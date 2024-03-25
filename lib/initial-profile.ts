@@ -1,31 +1,32 @@
-import { currentUser, redirectToSignIn } from "@clerk/nextjs";
-
 import { db } from "@/lib/db";
+import { currentProfile } from "./current-profile";
 
 export const initialProfile = async () => {
-  const user = await currentUser();
+  const profile = await currentProfile();
+  console.log(profile, "kiiiZ");
+  // const { onOpen } = useModal();
 
-  if (!user) {
-    return redirectToSignIn();
-  }
+  // if (!profile) {
+  //   return "loginModal";
+  // }
 
-  const profile = await db.profile.findUnique({
+  const user = await db.profile.findFirst({
     where: {
-      userId: user.id
-    }
+      id: profile?.id,
+    },
   });
 
-  if (profile) {
-    return profile;
+  if (user) {
+    return user;
   }
 
   const newProfile = await db.profile.create({
     data: {
-      userId: user.id,
-      name: `${user.firstName} ${user.lastName}`,
-      imageUrl: user.imageUrl,
-      email: user.emailAddresses[0].emailAddress
-    }
+      id: profile?.id,
+      name: `${profile?.name} ${profile?.name}`,
+      imageUrl: profile?.imageUrl ?? "oo",
+      email: profile?.email,
+    },
   });
 
   return newProfile;

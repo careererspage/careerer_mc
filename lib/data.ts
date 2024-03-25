@@ -302,8 +302,8 @@ export const Feescomponents = [
 ];
 export const Faqcomponents = [
   { title: "U.S.A. Faq", href: "/usa-faq" },
-  { title: "Switzerland Fees", href: "/swiss-faq" },
-  { title: "Austrailian Fees", href: "/student" },
+  { title: "Switzerland Faq", href: "/swiss-faq" },
+  { title: "Austrailian Faq", href: "/austrailian-faq" },
 ];
 
 export const Teams = [

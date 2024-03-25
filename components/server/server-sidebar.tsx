@@ -121,7 +121,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                 type: "member",
                 data: members?.map((member) => ({
                   id: member.id,
-                  name: member.profile.name,
+                  name: member.profile.firstName ?? "User",
                   icon: roleIconMap[member.role],
                 })),
               },

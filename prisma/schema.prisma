@@ -10,20 +10,61 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Profile {
-  id String @id @default(uuid()) @map("_id")
-  userId String @unique
-  name String
-  imageUrl String 
-  email String 
-
-  servers Server[]
-  members Member[]
-  channels Channel[]
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+enum AgentRole {
+  SWISS
+  USA
+  CANADA
+  AUSTRAILIAN
+  GERMANY
+  CLIENT
 }
+
+model Profile {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  firstName       String?
+  lastName        String?
+  imageUrl        String?
+  email           String?   @unique
+  emailVerified   DateTime?
+  hashedPassword  String?
+  address         String?
+  state           String?
+  city            String?
+  tel             String?
+  country         String?
+  language        String?
+  process         String?
+  role AgentRole @default(CLIENT)
+
+  accounts        Account[]
+
+  servers         Server[]
+  members         Member[]
+  channels        Channel[]
+
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Account {
+  id                 String   @id @default(auto()) @map("_id") @db.ObjectId
+  profileId          String   @db.ObjectId
+  type               String
+  provider           String
+  providerAccountId  String
+  refreshToken       String?  @db.String  
+  accessToken        String?  @db.String  
+  expiresAt          Int?                   
+  tokenType          String?             
+  scope              String?
+  idToken            String?  @db.String
+  sessionState       String?
+
+  profile            Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
 
 model Server {
   id String @id @default(uuid()) @map("_id")
@@ -31,7 +72,7 @@ model Server {
   imageUrl String 
   inviteCode String @unique
 
-  profileId String
+  profileId     String   @db.ObjectId
   profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
 
   members Member[]
@@ -53,7 +94,7 @@ model Member {
   id String @id @default(uuid()) @map("_id")
   role MemberRole @default(GUEST)
 
-  profileId String
+  profileId     String   @db.ObjectId
   profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
 
   serverId String
@@ -84,7 +125,7 @@ model Channel {
   name String
   type ChannelType @default(TEXT)
 
-  profileId String
+  profileId  String   @db.ObjectId
   profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
 
   serverId String

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
 import { EditServerModal } from "@/components/modals/edit-server-modal";
 import { InviteModal } from "@/components/modals/invite-modal";
 import { CreateServerModal } from "@/components/modals/create-server-modal";
@@ -14,6 +13,8 @@ import { EditChannelModal } from "@/components/modals/edit-channel-modal";
 import { MessageFileModal } from "@/components/modals/message-file-modal";
 import { DeleteMessageModal } from "@/components/modals/delete-message-modal";
 import { CreateReviewModal } from "../modals/create-review-modal";
+import { LoginModal } from "../modals/(authModal)/login-modal";
+import { RegisterModal } from "../modals/(authModal)/register-modal";
 
 export const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -29,6 +30,8 @@ export const ModalProvider = () => {
   return (
     <>
       <CreateServerModal />
+      <LoginModal />
+      <RegisterModal />
       <InviteModal />
       <EditServerModal />
       <MembersModal />

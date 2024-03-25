@@ -10,3 +10,20 @@ export type ServerWithMembersWithProfiles = Server & {
 export type NextApiResponseServerIo = NextApiResponse & {
   socket: Socket & { server: NetServer & { io: SocketIOServer } };
 };
+
+export interface SafeUser {
+  id: string;
+  firstName: string | null;
+  lastName: string | null;
+  imageUrl: string | null;
+  email: string | null;
+  hashedPassword: string | null;
+
+  address: string | null;
+  state: string | null;
+  city: string | null;
+  tel: string | null;
+  country: string | null;
+  language: string | null;
+  process: string | null;
+}

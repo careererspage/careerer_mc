@@ -1,14 +1,6 @@
 "use client";
-import React, { useState } from "react";
 import Container from "../container";
-import { useRouter } from "next/navigation";
-import { IoIosArrowDown } from "react-icons/io";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
-import { Button } from "../ui/button";
+
 import Link from "next/link";
 import MobileMenu from "../navigation/mobileMenu";
 import Image from "next/image";
@@ -17,12 +9,10 @@ import { Separator } from "../ui/separator";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import {
   AboutNav,
@@ -30,19 +20,29 @@ import {
   Fees,
   Jobs,
   SubBusinessNav,
-  SubParentNav,
   SubWorkNav,
   VisaType,
 } from "@/lib/faqData";
 import { usePathname } from "next/navigation";
+import { useModal } from "@/hooks/use-modal-store";
+import { SafeUser } from "@/types";
+import { signOut } from "next-auth/react";
+import { CgProfile } from "react-icons/cg";
+import { UserAvatar } from "../user-avatar";
+import { LiaSignOutAltSolid } from "react-icons/lia";
 
-const Navbar = () => {
+interface NavbarProps {
+  currentUser?: SafeUser | null;
+  profileMenu?: boolean;
+}
+
+const Navbar = ({ currentUser, profileMenu }: NavbarProps) => {
   const pathname = usePathname();
-
+  const { onOpen } = useModal();
   return (
     <div className="mb-4 h-[60px] w-full bg-[#0559a8] sticky top-0 z-50">
       <Container>
-        <div className="py-3 flex items-center justify-between">
+        <div className="py-2 flex items-center justify-between">
           <div className="sm:flex hidden items-center gap-1">
             <span className="text-gray-200 text-xs font-semibold">call us</span>
             <span className="text-white text-[13px] font-bold">
@@ -55,44 +55,74 @@ const Navbar = () => {
           >
             Live Chat
           </Link>
+
+          <div className="bg-[#003266] !text-sm shadow-md py-1 px-1 rounded-lg text-white font-semibold flex items-center gap-2 hover:bg-white hover:text-gray-600 transition ease-in duration-200 cursor-pointer">
+            <Image
+              width={50}
+              height={50}
+              src={require("@/public/images/care-line.png")}
+              alt="care line"
+              className="sm:w-[30px] w-[20px] sm:h-[30px] h-[20px] object-contain rounded-full animate-pulse"
+            />
+            Book a section
+          </div>
+
           <div className="text-sm">
-            <ul className="flex cursor-pointer gap-10 items-center">
-              <div className="flex items-center gap-3">
-                <Link
-                  href="/login"
-                  className="text-white flex gap-1 items-center hover:opacity-75 transition"
-                >
-                  Login <span className="hidden sm:block">account </span>
-                </Link>
-                <Separator className="h-3 w-[2px] bg-yellow-400" />
-                <Link
-                  href="/signUp"
-                  className="text-red-400 hover:opacity-75 font-semibold transition"
-                >
-                  Free <span className="text-white">Sign up </span>
-                </Link>
-              </div>
+            <ul className="">
+              {currentUser ? (
+                <div className="flex items-center gap-5">
+                  <Link href="/dashboard" className="">
+                    <UserAvatar
+                      src={currentUser?.imageUrl ?? ""}
+                      className="text-white"
+                    />
+                  </Link>
+                  <Separator className="h-4 w-[2px] bg-yellow-400 mr-2 hidden md:block" />
+
+                  <div
+                    className="flex items-center gap-1 group cursor-pointer"
+                    onClick={() => signOut()}
+                  >
+                    <LiaSignOutAltSolid className="sm:h-7 sm:w-7 w-5 h-5 !text-red-500 group:hover:!text-red-400 transition-all" />
+                    <span className="hidden md:block text-white group-hover:opacity-80">
+                      Sign out
+                    </span>
+                  </div>
+                </div>
+              ) : (
+                <div className="flex items-center gap-5">
+                  <button
+                    onClick={() => onOpen("loginModal")}
+                    className="text-white flex gap-1 items-center hover:opacity-75 transition"
+                  >
+                    Login <span className="hidden sm:block">account </span>
+                  </button>
+
+                  <Separator className="h-3 w-[2px] bg-yellow-400" />
+
+                  <div
+                    className="text-white flex gap-1 items-center hover:opacity-75 transition"
+                    onClick={() => onOpen("RegisterModal")}
+                  >
+                    <LiaSignOutAltSolid className="w-7 h-7 !text-red-500 group:hover:!text-red-400 transition-all" />
+                    <span className="hidden md:block text-white group-hover:opacity-80">
+                      Sign up
+                    </span>
+                  </div>
+                </div>
+              )}
             </ul>
           </div>
         </div>
       </Container>
 
-      <div className="bg-slate-50">
+      <div className="bg-slate-50 shadow-md">
         <Container>
-          <div className="flex items-center justify-between py-4">
+          <div className="flex items-center justify-between py-1">
             <div className="text-slate-600 font-bold">LOGO</div>
-            <div className="bg-[#003266] text-sm shadow-md py-2 px-1 rounded-lg text-white font-semibold flex items-center gap-2">
-              <Image
-                width={50}
-                height={50}
-                src={require("@/public/images/care-line.png")}
-                alt="care line"
-                className="w-[30px] h-[30px] object-contain rounded-full animate-pulse"
-              />
-              Book a section
-            </div>
+
             <div>
-              <div className="hidden sm:flex items-center text-slate-600 text-base">
+              <div className="hidden md:flex items-center text-slate-600 text-base">
                 <NavigationMenu className="w-full bg-white py-2 rounded-md">
                   <NavigationMenuList>
                     <NavigationMenuItem>
@@ -386,7 +416,7 @@ const Navbar = () => {
                 </HoverCard> */}
 
               <div className="block sm:hidden">
-                <MobileMenu />
+                <MobileMenu profileMenu={profileMenu} />
               </div>
             </div>
           </div>

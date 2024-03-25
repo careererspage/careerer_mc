@@ -23,11 +23,15 @@ const Quote = () => {
             <div className="font-bold">Welcome to Migrate Compass!</div>We pride
             ourselves on our profound legal expertise, our commitment to a
             people-centric approach, and our adoption of technology-driven
-            processes. Our services provide an efficient pathway for businesses,
-            employees, investors, schooling, and families seeking to apply for
-            Europe, U.S. Visas and Green Cards. We’re here to guide you through
-            every step of your immigration journey. Let’s navigate the
-            complexities of immigration together! 😊
+            processes. In addition to our immigration services, Migrate Compass
+            also operates as a recruitment agency. We have a vast network of
+            startups and small firms that are constantly on the lookout for
+            individuals. Our services provide an efficient pathway for
+            businesses, employees, investors, students, and families seeking to
+            apply for visas and green cards in Europe and the United States.
+            We&apos;re here to guide you through every step of your immigration
+            journey. Let&apos;s navigate the complexities of immigration
+            together! 😊
           </div>
         </div>
       </div>

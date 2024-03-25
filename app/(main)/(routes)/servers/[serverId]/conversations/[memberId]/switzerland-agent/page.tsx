@@ -1,4 +1,3 @@
-import { redirectToSignIn } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 import { db } from "@/lib/db";
@@ -8,6 +7,7 @@ import { ChatHeader } from "@/components/chat/chat-header";
 import { ChatMessages } from "@/components/chat/chat-messages";
 import { ChatInput } from "@/components/chat/chat-input";
 import { MediaRoom } from "@/components/media-room";
+import { useModal } from "@/hooks/use-modal-store";
 
 interface SwitzerlandIdPageProps {
   params: {
@@ -24,9 +24,11 @@ const SwitzerlandIdPage = async ({
   searchParams,
 }: SwitzerlandIdPageProps) => {
   const profile = await currentProfile();
+  const { onOpen } = useModal();
 
   if (!profile) {
-    return redirectToSignIn();
+    onOpen("loginModal");
+    return redirect("/");
   }
 
   const currentMember = await db.member.findFirst({
@@ -40,7 +42,7 @@ const SwitzerlandIdPage = async ({
   });
 
   if (!currentMember) {
-    return redirect("/");
+    return redirect("/about");
   }
 
   const conversation = await getOrCreateConversation(
@@ -60,7 +62,7 @@ const SwitzerlandIdPage = async ({
   return (
     <div className="bg-white dark:bg-[#313338] flex flex-col h-full">
       <ChatHeader
-        imageUrl={otherMember.profile.imageUrl}
+        // imageUrl={otherMember.profile.imageUrl}
         name="Switzerland Agent"
         serverId={params.serverId}
         type="conversation"

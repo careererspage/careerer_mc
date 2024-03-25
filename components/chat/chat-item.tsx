@@ -129,7 +129,7 @@ export const ChatItem = ({
           onClick={onMemberClick}
           className="cursor-pointer hover:drop-shadow-md transition"
         >
-          <UserAvatar src={member.profile.imageUrl} />
+          {/* <UserAvatar src={member?.profile?.imageUrl} /> */}
         </div>
         <div className="flex flex-col w-full">
           <div className="flex items-center gap-x-2">
@@ -138,7 +138,7 @@ export const ChatItem = ({
                 onClick={onMemberClick}
                 className="font-semibold text-sm hover:underline cursor-pointer"
               >
-                {member.profile.name}
+                {member?.profile?.firstName}
               </p>
               <ActionTooltip label={member.role}>
                 {roleIconMap[member.role]}

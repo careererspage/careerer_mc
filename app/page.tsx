@@ -1,24 +1,13 @@
-import Categories from "@/components/(clients)/category/categories";
-import CustomerExperience from "@/components/(clients)/customer-experience";
-import Hero from "@/components/(clients)/hero";
-import Navbar from "@/components/(clients)/navbar";
-import Process from "@/components/(clients)/process";
-import Region from "@/components/(clients)/region";
-import Footer from "@/components/Footer";
-import React from "react";
 
-function HomePage() {
-  return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Categories />
-      <Region />
-      <CustomerExperience />
-      <Process />
-      <Footer />
-    </div>
-  );
-}
+import { currentProfile } from "@/lib/current-profile";
+import HomeClient from "./HomeClient";
+
+const HomePage = async () => {
+  const currentUser = await currentProfile();
+
+  
+
+  return <HomeClient currentUser={currentUser} />;
+};
 
 export default HomePage;

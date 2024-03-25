@@ -25,8 +25,15 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { FileUpload } from "@/components/file-upload";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
+import { SafeUser } from "@/types";
+import { useModal } from "@/hooks/use-modal-store";
+import { ToastAction } from "../ui/toast";
+import { useToast } from "../ui/use-toast";
 
+interface InitialModalProps {
+  profile: SafeUser | null;
+}
 const formSchema = z.object({
   name: z.string().min(1, {
     message: "Server name is required.",
@@ -36,14 +43,18 @@ const formSchema = z.object({
   }),
 });
 
-export const InitialModal = () => {
+export const InitialModal = ({ profile }: InitialModalProps) => {
   const [isMounted, setIsMounted] = useState(false);
-
+  const { onOpen } = useModal();
   const router = useRouter();
+  const { toast } = useToast();
 
   useEffect(() => {
+    if (!profile) {
+      redirect("/");
+    }
     setIsMounted(true);
-  }, []);
+  }, [profile, router]);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -61,9 +72,13 @@ export const InitialModal = () => {
 
       form.reset();
       router.refresh();
-      window.location.reload();
-    } catch (error) {
-      console.log(error);
+    } catch (error: any) {
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description: error.message,
+        action: <ToastAction altText="Try again">Try again</ToastAction>,
+      });
     }
   };
 

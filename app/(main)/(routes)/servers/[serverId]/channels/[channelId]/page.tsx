@@ -1,4 +1,3 @@
-import { redirectToSignIn } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import { ChannelType } from "@prisma/client";
 
@@ -8,6 +7,7 @@ import { ChatInput } from "@/components/chat/chat-input";
 import { ChatMessages } from "@/components/chat/chat-messages";
 import { MediaRoom } from "@/components/media-room";
 import { db } from "@/lib/db";
+import { useModal } from "@/hooks/use-modal-store";
 
 interface ChannelIdPageProps {
   params: {
@@ -18,9 +18,11 @@ interface ChannelIdPageProps {
 
 const ChannelIdPage = async ({ params }: ChannelIdPageProps) => {
   const profile = await currentProfile();
+  // const { onOpen } = useModal();
 
   if (!profile) {
-    return redirectToSignIn();
+    // onOpen("loginModal");
+    return redirect("/");
   }
 
   const channel = await db.channel.findUnique({

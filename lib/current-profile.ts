@@ -1,19 +1,38 @@
-import { auth } from "@clerk/nextjs";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
 import { db } from "@/lib/db";
 
-export const currentProfile = async () => {
-  const { userId } = auth();
+export async function getSession() {
+  return await getServerSession(authOptions);
+}
 
-  if (!userId) {
+export const currentProfile = async () => {
+  try {
+    const session = await getSession();
+
+    if (!session?.user?.email) {
+      return null;
+    }
+
+    const profile = await db.profile.findUnique({
+      where: {
+        email: session.user.email as string,
+      },
+    });
+
+    if (!profile) {
+      console.log("No profile found for this user");
+      return null;
+    }
+
+    return {
+      ...profile,
+      createdAt: profile.createdAt.toISOString(),
+      updatedAt: profile.updatedAt.toISOString(),
+      emailVerified: profile.emailVerified?.toISOString() || null,
+    };
+  } catch (error: any) {
     return null;
   }
-
-  const profile = await db.profile.findUnique({
-    where: {
-      userId
-    }
-  });
-
-  return profile;
-}
+};

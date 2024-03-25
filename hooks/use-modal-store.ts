@@ -3,6 +3,8 @@ import { string } from "zod";
 import { create } from "zustand";
 
 export type ModalType =
+  | "loginModal"
+  | "RegisterModal"
   | "createServer"
   | "invite"
   | "editServer"
