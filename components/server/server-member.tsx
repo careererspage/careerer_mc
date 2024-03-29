@@ -44,14 +44,14 @@ export const ServerMember = ({ member, server }: ServerMemberProps) => {
       />
       <p
         className={cn(
-          "font-semibold text-sm text-zinc-500 group-hover:text-zinc-600 dark:text-zinc-400 dark:group-hover:text-zinc-300 transition",
+          "font-semibold sm:text-sm text-[11px] text-zinc-500 group-hover:text-zinc-600 dark:text-zinc-400 dark:group-hover:text-zinc-300 transition",
           params?.memberId === member.id &&
             "text-primary dark:text-zinc-200 dark:group-hover:text-white"
         )}
       >
         {member.profile.firstName}
       </p>
-      {icon}
+      <div className="ml-auto">{icon}</div>
     </button>
   );
 };

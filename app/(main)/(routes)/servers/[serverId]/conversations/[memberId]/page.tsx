@@ -1,4 +1,3 @@
-import { redirectToSignIn } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 import { db } from "@/lib/db";
@@ -23,7 +22,7 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
   const profile = await currentProfile();
 
   if (!profile) {
-    return redirectToSignIn();
+    return redirect("/");
   }
 
   const currentMember = await db.member.findFirst({
@@ -57,19 +56,24 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
   return (
     <div className="bg-white dark:bg-[#313338] flex flex-col h-full">
       <ChatHeader
-        imageUrl={otherMember.profile.imageUrl}
-        name={otherMember.profile.name}
+        imageUrl={otherMember.profile.imageUrl ?? ""}
+        name={otherMember?.profile?.firstName ?? "User"}
         serverId={params.serverId}
         type="conversation"
       />
       {searchParams.video && (
-        <MediaRoom chatId={conversation.id} video={true} audio={true} />
+        <MediaRoom
+          user={profile}
+          chatId={conversation.id}
+          video={true}
+          audio={true}
+        />
       )}
       {!searchParams.video && (
         <>
           <ChatMessages
             member={currentMember}
-            name={otherMember.profile.name}
+            name={otherMember?.profile?.firstName}
             chatId={conversation.id}
             type="conversation"
             apiUrl="/api/direct-messages"
@@ -81,12 +85,13 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
             }}
           />
           <ChatInput
-            name={otherMember.profile.name}
+            name={otherMember?.profile.firstName ?? "John"}
             type="conversation"
             apiUrl="/api/socket/direct-messages"
             query={{
               conversationId: conversation.id,
             }}
+            profileId={profile.id}
           />
         </>
       )}

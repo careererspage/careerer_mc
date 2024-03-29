@@ -15,7 +15,11 @@ export const AboutNav = [
 
 export const VisaType = [
   {
-    title: "Family Green Card",
+    title: "Family Visa",
+    link: "/family-green-card",
+  },
+  {
+    title: "Expired Visa",
     link: "/family-green-card",
   },
   {

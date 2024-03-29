@@ -1,5 +1,5 @@
 import { ChannelType, MemberRole } from "@prisma/client";
-import { redirect } from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
 import { Hash, Mic, ShieldAlert, ShieldCheck, Video } from "lucide-react";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -13,6 +13,8 @@ import { ServerSection } from "./server-section";
 import { ServerChannel } from "./server-channel";
 import { ServerMember } from "./server-member";
 import { ServerAgents } from "./Server-agents";
+
+import ServerTool from "./server-tool";
 
 interface ServerSidebarProps {
   serverId: string;
@@ -72,7 +74,22 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
   const members = server?.members.filter(
     (member) => member.profileId !== profile.id
   );
-  const agents = server?.members.filter((member) => member.role === "ADMIN");
+  const agents = server?.members.filter((member) => {
+    return (
+      member.role === "ADMIN" &&
+      member.profile.firstName !== "Support Line" &&
+      member.profile.firstName !== "Expired Visa" &&
+      member.profile.firstName !== "Process Payment"
+    );
+  });
+
+  const supportLine = server?.members.find(
+    (member) => member.profile?.firstName === "Support Line"
+  );
+
+  const expiredVisa = server?.members.find(
+    (member) => member.profile?.firstName === "Expired Visa"
+  );
 
   if (!server) {
     return redirect("/");
@@ -89,35 +106,35 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
         <div className="mt-2">
           <ServerSearch
             data={[
+              // {
+              //   label: "Text Channels",
+              //   type: "channel",
+              //   data: textChannels?.map((channel) => ({
+              //     id: channel.id,
+              //     name: channel.name,
+              //     icon: iconMap[channel.type],
+              //   })),
+              // },
+              // {
+              //   label: "Voice Channels",
+              //   type: "channel",
+              //   data: audioChannels?.map((channel) => ({
+              //     id: channel.id,
+              //     name: channel.name,
+              //     icon: iconMap[channel.type],
+              //   })),
+              // },
+              // {
+              //   label: "Video Channels",
+              //   type: "channel",
+              //   data: videoChannels?.map((channel) => ({
+              //     id: channel.id,
+              //     name: channel.name,
+              //     icon: iconMap[channel.type],
+              //   })),
+              // },
               {
-                label: "Text Channels",
-                type: "channel",
-                data: textChannels?.map((channel) => ({
-                  id: channel.id,
-                  name: channel.name,
-                  icon: iconMap[channel.type],
-                })),
-              },
-              {
-                label: "Voice Channels",
-                type: "channel",
-                data: audioChannels?.map((channel) => ({
-                  id: channel.id,
-                  name: channel.name,
-                  icon: iconMap[channel.type],
-                })),
-              },
-              {
-                label: "Video Channels",
-                type: "channel",
-                data: videoChannels?.map((channel) => ({
-                  id: channel.id,
-                  name: channel.name,
-                  icon: iconMap[channel.type],
-                })),
-              },
-              {
-                label: "Members",
+                label: "Offices",
                 type: "member",
                 data: members?.map((member) => ({
                   id: member.id,
@@ -128,8 +145,17 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
             ]}
           />
         </div>
+
+        <Separator className="bg-zinc-200 rounded-md my-2" />
+
+        <ServerTool
+          serverId={serverId}
+          supportLine={supportLine}
+          expiredVisa={expiredVisa}
+        />
+
         <Separator className="bg-zinc-200 dark:bg-zinc-700 rounded-md my-2" />
-        {!!textChannels?.length && (
+        {!!textChannels?.length && role === "ADMIN" && (
           <div className="mb-2">
             <ServerSection
               sectionType="channels"
@@ -169,7 +195,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
             </div>
           </div>
         )}
-        {!!videoChannels?.length && (
+        {/* {!!videoChannels?.length && (
           <div className="mb-2">
             <ServerSection
               sectionType="channels"
@@ -188,8 +214,8 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
               ))}
             </div>
           </div>
-        )}
-        {!!members?.length && (
+        )} */}
+        {role === "ADMIN" && (
           <div className="mb-2">
             <ServerSection
               sectionType="members"
@@ -198,12 +224,18 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
               server={server}
             />
             <div className="space-y-[2px]">
-              {members.map((member) => (
-                <ServerMember key={member.id} member={member} server={server} />
-              ))}
+              {members &&
+                members.map((member) => (
+                  <ServerMember
+                    key={member.id}
+                    member={member}
+                    server={server}
+                  />
+                ))}
             </div>
           </div>
         )}
+
         {!!members?.length && (
           <div className="mb-2">
             <ServerSection

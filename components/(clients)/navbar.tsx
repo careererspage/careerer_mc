@@ -25,7 +25,7 @@ import {
 } from "@/lib/faqData";
 import { usePathname } from "next/navigation";
 import { useModal } from "@/hooks/use-modal-store";
-import { SafeUser } from "@/types";
+import { SafeMember, SafeUser } from "@/types";
 import { signOut } from "next-auth/react";
 import { CgProfile } from "react-icons/cg";
 import { UserAvatar } from "../user-avatar";
@@ -34,9 +34,20 @@ import { LiaSignOutAltSolid } from "react-icons/lia";
 interface NavbarProps {
   currentUser?: SafeUser | null;
   profileMenu?: boolean;
+  agents?: SafeUser[] | null;
+  serverId?: string;
+  supportLine: SafeMember | undefined;
+  expiredVisa: SafeMember | undefined;
 }
 
-const Navbar = ({ currentUser, profileMenu }: NavbarProps) => {
+const Navbar = ({
+  currentUser,
+  profileMenu,
+  serverId,
+  agents,
+  supportLine,
+  expiredVisa,
+}: NavbarProps) => {
   const pathname = usePathname();
   const { onOpen } = useModal();
   return (
@@ -71,11 +82,17 @@ const Navbar = ({ currentUser, profileMenu }: NavbarProps) => {
             <ul className="">
               {currentUser ? (
                 <div className="flex items-center gap-5">
-                  <Link href="/dashboard" className="">
+                  <Link
+                    href="/settings"
+                    className="flex items-center gap-1 group"
+                  >
                     <UserAvatar
+                      className="group-hover:!text-white"
                       src={currentUser?.imageUrl ?? ""}
-                      className="text-white"
                     />
+                    <span className="hidden md:block text-gray-200 transition-all group-hover:text-white">
+                      Profile
+                    </span>
                   </Link>
                   <Separator className="h-4 w-[2px] bg-yellow-400 mr-2 hidden md:block" />
 
@@ -101,7 +118,7 @@ const Navbar = ({ currentUser, profileMenu }: NavbarProps) => {
                   <Separator className="h-3 w-[2px] bg-yellow-400" />
 
                   <div
-                    className="text-white flex gap-1 items-center hover:opacity-75 transition"
+                    className="text-white flex gap-1 items-center hover:opacity-75 transition cursor-pointer"
                     onClick={() => onOpen("RegisterModal")}
                   >
                     <LiaSignOutAltSolid className="w-7 h-7 !text-red-500 group:hover:!text-red-400 transition-all" />
@@ -301,122 +318,16 @@ const Navbar = ({ currentUser, profileMenu }: NavbarProps) => {
                   </NavigationMenuList>
                 </NavigationMenu>
               </div>
-              {/* <HoverCard>
-                  
-
-                <HoverCard>
-                  <HoverCardTrigger asChild>
-                    <div className="cursor-pointer hover:opacity-75 transition flex items-center gap-1">
-                      Services{" "}
-                      <IoIosArrowDown size={15} className="text-gray-400" />
-                    </div>
-                  </HoverCardTrigger>
-                  <HoverCardContent className="text-white text-sm cursor-default bg-blue-500 border-none w-[150px]">
-                    <ul className="grid grid-cols-1 gap-4">
-                      <Link
-                        href="/work"
-                        className="cursor-pointer hover:opacity-100 opacity-80 transition"
-                      >
-                        Work Visa
-                      </Link>
-                      <Link
-                        href="/business"
-                        className="cursor-pointer hover:opacity-100 opacity-80 transition"
-                      >
-                        Business Visa
-                      </Link>
-                      <Link
-                        href="/student"
-                        className="cursor-pointer hover:opacity-100 opacity-80 transition"
-                      >
-                        Student Visa
-                      </Link>
-                      <Link
-                        href="/migration"
-                        className="cursor-pointer hover:opacity-100 opacity-80 transition"
-                      >
-                        Parent Migration
-                      </Link>
-                      <Link
-                        href="/rvisa"
-                        className="cursor-pointer hover:opacity-100 opacity-80 transition"
-                      >
-                        R1 Visa
-                      </Link>
-                    </ul>
-                  </HoverCardContent>
-                </HoverCard>
-
-                <HoverCard>
-                  <HoverCardTrigger asChild>
-                    <div className="cursor-pointer hover:opacity-75 transition flex items-center gap-1">
-                      Fees{" "}
-                      <IoIosArrowDown size={15} className="text-gray-400" />
-                    </div>
-                  </HoverCardTrigger>
-                  <HoverCardContent className="text-white text-sm cursor-default bg-blue-500 border-none w-[150px]">
-                    <ul className="grid grid-cols-1 gap-4">
-                      <Link
-                        href="/charges"
-                        className="cursor-pointer hover:opacity-100 opacity-80 transition"
-                      >
-                        U.S.A. Fee
-                      </Link>
-                      <Link
-                        href="/swiss-fees"
-                        className="cursor-pointer hover:opacity-100 opacity-80 transition"
-                      >
-                        Switzerland Fee
-                      </Link>
-                      <Link
-                        href="/student"
-                        className="cursor-pointer hover:opacity-100 opacity-80 transition"
-                      >
-                        Austrailian Fee
-                      </Link>
-                    </ul>
-                  </HoverCardContent>
-                </HoverCard>
-
-                <Link
-                  href="/eb3-Jobs"
-                  className="cursor-pointer hover:opacity-75 transition"
-                >
-                  Eb3 active Jobs
-                </Link>
-                <HoverCard>
-                  <HoverCardTrigger asChild>
-                    <div className="cursor-pointer hover:opacity-75 transition flex items-center gap-1">
-                      Faq
-                      <IoIosArrowDown size={15} className="text-gray-400" />
-                    </div>
-                  </HoverCardTrigger>
-                  <HoverCardContent className="text-white text-sm cursor-default bg-blue-500 border-none w-[150px]">
-                    <ul className="grid grid-cols-1 gap-4">
-                      <Link
-                        href="/usa-faq"
-                        className="cursor-pointer hover:opacity-100 opacity-80 transition"
-                      >
-                        U.S.A. Faq
-                      </Link>
-                      <Link
-                        href="/swiss-faq"
-                        className="cursor-pointer hover:opacity-100 opacity-80 transition"
-                      >
-                        Switzerland Faq
-                      </Link>
-                      <Link
-                        href="/student"
-                        className="cursor-pointer hover:opacity-100 opacity-80 transition"
-                      >
-                        Austrailian Visa
-                      </Link>
-                    </ul>
-                  </HoverCardContent>
-                </HoverCard> */}
 
               <div className="block sm:hidden">
-                <MobileMenu profileMenu={profileMenu} />
+                <MobileMenu
+                  serverId={serverId}
+                  agents={agents}
+                  profileMenu={profileMenu}
+                  currentUser={currentUser}
+                  supportLine={supportLine}
+                  expiredVisa={expiredVisa}
+                />
               </div>
             </div>
           </div>

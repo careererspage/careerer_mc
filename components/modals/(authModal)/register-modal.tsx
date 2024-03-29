@@ -29,21 +29,30 @@ import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { signIn } from "next-auth/react";
 import { useCallback } from "react";
+import { useToast } from "@/components/ui/use-toast";
+import { ToastAction } from "@/components/ui/toast";
 
 const formSchema = z.object({
-  email: z.string().min(1, {
-    message: "email is required.",
-  }),
+  email: z
+    .string()
+    .email()
+    .refine((value) => value.endsWith("@gmail.com"), {
+      message: "Email must be a Gmail address.",
+    }),
   password: z.string().min(5, {
     message: "password is required.",
   }),
   country: z.string().min(1, {
     message: "country is required.",
   }),
+  firstname: z.string().min(2, {
+    message: "Name is required.",
+  }),
 });
 
 export const RegisterModal = () => {
   const { isOpen, onOpen, onClose, type } = useModal();
+  const { toast } = useToast();
 
   const router = useRouter();
 
@@ -55,6 +64,7 @@ export const RegisterModal = () => {
       email: "",
       password: "",
       country: "",
+      firstname: "",
     },
   });
 
@@ -62,13 +72,41 @@ export const RegisterModal = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
+      const result = formSchema.safeParse(values);
+
+      if (!result.success) {
+        // If form validation fails, display the first error message
+        const firstError = Object.values(result.error.errors)[0];
+        toast({
+          style: {
+            background: "black",
+            color: "#fff",
+          },
+          variant: "destructive",
+          description: firstError.message,
+          action: <ToastAction altText="Close">Close</ToastAction>,
+        });
+        return;
+      }
       await axios.post("/api/register", values);
 
       form.reset();
       router.refresh();
       onClose();
-    } catch (error) {
-      console.log(error);
+      toast({
+        style: {
+          background: "black",
+          color: "#fff",
+        },
+        description: "Account created successfully!",
+        action: <ToastAction altText="Close">Close</ToastAction>,
+      });
+    } catch (error: any) {
+      toast({
+        variant: "destructive",
+        description: error.response.data,
+        action: <ToastAction altText="Close">Close</ToastAction>,
+      });
     }
   };
 
@@ -86,10 +124,10 @@ export const RegisterModal = () => {
     <Dialog open={isModalOpen} onOpenChange={handleClose}>
       <DialogContent className="bg-white text-black p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
-          <DialogTitle className="text-2xl text-center font-bold">
+          <DialogTitle className="md:text-2xl sm:text-xl text-lg text-center sm:font-bold font-semibold">
             Create a Free account{" "}
           </DialogTitle>
-          <DialogDescription className="text-zinc-500">
+          <DialogDescription className="text-zinc-500 text-sm sm:text-base">
             Welcome to Migrate Compass.
           </DialogDescription>
         </DialogHeader>
@@ -101,13 +139,13 @@ export const RegisterModal = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                    <FormLabel className="uppercase text-xs sm:font-bold font-semibold text-zinc-500 dark:text-secondary/70">
                       Email
                     </FormLabel>
                     <FormControl>
                       <Input
                         disabled={isLoading}
-                        className="bg-opacity-50 bg-slate-50 border border-gray-300 focus-visible:ring-0 focus:bg-opacity-100 focus:bg-slate-100 transition-all text-black focus-visible:ring-offset-0"
+                        className="bg-opacity-50 bg-slate-50 border border-gray-300 focus-visible:ring-0 focus:bg-opacity-100 focus:bg-slate-100 transition-all text-zinc-600 !font-normal focus-visible:ring-offset-0"
                         placeholder="Enter your email"
                         {...field}
                       />
@@ -121,14 +159,35 @@ export const RegisterModal = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                    <FormLabel className="uppercase text-xs sm:font-bold font-semibold text-zinc-500 dark:text-secondary/70">
                       Password
                     </FormLabel>
                     <FormControl>
                       <Input
                         disabled={isLoading}
-                        className="bg-opacity-50 bg-slate-50 border border-gray-300 focus-visible:ring-0 focus:bg-opacity-100 focus:bg-slate-100 transition-all text-black focus-visible:ring-offset-0"
+                        className="bg-opacity-50 bg-slate-50 border border-gray-300 focus-visible:ring-0 focus:bg-opacity-100 focus:bg-slate-100 transition-all text-zinc-600 !font-normal focus-visible:ring-offset-0"
                         placeholder="Enter password"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="firstname"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="uppercase text-xs sm:font-bold font-semibold text-zinc-500 dark:text-secondary/70">
+                      Name
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        disabled={isLoading}
+                        className="bg-opacity-50 bg-slate-50 border border-gray-300 focus-visible:ring-0 focus:bg-opacity-100 focus:bg-slate-100 transition-all text-zinc-600 !font-normal focus-visible:ring-offset-0"
+                        placeholder="Enter your firstname"
                         {...field}
                       />
                     </FormControl>
@@ -142,13 +201,13 @@ export const RegisterModal = () => {
                 name="country"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                    <FormLabel className="uppercase text-xs sm:font-bold font-semibold text-zinc-500 dark:text-secondary/70">
                       Country of Birth
                     </FormLabel>
                     <FormControl>
                       <Input
                         disabled={isLoading}
-                        className="bg-opacity-50 bg-slate-50 border border-gray-300 focus-visible:ring-0 focus:bg-opacity-100 focus:bg-slate-100 transition-all text-black focus-visible:ring-offset-0"
+                        className="bg-opacity-50 bg-slate-50 border border-gray-300 focus-visible:ring-0 focus:bg-opacity-100 focus:bg-slate-100 transition-all text-zinc-600 !font-normal focus-visible:ring-offset-0"
                         placeholder="Enter your country"
                         {...field}
                       />
@@ -165,12 +224,12 @@ export const RegisterModal = () => {
           </form>
         </Form>
 
-        <div className="flex px-6 flex-col gap-4 mt-3">
+        <div className="flex px-6 flex-col gap-4 mt-1">
           <hr />
           {/* <button
             disabled={isLoading}
             onClick={() => signIn("google")}
-            className="relative w-full py-2 flex items-center justify-center gap-7 text-center disabled:cursor-not-allowed rounded-lg hover:opacity-75 hover:bg-slate-50 transition bg-white border-[#febb02] text-black border"
+            className="relative w-full py-2 flex items-center justify-center gap-7 text-center disabled:cursor-not-allowed rounded-lg hover:opacity-75 hover:bg-slate-50 transition bg-white border-[#febb02] text-zinc-600 !font-normal border"
           >
             <FcGoogle size={24} />
             Continue with Google

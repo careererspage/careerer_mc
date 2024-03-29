@@ -1,3 +1,4 @@
+import { SafeMember } from "@/types";
 import { Channel, ChannelType, Server } from "@prisma/client";
 import { string } from "zod";
 import { create } from "zustand";
@@ -8,7 +9,9 @@ export type ModalType =
   | "createServer"
   | "invite"
   | "editServer"
+  | "consultaion"
   | "members"
+  | "agents"
   | "createChannel"
   | "leaveServer"
   | "deleteServer"
@@ -24,6 +27,8 @@ interface ModalData {
   channelType?: ChannelType;
   apiUrl?: string;
   query?: Record<string, any>;
+  serverId?: string;
+  supportLine?: SafeMember;
 }
 
 interface ModalStore {

@@ -18,8 +18,21 @@ const SetupPage = async () => {
     },
   });
 
+  const member = await db.server.findFirst({
+    where: {
+      members: {
+        some: {
+          profileId: profile?.id,
+          profile: {
+            firstName: "Support Line",
+          },
+        },
+      },
+    },
+  });
+
   if (server) {
-    return redirect(`/servers/${server.id}`);
+    return redirect(`/servers/${server.id}/conversations/${member}`);
   }
 
   return <InitialModal profile={profile} />;

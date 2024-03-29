@@ -27,21 +27,30 @@ import { useRouter } from "next/navigation";
 import { useModal } from "@/hooks/use-modal-store";
 import { signIn } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
+import { ToastAction } from "@/components/ui/toast";
+import { useToast } from "@/components/ui/use-toast";
+import { EyeIcon, EyeOffIcon } from "lucide-react";
 
 const formSchema = z.object({
-  email: z.string().min(1, {
-    message: "email is required.",
-  }),
+  email: z
+    .string()
+    .email()
+    .refine((value) => value.endsWith("@gmail.com"), {
+      message: "Email must be a Gmail address.",
+    }),
   password: z.string().min(5, {
-    message: "password is required.",
+    message: "Password is required.",
   }),
 });
 
 export const LoginModal = () => {
   const { isOpen, onOpen, onClose, type } = useModal();
-
+  const { toast } = useToast();
   const router = useRouter();
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePasswordVisibility = () => setShowPassword(!showPassword); // Function to toggle password visibility
+  const [isLoadinging, setIsloading] = useState(false);
 
   const isModalOpen = isOpen && type === "loginModal";
 
@@ -58,13 +67,32 @@ export const LoginModal = () => {
     },
   });
 
-  const isLoading = form.formState.isSubmitting;
-
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
+      const result = formSchema.safeParse(values);
+
+      if (!result.success) {
+        // If form validation fails, display the first error message
+        const firstError = Object.values(result.error.errors)[0];
+        toast({
+          style: {
+            background: "black",
+            color: "#fff",
+          },
+          variant: "destructive",
+          description: firstError.message,
+          action: <ToastAction altText="Close">Close</ToastAction>,
+        });
+        return;
+      }
+
+      setIsloading(false);
       signIn("credentials", {
         ...values,
+        redirect: false, // Disable redirection on errors
       }).then((callback) => {
+        setIsloading(false);
+
         if (callback?.ok) {
           form.reset();
           router.refresh();
@@ -72,11 +100,27 @@ export const LoginModal = () => {
         }
         if (callback?.error) {
           onClose();
-          console.log("Wrong credentials");
+          toast({
+            style: {
+              background: "black",
+              color: "#fff",
+            },
+            variant: "destructive",
+            description: "Wrong Credential",
+            action: <ToastAction altText="Close">Close</ToastAction>,
+          });
         }
       });
-    } catch (error) {
-      console.log(error);
+    } catch (error: any) {
+      toast({
+        style: {
+          background: "black",
+          color: "#fff",
+        },
+        variant: "destructive",
+        description: error.response.data,
+        action: <ToastAction altText="Close">Close</ToastAction>,
+      });
     }
   };
 
@@ -89,10 +133,10 @@ export const LoginModal = () => {
     <Dialog open={isModalOpen} onOpenChange={handleClose}>
       <DialogContent className="bg-white text-black p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
-          <DialogTitle className="text-2xl text-center font-bold">
+          <DialogTitle className="md:text-2xl sm:text-xl text-lg text-center font-bold">
             Login into your account
           </DialogTitle>
-          <DialogDescription className="text-zinc-500">
+          <DialogDescription className="text-zinc-500 text-sm sm:text-base">
             Welcome back to Migrate Compass.
           </DialogDescription>
         </DialogHeader>
@@ -104,13 +148,13 @@ export const LoginModal = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                    <FormLabel className="uppercase text-xs sm:font-bold font-semibold text-zinc-500 dark:text-secondary/70">
                       Email
                     </FormLabel>
                     <FormControl>
                       <Input
-                        disabled={isLoading}
-                        className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+                        disabled={isLoadinging}
+                        className="bg-opacity-50 bg-slate-50 border border-gray-300 focus-visible:ring-0 focus:bg-opacity-100 focus:bg-slate-100 transition-all text-zinc-600 !font-normal focus-visible:ring-offset-0"
                         placeholder="Enter your email"
                         {...field}
                       />
@@ -124,23 +168,36 @@ export const LoginModal = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                    <FormLabel className="uppercase text-xs sm:font-bold font-semibold text-zinc-500 dark:text-secondary/70">
                       Password
                     </FormLabel>
                     <FormControl>
-                      <Input
-                        disabled={isLoading}
-                        className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
-                        placeholder="Enter password"
-                        {...field}
-                      />
+                      <div className="relative">
+                        <Input
+                          disabled={isLoadinging}
+                          className="bg-opacity-50 bg-slate-50 border border-gray-300 focus-visible:ring-0 focus:bg-opacity-100 focus:bg-slate-100 transition-all text-zinc-600 !font-normal focus-visible:ring-offset-0"
+                          placeholder="Enter password"
+                          type={showPassword ? "text" : "password"} // Change type based on state
+                          {...field}
+                        />
+                        <div
+                          className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
+                          onClick={togglePasswordVisibility}
+                        >
+                          {showPassword ? (
+                            <EyeOffIcon className="h-5 w-5" />
+                          ) : (
+                            <EyeIcon className="h-5 w-5" />
+                          )}
+                        </div>
+                      </div>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
 
-              <Button variant="primary" disabled={isLoading}>
+              <Button variant="primary" disabled={isLoadinging}>
                 Login
               </Button>
             </div>
@@ -149,14 +206,14 @@ export const LoginModal = () => {
 
         <div className="flex px-6 flex-col gap-4 mt-3">
           <hr />
-          <button
+          {/* <button
             disabled={isLoading}
             onClick={() => signIn("google")}
             className="relative w-full py-2 flex items-center justify-center gap-7 text-center disabled:cursor-not-allowed rounded-lg hover:opacity-75 hover:bg-slate-50 transition bg-white border-[#febb02] text-black border"
           >
             <FcGoogle size={24} />
             Continue with Google
-          </button>
+          </button> */}
 
           <div className="text-neutral-500 text-center my-2 font-light">
             <p>

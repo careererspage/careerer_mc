@@ -1,20 +1,24 @@
 import { NextApiRequest } from "next";
-
+import { getSession } from "next-auth/react";
 import { db } from "@/lib/db";
-import { currentProfile } from "./current-profile";
 
 export const currentProfilePages = async (req: NextApiRequest) => {
-  const userId = await currentProfile();
+  try {
+    const session = await getSession({ req });
 
-  if (!userId) {
+    if (!session?.user?.email) {
+      return null;
+    }
+
+    const profile = await db.profile.findUnique({
+      where: {
+        email: session.user.email as string,
+      },
+    });
+
+    return profile;
+  } catch (error: any) {
+    console.error("Error fetching current profile:", error);
     return null;
   }
-
-  const profile = await db.profile.findUnique({
-    where: {
-      id: userId.id,
-    },
-  });
-
-  return profile;
 };

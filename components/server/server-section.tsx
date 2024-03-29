@@ -49,6 +49,16 @@ export const ServerSection = ({
           </button>
         </ActionTooltip>
       )}
+      {role === MemberRole.ADMIN && sectionType === "Agents" && (
+        <ActionTooltip label="Manage Agents" side="top">
+          <button
+            onClick={() => onOpen("agents", { server })}
+            className="text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-300 transition"
+          >
+            <Settings className="h-4 w-4" />
+          </button>
+        </ActionTooltip>
+      )}
     </div>
   );
 };

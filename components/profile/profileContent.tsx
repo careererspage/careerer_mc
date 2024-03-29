@@ -1,6 +1,6 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { DialogFooter } from "../ui/dialog";
@@ -18,71 +18,105 @@ import { FileUpload } from "../file-upload";
 import { Input } from "../ui/input";
 import { ChannelType } from "@prisma/client";
 import Container from "../container";
+import { SafeUser } from "@/types";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import { useToast } from "../ui/use-toast";
+import { ToastAction } from "../ui/toast";
+import UpdateProfilePic from "./updateProfilePic";
 
 const formSchema = z.object({
-  name: z.string().min(1, { message: "Name is required." }),
   email: z.string().email({ message: "Email is required." }),
   country: z.string().min(1, { message: "country is required." }),
   address: z.string().min(1, { message: "Address is required." }),
   firstName: z.string().min(1, { message: "First name is required." }),
-  lastNmae: z.string().min(1, { message: "Last name is required." }),
+  lastName: z.string().min(1, { message: "Last name is required." }),
   language: z.string().min(1, { message: "Language is required." }),
   tel: z.string().min(1, { message: "Telephone number is required." }),
 });
-const ProfileContent = () => {
+
+interface ProfileContentProps {
+  currentUser?: SafeUser | undefined;
+}
+
+const ProfileContent = ({ currentUser }: ProfileContentProps) => {
+  const router = useRouter();
+  const [isModified, setIsModified] = useState(false);
+  const { toast } = useToast();
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
-      email: "",
-      country: "",
-      address: "",
-      firstName: "",
-      lastName: "",
-      language: "",
-      tel: "",
-      imageUrl: "",
+      email: currentUser?.email || "",
+      country: currentUser?.country || "",
+      address: currentUser?.address || "",
+      firstName: currentUser?.firstName || "",
+      lastName: currentUser?.lastName || "",
+      language: currentUser?.language || "",
+      tel: currentUser?.tel || "",
+      imageUrl: currentUser?.imageUrl || "",
     },
   });
 
   const isLoading = form.formState.isSubmitting;
+  const { isDirty } = form.formState;
+
+  // Update isModified state based on form dirtiness
+  useEffect(() => {
+    setIsModified(isDirty);
+  }, [isDirty]);
+
+  
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    // Handle form submission here
-    // console.log(values);
+    try {
+      const hasChanges = Object.keys(values).some((key) => {
+        const typedKey = key as keyof typeof values;
+        return values[typedKey] !== currentUser?.[typedKey];
+      });
+
+      if (!hasChanges) {
+        toast({
+          style: {
+            background: "black",
+            color: "#fff",
+          },
+          description: "No changes detected!",
+        }); // You can show a toast message here indicating that no changes were made
+        return;
+      }
+
+      await axios.patch(`/api/register/${currentUser?.id}`, values);
+      form.reset();
+      router.refresh();
+      toast({
+        style: {
+          background: "black",
+          color: "#fff",
+        },
+        description: "Account created successfully!",
+        action: <ToastAction altText="Close">Close</ToastAction>,
+      });
+    } catch (error:any) {
+      toast({
+        variant: "destructive",
+        description: error.response.data,
+        action: <ToastAction altText="Close">Close</ToastAction>,
+      });
+    }
   };
 
   return (
     <div className="w-full ml-6 p-4 bg-white shadow-md">
       <Container>
         <div className="">
+          <UpdateProfilePic currentUser={currentUser}/>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <h1 className="md:text-2xl text-lg font-bold text-center">
                 Update profile
               </h1>
               <div className=" w-full grid grid-cols-2 md:gap-8 gap-4 md:px-6 px-0">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="uppercase !text-[10px] font-bold text-zinc-500 dark:text-secondary/70">
-                        Name
-                      </FormLabel>
-                      <FormControl>
-                        <Input
-                          disabled={isLoading}
-                          className="bg-zinc-300/50 border border-gray-200 focus-visible:ring-0 text-black placeholder:text-[12px] focus-visible:ring-offset-0 outline-none focus:bg-slate-50 transition-all duration-200 ease-in"
-                          placeholder="Enter your name"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
                 <FormField
                   control={form.control}
                   name="email"

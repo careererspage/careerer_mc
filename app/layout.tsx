@@ -24,18 +24,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn("bg-slate-100 dark:bg-[#313338]")}>
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           storageKey="discord-theme"
-        >
-          <SocketProvider>
-            <ModalProvider />
-            <QueryProvider>{children}</QueryProvider>
-            <Toaster />
-          </SocketProvider>
-        </ThemeProvider>
+        > */}
+        <SocketProvider>
+          <ModalProvider />
+          <QueryProvider>{children}</QueryProvider>
+          <Toaster />
+        </SocketProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

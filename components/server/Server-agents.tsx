@@ -7,6 +7,7 @@ import { useParams, usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { UserAvatar } from "@/components/user-avatar";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ServerAgentsProps {
   member: Member & { profile: Profile };
@@ -26,63 +27,48 @@ export const ServerAgents = ({ member, server }: ServerAgentsProps) => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const icon = roleIconMap[member.role];
+  // const icon = roleIconMap[member.role];
 
   const onClick = () => {
-    router.push(
-      `/servers/${params?.serverId}/conversations/${member.id}/canada-agent`
-    );
+    router.push(`/servers/${params?.serverId}/conversations/${member.id}`);
   };
-
-  const AgentLinks = [
-    {
-      title: "USA Agent",
-      href: `/servers/${params?.serverId}/conversations/${member.id}/usa-agent`,
-    },
-    {
-      title: "Switzerland Agent",
-      href: `/servers/${params?.serverId}/conversations/${member.id}/switzerland-agent`,
-    },
-    {
-      title: "Canada Agent",
-      href: `/servers/${params?.serverId}/conversations/${member.id}/canada-agent`,
-    },
-    {
-      title: "Australian Agent",
-      href: `/servers/${params?.serverId}/conversations/${member.id}/australian-agent`,
-    },
-  ];
 
   return (
     <div className="flex flex-col gap-3">
-      {AgentLinks.map((agent, i) => (
-        <Link
-          href={agent.href}
-          key={i}
-          onClick={onClick}
+      <Link
+        href={member.id}
+        key={member.id}
+        onClick={onClick}
+        className={cn(
+          "group px-2 py-2 rounded-md flex items-center gap-x-2 w-full hover:bg-zinc-700/10 dark:hover:bg-zinc-700/50 transition mb-1",
+          pathname ===
+            `/servers/${params?.serverId}/conversations/${member.id}` &&
+            "!bg-zinc-700/20"
+        )}
+      >
+        <UserAvatar
+          src={member.profile.imageUrl ?? ""}
+          className="h-8 w-8 md:h-8 md:w-8"
+        />
+        <p
           className={cn(
-            "group px-2 py-2 rounded-md flex items-center gap-x-2 w-full hover:bg-zinc-700/10 dark:hover:bg-zinc-700/50 transition mb-1",
+            "font-semibold sm:text-sm text-[11px] text-zinc-500 group-hover:text-zinc-600 dark:text-zinc-400 dark:group-hover:text-zinc-300 transition",
             params?.memberId === member.id &&
-              pathname === agent.href &&
-              "bg-zinc-700/20 dark:bg-zinc-700"
+              "text-primary dark:text-zinc-200 dark:group-hover:text-white"
           )}
         >
-          <UserAvatar
-            src={member.profile.imageUrl ?? ""}
-            className="h-8 w-8 md:h-8 md:w-8"
+          {member.profile.firstName}
+        </p>
+        <div className="ml-auto">
+          <Image
+            width={50}
+            height={50}
+            src={require("@/public/images/care-line.png")}
+            alt="care line"
+            className="sm:w-[30px] w-[20px] sm:h-[30px] h-[20px] object-contain rounded-full"
           />
-          <p
-            className={cn(
-              "font-semibold text-sm text-zinc-500 group-hover:text-zinc-600 dark:text-zinc-400 dark:group-hover:text-zinc-300 transition",
-              params?.memberId === member.id &&
-                "text-primary dark:text-zinc-200 dark:group-hover:text-white"
-            )}
-          >
-            {agent.title}{" "}
-          </p>
-          {icon}
-        </Link>
-      ))}
+        </div>
+      </Link>
     </div>
   );
 };

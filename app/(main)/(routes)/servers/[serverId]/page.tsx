@@ -6,46 +6,50 @@ import { db } from "@/lib/db";
 interface ServerIdPageProps {
   params: {
     serverId: string;
-  }
-};
+  };
+}
 
-const ServerIdPage = async ({
-  params
-}: ServerIdPageProps) => {
+const ServerIdPage = async ({ params }: ServerIdPageProps) => {
   const profile = await currentProfile();
 
   if (!profile) {
     return redirect("/");
   }
 
-  const server = await db.server.findUnique({
+  const server = await db.server.findFirst({
     where: {
       id: params.serverId,
       members: {
         some: {
-          profileId: profile.id,
-        }
-      }
+          profileId: profile?.id,
+        },
+      },
     },
     include: {
-      channels: {
-        where: {
-          name: "general"
+      members: {
+        include: {
+          profile: true,
         },
-        orderBy: {
-          createdAt: "asc"
-        }
-      }
-    }
-  })
+      },
+    },
+  });
 
-  const initialChannel = server?.channels[0];
-
-  if (initialChannel?.name !== "general") {
+  if (!server) {
+    // Handle the case where no server is found
     return null;
   }
 
-  return redirect(`/servers/${params.serverId}/channels/${initialChannel?.id}`)
-}
- 
+  const supportLineMember = server.members.find(
+    (member) => member.profile.firstName === "Support Line"
+  );
+
+  if (!supportLineMember) {
+    return null;
+  }
+
+  return redirect(
+    `/servers/${params.serverId}/conversations/${supportLineMember.id}`
+  );
+};
+
 export default ServerIdPage;

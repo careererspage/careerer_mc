@@ -21,7 +21,7 @@ type MessageWithMemberWithProfile = Message & {
 };
 
 interface ChatMessagesProps {
-  name: string;
+  name: string|null;
   member: Member;
   chatId: string;
   apiUrl: string;
@@ -82,7 +82,7 @@ export const ChatMessages = ({
       <div className="flex flex-col flex-1 justify-center items-center">
         <ServerCrash className="h-7 w-7 text-zinc-500 my-4" />
         <p className="text-xs text-zinc-500 dark:text-zinc-400">
-          Something went wrong!
+          Something went wrong! please refresh page
         </p>
       </div>
     );

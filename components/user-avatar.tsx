@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { FaRegUserCircle } from "react-icons/fa";
 
 interface UserAvatarProps {
-  src?: string;
+  src?: string | null;
   className?: string;
 }
 
@@ -20,7 +20,7 @@ export const UserAvatar = ({ src, className }: UserAvatarProps) => {
       ) : (
         <FaRegUserCircle
           className={cn(
-            "!text-gray-200 hover:!text-white transition-all !font-light h-7 w-7 md:h-7 md:w-7",
+            "!text-gray-200 transition-all !font-light h-7 w-7 md:h-7 md:w-7",
             className
           )}
         />
