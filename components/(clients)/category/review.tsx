@@ -46,15 +46,15 @@ const Review = ({ Animate, title, list1, list2, list3, href }: ReviewProp) => {
           <span className="text-[#DC531D]"> Visa Services</span>
         </h2>
         <p className="mb-4">
-          Applying for visas online has never been easier than it is with
-          Migrate Compass. Our team of travel experts has relationships with
-          embassies and consulates across the globe, making it easy for our
-          clients to apply for business visas, tourist visas and more to any
-          number of countries like U.S.A., Switzerland, Austrailian, and Canada.
-          Even if you need visa service within the week you&lsquo;re traveling,
-          we will work with you from start to finish, ensuring your paperwork
-          will conform to the requirements of foreign embassies. Chat with any
-          of our agent for support.
+          Applying for visa online has never been easier than it is with Migrate
+          Compass. Our team of travel experts has relationships with embassies
+          and consulates across the globe, making it easy for our clients to
+          apply for business visa, Employment visa and more to any number of
+          countries like U.S.A., Switzerland, Austrailian, and Canada. Even if
+          you need visa service within the week you&lsquo;re traveling, we will
+          work with you from start to finish, ensuring your paperwork will
+          conform to the requirements of foreign embassies.{" "}
+          <span className="font-bold">Chat with us support.</span>
         </p>
       </div>
     </div>

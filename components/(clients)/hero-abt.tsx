@@ -5,11 +5,12 @@ import { Button } from "../ui/button";
 import { Teams, VisaType } from "@/lib/data";
 import GeneralHero from "./generalHero";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { useRouter } from "next/navigation";
 
 const HeroAbt = () => {
   const [showRightScroll1, setShowRightScroll1] = useState(true);
   const [showLeftScroll1, setShowLeftScroll1] = useState(true);
-
+  const router = useRouter();
   const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
     const container = event.currentTarget;
     const buffer = 10; // Adjust this value as needed
@@ -43,9 +44,9 @@ const HeroAbt = () => {
     <div className="w-full">
       <GeneralHero
         ImageUrl={require("@/public/images/connect-bg.jpg")}
-        title="Welcome to Global Connect "
-        subTitle="We Help With Relocation To"
-        subTitle1="The United States and Europe"
+        title="Welcome to Migrate Compass"
+        subTitle="We Help With Immigration and Job Opporturnitis"
+        subTitle1="In the United States and Europe"
       />
 
       <div className="mt-6 px-10">
@@ -60,17 +61,18 @@ const HeroAbt = () => {
               </h2>
 
               <p className="text-[15px] text-[#333333]">
-                CIBT draws on over thirty years of experience and over 2,000
-                expert immigration, visa and passport professionals, attorneys
-                and qualified migration consultants located in over 60 offices
-                in 29 countries. CIBT offers a comprehensive suite of services
-                under two primary brands: Newland Chase, a wholly owned
-                subsidiary focused on global immigration strategy and advisory
-                services for corporations worldwide and Travisa, the market
-                leader for business and other travel visa and passport services
-                for corporate and individual clients. Travisa is a private
-                company that is authorized to process visa applications and
-                expedite passports at consulate and passport agencies for a fee.
+                Migrate Compass draws on over Eleven years of experience and
+                over 2,000 expert immigration, visa and passport professionals,
+                attorneys and qualified immigration officers in 5 to more
+                countries. Migrate Compass offers a comprehensive suite of
+                services under two primary brands: immigration and job
+                sponsorship. Our first goal, immigration, involves providing
+                strategic advice and solutions for corporations worldwide. Our
+                second goal, job sponsorship, involves offering market-leading
+                services for both corporate and individual clients seeking work
+                visa and passport services. Migrate Compass is a private company
+                that is authorized to process visa applications and expedite
+                passports at consulate and passport agencies for a fee
               </p>
             </div>
 
@@ -159,6 +161,11 @@ const HeroAbt = () => {
                   </h1>
                   <p className="text-sm text-zinc-500">{visa.details}</p>
                   <Button
+                    onClick={() =>
+                      router.push(
+                        `/servers/66edbb5c-de49-42d2-a842-4a77074f0f03/conversations/9fe2cb6c-7383-4a60-a7d2-39ec373f4734`
+                      )
+                    }
                     variant="primary"
                     size="icon"
                     className="w-full mt-auto sm:text-base text-sm"
@@ -195,7 +202,16 @@ const HeroAbt = () => {
           discuss your visa case and give professional advice tailored to your
           specific situation.
         </p>
-        <Button variant="outline" size="lg" className="">
+        <Button
+          onClick={() =>
+            router.push(
+              `/servers/66edbb5c-de49-42d2-a842-4a77074f0f03/conversations/9fe2cb6c-7383-4a60-a7d2-39ec373f4734`
+            )
+          }
+          variant="outline"
+          size="lg"
+          className=""
+        >
           <Image
             height={50}
             width={50}

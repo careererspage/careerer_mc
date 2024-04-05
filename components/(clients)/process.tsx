@@ -9,16 +9,48 @@ import Lottie from "lottie-react";
 import AnimateChat from "@/public/images/lottie/chat.json";
 import AnimateProcess from "@/public/images/lottie/process.json";
 import Cases from "./category/cases";
+import { useRouter } from "next/navigation";
+import { SafeUser } from "@/types";
+import { useModal } from "@/hooks/use-modal-store";
 
-const Process = () => {
+interface ProcessProps {
+  currentUser?: SafeUser | null;
+  expiredVisa?: string | undefined;
+  supportId?: string | undefined;
+  existingServer?: string | undefined;
+}
+
+const Process = ({
+  currentUser,
+  expiredVisa,
+  supportId,
+  existingServer,
+}: ProcessProps) => {
+  const { onOpen } = useModal();
+  const router = useRouter();
+
+  const connectOfficer = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${existingServer}/conversations/${supportId}`);
+  };
+
+  
   return (
     <div className="relative">
       <Container>
-        <Benefit />
+        <Benefit connectOfficer={connectOfficer} />
       </Container>
 
       <div className="bg-[#055AAA] w-full">
-        <Cases />
+        <Cases
+          currentUser={currentUser}
+          expiredVisa={expiredVisa}
+          supportId={supportId}
+          existingServer={existingServer}
+        />
       </div>
       <Container>
         <div className="mt-10">
@@ -30,7 +62,7 @@ const Process = () => {
               className="w-[100px] h-[100px]"
             />
             <h1 className="sm:text-2xl text-lg font-bold sm:text-center text-gray-600 z-10">
-              Work process & Solution with Global
+              Work process & Solution
             </h1>
           </div>
 
@@ -63,6 +95,7 @@ const Process = () => {
           </div>
 
           <Button
+            onClick={connectOfficer}
             className="mt-4 ml-6 flex items-center "
             variant="button"
             size="lg"
@@ -73,7 +106,7 @@ const Process = () => {
               autoplay
               className="w-[50px] h-[50px]"
             />
-            Chat with an Agent
+            Chat with Us
           </Button>
         </div>
       </Container>

@@ -13,18 +13,30 @@ import AnimateReviews from "@/public/images/lottie/reviews.json";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { SafeUser } from "@/types";
+import { useRouter } from "next/navigation";
+import { useModal } from "@/hooks/use-modal-store";
 
 interface CustomerExperienceProps {
   reviewPage?: boolean;
+  currentUser?: SafeUser | null;
+  supportId?: string | undefined;
+  existingServer?: string | undefined;
 }
 
-const CustomerExperience = ({ reviewPage }: CustomerExperienceProps) => {
+const CustomerExperience = ({
+  reviewPage,
+  supportId,
+  currentUser,
+  existingServer,
+}: CustomerExperienceProps) => {
   const image = "/images/google.png";
   const [showRightScroll, setShowRightScroll] = useState(true);
   const [showLeftScroll, setShowLeftScroll] = useState(true);
+  const router = useRouter();
+  const { onOpen } = useModal();
 
-  const [reviews, setReviews] = useState(8); // initialReviews is your initial data
-
+  const [reviews, setReviews] = useState(8);
   const [isFetching, setIsFetching] = useState(false);
 
   const loadMoreReviews = async () => {
@@ -64,6 +76,14 @@ const CustomerExperience = ({ reviewPage }: CustomerExperienceProps) => {
     }
   };
 
+  const supportLine = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${existingServer}/conversations/${supportId}`);
+  };
+
   return (
     <div className="mt-10 shadow-sm py-10 bg-white">
       <Container>
@@ -100,13 +120,13 @@ const CustomerExperience = ({ reviewPage }: CustomerExperienceProps) => {
             reviewPage
               ? "overflow-y-scroll overflow-x-hidden bg-slate-50 shadow-md md:-mx-10 h-[500px]"
               : "md:mx-20",
-            "relative group mt-20"
+            "relative group mt-24"
           )}
         >
           <div
             className={cn(
               reviewPage ? "" : "overflow-x-auto",
-              "mt-4 scroll-container scrollbar-hide"
+              "my-6 scroll-container scrollbar-hide"
             )}
             onScroll={handleScroll}
           >
@@ -173,31 +193,37 @@ const CustomerExperience = ({ reviewPage }: CustomerExperienceProps) => {
           )}
         </div>
         <div className="flex items-start justify-center flex-col gap-1 w-full sm:w-[550px] p-3 rounded-md">
-          <h1 className="text-[#222325] sm:text-xl text-lg">
-            Don&apos;t just take it from us,
-          </h1>{" "}
-          <span className="font-semibold sm:text-[25px] text-xl text-[#002B3D]">
-            let our clients do the talking!
-          </span>
+          {!reviewPage && (
+            <>
+              <h1 className="text-[#222325] sm:text-xl text-lg">
+                Don&apos;t just take it from us,
+              </h1>
+              <span className="font-semibold sm:text-[25px] text-xl text-[#002B3D]">
+                let our clients do the talking!
+              </span>
+            </>
+          )}
           {reviewPage ? (
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 mt-2">
               <Button
                 variant="primary"
                 size="default"
                 onClick={loadMoreReviews}
                 disabled={isFetching}
               >
-                {isFetching ? "Loading..." : "Read more stories"}
+                {reviews >= Reviews.length
+                  ? "End of Reviews"
+                  : "Load More Reviews"}
               </Button>
 
               <div>
                 <Button
                   variant="button"
                   size="default"
-                  onClick={loadMoreReviews}
+                  onClick={supportLine}
                   disabled={isFetching}
                 >
-                  Chat with agent
+                  Chat with Us
                 </Button>
               </div>
             </div>

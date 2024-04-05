@@ -13,7 +13,7 @@ interface MigrateProps {
 
 const MigrateContent = ({ currentUser }: MigrateProps) => {
   return (
-    <div className="w-full ml-6 sm:px-4 sm:py-4 py-2 px-1 bg-white shadow-md">
+    <div className="w-full mx-auto md:ml-6 sm:px-4 sm:py-4 py-2 px-1 bg-white shadow-md">
       <Container>
         <div className="flex flex-col items-center gap-6">
           <div className="font-bold text-center md:text-3xl text-gray-500">

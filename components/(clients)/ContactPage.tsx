@@ -2,22 +2,38 @@
 import React from "react";
 import Container from "../container";
 import HeadingsText from "./HeadingsText";
-import GeneralHero from "./generalHero";
 import { Button } from "../ui/button";
 import Lottie from "lottie-react";
 import AnimateChat from "@/public/images/lottie/chat.json";
+import { SafeUser } from "@/types";
+import { useRouter } from "next/navigation";
+import { useModal } from "@/hooks/use-modal-store";
+import { useToast } from "../ui/use-toast";
+import { sendEmail } from "@/actions/senderEmail";
+import { ToastAction } from "../ui/toast";
+import SubmitBtn from "./submit-btn";
 
-const ContactPage = () => {
+interface ContactProps {
+  currentUser?: SafeUser | null;
+  serverId?: string | undefined;
+  supportId?: string | undefined;
+}
+
+const ContactPage = ({ currentUser, serverId, supportId }: ContactProps) => {
+  const { onOpen } = useModal();
+  const router = useRouter();
+  const { toast } = useToast();
+
+  const supportLine = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${serverId}/conversations/${supportId}`);
+  };
+
   return (
     <div>
-      <GeneralHero
-        ImageUrl={require("@/public/images/hero/Call.jpg")}
-        center
-        chatAgent
-        title="Connect
-        with us directly through "
-        subTitle="the chat feature on your free account."
-      />
       <Container>
         <HeadingsText
           heading="Schedule A "
@@ -25,7 +41,12 @@ const ContactPage = () => {
           text="
           Please click the button below to schedule a consultation with one of our attorneys. In addition to phone consultations, we also offer live call consultations over on this platform. If you&lsquo;re local and would like to do an in-office consultations in our Fort Lauderdale office, we can accommodate that as well."
         />
-        <Button className="flex items-center gap-3" variant="button" size="lg">
+        <Button
+          onClick={supportLine}
+          className="flex items-center gap-3"
+          variant="button"
+          size="lg"
+        >
           Book Consultation
           <Lottie
             animationData={AnimateChat}
@@ -45,36 +66,34 @@ const ContactPage = () => {
 
             <form
               className="mt-10 flex flex-col gap-3 text-black"
-              // action={async (formData) => {
-              //   const { data, error } = await sendEmail(formData);
+              action={async (formData) => {
+                const { data, error } = await sendEmail(formData);
 
-              //   if (error) {
-              //     toast.error(error);
-              //     return;
-              //   }
+                if (error) {
+                  toast({
+                    style: {
+                      background: "black",
+                      color: "#fff",
+                    },
+                    variant: "destructive",
+                    description: error,
+                    action: <ToastAction altText="Close">Close</ToastAction>,
+                  });
+                  return;
+                }
 
-              //   toast.success("Email sent successfully!");
-              // }}
+                
+                toast({
+                  style: {
+                    background: "black",
+                    color: "#fff",
+                  },
+                  variant: "default",
+                  description: "Email sent successfully!",
+                  action: <ToastAction altText="Close">Close</ToastAction>,
+                });
+              }}
             >
-              <div className="flex items-center gap-2">
-                <input
-                  className="h-14 w-full px-4 rounded-lg bg-white bg-opacity-50 border-2 border-slate-200 focus:bg-opacity-100 transition-all outline-none"
-                  name="senderFirstName"
-                  type="text"
-                  required
-                  maxLength={500}
-                  placeholder="First name"
-                />
-                <input
-                  className="h-14 w-full px-4 rounded-lg bg-white bg-opacity-50 border-2 border-slate-200 focus:bg-opacity-100 transition-all outline-none"
-                  name="senderLastName"
-                  type="text"
-                  required
-                  maxLength={500}
-                  placeholder="Last name"
-                />
-              </div>
-
               <input
                 className="h-14 px-4 rounded-lg bg-white bg-opacity-50 border-2 border-slate-200 focus:bg-opacity-100 transition-all outline-none"
                 name="senderEmail"
@@ -83,16 +102,14 @@ const ContactPage = () => {
                 maxLength={500}
                 placeholder="Your email"
               />
-
               <input
                 className="h-14 px-4 rounded-lg bg-white bg-opacity-50 border-2 border-slate-200 focus:bg-opacity-100 transition-all outline-none"
-                name="senderNumber"
-                type="tel"
+                name="senderName"
+                type="text"
                 required
-                maxLength={13}
-                placeholder="Phone number"
+                maxLength={50}
+                placeholder="Name"
               />
-
               <textarea
                 className="h-52 my-3 rounded-lg p-4 bg-white bg-opacity-50 border-2 border-slate-200 focus:bg-opacity-100 transition-all outline-none"
                 name="message"
@@ -100,7 +117,7 @@ const ContactPage = () => {
                 required
                 maxLength={5000}
               />
-              {/* <SubmitBtn /> */}
+              <SubmitBtn />{" "}
             </form>
           </div>
           <div className="text-[#2C2C2C] w-full">
@@ -118,12 +135,12 @@ const ContactPage = () => {
             </p>
             <div className="flex flex-col gap-2 mt-1">
               <div>
-                <h1 className="font-bold">Address</h1>
+                <h1 className="font-bold">Address / Offices</h1>
                 <div className="text-[#2c2c2c]">
-                  800 Corporate Dr, Suite 206
-                </div>
-                <div className="text-[rgb(44,44,44)]">
-                  Fort Lauderdale, FL 33334
+                  Swiss office: Stockerstrasse 38, CH-8002, Zürich, Switzerland
+                  <div className="text-[rgb(44,44,44)]">
+                    U.S office: USCIS headquarters.{" "}
+                  </div>
                 </div>
               </div>
 
@@ -133,7 +150,14 @@ const ContactPage = () => {
               </div>
               <div className="flex items-center">
                 <h1 className="font-bold">Email:</h1>
-                <div className="text-[#2c2c2c]">support@migratecompass.com</div>
+                <div className="text-[#2c2c2c]">
+                  <a
+                    className="underline"
+                    href="mailto:careererspage@gmail.com"
+                  >
+                    support@migratecompass.com
+                  </a>
+                </div>
               </div>
             </div>
           </div>

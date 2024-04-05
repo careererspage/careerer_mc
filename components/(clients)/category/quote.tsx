@@ -12,7 +12,7 @@ const Quote = () => {
         <span className="text-[#e67121]"> Expertise </span>
         Delivered
       </div>
-      <div className="grid sm:!items-center sm:grid-cols-[35%,65%] grid-cols-1 gap-5 mt-10 mb-6 w-full px-5">
+      <div className="grid lg:!items-center lg:grid-cols-[35%,65%] grid-cols-1 gap-5 mt-10 mb-6 w-full px-5">
         <Image
           src={require("@/public/images/team/meeting.jpg")}
           className="w-full h-[250px] object-cover"

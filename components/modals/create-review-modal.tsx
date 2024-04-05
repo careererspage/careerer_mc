@@ -1,8 +1,6 @@
 "use client";
 
-import axios from "axios";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 import {
   Dialog,
@@ -17,14 +15,11 @@ import { Button } from "@/components/ui/button";
 
 export const CreateReviewModal = () => {
   const { isOpen, onClose, type, data } = useModal();
-  const router = useRouter();
 
   const isModalOpen = isOpen && type === "openReviews";
   const { server } = data;
 
   const [isLoading, setIsLoading] = useState(false);
-
-  
 
   return (
     <Dialog open={isModalOpen} onOpenChange={onClose}>

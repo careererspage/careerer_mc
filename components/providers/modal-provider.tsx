@@ -17,6 +17,7 @@ import { LoginModal } from "../modals/(authModal)/login-modal";
 import { RegisterModal } from "../modals/(authModal)/register-modal";
 import { AgentsModal } from "../modals/agents-modal";
 import { ConsultationFeeModal } from "../modals/consultation-fee";
+import { JobsModal } from "../modals/jobs-maodal";
 
 export const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -47,6 +48,7 @@ export const ModalProvider = () => {
       <MessageFileModal />
       <DeleteMessageModal />
       <CreateReviewModal />
+      <JobsModal />
     </>
   );
 };

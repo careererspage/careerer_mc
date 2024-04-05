@@ -4,8 +4,33 @@ import { Button } from "../ui/button";
 import Container from "../container";
 import Image from "next/image";
 import { Regions } from "@/lib/data";
+import { useRouter } from "next/navigation";
+import { SafeUser } from "@/types";
+import { useModal } from "@/hooks/use-modal-store";
 
-const Region = () => {
+interface HomeClientProps {
+  currentUser?: SafeUser | null;
+  supportId?: string | undefined;
+  existingServer?: string | undefined;
+}
+
+const Region = ({
+  currentUser,
+  supportId,
+  existingServer,
+}: HomeClientProps) => {
+  const router = useRouter();
+  const { onOpen } = useModal();
+
+  const supportLine = (region:string) => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${existingServer}/conversations/${supportId}`);
+  };
+  
+
   return (
     <Container>
       <div className="">
@@ -36,8 +61,13 @@ const Region = () => {
                 {region.country}
               </h1>
               <p className="text-sm text-zinc-500">{region.comment}</p>
-              <Button variant="button" size="icon" className="w-full mt-auto">
-                Chat with agent
+              <Button
+                onClick={() => supportLine(`${region.country}`)}
+                variant="button"
+                size="icon"
+                className="w-full mt-auto"
+              >
+                Chat with an officer
               </Button>
             </div>
           ))}

@@ -31,7 +31,6 @@ export const ServerHeader = ({ server, role }: ServerHeaderProps) => {
 
   const isAdmin = role === MemberRole.ADMIN;
   const isModerator = isAdmin || role === MemberRole.MODERATOR;
-  const isGuest = isAdmin || role === MemberRole.GUEST;
 
   return (
     <DropdownMenu>
@@ -41,7 +40,7 @@ export const ServerHeader = ({ server, role }: ServerHeaderProps) => {
           {/* <ChevronDown className="h-5 w-5 ml-auto" /> */}
         </button>
       </DropdownMenuTrigger>
-      {!isGuest && (
+      {isAdmin && (
         <DropdownMenuContent className="w-56 text-xs font-medium text-black dark:text-neutral-400 space-y-[2px]">
           {isModerator && (
             <DropdownMenuItem

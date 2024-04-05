@@ -8,8 +8,19 @@ import { Button } from "../ui/button";
 import Container from "../container";
 import CustomerExperience from "./customer-experience";
 import { useModal } from "@/hooks/use-modal-store";
+import { SafeUser } from "@/types";
 
-const ReviewsClient = () => {
+interface ReviewsProps {
+  currentUser?: SafeUser | null;
+  supportId?: string | undefined;
+  existingServer?: string | undefined;
+}
+
+const ReviewsClient = ({
+  currentUser,
+  supportId,
+  existingServer,
+}: ReviewsProps) => {
   const { onOpen } = useModal();
 
   return (
@@ -45,7 +56,12 @@ const ReviewsClient = () => {
                 Write a review
               </Button>
             </div>
-            <CustomerExperience reviewPage />
+            <CustomerExperience
+              supportId={supportId}
+              currentUser={currentUser}
+              existingServer={existingServer}
+              reviewPage
+            />
           </div>
           <div className="bg-[#003266] p-4 rounded-md flex gap-3 flex-col h-[600px]">
             <h1 className="font-bold sm:text-2xl text-xl text-center text-white py-2">

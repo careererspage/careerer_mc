@@ -83,7 +83,7 @@ const ServerIdLayout = async ({
             }))}
           />
         </div>
-        <main className="">{children}</main>
+        <main className="mx-auto">{children}</main>
       </div>
     </div>
   );

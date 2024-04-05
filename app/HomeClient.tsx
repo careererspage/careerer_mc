@@ -10,17 +10,52 @@ import { SafeUser } from "@/types";
 
 interface HomeClientProps {
   currentUser: SafeUser | null;
+  existingServer: string | undefined;
+  expiredVisa?: string | undefined;
+  support?: string | undefined;
 }
-const HomeClient = ({ currentUser }: HomeClientProps) => {
+
+const HomeClient = ({
+  currentUser,
+  expiredVisa,
+  support,
+  existingServer,
+}: HomeClientProps) => {
   return (
     <div>
-      <Navbar currentUser={currentUser} />
-      <Hero />
+      <Navbar
+        currentUser={currentUser}
+        supportId={support}
+        serverId={existingServer}
+      />
+      <Hero
+        currentUser={currentUser}
+        supportId={support}
+        existingServer={existingServer}
+      />
       <Categories />
-      <Region />
-      <CustomerExperience />
-      <Process />
-      <Footer />
+      <Region
+        currentUser={currentUser}
+        supportId={support}
+        existingServer={existingServer}
+      />
+      <CustomerExperience
+        currentUser={currentUser}
+        supportId={support}
+        existingServer={existingServer}
+      />
+      <Process
+        currentUser={currentUser}
+        expiredVisa={expiredVisa}
+        supportId={support}
+        existingServer={existingServer}
+      />
+      <Footer
+        currentUser={currentUser}
+        existingServer={existingServer}
+        expiredVisa={expiredVisa}
+        supportId={support}
+      />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
@@ -354,11 +355,15 @@ const MobileMenu = ({
                 </Accordion>
               </div>
 
-              <li>
-                <Link href="/eb3-Jobs" onClick={toggleMenu}>
-                  Explore Jobs
-                </Link>
-              </li>
+              <div
+                className="cursor-pointer"
+                onClick={() => {
+                  onOpen("jobs");
+                  toggleMenu();
+                }}
+              >
+                Explore Jobs
+              </div>
 
               <Separator className=" w-[250px] my-1 h-[2px]" />
 

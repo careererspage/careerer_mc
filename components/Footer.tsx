@@ -1,8 +1,43 @@
+"use client";
 import React from "react";
 import Container from "./container";
 import Link from "next/link";
+import { SafeUser } from "@/types";
+import { useModal } from "@/hooks/use-modal-store";
+import { useRouter } from "next/navigation";
 
-const Footer = () => {
+interface FooterProps {
+  currentUser?: SafeUser | null;
+  expiredVisa?: string | undefined;
+  existingServer?: string | undefined;
+  supportId?: string | undefined;
+}
+
+const Footer = ({
+  currentUser,
+  expiredVisa,
+  supportId,
+  existingServer,
+}: FooterProps) => {
+  const { onOpen } = useModal();
+  const router = useRouter();
+
+  const supportLine = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${existingServer}/conversations/${supportId}`);
+  };
+
+  const difficultCases = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${existingServer}/conversations/${expiredVisa}`);
+  };
+
   return (
     <div className="py-10 mt-10 bg-[#112e5f]">
       <Container>
@@ -13,15 +48,16 @@ const Footer = () => {
               Migrate Compass
             </h1>
             <div className="text-sm text-white">
-              Copyright © 2005-2024 Travel Visa Pro ®
+              Copyright © 2005-2024 Migrate Compass ®
             </div>
             <p
               className="text-sm text-gray-300 leading-10"
               style={{ lineHeight: 1.8 }}
             >
-              Travel Visa Pro, a registered service with the U.S. Dept of State,
-              offers form completion and courier services for visa applications.
-              We officially follow all instructions protocol based on your
+              Migrate Compass, a registered service with the U.S. Dept of State,
+              offers job opporturnities, visa processing, expired visa,
+              completion and courier services for visa applications and much
+              more. We officially follow all instructions protocol based on your
               input, Dept of State and foreign consulates/embassies.
             </p>
           </div>
@@ -29,44 +65,12 @@ const Footer = () => {
           <div className="grid grid-cols-3 w-full gap-3 sm:text-base text-[12px] text-gray-300">
             <ul className="flex flex-col gap-3">
               <Link
-                href="/about Us"
+                href="/about"
                 className="cursor-pointer hover:text-white transition w-[100px]"
               >
                 About Us
               </Link>
-              <Link
-                href="/contact Us"
-                className="cursor-pointer hover:text-white transition w-[100px]"
-              >
-                Contact Us
-              </Link>
-              <Link
-                href="/vvip Service"
-                className="cursor-pointer hover:text-white transition w-[100px]"
-              >
-                VVIP Service
-              </Link>
-              <Link
-                href="/agent"
-                className="cursor-pointer hover:text-white transition w-[100px]"
-              >
-                Chat with agent
-              </Link>
-              <Link
-                href="/support"
-                className="cursor-pointer hover:text-white transition w-[100px]"
-              >
-                Support
-              </Link>
-            </ul>
 
-            <ul className="flex flex-col gap-3">
-              <Link
-                href="/charges"
-                className="cursor-pointer hover:text-white transition w-[100px]"
-              >
-                Payment Plan
-              </Link>
               <Link
                 href="/reviews"
                 className="cursor-pointer hover:text-white transition w-[100px]"
@@ -85,38 +89,80 @@ const Footer = () => {
               >
                 Terms
               </Link>
+              <h1 className="font-bold underline">Faq</h1>
+
               <Link
-                href="/faq"
+                href="/swiss-faq"
                 className="cursor-pointer hover:text-white transition w-[100px]"
               >
-                faq
+                Swiss faq
+              </Link>
+              <Link
+                href="/usa-faq"
+                className="cursor-pointer hover:text-white transition w-[100px]"
+              >
+                U.S.A faq
               </Link>
             </ul>
 
             <ul className="flex flex-col gap-3">
+              <h1 className="font-bold underline">Payment Plan</h1>
               <Link
-                href="/charges"
+                href="/usa-fees"
                 className="cursor-pointer hover:text-white transition w-[100px]"
               >
-                Work Visa
+                U.S.A fees
               </Link>
               <Link
-                href="/refund-policy"
+                href="/swiss-fees"
                 className="cursor-pointer hover:text-white transition w-[100px]"
               >
-                Parent Migration
+                Swiss Visa
+              </Link>
+
+              <h1 className="font-bold underline">Support Line</h1>
+              <div
+                onClick={difficultCases}
+                className="cursor-pointer hover:text-white transition w-[100px]"
+              >
+                Expired Visa
+              </div>
+              <div
+                onClick={supportLine}
+                className="cursor-pointer hover:text-white transition w-[100px]"
+              >
+                Chat with Us
+              </div>
+            </ul>
+
+            <ul className="flex flex-col gap-3">
+              <h1 className="font-bold underline">Business Visa</h1>
+              <Link
+                href="/swiss-businessvisa"
+                className="cursor-pointer hover:text-white transition w-[100px]"
+              >
+                Swiss
               </Link>
               <Link
-                href="/faq"
+                href="/usa-businessvisa"
                 className="cursor-pointer hover:text-white transition w-[100px]"
               >
-                School Visa
+                U.S.A
+              </Link>
+
+              <h1 className="font-bold underline">Work Visa</h1>
+
+              <Link
+                href="/usa-workvisa"
+                className="cursor-pointer hover:text-white transition w-[100px]"
+              >
+                U.S.A
               </Link>
               <Link
-                href="/faq"
+                href="/swiss-workvisa"
                 className="cursor-pointer hover:text-white transition w-[100px]"
               >
-                Business Visa
+                Switzerland
               </Link>
             </ul>
           </div>

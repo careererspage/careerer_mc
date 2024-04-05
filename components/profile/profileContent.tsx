@@ -66,8 +66,6 @@ const ProfileContent = ({ currentUser }: ProfileContentProps) => {
     setIsModified(isDirty);
   }, [isDirty]);
 
-  
-
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       const hasChanges = Object.keys(values).some((key) => {
@@ -82,7 +80,7 @@ const ProfileContent = ({ currentUser }: ProfileContentProps) => {
             color: "#fff",
           },
           description: "No changes detected!",
-        }); // You can show a toast message here indicating that no changes were made
+        });
         return;
       }
 
@@ -94,26 +92,29 @@ const ProfileContent = ({ currentUser }: ProfileContentProps) => {
           background: "black",
           color: "#fff",
         },
-        description: "Account created successfully!",
+        description: "Account updated successfully!",
         action: <ToastAction altText="Close">Close</ToastAction>,
       });
-    } catch (error:any) {
+    } catch (error: any) {
       toast({
         variant: "destructive",
-        description: error.response.data,
+        description: "Error upating profile, Try again",
         action: <ToastAction altText="Close">Close</ToastAction>,
       });
     }
   };
 
   return (
-    <div className="w-full ml-6 p-4 bg-white shadow-md">
+    <div className="w-full mx-auto md:ml-6 p-4 bg-white shadow-md">
       <Container>
         <div className="">
-          <UpdateProfilePic currentUser={currentUser}/>
+          <UpdateProfilePic currentUser={currentUser} />
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-              <h1 className="md:text-2xl text-lg font-bold text-center">
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="space-y-8 mt-4"
+            >
+              <h1 className="md:text-2xl text-base sm:font-bold font-semibold text-center">
                 Update profile
               </h1>
               <div className=" w-full grid grid-cols-2 md:gap-8 gap-4 md:px-6 px-0">

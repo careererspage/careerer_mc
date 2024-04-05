@@ -5,16 +5,48 @@ import { Button } from "@/components/ui/button";
 import AnimateFaq from "@/public/images/lottie/faq.json";
 import React from "react";
 import Footer from "@/components/Footer";
-import { BusinessOverview } from "@/lib/data";
-import UlList from "@/components/(clients)/ul-List";
 import Cases from "@/components/(clients)/category/cases";
 import ServiceCard from "@/components/(clients)/serviceCard";
 import Review from "@/components/(clients)/category/review";
+import { currentProfile } from "@/lib/current-profile";
+import { db } from "@/lib/db";
+import ButtonChat from "@/components/(clients)/ButtonChat";
 
-const page = () => {
+const page = async () => {
+  const currentUser = await currentProfile();
+
+  const existingServer = await db.server.findFirst({
+    where: {
+      inviteCode: "cd8cdd9f-a6ea-4b61-a06a-ead537c99ad5",
+      members: {
+        some: {
+          profileId: currentUser?.id,
+        },
+      },
+    },
+    include: {
+      members: {
+        include: {
+          profile: true,
+        },
+      },
+    },
+  });
+
+  const expiredVisa = existingServer?.members.find(
+    (member) => member.profile?.firstName === "Expired Visa"
+  );
+  const support = existingServer?.members.find(
+    (member) => member.profile?.firstName === "Support Line"
+  );
+
   return (
     <div>
-      <Navbar />
+      <Navbar
+        currentUser={currentUser}
+        serverId={existingServer?.id}
+        supportId={support?.id}
+      />
       <GeneralHero
         ImageUrl={require("@/public/images/hero/farm.jpg")}
         title="Business / Investment Based Visa in Switzerland"
@@ -23,6 +55,9 @@ const page = () => {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-[40%,60%] gap-4 mt-10 relative">
           <ServiceCard
+            currentUser={currentUser}
+            existingServer={existingServer?.id}
+            supportId={support?.id}
             title="Business Visa"
             listItems={[
               "We connect you with our established Business Partners",
@@ -122,9 +157,11 @@ const page = () => {
               </li>
             </ul>
 
-            <Button variant="outline" size="default" className="mt-4">
-              Book Session with Expert
-            </Button>
+            <ButtonChat
+              currentUser={currentUser}
+              existingServer={existingServer?.id}
+              supportId={support?.id}
+            />
             <p
               className="text-[#2C2C2C] text-sm sm:!text-base mt-3"
               style={{ lineHeight: "1.8" }}
@@ -146,11 +183,20 @@ const page = () => {
           href="/reviews"
         />
       </div>
-
       <div className="mt-6">
-        <Cases />
+        <Cases
+          currentUser={currentUser}
+          expiredVisa={expiredVisa?.id}
+          supportId={support?.id}
+          existingServer={existingServer?.id}
+        />
       </div>
-      <Footer />
+      <Footer
+        currentUser={currentUser}
+        existingServer={existingServer?.id}
+        supportId={support?.id}
+        expiredVisa={expiredVisa?.id}
+      />
     </div>
   );
 };

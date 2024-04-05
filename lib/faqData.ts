@@ -18,10 +18,7 @@ export const VisaType = [
     title: "Family Visa",
     link: "/family-green-card",
   },
-  {
-    title: "Expired Visa",
-    link: "/family-green-card",
-  },
+
   {
     title: "Religious Visa",
     link: "/r1-visa",
@@ -32,10 +29,7 @@ export const SubWorkNav = [
     title: "Switzerland Work Visa",
     link: "/swiss-workvisa",
   },
-  {
-    title: "Australian Work Visa",
-    link: "/austrailian-workvisa",
-  },
+
   {
     title: "U.S.A Work Visa",
     link: "/usa-workvisa",
@@ -63,25 +57,20 @@ export const SubParentNav = [
     title: "U.S.A",
     link: "/usa-migration",
   },
-
-  {
-    title: "Austrailian",
-    link: "/austrailian-migration",
-  },
 ];
 
 export const Jobs = [
   {
     title: "Jobs in U.S.A",
-    link: "/usa-fees",
   },
   {
     title: "Jobs in Switzerland",
-    link: "/swiss-fees",
+  },
+  {
+    title: "Jobs in Canada",
   },
   {
     title: "Jobs in Austrailian",
-    link: "/austrailian-fee",
   },
 ];
 
@@ -94,10 +83,6 @@ export const Fees = [
     title: "Switzerland Fee",
     link: "/swiss-fees",
   },
-  {
-    title: "Austrailian Fee",
-    link: "/austrailian-fee",
-  },
 ];
 
 export const FaqNav = [
@@ -108,10 +93,6 @@ export const FaqNav = [
   {
     title: "U.S.A",
     link: "/usa-faq",
-  },
-  {
-    title: "Austrailian",
-    link: "/austrailian-faq",
   },
 ];
 

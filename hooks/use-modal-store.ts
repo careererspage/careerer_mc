@@ -1,6 +1,5 @@
 import { SafeMember } from "@/types";
 import { Channel, ChannelType, Server } from "@prisma/client";
-import { string } from "zod";
 import { create } from "zustand";
 
 export type ModalType =
@@ -12,6 +11,7 @@ export type ModalType =
   | "consultaion"
   | "members"
   | "agents"
+  | "jobs"
   | "createChannel"
   | "leaveServer"
   | "deleteServer"

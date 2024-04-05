@@ -13,6 +13,12 @@ export type NextApiResponseServerIo = NextApiResponse & {
   socket: Socket & { server: NetServer & { io: SocketIOServer } };
 };
 
+export interface FormType {
+  firstname: string;
+  email: string;
+  country: string;
+}
+
 export interface SafeUser {
   id: string;
   memberId?: string | null;

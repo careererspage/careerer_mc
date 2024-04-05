@@ -1,14 +1,38 @@
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { FaClipboardCheck } from "react-icons/fa";
 import { Separator } from "../ui/separator";
+import { SafeUser } from "@/types";
+import { useRouter } from "next/navigation";
+import { useModal } from "@/hooks/use-modal-store";
 
-interface ServiceCardItemProps {
+interface ServiceCardProps {
   listItems: string[];
   title: string;
+  currentUser?: SafeUser | null;
+  supportId?: string | undefined;
+  existingServer?: string | undefined;
 }
 
-const ServiceCard = ({ listItems, title }: ServiceCardItemProps) => {
+const ServiceCard = ({
+  listItems,
+  title,
+  currentUser,
+  supportId,
+  existingServer,
+}: ServiceCardProps) => {
+  const { onOpen } = useModal();
+  const router = useRouter();
+
+  const connectOfficer = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${existingServer}/conversations/${supportId}`);
+  };
+
   return (
     <div className="md:!h-[390px] sm:!h-[300px] top-40 md:sticky flex flex-col justify-center gap-2 p-4 rounded-md shadow-md bg-white">
       <h1 className="font-bold lg:text-2xl md:text-lg text-lg text-gray-700 text-center">
@@ -32,7 +56,7 @@ const ServiceCard = ({ listItems, title }: ServiceCardItemProps) => {
           </div>
         ))}
       </ul>
-      <Button variant="primary" size="default">
+      <Button variant="primary" size="default" onClick={connectOfficer}>
         Book Session with Expert
       </Button>
     </div>

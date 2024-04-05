@@ -8,7 +8,11 @@ import React from "react";
 import AnimateChat from "@/public/images/lottie/chat.json";
 import AnimateGift from "@/public/images/lottie/gift.json";
 
-const Benefit = () => {
+interface BenefitProps {
+  connectOfficer?: (() => void) | undefined;
+}
+
+const Benefit = ({ connectOfficer }: BenefitProps) => {
   return (
     <div className="mt-10 rounded-xl p-5">
       <div className="flex items-center gap-4">
@@ -49,6 +53,7 @@ const Benefit = () => {
       </div>
 
       <Button
+        onClick={connectOfficer}
         className="mt-4 ml-6 flex items-center "
         variant="button"
         size="lg"
@@ -59,7 +64,7 @@ const Benefit = () => {
           autoplay
           className="w-[50px] h-[50px]"
         />
-        Chat with an Agent
+        Chat with Us
       </Button>
     </div>
   );

@@ -51,7 +51,6 @@ export const LoginModal = () => {
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => setShowPassword(!showPassword); // Function to toggle password visibility
   const [isLoadinging, setIsloading] = useState(false);
-
   const isModalOpen = isOpen && type === "loginModal";
 
   const onToggle = useCallback(() => {
@@ -68,6 +67,7 @@ export const LoginModal = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    setIsloading(true);
     try {
       const result = formSchema.safeParse(values);
 
@@ -83,20 +83,21 @@ export const LoginModal = () => {
           description: firstError.message,
           action: <ToastAction altText="Close">Close</ToastAction>,
         });
+        setIsloading(false);
         return;
       }
 
-      setIsloading(false);
       signIn("credentials", {
         ...values,
         redirect: false, // Disable redirection on errors
       }).then((callback) => {
         setIsloading(false);
-
         if (callback?.ok) {
           form.reset();
           router.refresh();
           onClose();
+          router.push("invite/cd8cdd9f-a6ea-4b61-a06a-ead537c99ad5");
+          window.location.reload();
         }
         if (callback?.error) {
           onClose();
@@ -112,6 +113,7 @@ export const LoginModal = () => {
         }
       });
     } catch (error: any) {
+      setIsloading(false);
       toast({
         style: {
           background: "black",

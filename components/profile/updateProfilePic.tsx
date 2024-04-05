@@ -34,7 +34,6 @@ const UpdateProfilePic = ({ currentUser }: UpdateProfilePicProps) => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      // Assuming 'updateId' is defined somewhere in your component or received as a prop
       await axios.patch(`/api/register/${currentUser?.id}/updateImage`, values);
 
       form.reset();
@@ -76,7 +75,9 @@ const UpdateProfilePic = ({ currentUser }: UpdateProfilePicProps) => {
             type="submit"
             disabled={form.formState.isSubmitting}
           >
-            Upload profile image
+            {currentUser?.imageUrl
+              ? "Update profile image"
+              : "Upload profile image"}
           </button>
         </form>
       </Form>

@@ -4,8 +4,42 @@ import AnimateVVIP from "@/public/images/lottie/vvip.json";
 import AnimateCrown from "@/public/images/lottie/crown.json";
 import Lottie from "lottie-react";
 import Image from "next/image";
+import { SafeUser } from "@/types";
+import { useRouter } from "next/navigation";
+import { useModal } from "@/hooks/use-modal-store";
 
-const Cases = () => {
+interface CasesProps {
+  currentUser?: SafeUser | null;
+  expiredVisa?: string | undefined;
+  supportId?: string | undefined;
+  existingServer?: string | undefined;
+}
+
+const Cases = ({
+  currentUser,
+  expiredVisa,
+  supportId,
+  existingServer,
+}: CasesProps) => {
+  const { onOpen } = useModal();
+  const router = useRouter();
+
+  const connectOfficer = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${existingServer}/conversations/${supportId}`);
+  };
+
+  const difficultCases = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${existingServer}/conversations/${expiredVisa}`);
+  };
+
   return (
     <div className="relative w-full h-full pt-2 pb-4">
       <Image
@@ -28,7 +62,10 @@ const Cases = () => {
         </div>
 
         <div className="flex gap-6 items-center">
-          <div className="flex flex-col justify-center items-center sm:gap-4 gap-2">
+          <div
+            onClick={connectOfficer}
+            className="flex flex-col justify-center items-center sm:gap-4 gap-2"
+          >
             <Lottie
               animationData={AnimateCrown}
               loop
@@ -47,7 +84,10 @@ const Cases = () => {
 
           <span className="w-[3px] h-[40px] sm:h-[80px] bg-yellow-400" />
 
-          <div className="flex flex-col justify-center items-center gap-2 sm:gap-4">
+          <div
+            onClick={difficultCases}
+            className="flex flex-col justify-center items-center gap-2 sm:gap-4"
+          >
             <Lottie
               animationData={AnimateVVIP}
               loop

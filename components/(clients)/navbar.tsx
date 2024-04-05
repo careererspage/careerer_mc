@@ -30,14 +30,16 @@ import { signOut } from "next-auth/react";
 import { CgProfile } from "react-icons/cg";
 import { UserAvatar } from "../user-avatar";
 import { LiaSignOutAltSolid } from "react-icons/lia";
+import { useRouter } from "next/navigation";
 
 interface NavbarProps {
   currentUser?: SafeUser | null;
   profileMenu?: boolean;
   agents?: SafeUser[] | null;
+  supportLine?: SafeMember | undefined;
   serverId?: string;
-  supportLine: SafeMember | undefined;
-  expiredVisa: SafeMember | undefined;
+  supportId?: string | undefined;
+  expiredVisa?: SafeMember | undefined;
 }
 
 const Navbar = ({
@@ -46,10 +48,29 @@ const Navbar = ({
   serverId,
   agents,
   supportLine,
+  supportId,
   expiredVisa,
 }: NavbarProps) => {
   const pathname = usePathname();
   const { onOpen } = useModal();
+  const router = useRouter();
+
+  const connectOfficer = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${serverId}/conversations/${supportId}`);
+  };
+
+  const difficultCases = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${serverId}/conversations/${expiredVisa}`);
+  };
+
   return (
     <div className="mb-4 h-[60px] w-full bg-[#0559a8] sticky top-0 z-50">
       <Container>
@@ -60,14 +81,17 @@ const Navbar = ({
               @ +111 111 11
             </span>
           </div>
-          <Link
-            href="/help"
-            className="text-white text-sm hover:opacity-75 transition border p-1 rounded-md"
+          <div
+            onClick={connectOfficer}
+            className="text-white cursor-pointer text-sm hover:opacity-75 transition border p-1 rounded-md"
           >
             Live Chat
-          </Link>
+          </div>
 
-          <div className="bg-[#003266] !text-sm shadow-md py-1 px-1 rounded-lg text-white font-semibold flex items-center gap-2 hover:bg-white hover:text-gray-600 transition ease-in duration-200 cursor-pointer">
+          <div
+            onClick={connectOfficer}
+            className="bg-[#003266] !text-sm shadow-md py-1 px-1 rounded-lg text-white font-semibold flex items-center gap-2 hover:bg-white hover:text-gray-600 transition ease-in duration-200 cursor-pointer"
+          >
             <Image
               width={50}
               height={50}
@@ -218,9 +242,15 @@ const Navbar = ({
                         </ul>
 
                         <div className="my-2 w-full h-[1px] bg-indigo-500" />
-
                         {/* Rest of the Visa offered */}
                         <ul className="grid gap-2 p-4 sm:w-[300px] md:grid-cols-1 lg:w-[300px] text-sm">
+                          <NavigationMenuLink
+                            title="Expired Visa / Complicated"
+                            onClick={difficultCases}
+                            className={` cursor-pointer transition-colors hover:bg-[#0559a8] p-2 rounded-md hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground font-normal hover:text-white `}
+                          >
+                            Expired Visa / Complicated
+                          </NavigationMenuLink>
                           {VisaType.map((component) => (
                             <NavigationMenuLink
                               key={component.title}
@@ -277,14 +307,10 @@ const Navbar = ({
                         <ul className="grid gap-2 pl-4 py-2 sm:w-[200px] md:grid-cols-1 lg:w-[200px] text-sm">
                           {Jobs.map((component) => (
                             <NavigationMenuLink
+                              onClick={() => onOpen("jobs")}
                               key={component.title}
                               title={component.title}
-                              href={component.link}
-                              className={`transition-colors hover:bg-[#0559a8] p-2 rounded-md hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground font-normal hover:text-white  ${
-                                pathname === component.link
-                                  ? "bg-[#0559a8] text-white"
-                                  : ""
-                              }`}
+                              className={` cursor-pointer transition-colors hover:bg-[#0559a8] p-2 rounded-md hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground font-normal hover:text-white  `}
                             >
                               {component.title}
                             </NavigationMenuLink>

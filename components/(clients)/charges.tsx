@@ -4,7 +4,6 @@ import { Button } from "../ui/button";
 import Lottie from "lottie-react";
 import AnimateChat from "@/public/images/lottie/chat.json";
 import AnimateFaq from "@/public/images/lottie/faq.json";
-import AnimateFees from "@/public/images/lottie/payment.json";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import Container from "../container";
@@ -13,56 +12,66 @@ import { UsaFeeA, UsaFeeC } from "@/lib/data";
 import UlList from "./ul-List";
 import Review from "./category/review";
 import PaymentHeading from "./payment-heading";
+import Image from "next/image";
+import { SafeUser } from "@/types";
+import { useModal } from "@/hooks/use-modal-store";
+import { useRouter } from "next/navigation";
 
-const Charges = () => {
+interface ChargesProps {
+  currentUser?: SafeUser | null;
+  serverId?: string;
+  supportId?: string | undefined;
+}
+
+const Charges = ({ currentUser, serverId, supportId }: ChargesProps) => {
   const [selectedType, setSelectedType] = useState<string>("default");
 
   const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedType(e.target.value);
   };
 
+  const { onOpen } = useModal();
+  const router = useRouter();
+
+  const connectOfficer = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${serverId}/conversations/${supportId}`);
+  };
+
   return (
     <div className="w-full mt-28">
-      <div className="p-4 bg-gray-200 border-y-2 border-gray-500 mb-2">
-        Migrate Compass Cost: Is it worth your money?
-      </div>
-
       <Container>
+        <div className="p-4 bg-gray-200 border-y-2 border-gray-500 mb-4">
+          Migrate Compass Cost: Is it worth your money?
+        </div>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 px-4">
           <div
             className="text-[#2C2C2C] text-base"
             style={{ lineHeight: "1.8" }}
           >
-            Our agency, staffed with former immigration consular officers,
-            specializes in United States immigration law. We provide a
-            comprehensive service that begins with
+            At Migrate Compass, we pride ourselves on our team of experienced
+            immigration professionals, including former consular officers, and
+            our strong ties with consular services. Our expertise lies in U.S.
+            immigration law. We offer a comprehensive service that starts with{" "}
             <span className="font-bold">
               connecting you to potential employers in the United States.
             </span>{" "}
-            Once employment is secured, we then assist with the processing of
-            your work visa.
+            Once we secure you an employment offer, we then guide you through
+            the process of obtaining your U.S. work visa
             <p className="pt-1">
               <span className="font-bold">
-                Migrate Compass as a body specializing in immigration law.
+                Migrate Compass as a body specializes in immigration law.
               </span>{" "}
-              Our team provides a wide range of services to our clients. These
-              include: <span className="font-bold">Firstly,</span> offering
-              consultations; <span className="font-bold">Secondly,</span>{" "}
-              identifying potential ‘red flags’ in your situation;{" "}
-              <span className="font-bold">Thirdly,</span> completing the
-              appropriate immigration forms;{" "}
-              <span className="font-bold">Fourthly,</span> reviewing your
-              supporting documents; and list goes on to as reviewing the
-              decisions of the U.S. Citizenship and Immigration Services
-              (USCIS).
             </p>
           </div>
 
-          <Lottie
-            animationData={AnimateFees}
-            loop
-            autoplay
-            className="w-full h-[500px] p-0 -my-24"
+          <Image
+            src={require("@/public/images/paymentImage.jpg")}
+            className="w-full h-[300px] object-cover"
+            alt="payment plan"
           />
         </div>
 
@@ -75,21 +84,31 @@ const Charges = () => {
         process of obtaining your employment-based immigrant visa. Here&lsquo;s
         what you can expect:"
           />
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="sm:!text-base text-sm list-disc flex flex-col gap-3 mb-2 ml-4 ul-list">
             <li>
-              Comprehensive evaluation of your eligibility for the EB-3 visa
-              category.
+              Assessing your qualifications for a job in the USA with our
+              extensive network of start-ups and smaller firms.
             </li>
             <li>
-              Assistance with preparing and submitting your visa application.
-            </li>
-            <li>Guidance on gathering required documentation and evidence.</li>
-            <li>
-              Regular updates on the status of your application and any
-              developments.
+              Assigning a dedicated officer to guide you from the first day of
+              the process until your arrival in the USA.
             </li>
             <li>
-              Expert support from our experienced immigration team throughout
+              Thorough evaluation of your eligibility for the H-1B, Eb3 or L-1
+              visa categories.
+            </li>
+            <li>
+              Assistance with the preparation and submission of your visa
+              application.
+            </li>
+            <li>
+              Guidance on compiling the necessary documentation and evidence.
+            </li>
+            <li>
+              Regular updates on your application status and any developments.
+            </li>
+            <li>
+              Continuous support from our seasoned immigration team throughout
               the process.
             </li>
           </ul>
@@ -100,9 +119,10 @@ const Charges = () => {
           </p>
           <div className="flex items-center p-4 mt-4 justify-center bg-[#DC531D] w-full">
             <p className="font-bold text-white">
-              For more information Please chat with our{" "}
+              For more information Please chat with our
             </p>
             <Button
+              onClick={connectOfficer}
               className="ml-6 flex items-center "
               variant="primary"
               size="lg"
@@ -116,39 +136,27 @@ const Charges = () => {
               Support Team
             </Button>
           </div>
-
-          <p
-            className="px-4 sm:mt-3 text-[#2C2C2C] sm:text-base text-sm"
-            style={{ lineHeight: "1.8" }}
-          >
-            A multitude of variables will affect the fee of an Immigration
-            Attorney. These variables generally impact the fees you pay, these
-            are: <span className="font-bold">First,</span> the type of service
-            required; <span className="font-bold">Second,</span>, the type of
-            application; <span className="font-bold">Third,</span>, the place of
-            practice; and <span className="font-bold">Fourth,</span> the level
-            of experience or expertise. The average fees for various types of
-            visa is another factor that determines Migrate Compass fees.
-          </p>
         </div>
 
-        <div className="flex sm:!flex-row flex-col-reverse items-start gap-2 mt-10">
+        <h1 className="text-base mt-4 text-center sm:text-xl text-[#DC531D] font-extrabold">
+          Payment Plan{" "}
+        </h1>
+
+        <div className="flex sm:!flex-row flex-col-reverse items-start md:gap-5 gap-2 mt-6 sm:mt-10">
           {selectedType === "default" && (
             <div className="flex flex-col gap-3 p-5 rounded-md shadow-md bg-white">
               <PaymentHeading
                 heading="First Payment: Application Process"
-                price="$6,970"
-                text=" This payment is due when you sign the agreement for us to begin the process of securing a job for you in the United States. This includes evaluating your qualifications, networking with start-ups and smaller firms and knowing the best routes."
+                price="$3,970"
+                text=" This payment is due onces you sign the agreement contract. This initiates the process where a dedicated officer begins working on securing you a job in the United States. This covers getting your own assigned officer and most importantly, connecting you with a trusted sponsor for employment opportunities."
               />
 
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
               <PaymentHeading
                 heading="Second Payment"
-                price="$10,930"
-                text="This payment is due after we have secured a job for you in U.S.A. and after the approval of the Labor Certificate and
-                prior to the filing of forms I-140/I-485 (under I-907 premium
-                processing)."
+                price="8,930"
+                text="This payment is due after we secured you a job in the United States."
               />
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
@@ -158,7 +166,7 @@ const Charges = () => {
 
               <PaymentHeading
                 heading="Third Payment: After Visa Approval"
-                price="$8,000"
+                price="$6,000"
                 text="This payment is due after your visa has been approved."
               />
 
@@ -171,7 +179,7 @@ const Charges = () => {
               <p className="text-sm">
                 If you have any questions or concerns about the payment process,
                 please don&apos;t hesitate to contact us at
-                support@migratecompass.com.
+                support@migratecompass.com
               </p>
             </div>
           )}
@@ -180,18 +188,17 @@ const Charges = () => {
             <div className="flex flex-col gap-3 p-5 rounded-md shadow-md bg-white">
               <PaymentHeading
                 heading="First Payment: Application Process"
-                price="$6,970"
-                text=" This payment is due when you sign the agreement for us to begin the process of securing a job for you in the United States. This includes evaluating your qualifications, networking with start-ups and smaller firms and knowing the best routes."
+                price="$3,970"
+                text=" This payment is due onces you sign the agreement contract. This initiates the process where a dedicated officer begins working on securing you a job in the United States. This covers getting your own assigned officer and most importantly, connecting you with a trusted sponsor for employment opportunities."
               />
 
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
               <PaymentHeading
-                heading="Second Payment: Over a span of 15 Months"
-                price="$10,930"
-                text="This payment is due after we have secured a job for you in U.S.A. and after the approval of the Labor Certificate and
-                prior to the filing of forms I-140/I-485 (under I-907 premium
-                processing)."
+                heading="Second Payment: Over a span of 12 Months"
+                price="$1,120"
+                // price="$14,440"
+                text="This is a monthly payment plan to be made monthly after we have secured you a job in the U.S.A."
               />
 
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
@@ -202,7 +209,7 @@ const Charges = () => {
 
               <PaymentHeading
                 heading="Third Payment: After Visa Approval"
-                price="$8,000"
+                price="$6,000"
                 text="This payment is due after your visa has been approved."
               />
 
@@ -215,12 +222,12 @@ const Charges = () => {
               <p className="text-sm">
                 If you have any questions or concerns about the payment process,
                 please don&apos;t hesitate to contact us at
-                support@migratecompass.com.
+                support@migratecompass.com
               </p>
             </div>
           )}
 
-          <div className="p-1 rounded-md shadow-md text-white sm:w-[600px] w-full">
+          <div className="p-1 rounded-md shadow-md text-white sm:w-[700px] w-full">
             <RadioGroup value={selectedType} onChange={handleRadioChange}>
               <div
                 className="flex items-center space-x-2 bg-[#112f61] rounded-md p-6 w-full"
@@ -235,8 +242,8 @@ const Charges = () => {
                   htmlFor="r1"
                   className="flex flex-col sm:gap-3 gap-1 w-full h-full cursor-pointer"
                 >
-                  <h1 className="font-bold sm:text-2xl text-lg">Type A</h1>
-                  <p className="text-gray-100 !text-sm"> Total Cost: $22,610</p>
+                  <h1 className="font-bold sm:text-2xl text-lg">Plan A</h1>
+                  <p className="text-gray-100 !text-sm"> Total Cost: $18,900</p>
                 </Label>
               </div>
               <div
@@ -253,8 +260,8 @@ const Charges = () => {
                   htmlFor="r2"
                   className="flex flex-col sm:gap-3 gap-1 w-full h-full cursor-pointer"
                 >
-                  <h1 className="font-bold sm:text-2xl text-lg">Type B</h1>
-                  <p className="text-gray-100"> Total Cost: $22,610</p>
+                  <h1 className="font-bold sm:text-2xl text-lg">Plan B</h1>
+                  <p className="text-gray-100"> Total Cost: $23,400</p>
                 </Label>
               </div>
             </RadioGroup>

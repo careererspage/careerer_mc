@@ -10,11 +10,45 @@ import AnimateFaq from "@/public/images/lottie/faq.json";
 import Cases from "@/components/(clients)/category/cases";
 import ServiceCard from "@/components/(clients)/serviceCard";
 import Review from "@/components/(clients)/category/review";
+import { currentProfile } from "@/lib/current-profile";
+import { db } from "@/lib/db";
+import ButtonChat from "@/components/(clients)/ButtonChat";
 
-const page = () => {
+const page = async () => {
+  const currentUser = await currentProfile();
+
+  const existingServer = await db.server.findFirst({
+    where: {
+      inviteCode: "cd8cdd9f-a6ea-4b61-a06a-ead537c99ad5",
+      members: {
+        some: {
+          profileId: currentUser?.id,
+        },
+      },
+    },
+    include: {
+      members: {
+        include: {
+          profile: true,
+        },
+      },
+    },
+  });
+
+  const expiredVisa = existingServer?.members.find(
+    (member) => member.profile?.firstName === "Expired Visa"
+  );
+  const support = existingServer?.members.find(
+    (member) => member.profile?.firstName === "Support Line"
+  );
+
   return (
     <div>
-      <Navbar />
+      <Navbar
+        currentUser={currentUser}
+        serverId={existingServer?.id}
+        supportId={support?.id}
+      />
       <GeneralHero
         ImageUrl={require("@/public/images/hero/swissWork.jpg")}
         title="Work Visa made easy with Migrate Compass"
@@ -23,11 +57,14 @@ const page = () => {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-[40%,60%] gap-4 mt-10 relative">
           <ServiceCard
+            currentUser={currentUser}
+            existingServer={existingServer?.id}
+            supportId={support?.id}
             title="Work Visa Complete Service"
             listItems={[
-              "We facilitate connections with small firms for potential job offers",
-              "We have a network of satisfied clients we can pair you with on arrival",
-              "We assist in preparing comprehensive documentation",
+              "We connect you with patterned companies, firms, individuals, for potential job offers",
+              "We have a network of satisfied clients we pair you with on arrival",
+              "Don't have your papers? We would evaluate and connect you with an officer",
             ]}
           />
 
@@ -107,11 +144,12 @@ const page = () => {
               </li>
             </ul>
 
-            <Button variant="outline" size="default" className="mt-4">
-              Book Session with Expert
-            </Button>
-
-            <p className="mt-3">
+            <ButtonChat
+              currentUser={currentUser}
+              existingServer={existingServer?.id}
+              supportId={support?.id}
+            />
+            <p className="mt-3 text-sm sm:!text-base text-[#2C2C2C]">
               Migrate Compass is here to offer you a hassle-free experience and
               make sure you receive your Swiss Work visa as quickly as possible.
             </p>
@@ -129,9 +167,19 @@ const page = () => {
         />
       </div>
       <div className="mt-6">
-        <Cases />
+        <Cases
+          currentUser={currentUser}
+          expiredVisa={expiredVisa?.id}
+          supportId={support?.id}
+          existingServer={existingServer?.id}
+        />
       </div>
-      <Footer />
+      <Footer
+        currentUser={currentUser}
+        existingServer={existingServer?.id}
+        supportId={support?.id}
+        expiredVisa={expiredVisa?.id}
+      />
     </div>
   );
 };

@@ -25,12 +25,13 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { useModal } from "@/hooks/use-modal-store";
-import { AiFillGithub } from "react-icons/ai";
-import { FcGoogle } from "react-icons/fc";
-import { signIn } from "next-auth/react";
+
 import { useCallback } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@/components/ui/toast";
+
+import React from "react";
+import { sendWelcomeEmail } from "@/actions/sendWelcomeEmail";
 
 const formSchema = z.object({
   email: z
@@ -90,6 +91,21 @@ export const RegisterModal = () => {
       }
       await axios.post("/api/register", values);
 
+      // Send welcome email after successful registration
+      const { error } = await sendWelcomeEmail(values);
+      if (error) {
+        toast({
+          style: {
+            background: "black",
+            color: "#fff",
+          },
+          variant: "destructive",
+          description: error,
+          action: <ToastAction altText="Close">Close</ToastAction>,
+        });
+        return;
+      }
+
       form.reset();
       router.refresh();
       onClose();
@@ -137,11 +153,14 @@ export const RegisterModal = () => {
               <FormField
                 control={form.control}
                 name="email"
-                render={({ field }) => (
+                render={({ field, fieldState: { error } }) => (
                   <FormItem>
                     <FormLabel className="uppercase text-xs sm:font-bold font-semibold text-zinc-500 dark:text-secondary/70">
                       Email
                     </FormLabel>
+                    {error && (
+                      <p className="text-red-500 mt-2">{error.message}</p>
+                    )}
                     <FormControl>
                       <Input
                         disabled={isLoading}

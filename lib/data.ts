@@ -153,26 +153,26 @@ export const DifficultCases = [
 export const Regions = [
   {
     image: require("../public/images/usa.jpg"),
-    country: "U.S.A Visa",
+    country: "U.S.A Office",
     comment:
       "Embark on your American dream with ease. Let Global expedite your U.S. visa process.",
   },
   {
     image: require("../public/images/canada-flag.jpg"),
-    country: "Canada Visa",
+    country: "Canada Office",
     comment:
       "From the Nomads visa to the unskilled visa, let Global pave the way for your Canadian adventure.",
   },
 
   {
     image: require("../public/images/austrailian-flag.jpg"),
-    country: "Australia Visa",
+    country: "Austrailian Office",
     comment:
-      "Let Global be your gateway to the land down under. Explore Australia's vibrant cities with ease.",
+      "Let Global be your gateway to the land down under. Explore Austrailian's vibrant cities with ease.",
   },
   {
     image: require("../public/images/switzerland-flag.jpg"),
-    country: "Switzerland Visa",
+    country: "Switzerland Office",
     comment:
       "Indulge in the picturesque beauty and tranquility of Switzerland. Trust Global for your Swiss visa process.",
   },
@@ -185,6 +185,12 @@ export const Benefits = [
     details:
       "Visa denials often stem from errors or insufficient evidence. Our team helps prevent these issues, reviews your application, and prepares you for the interview, enhancing your chances of success.",
   },
+  {
+    image: require("../public/images/sponsorship.jpg"),
+    title: "Job Sponsors",
+    details:
+      "We connect you with trusted companies ready to provides job opportunities and sponsorship.",
+  },
 
   {
     image: require("../public/images/Cost.png"),
@@ -193,16 +199,22 @@ export const Benefits = [
       "Facing visa denial can be costly. Our expert guidance simplifies the process, saving you time, money, and stress..",
   },
   {
-    image: require("../public/images/agent.png"),
-    title: "Personal Visa Guide",
+    image: require("../public/images/caution.jpg"),
+    title: "Complicated Cases",
     details:
-      "A dedicated consultant will review your application, provide tailored advice for your unique situation, guide you through document requirements, and prepare you for the embassy interview.",
+      "Whether your visa has expired or you've encountered deportation, we assess and address the issue effectively.",
+  },
+  {
+    image: require("../public/images/agent.png"),
+    title: "Personal Guide",
+    details:
+      "A dedicated senior officer will be assigned to you onces you begin your application your application.",
   },
   {
     image: require("../public/images/peace-of-mind.png"),
     title: "Enjoy Peace of Mind",
     details:
-      "Leave the complexities of visa requirements, forms, costs, and interviews to our experts. We’ll handle your case for a successful outcome, providing you peace of mind at every stage.",
+      "Leave the complexities of visa requirements, forms, costs, and interviews to our experts. We’ll handle your case for a successful outcome.",
   },
   {
     image: require("../public/images/time.png"),
@@ -214,47 +226,59 @@ export const Benefits = [
     image: require("../public/images/care-line.png"),
     title: "Round-the-Clock Support",
     details:
-      "Our team are available 24/7/365 to promptly address your queries and concerns, ensuring efficient visa services at all times.",
+      "Our team are available 24/7/365 to promptly address your queries and concerns, ensuring efficient services at all times.",
   },
 ];
 
 export const Processes = [
   {
-    image: require("../public/images/Denial.png"),
+    image: require("../public/images/folder.png"),
     title: "Start Application",
     details:
       "Complete the application form by answering a simple series of questions about yourself.",
   },
 
   {
-    image: require("../public/images/Cost.png"),
-    title: "Provide documents",
+    image: require("../public/images/job.png"),
+    title: "We secure you a Job",
     details:
-      "Send in the required items and we will process your request with the government.",
+      "We connect you with trusted companies we have patternship with for job opportunities.",
   },
   {
-    image: require("../public/images/agent.png"),
+    image: require("../public/images/payment.png"),
     title: "Service Payment",
     details:
-      "After payment, a dedicated officer will manage your visa application for accuracy and completeness.",
+      "After payment, a dedicated officer will manage your visa application for speed, accuracy and completeness.",
   },
   {
-    image: require("../public/images/peace-of-mind.png"),
+    image: require("../public/images/verified.png"),
     title: "Document Verification",
     details:
-      "We ensure the accuracy of your application details. Contact us 24/7 for any assistance.",
+      "We ensure the authencity of your application details. Contact us 24/7 for any assistance.",
   },
   {
-    image: require("../public/images/time.png"),
+    image: require("../public/images/interview-agent.png"),
     title: "Interview Assistance",
     details:
       "Our visa specialist coordinates your embassy interview and ensures document readiness.",
   },
   {
-    image: require("../public/images/care-line.png"),
+    image: require("../public/images/visa.png"),
     title: "Visa Acquisition",
     details:
-      "We support you throughout, simplify the process, and enhance your visa approval chances.",
+      "We support you throughout, simplify the process and enhance your visa approval chances.",
+  },
+  {
+    image: require("../public/images/home.png"),
+    title: "Support",
+    details:
+      "We support you in finding accommodation and settling down in the choice of your residence.",
+  },
+  {
+    image: require("../public/images/agent.png"),
+    title: "Guidance",
+    details:
+      "Guidance and orientation with countries social security, tax system, and other local regulations.",
   },
 ];
 
@@ -263,20 +287,20 @@ export const VisaType = [
     image: require("../public/images/agent.png"),
     title: "Skilled & Unskilled",
     details:
-      "For skilled and unskilled workers seeking employment opportunities in the U.S. After payment, a dedicated officer will manage your visa application for accuracy and completeness.",
+      "For skilled and unskilled workers seeking employment opportunities in the U.S. & Europe After payment, a dedicated officer will manage your visa application for accuracy and completeness.",
   },
   {
     image: require("../public/images/Denial.png"),
     title: "Tourist, Visitor or Medical Treatment",
     details:
-      "For individuals traveling to the U.S. for tourism, visiting, or seeking medical treatment. We welcome all visitors and our service covers every step of the way.",
+      "For individuals traveling to the for tourism, visiting, or seeking medical treatment. We welcome all visitors and our service covers every step of the way.",
   },
 
   {
     image: require("../public/images/Cost.png"),
     title: "Business or Employment",
     details:
-      "For professionals attending business meetings, settling estates, making investments, or starting work in the U.S. We help you get the right visa type for your needs.",
+      "For professionals attending business meetings, settling estates, making investments, or starting work in U.S. and Europe We help you get the right visa type for your needs.",
   },
 
   {
@@ -308,7 +332,7 @@ export const Faqcomponents = [
 
 export const Teams = [
   {
-    image: require("../public/images/team/ceo.jpg"),
+    image: require("../public/images/team/member-4.jpeg"),
     name: "Andrew Ryan",
     title: "CEO, Retired USCIS officer",
     details:
@@ -339,8 +363,8 @@ export const Teams = [
     ],
   },
   {
-    image: require("../public/images/team/member-3t.jpg"),
-    name: "Attorney Ala Bujac",
+    image: require("../public/images/team/member-2.jpeg"),
+    name: "Attorney Alan Brad",
     title: "Senior Attorney",
     details:
       "Specializes in case management at Cohen Immigration Law. Holds an MBA and a law degree from McGill University.",
@@ -361,7 +385,7 @@ export const Teams = [
   },
 
   {
-    image: require("../public/images/team/woman-4t.jpg"),
+    image: require("../public/images/team/member-5.jpeg"),
     name: "Sheila Ian",
     title: "Senior Business Immigration Specialist",
     details:
@@ -381,7 +405,7 @@ export const Teams = [
   },
 
   {
-    image: require("../public/images/team/member-2.jpg"),
+    image: require("../public/images/team/member-3.jpeg"),
     name: "Ann Souza",
     title: "Chief of Staff",
     details:
@@ -439,7 +463,7 @@ export const Teams = [
   },
 
   {
-    image: require("../public/images/team/member-1.jpg"),
+    image: require("../public/images/team/member-1.jpeg"),
     name: "Ardian  Snow",
     title: "Vice President, Finance",
     details: "Assists professionals with business and work travels to the U.S.",
@@ -620,14 +644,14 @@ export const BusinessOverview = [
 
 export const UsaFeeA = [
   {
+    lists: "Consular processing fees",
+  },
+  {
     lists: "USCIS premium processing fees for expedited handling of your I-140",
   },
   {
     lists:
       "Preparation and filing of your I-485 (Application to Register Permanent Residence or Adjust Status), if you currently in the United States",
-  },
-  {
-    lists: "Consular processing fees",
   },
   {
     lists:
@@ -637,11 +661,10 @@ export const UsaFeeA = [
     lists: "USCIS Legal Cost",
   },
   {
-    lists: "Application / Filling Fee",
+    lists: "Application / Filing Fee",
   },
   {
-    lists:
-      "Migrate Compass consulting fee for professional advice and guidance",
+    lists: "Guidance on gathering the required documentation and evidence",
   },
   {
     lists:
@@ -661,7 +684,7 @@ export const UsaFeeC = [
   },
   {
     lists:
-      "Assistance with the local registration process upon arrival in United States",
+      "Assistance with the local registration process upon arrival in the United States",
   },
   {
     lists: "Support in finding accommodation and settling in the United States",
@@ -690,7 +713,7 @@ export const SwissA = [
     lists: "Legal costs associated with the Swiss work permit application",
   },
   {
-    lists: "Application / Filling Fee",
+    lists: "Application / Filing Fee",
   },
 
   {
