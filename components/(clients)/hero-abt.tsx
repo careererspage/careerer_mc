@@ -6,6 +6,7 @@ import { Teams, VisaType } from "@/lib/data";
 import GeneralHero from "./generalHero";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const HeroAbt = () => {
   const [showRightScroll1, setShowRightScroll1] = useState(true);
@@ -39,14 +40,15 @@ const HeroAbt = () => {
       setShowRightScroll1(!isAtEnd);
     }
   };
+  const t = useTranslations("navbar.aboutUsPage");
 
   return (
     <div className="w-full">
       <GeneralHero
         ImageUrl={require("@/public/images/connect-bg.jpg")}
-        title="Welcome to Migrate Compass"
-        subTitle="We Help With Immigration and Job Opporturnitis"
-        subTitle1="In the United States and Europe"
+        title={t("title")}
+        subTitle={t("subTitle")}
+        subTitle1={t("subTitle1")}
       />
 
       <div className="mt-6 px-10">
@@ -54,26 +56,13 @@ const HeroAbt = () => {
           <div className="flex sm:!flex-row flex-col items-center">
             <div className="flex flex-col gap-1 mt-4">
               <h1 className="md:text-6xl sm:text-4xl text-3xl font-bold">
-                Who we are
+                {t("header")}
               </h1>
               <h2 className="sm:text-[22px] text-xl text-zinc-500 font-bold">
-                Worldwide Leaders
+                {t("subHeader")}{" "}
               </h2>
 
-              <p className="text-[15px] text-[#333333]">
-                Migrate Compass draws on over Eleven years of experience and
-                over 2,000 expert immigration, visa and passport professionals,
-                attorneys and qualified immigration officers in 5 to more
-                countries. Migrate Compass offers a comprehensive suite of
-                services under two primary brands: immigration and job
-                sponsorship. Our first goal, immigration, involves providing
-                strategic advice and solutions for corporations worldwide. Our
-                second goal, job sponsorship, involves offering market-leading
-                services for both corporate and individual clients seeking work
-                visa and passport services. Migrate Compass is a private company
-                that is authorized to process visa applications and expedite
-                passports at consulate and passport agencies for a fee
-              </p>
+              <p className="text-[15px] text-[#333333]">{t("speech")}</p>
             </div>
 
             <div className="sm:w-[50px] sm:h-[80px] w-full h-[20px] bg-yellow-400 sm:mx-6 my-6" />
@@ -83,49 +72,36 @@ const HeroAbt = () => {
             <div>
               <h2 className="sm:text-[22px] text-lg text-zinc-500 font-bold">
                 {" "}
-                Our Vision
+                {t("OurVision")}
+              </h2>
+              <p className="text-[15px] text-[#333333]">{t("OurVision")}</p>
+            </div>
+
+            <div>
+              <h2 className="sm:text-[22px] text-lg text-zinc-500 font-bold">
+                {" "}
+                {t("OurMission")}
               </h2>
               <p className="text-[15px] text-[#333333]">
-                Simplify the journey, to bridge people, cultures, and businesses
-                and open the world.
+                {t("missionDetails")}
               </p>
             </div>
 
             <div>
               <h2 className="sm:text-[22px] text-lg text-zinc-500 font-bold">
                 {" "}
-                Our Mission
+                {t("operateWithCare")}
               </h2>
               <p className="text-[15px] text-[#333333]">
-                We enable global movement by managing the complexities of a
-                changing world. We empower people and organizations to
-                seamlessly live, work, travel, and trade through our global
-                reach, local expertise, and customer-focused solutions.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="sm:text-[22px] text-lg text-zinc-500 font-bold">
-                {" "}
-                OPERATE WITH CARE
-              </h2>
-              <p className="text-[15px] text-[#333333]">
-                We care deeply about what we do and the difference we make. We
-                take accountability, demonstrate integrity, and make conscious
-                choices to do the right thing. We aspire to leave things better
-                than we found them.
+                {t("operateDetails")}
               </p>
             </div>
             <div>
               <h2 className="sm:text-[22px] text-lg text-zinc-500 font-bold">
-                EFFECTIVE AND EFFICIENT
+                {t("effectiveAndEfficient")}{" "}
               </h2>
               <p className="text-[15px] text-[#333333]">
-                We seek a careful balance of speed, quality, and efficiency. We
-                utilize global processes to achieve consistent, compliant
-                outcomes. We empower teams to adapt to meet the changing needs
-                of our customers and the government agencies with which we
-                engage.
+                {t("effectiveDetails")}
               </p>
             </div>
           </div>
@@ -133,7 +109,7 @@ const HeroAbt = () => {
       </div>
       <div className="bg-[#055AAA] w-full sm:px-10 h-auto mt-4 flex flex-col items-center py-4">
         <h2 className="text-white md:text-xl text-lg font-bold text-center p-4">
-          Does your purpose of visit belong to one of these categories?
+          {t("purpose")}{" "}
         </h2>
 
         <div className="md:mx-20 relative w-full group  bg-[#00498e] p-4 rounded-md">

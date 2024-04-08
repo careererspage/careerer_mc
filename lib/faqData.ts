@@ -1,100 +1,133 @@
-export const AboutNav = [
-  {
-    title: "About Us",
-    link: "/about",
-  },
-  {
-    title: "Contact Us",
-    link: "/contact",
-  },
-  {
-    title: "Reviews",
-    link: "/reviews",
-  },
-];
+import React from "react";
+import { useTranslations } from "next-intl";
 
-export const VisaType = [
-  {
-    title: "Family Visa",
-    link: "/family-green-card",
-  },
+export const AboutNav = () => {
+  const t = useTranslations("navbar.navbarLinks");
 
-  {
-    title: "Religious Visa",
-    link: "/r1-visa",
-  },
-];
-export const SubWorkNav = [
-  {
-    title: "Switzerland Work Visa",
-    link: "/swiss-workvisa",
-  },
+  return [
+    {
+      title: t("aboutUs"),
+      link: "/about",
+    },
+    {
+      title: t("contactUs"),
+      link: "/contact",
+    },
+    {
+      title: t("reviews"),
+      link: "/reviews",
+    },
+  ];
+};
 
-  {
-    title: "U.S.A Work Visa",
-    link: "/usa-workvisa",
-  },
-];
-export const SubBusinessNav = [
-  {
-    title: "Switzerland Business Visa",
-    link: "/swiss-businessvisa",
-  },
+export const VisaType = () => {
+  const t = useTranslations("navbar.navbarLinks");
 
-  {
-    title: "U.S.A Business Visa",
-    link: "/usa-businessvisa",
-  },
-];
+  return [
+    {
+      title: t("Family Visa"),
+      link: "/family-green-card",
+    },
+    {
+      title: t("Religious Visa"),
+      link: "/r1-visa",
+    },
+  ];
+};
 
-export const SubParentNav = [
-  {
-    title: "Switzerland",
-    link: "/migration",
-  },
+export const SubWorkNav = () => {
+  const t = useTranslations("navbar.navbarLinks");
 
-  {
-    title: "U.S.A",
-    link: "/usa-migration",
-  },
-];
+  return [
+    {
+      title: t("Switzerland Work Visa"),
+      link: "/swiss-workvisa",
+    },
+    {
+      title: t("USA Work Visa"),
+      link: "/usa-workvisa",
+    },
+  ];
+};
 
-export const Jobs = [
-  {
-    title: "Jobs in U.S.A",
-  },
-  {
-    title: "Jobs in Switzerland",
-  },
-  {
-    title: "Jobs in Canada",
-  },
-  {
-    title: "Jobs in Austrailian",
-  },
-];
+export const SubBusinessNav = () => {
+  const t = useTranslations("navbar.navbarLinks");
 
-export const Fees = [
-  {
-    title: "U.S.A Fee",
-    link: "/usa-fees",
-  },
-  {
-    title: "Switzerland Fee",
-    link: "/swiss-fees",
-  },
-];
+  return [
+    {
+      title: t("Switzerland Business Visa"),
+      link: "/swiss-businessvisa",
+    },
+    {
+      title: t("USA Business Visa"),
+      link: "/usa-businessvisa",
+    },
+  ];
+};
 
-export const FaqNav = [
-  {
-    title: "Switzerland",
-    link: "/swiss-faq",
-  },
-  {
-    title: "U.S.A",
-    link: "/usa-faq",
-  },
-];
+export const SubParentNav = () => {
+  const t = useTranslations("navbar.navbarLinks");
+
+  return [
+    {
+      title: t("Switzerland"),
+      link: "/migration",
+    },
+    {
+      title: t("USA"),
+      link: "/usa-migration",
+    },
+  ];
+};
+
+export const Jobs = () => {
+  const t = useTranslations("navbar.navbarLinks");
+
+  return [
+    {
+      title: t("Jobs in USA"),
+    },
+    {
+      title: t("Jobs in Switzerland"),
+    },
+    {
+      title: t("Jobs in Canada"),
+    },
+    {
+      title: t("Jobs in Australia"),
+    },
+  ];
+};
+
+export const Fees = () => {
+  const t = useTranslations("navbar.navbarLinks");
+
+  return [
+    {
+      title: t("USA Fee"),
+      link: "/usa-fees",
+    },
+    {
+      title: t("Switzerland Fee"),
+      link: "/swiss-fees",
+    },
+  ];
+};
+
+export const FaqNav = () => {
+  const t = useTranslations("navbar.navbarLinks");
+
+  return [
+    {
+      title: t("Switzerland"),
+      link: "/swiss-faq",
+    },
+    {
+      title: t("USA"),
+      link: "/usa-faq",
+    },
+  ];
+};
 
 export const SwissFaq = [
   {

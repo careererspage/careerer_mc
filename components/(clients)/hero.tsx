@@ -5,7 +5,6 @@ import { heroImages } from "@/lib/data";
 import { SafeUser } from "@/types";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { redirect } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FcCustomerSupport } from "react-icons/fc";
 

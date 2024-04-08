@@ -25,6 +25,7 @@ import { signOut } from "next-auth/react";
 import { SafeMember, SafeUser } from "@/types";
 import { LiaSignOutAltSolid } from "react-icons/lia";
 import ServerTool from "../server/server-tool";
+import { useTranslations } from "next-intl";
 
 const About = [
   { title: "About Us", href: "/about" },
@@ -51,6 +52,7 @@ const MobileMenu = ({
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const { onOpen } = useModal();
+  const t = useTranslations("navbar");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -286,7 +288,7 @@ const MobileMenu = ({
                             Work Visa
                           </AccordionTrigger>
                           <AccordionContent>
-                            {SubWorkNav.map((component) => (
+                            {SubWorkNav().map((component) => (
                               <Link
                                 key={component.title}
                                 href={component.link}
@@ -309,7 +311,7 @@ const MobileMenu = ({
                             Business Visa
                           </AccordionTrigger>
                           <AccordionContent>
-                            {SubBusinessNav.map((component) => (
+                            {SubBusinessNav().map((component) => (
                               <Link
                                 key={component.title}
                                 href={component.link}
@@ -332,7 +334,7 @@ const MobileMenu = ({
                             Others Visa
                           </AccordionTrigger>
                           <AccordionContent>
-                            {VisaType.map((component) => (
+                            {VisaType().map((component) => (
                               <Link
                                 key={component.title}
                                 href={component.link}

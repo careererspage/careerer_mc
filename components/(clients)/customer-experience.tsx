@@ -16,6 +16,7 @@ import Link from "next/link";
 import { SafeUser } from "@/types";
 import { useRouter } from "next/navigation";
 import { useModal } from "@/hooks/use-modal-store";
+import { useTranslations } from "next-intl";
 
 interface CustomerExperienceProps {
   reviewPage?: boolean;
@@ -84,13 +85,17 @@ const CustomerExperience = ({
     router.push(`/servers/${existingServer}/conversations/${supportId}`);
   };
 
+  const t = useTranslations("navbar.homeQuote");
+  const c = useTranslations("navbar.common");
+
   return (
     <div className="mt-10 shadow-sm py-10 bg-white">
       <Container>
         <RiDoubleQuotesL className="text-[#f16767] text-3xl" />
         <div className="sm:text-3xl text-xl flex items-center font-bold ">
           <div className="relative">
-            Clients <span className="text-blue-500">Experience </span>
+            {c("clientsExperience")}{" "}
+            <span className="text-blue-500">{c("clientsExperienceSpan")} </span>
             <Lottie
               animationData={AnimateReviews}
               loop
@@ -103,7 +108,7 @@ const CustomerExperience = ({
 
         <div className="flex items-center justify-around sm:justify-center gap-5 sm:gap-14 mt-10">
           <h1 className="font-bold sm:text-4xl text-xl gradient-text">
-            500+ Google Reviews
+            {c("googleReview")}{" "}
           </h1>
 
           <Image
@@ -138,36 +143,38 @@ const CustomerExperience = ({
                   : "flex flex-nowrap"
               )}
             >
-              {Reviews.slice(0, reviews).map((review, index) => (
-                <div
-                  key={index}
-                  className={cn(
-                    "rounded-md flex-none cursor-pointer shadow-md hover:shadow-sm p-4 m-2 transition flex flex-col gap-1 group",
-                    reviewPage
-                      ? "w-full bg-white"
-                      : "w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/3"
-                  )}
-                >
-                  <div className="flex items-center gap-4">
-                    <h2 className="text-[#555555] text-[16px]">
-                      {review.name}
-                    </h2>
-                    <Image
-                      src={image}
-                      width={50}
-                      height={50}
-                      alt={"Reviews"}
-                      className="w-[20px] h-[20px] object-cover"
-                    />
+              {Reviews()
+                .slice(0, reviews)
+                .map((review, index) => (
+                  <div
+                    key={index}
+                    className={cn(
+                      "rounded-md flex-none cursor-pointer shadow-md hover:shadow-sm p-4 m-2 transition flex flex-col gap-1 group",
+                      reviewPage
+                        ? "w-full bg-white"
+                        : "w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/3"
+                    )}
+                  >
+                    <div className="flex items-center gap-4">
+                      <h2 className="text-[#555555] text-[16px]">
+                        {review.name}
+                      </h2>
+                      <Image
+                        src={image}
+                        width={50}
+                        height={50}
+                        alt={"Reviews"}
+                        className="w-[20px] h-[20px] object-cover"
+                      />
+                    </div>
+                    <div className="flex">
+                      <Ratings rating={review?.rating ?? 0} />
+                    </div>
+                    <div className="text-[#000000B3] pr-0.5 text-[16px] group-hover:overflow-y-scroll h-[100px] w-full overflow-hidden">
+                      {review.comment}
+                    </div>
                   </div>
-                  <div className="flex">
-                    <Ratings rating={review?.rating ?? 0} />
-                  </div>
-                  <div className="text-[#000000B3] pr-0.5 text-[16px] group-hover:overflow-y-scroll h-[100px] w-full overflow-hidden">
-                    {review.Comment}
-                  </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
 
@@ -196,10 +203,10 @@ const CustomerExperience = ({
           {!reviewPage && (
             <>
               <h1 className="text-[#222325] sm:text-xl text-lg">
-                Don&apos;t just take it from us,
+                {c("dontTakeFromUs")}{" "}
               </h1>
               <span className="font-semibold sm:text-[25px] text-xl text-[#002B3D]">
-                let our clients do the talking!
+                {c("letClientsTalk")}{" "}
               </span>
             </>
           )}
@@ -223,14 +230,14 @@ const CustomerExperience = ({
                   onClick={supportLine}
                   disabled={isFetching}
                 >
-                  Chat with Us
+                  {c("chatWithUs")}{" "}
                 </Button>
               </div>
             </div>
           ) : (
             <Link href="/reviews">
               <Button variant="primary" size="default">
-                Read more stories
+                {c("readMoreStories")}{" "}
               </Button>
             </Link>
           )}

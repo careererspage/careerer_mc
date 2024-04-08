@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 export const heroImages = [
   {
     image: require("../public/images/hero/ttravel.jpg"),
@@ -16,128 +18,238 @@ export const heroImages = [
   },
 ];
 
-export const Reviews = [
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "MIRAAL N",
-    Comment:
-      "Thank you Michael & team! The process for a TN visa was efficient, comprehensive and seamless. Highly recommend.",
-    rating: 5,
-  },
-];
+export const Reviews = () => {
+  const t = useTranslations("navbar.clientReviews");
+
+  return [
+    {
+      name: t("name1"),
+      comment: t("comment1"),
+      rating: 5,
+    },
+    {
+      name: t("name2"),
+      comment: t("comment2"),
+      rating: 5,
+    },
+    {
+      name: t("name3"),
+      comment: t("comment3"),
+      rating: 4,
+    },
+    {
+      name: t("name4"),
+      comment: t("comment4"),
+      rating: 5,
+    },
+    {
+      name: t("name5"),
+      comment: t("comment5"),
+      rating: 4,
+    },
+    {
+      name: t("name6"),
+      comment: t("comment6"),
+      rating: 5,
+    },
+    {
+      name: t("name7"),
+      comment: t("comment7"),
+      rating: 4,
+    },
+    {
+      name: t("name8"),
+      comment: t("comment8"),
+      rating: 5,
+    },
+    {
+      name: t("name9"),
+      comment: t("comment9"),
+      rating: 5,
+    },
+    {
+      name: t("name10"),
+      comment: t("comment10"),
+      rating: 5,
+    },
+    {
+      name: t("name11"),
+      comment: t("comment11"),
+      rating: 5,
+    },
+    {
+      name: t("name12"),
+      comment: t("comment12"),
+      rating: 5,
+    },
+    {
+      name: t("name13"),
+      comment: t("comment13"),
+      rating: 4,
+    },
+    {
+      name: t("name14"),
+      comment: t("comment14"),
+      rating: 5,
+    },
+    {
+      name: t("name15"),
+      comment: t("comment15"),
+      rating: 5,
+    },
+    {
+      name: t("name16"),
+      comment: t("comment16"),
+      rating: 5,
+    },
+    {
+      name: t("name17"),
+      comment: t("comment17"),
+      rating: 4,
+    },
+    {
+      name: t("name18"),
+      comment: t("comment18"),
+      rating: 4,
+    },
+    {
+      name: t("name19"),
+      comment: t("comment19"),
+      rating: 4,
+    },
+    {
+      name: t("name20"),
+      comment: t("comment20"),
+      rating: 5,
+    },
+    {
+      name: t("name21"),
+      comment: t("comment21"),
+      rating: 5,
+    },
+    {
+      name: t("name22"),
+      comment: t("comment22"),
+      rating: 4,
+    },
+    {
+      name: t("name23"),
+      comment: t("comment23"),
+      rating: 5,
+    },
+    {
+      name: t("name24"),
+      comment: t("comment24"),
+      rating: 4,
+    },
+    {
+      name: t("name25"),
+      comment: t("comment25"),
+      rating: 5,
+    },
+    {
+      name: t("name26"),
+      comment: t("comment26"),
+      rating: 4,
+    },
+    {
+      name: t("name27"),
+      comment: t("comment27"),
+      rating: 5,
+    },
+    {
+      name: t("name28"),
+      comment: t("comment28"),
+      rating: 4,
+    },
+    {
+      name: t("name29"),
+      comment: t("comment29"),
+      rating: 5,
+    },
+    {
+      name: t("name30"),
+      comment: t("comment30"),
+      rating: 4,
+    },
+    {
+      name: t("name31"),
+      comment: t("comment31"),
+      rating: 5,
+    },
+    {
+      name: t("name32"),
+      comment: t("comment32"),
+      rating: 4,
+    },
+    {
+      name: t("name33"),
+      comment: t("comment33"),
+      rating: 5,
+    },
+    {
+      name: t("name34"),
+      comment: t("comment34"),
+      rating: 4,
+    },
+    {
+      name: t("name35"),
+      comment: t("comment35"),
+      rating: 5,
+    },
+    {
+      name: t("name36"),
+      comment: t("comment36"),
+      rating: 4,
+    },
+    {
+      name: t("name37"),
+      comment: t("comment37"),
+      rating: 5,
+    },
+    {
+      name: t("name38"),
+      comment: t("comment38"),
+      rating: 4,
+    },
+    {
+      name: t("name39"),
+      comment: t("comment39"),
+      rating: 5,
+    },
+    {
+      name: t("name40"),
+      comment: t("comment40"),
+      rating: 5,
+    },
+    {
+      name: t("name41"),
+      comment: t("comment41"),
+      rating: 4,
+    },
+    {
+      name: t("name42"),
+      comment: t("comment42"),
+      rating: 5,
+    },
+
+    {
+      name: t("name43"),
+      comment: t("comment43"),
+      rating: 5,
+    },
+    {
+      name: t("name44"),
+      comment: t("comment44"),
+      rating: 5,
+    },
+    {
+      name: t("name45"),
+      comment: t("comment45"),
+      rating: 5,
+    },
+  ];
+};
 
 export const DifficultCases = [
   {
@@ -150,137 +262,127 @@ export const DifficultCases = [
   },
 ];
 
-export const Regions = [
-  {
-    image: require("../public/images/usa.jpg"),
-    country: "U.S.A Office",
-    comment:
-      "Embark on your American dream with ease. Let Global expedite your U.S. visa process.",
-  },
-  {
-    image: require("../public/images/canada-flag.jpg"),
-    country: "Canada Office",
-    comment:
-      "From the Nomads visa to the unskilled visa, let Global pave the way for your Canadian adventure.",
-  },
+export const Regions = () => {
+  const t = useTranslations("navbar.offices");
 
-  {
-    image: require("../public/images/austrailian-flag.jpg"),
-    country: "Austrailian Office",
-    comment:
-      "Let Global be your gateway to the land down under. Explore Austrailian's vibrant cities with ease.",
-  },
-  {
-    image: require("../public/images/switzerland-flag.jpg"),
-    country: "Switzerland Office",
-    comment:
-      "Indulge in the picturesque beauty and tranquility of Switzerland. Trust Global for your Swiss visa process.",
-  },
-];
+  return [
+    {
+      image: require("../public/images/usa.jpg"),
+      country: t("usaOffice"),
+      comment: t("usaComment"),
+    },
+    {
+      image: require("../public/images/canada-flag.jpg"),
+      country: t("canadaOffice"),
+      comment: t("canadaComment"),
+    },
+    {
+      image: require("../public/images/austrailian-flag.jpg"),
+      country: t("australiaOffice"),
+      comment: t("australiaComment"),
+    },
+    {
+      image: require("../public/images/switzerland-flag.jpg"),
+      country: t("switzerlandOffice"),
+      comment: t("switzerlandComment"),
+    },
+  ];
+};
+export const Benefits = () => {
+  const t = useTranslations("navbar.benefits");
 
-export const Benefits = [
-  {
-    image: require("../public/images/Denial.png"),
-    title: "Avoid visa denial risk",
-    details:
-      "Visa denials often stem from errors or insufficient evidence. Our team helps prevent these issues, reviews your application, and prepares you for the interview, enhancing your chances of success.",
-  },
-  {
-    image: require("../public/images/sponsorship.jpg"),
-    title: "Job Sponsors",
-    details:
-      "We connect you with trusted companies ready to provides job opportunities and sponsorship.",
-  },
+  return [
+    {
+      image: require("../public/images/Denial.png"),
+      title: t("title1"),
+      details: t("details1"),
+    },
+    {
+      image: require("../public/images/sponsorship.jpg"),
+      title: t("title2"),
+      details: t("details2"),
+    },
 
-  {
-    image: require("../public/images/Cost.png"),
-    title: "Cut Down Your Expenses",
-    details:
-      "Facing visa denial can be costly. Our expert guidance simplifies the process, saving you time, money, and stress..",
-  },
-  {
-    image: require("../public/images/caution.jpg"),
-    title: "Complicated Cases",
-    details:
-      "Whether your visa has expired or you've encountered deportation, we assess and address the issue effectively.",
-  },
-  {
-    image: require("../public/images/agent.png"),
-    title: "Personal Guide",
-    details:
-      "A dedicated senior officer will be assigned to you onces you begin your application your application.",
-  },
-  {
-    image: require("../public/images/peace-of-mind.png"),
-    title: "Enjoy Peace of Mind",
-    details:
-      "Leave the complexities of visa requirements, forms, costs, and interviews to our experts. We’ll handle your case for a successful outcome.",
-  },
-  {
-    image: require("../public/images/time.png"),
-    title: "Value Your Time",
-    details:
-      "We streamline your visa process. From reviewing options to handling paperwork, we manage your case end-to-end. Our user-friendly tools help you focus on what’s important.",
-  },
-  {
-    image: require("../public/images/care-line.png"),
-    title: "Round-the-Clock Support",
-    details:
-      "Our team are available 24/7/365 to promptly address your queries and concerns, ensuring efficient services at all times.",
-  },
-];
+    {
+      image: require("../public/images/Cost.png"),
+      title: t("title3"),
+      details: t("details3"),
+    },
+    {
+      image: require("../public/images/caution.jpg"),
+      title: t("title4"),
+      details: t("details4"),
+    },
+    {
+      image: require("../public/images/agent.png"),
+      title: t("title5"),
+      details: t("details5"),
+    },
+    {
+      image: require("../public/images/peace-of-mind.png"),
+      title: t("title6"),
+      details: t("details6"),
+    },
+    {
+      image: require("../public/images/time.png"),
+      title: t("title7"),
+      details: t("details7"),
+    },
+    {
+      image: require("../public/images/care-line.png"),
+      title: t("title8"),
+      details: t("details8"),
+    },
+  ];
+};
 
-export const Processes = [
-  {
-    image: require("../public/images/folder.png"),
-    title: "Start Application",
-    details:
-      "Complete the application form by answering a simple series of questions about yourself.",
-  },
+export const Processes = () => {
+  const t = useTranslations("navbar.workProcess");
 
-  {
-    image: require("../public/images/job.png"),
-    title: "We secure you a Job",
-    details:
-      "We connect you with trusted companies we have patternship with for job opportunities.",
-  },
-  {
-    image: require("../public/images/payment.png"),
-    title: "Service Payment",
-    details:
-      "After payment, a dedicated officer will manage your visa application for speed, accuracy and completeness.",
-  },
-  {
-    image: require("../public/images/verified.png"),
-    title: "Document Verification",
-    details:
-      "We ensure the authencity of your application details. Contact us 24/7 for any assistance.",
-  },
-  {
-    image: require("../public/images/interview-agent.png"),
-    title: "Interview Assistance",
-    details:
-      "Our visa specialist coordinates your embassy interview and ensures document readiness.",
-  },
-  {
-    image: require("../public/images/visa.png"),
-    title: "Visa Acquisition",
-    details:
-      "We support you throughout, simplify the process and enhance your visa approval chances.",
-  },
-  {
-    image: require("../public/images/home.png"),
-    title: "Support",
-    details:
-      "We support you in finding accommodation and settling down in the choice of your residence.",
-  },
-  {
-    image: require("../public/images/agent.png"),
-    title: "Guidance",
-    details:
-      "Guidance and orientation with countries social security, tax system, and other local regulations.",
-  },
-];
+  return [
+    {
+      image: require("../public/images/folder.png"),
+      title: t("title1"),
+      details: t("details1"),
+    },
+
+    {
+      image: require("../public/images/job.png"),
+      title: t("title2"),
+      details: t("details2"),
+    },
+    {
+      image: require("../public/images/payment.png"),
+      title: t("title3"),
+      details: t("details3"),
+    },
+    {
+      image: require("../public/images/verified.png"),
+      title: t("title4"),
+      details: t("details4"),
+    },
+    {
+      image: require("../public/images/interview-agent.png"),
+      title: t("title5"),
+      details: t("details5"),
+    },
+    {
+      image: require("../public/images/visa.png"),
+      title: t("title6"),
+      details: t("details6"),
+    },
+    {
+      image: require("../public/images/home.png"),
+      title: t("title7"),
+      details: t("details7"),
+    },
+    {
+      image: require("../public/images/agent.png"),
+      title: t("title8"),
+      details: t("details8"),
+    },
+  ];
+};
 
 export const VisaType = [
   {

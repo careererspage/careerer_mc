@@ -31,6 +31,7 @@ import { CgProfile } from "react-icons/cg";
 import { UserAvatar } from "../user-avatar";
 import { LiaSignOutAltSolid } from "react-icons/lia";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface NavbarProps {
   currentUser?: SafeUser | null;
@@ -54,6 +55,7 @@ const Navbar = ({
   const pathname = usePathname();
   const { onOpen } = useModal();
   const router = useRouter();
+  const t = useTranslations("navbar");
 
   const connectOfficer = () => {
     if (!currentUser) {
@@ -78,14 +80,14 @@ const Navbar = ({
           <div className="sm:flex hidden items-center gap-1">
             <span className="text-gray-200 text-xs font-semibold">call us</span>
             <span className="text-white text-[13px] font-bold">
-              @ +111 111 11
+              +91-2288-221{" "}
             </span>
           </div>
           <div
             onClick={connectOfficer}
             className="text-white cursor-pointer text-sm hover:opacity-75 transition border p-1 rounded-md"
           >
-            Live Chat
+            {t("liveChat")}
           </div>
 
           <div
@@ -99,7 +101,7 @@ const Navbar = ({
               alt="care line"
               className="sm:w-[30px] w-[20px] sm:h-[30px] h-[20px] object-contain rounded-full animate-pulse"
             />
-            Book a section
+            {t("bookSection")}
           </div>
 
           <div className="text-sm">
@@ -115,7 +117,7 @@ const Navbar = ({
                       src={currentUser?.imageUrl ?? ""}
                     />
                     <span className="hidden md:block text-gray-200 transition-all group-hover:text-white">
-                      Profile
+                      {t("profile")}
                     </span>
                   </Link>
                   <Separator className="h-4 w-[2px] bg-yellow-400 mr-2 hidden md:block" />
@@ -126,7 +128,7 @@ const Navbar = ({
                   >
                     <LiaSignOutAltSolid className="sm:h-7 sm:w-7 w-5 h-5 !text-red-500 group:hover:!text-red-400 transition-all" />
                     <span className="hidden md:block text-white group-hover:opacity-80">
-                      Sign out
+                      {t("signOut")}
                     </span>
                   </div>
                 </div>
@@ -136,7 +138,8 @@ const Navbar = ({
                     onClick={() => onOpen("loginModal")}
                     className="text-white flex gap-1 items-center hover:opacity-75 transition"
                   >
-                    Login <span className="hidden sm:block">account </span>
+                    {t("login")}
+                    <span className="hidden sm:block">account </span>
                   </button>
 
                   <Separator className="h-3 w-[2px] bg-yellow-400" />
@@ -147,7 +150,7 @@ const Navbar = ({
                   >
                     <LiaSignOutAltSolid className="w-7 h-7 !text-red-500 group:hover:!text-red-400 transition-all" />
                     <span className="hidden md:block text-white group-hover:opacity-80">
-                      Sign up
+                      {t("signUp")}
                     </span>
                   </div>
                 </div>
@@ -168,10 +171,12 @@ const Navbar = ({
                   <NavigationMenuList>
                     <NavigationMenuItem>
                       {/* About Us */}
-                      <NavigationMenuTrigger> About Us</NavigationMenuTrigger>
+                      <NavigationMenuTrigger>
+                        {t("aboutUs")}
+                      </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul className="grid gap-2 pl-4 py-2 sm:w-[300px] md:grid-cols-1 lg:w-[300px] text-sm">
-                          {AboutNav.map((component) => (
+                          {AboutNav().map((component) => (
                             <NavigationMenuLink
                               key={component.title}
                               title={component.title}
@@ -191,17 +196,19 @@ const Navbar = ({
 
                     {/* Visa type Visa */}
                     <NavigationMenuItem>
-                      <NavigationMenuTrigger>Visa Type</NavigationMenuTrigger>
+                      <NavigationMenuTrigger>
+                        {t("visaType")}
+                      </NavigationMenuTrigger>
                       <NavigationMenuContent className="overflow-y-scroll h-screen">
                         {/* Work Visa */}
                         <div className="!text-sm pl-3 mt-2  font-semibold">
-                          Work Visa
+                          {t("workVisa")}
                         </div>
 
                         <div className="my-2 w-full h-[1px] bg-indigo-500" />
 
                         <ul className="grid gap-2 pl-4 py-2 sm:w-[300px] md:grid-cols-1 lg:w-[300px] text-sm">
-                          {SubWorkNav.map((component) => (
+                          {SubWorkNav().map((component) => (
                             <NavigationMenuLink
                               key={component.title}
                               title={component.title}
@@ -219,13 +226,13 @@ const Navbar = ({
 
                         {/* Business Visa */}
                         <div className="!text-sm pl-3 mt-2  font-semibold">
-                          Business Visa
+                          {t("businessVisa")}
                         </div>
 
                         <div className="my-2 w-full h-[1px] bg-indigo-500" />
 
                         <ul className="grid gap-2 pl-4 py-2 sm:w-[300px] md:grid-cols-1 lg:w-[300px] text-sm">
-                          {SubBusinessNav.map((component) => (
+                          {SubBusinessNav().map((component) => (
                             <NavigationMenuLink
                               key={component.title}
                               title={component.title}
@@ -249,9 +256,9 @@ const Navbar = ({
                             onClick={difficultCases}
                             className={` cursor-pointer transition-colors hover:bg-[#0559a8] p-2 rounded-md hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground font-normal hover:text-white `}
                           >
-                            Expired Visa / Complicated
+                            {t("expiredVisaComplicated")}
                           </NavigationMenuLink>
-                          {VisaType.map((component) => (
+                          {VisaType().map((component) => (
                             <NavigationMenuLink
                               key={component.title}
                               title={component.title}
@@ -271,12 +278,12 @@ const Navbar = ({
 
                     {/* Fees */}
                     <NavigationMenuItem>
-                      <NavigationMenuTrigger>Fees</NavigationMenuTrigger>
+                      <NavigationMenuTrigger>{t("fees")}</NavigationMenuTrigger>
                       <NavigationMenuContent className=" overflow-y-scroll">
                         {/* Fees */}
 
                         <ul className="grid gap-2 pl-4 py-2 sm:w-[300px] md:grid-cols-1 lg:w-[300px] text-sm">
-                          {Fees.map((component) => (
+                          {Fees().map((component) => (
                             <NavigationMenuLink
                               key={component.title}
                               title={component.title}
@@ -301,11 +308,11 @@ const Navbar = ({
                     {/* Jobs */}
                     <NavigationMenuItem>
                       <NavigationMenuTrigger>
-                        Explore Jobs
+                        {t("exploreJobs")}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent className=" overflow-y-scroll">
                         <ul className="grid gap-2 pl-4 py-2 sm:w-[200px] md:grid-cols-1 lg:w-[200px] text-sm">
-                          {Jobs.map((component) => (
+                          {Jobs().map((component) => (
                             <NavigationMenuLink
                               onClick={() => onOpen("jobs")}
                               key={component.title}
@@ -321,10 +328,10 @@ const Navbar = ({
 
                     {/* Faq */}
                     <NavigationMenuItem>
-                      <NavigationMenuTrigger>Faq</NavigationMenuTrigger>
+                      <NavigationMenuTrigger>{t("faq")}</NavigationMenuTrigger>
                       <NavigationMenuContent className=" overflow-y-scroll">
                         <ul className="grid gap-2 pl-4 py-2 sm:w-[200px] md:grid-cols-1 lg:w-[200px] text-sm">
-                          {FaqNav.map((component) => (
+                          {FaqNav().map((component) => (
                             <NavigationMenuLink
                               key={component.title}
                               title={component.title}

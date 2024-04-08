@@ -12,6 +12,7 @@ import Cases from "./category/cases";
 import { useRouter } from "next/navigation";
 import { SafeUser } from "@/types";
 import { useModal } from "@/hooks/use-modal-store";
+import { useTranslations } from "next-intl";
 
 interface ProcessProps {
   currentUser?: SafeUser | null;
@@ -37,7 +38,9 @@ const Process = ({
     router.push(`/servers/${existingServer}/conversations/${supportId}`);
   };
 
-  
+  const c = useTranslations("navbar.common");
+  const t = useTranslations("navbar.workProcess");
+
   return (
     <div className="relative">
       <Container>
@@ -62,12 +65,12 @@ const Process = ({
               className="w-[100px] h-[100px]"
             />
             <h1 className="sm:text-2xl text-lg font-bold sm:text-center text-gray-600 z-10">
-              Work process & Solution
+              {t("Title")}{" "}
             </h1>
           </div>
 
           <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 2xl:grid-cols-3">
-            {Processes.map((data, i) => (
+            {Processes().map((data, i) => (
               <div
                 key={i}
                 className="rounded-md shadow-lg hover:shadow-lg p-3 transition flex flex-col gap-3 bg-[#8DBBE2]"
@@ -106,7 +109,7 @@ const Process = ({
               autoplay
               className="w-[50px] h-[50px]"
             />
-            Chat with Us
+            {c("chatWithUs")}{" "}
           </Button>
         </div>
       </Container>

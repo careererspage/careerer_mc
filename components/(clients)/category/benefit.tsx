@@ -7,12 +7,14 @@ import React from "react";
 
 import AnimateChat from "@/public/images/lottie/chat.json";
 import AnimateGift from "@/public/images/lottie/gift.json";
+import { useTranslations } from "next-intl";
 
 interface BenefitProps {
   connectOfficer?: (() => void) | undefined;
 }
 
 const Benefit = ({ connectOfficer }: BenefitProps) => {
+  const c = useTranslations("navbar.common");
   return (
     <div className="mt-10 rounded-xl p-5">
       <div className="flex items-center gap-4">
@@ -27,7 +29,7 @@ const Benefit = ({ connectOfficer }: BenefitProps) => {
         </h1>
       </div>
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-3">
-        {Benefits.map((benefit, i) => (
+        {Benefits().map((benefit, i) => (
           <div
             key={i}
             className="rounded-md p-4 m-2 transition flex flex-col gap-1"
@@ -64,7 +66,7 @@ const Benefit = ({ connectOfficer }: BenefitProps) => {
           autoplay
           className="w-[50px] h-[50px]"
         />
-        Chat with Us
+        {c("chatWithUs")}{" "}
       </Button>
     </div>
   );

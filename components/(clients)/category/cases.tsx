@@ -7,6 +7,7 @@ import Image from "next/image";
 import { SafeUser } from "@/types";
 import { useRouter } from "next/navigation";
 import { useModal } from "@/hooks/use-modal-store";
+import { useTranslations } from "next-intl";
 
 interface CasesProps {
   currentUser?: SafeUser | null;
@@ -23,6 +24,7 @@ const Cases = ({
 }: CasesProps) => {
   const { onOpen } = useModal();
   const router = useRouter();
+  const c = useTranslations("navbar.common");
 
   const connectOfficer = () => {
     if (!currentUser) {
@@ -54,10 +56,10 @@ const Cases = ({
       <div className="flex flex-col items-center justify-center gap-2 relative z-10">
         <div className="flex items-center flex-row gap-1">
           <h1 className="sm:text-2xl text-xl font-bold text-slate-50">
-            Premium{" "}
+            {c("premium")}
           </h1>
           <span className="sm:text-4xl text-xl text-white  font-extrabold">
-            Services
+            {c("services")}
           </span>
         </div>
 
@@ -75,10 +77,10 @@ const Cases = ({
             />{" "}
             <h1 className="sm:text-2xl text-base text-white font-semibold text-center">
               {" "}
-              Visa Premium
+              {c("visaPremium")}
             </h1>
             <h2 className="text-sm font-semibold shadow-lg hover:shadow-sm text-white hover:bg-blue-500 transition duration-200 ease-in bg-blue-600 px-2 py-2 rounded-md cursor-pointer">
-              Regular Cases
+              {c("regularCases")}
             </h2>
           </div>
 
@@ -96,10 +98,10 @@ const Cases = ({
               // style={{ height: 10, width: 150 }}
             />{" "}
             <h1 className="sm:text-2xl text-base text-white font-semibold text-center">
-              Visa Top-Premium
+              {c("visaTopPremium")}
             </h1>
             <h2 className="text-sm text-white font-semibold shadow-lg hover:shadow-sm bg-red-600 hover:bg-red-500 transition duration-200 ease-in px-2 py-2 rounded-md cursor-pointer">
-              Problematic Cases
+              {c("problematicCases")}{" "}
             </h2>
           </div>
         </div>

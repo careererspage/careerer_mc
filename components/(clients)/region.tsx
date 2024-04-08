@@ -7,6 +7,7 @@ import { Regions } from "@/lib/data";
 import { useRouter } from "next/navigation";
 import { SafeUser } from "@/types";
 import { useModal } from "@/hooks/use-modal-store";
+import { useTranslations } from "next-intl";
 
 interface HomeClientProps {
   currentUser?: SafeUser | null;
@@ -21,30 +22,29 @@ const Region = ({
 }: HomeClientProps) => {
   const router = useRouter();
   const { onOpen } = useModal();
+  const t = useTranslations("navbar.homeQuote");
+  const c = useTranslations("navbar.common");
 
-  const supportLine = (region:string) => {
+  const supportLine = (region: string) => {
     if (!currentUser) {
       onOpen("loginModal");
       return;
     }
     router.push(`/servers/${existingServer}/conversations/${supportId}`);
   };
-  
 
   return (
     <Container>
       <div className="">
         <h1 className="w-full leading-7 text-zinc-500 font-semibold sm:font-bold text-sm sm:!text-base">
-          This are{" "}
-          <span className="text-blue-700">core regions we work with.</span>{" "}
-          These countries hold a special place in our hearts, as many of{" "}
-          <span className="text-blue-700">
-            our team members have served as immigration officers
-          </span>{" "}
-          in some of these nations.
+          {t("thisAre")}
+          <span className="text-blue-700">{t("coreRegions")}</span>{" "}
+          {t("specialPlace")}
+          <span className="text-blue-700">{t("teamMembers")}</span>{" "}
+          {t("inNations")}{" "}
         </h1>
         <div className="grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-4">
-          {Regions.map((region, index) => (
+          {Regions().map((region, index) => (
             <div
               key={index}
               className="bg-white shadow-md text-zinc-500 flex flex-col gap-1 items-center rounded p-4"
@@ -67,7 +67,7 @@ const Region = ({
                 size="icon"
                 className="w-full mt-auto"
               >
-                Chat with an officer
+                {c("chatOfficer")}
               </Button>
             </div>
           ))}
