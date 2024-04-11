@@ -1,4 +1,3 @@
-import { FlameKindling } from "lucide-react";
 import React from "react";
 import { Button } from "../ui/button";
 import Container from "../container";
@@ -22,8 +21,8 @@ const Region = ({
 }: HomeClientProps) => {
   const router = useRouter();
   const { onOpen } = useModal();
-  const t = useTranslations("navbar.homeQuote");
-  const c = useTranslations("navbar.common");
+  const t = useTranslations("translate.homeQuote");
+  const c = useTranslations("translate.common");
 
   const supportLine = (region: string) => {
     if (!currentUser) {

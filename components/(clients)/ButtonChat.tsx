@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import { SafeUser } from "@/types";
 import { useModal } from "@/hooks/use-modal-store";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface ButtonChatProps {
   currentUser?: SafeUser | null;
@@ -26,18 +27,18 @@ const ButtonChat = ({
     router.push(`/servers/${existingServer}/conversations/${supportId}`);
   };
 
+  const c = useTranslations("translate.common");
+
   return (
     <div>
-      <p className="text-sm md:text-base mt-3 text-red-500">
-        Need the help of an Expert?
-      </p>
+      <p className="text-sm md:text-base mt-3 text-red-500">{c("needHelp")} </p>
       <Button
         onClick={difficultCases}
         variant="outline"
         size="default"
         className="mt-2"
       >
-        Chat with Expert
+        {c("chatOfficer")}{" "}
       </Button>
     </div>
   );

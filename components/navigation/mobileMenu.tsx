@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
 import { IoClose, IoMenuOutline, IoSettingsOutline } from "react-icons/io5";
 
 import { cn } from "@/lib/utils";
@@ -12,13 +11,18 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Separator } from "../ui/separator";
-import { Components, Faqcomponents, Feescomponents } from "@/lib/data";
-import { SubBusinessNav, SubWorkNav, VisaType } from "@/lib/faqData";
+import { Faqcomponents, Feescomponents } from "@/lib/data";
+import {
+  FaqNav,
+  Fees,
+  SubBusinessNav,
+  SubWorkNav,
+  VisaType,
+} from "@/lib/faqData";
 import { usePathname } from "next/navigation";
-import { MdOutlineSupportAgent, MdOutlineTrackChanges } from "react-icons/md";
-import { AiOutlineMessage } from "react-icons/ai";
+import { MdOutlineTrackChanges } from "react-icons/md";
 import { RxPerson } from "react-icons/rx";
-import { RiPassExpiredLine, RiTeamLine } from "react-icons/ri";
+import { RiTeamLine } from "react-icons/ri";
 import Image from "next/image";
 import { useModal } from "@/hooks/use-modal-store";
 import { signOut } from "next-auth/react";
@@ -27,11 +31,15 @@ import { LiaSignOutAltSolid } from "react-icons/lia";
 import ServerTool from "../server/server-tool";
 import { useTranslations } from "next-intl";
 
-const About = [
-  { title: "About Us", href: "/about" },
-  { title: "Contact Us", href: "/contact" },
-  { title: "Reviews", href: "/reviews" },
-];
+const About = () => {
+  const t = useTranslations("translate.navbarLinks");
+
+  return [
+    { title: t("aboutUs"), href: "/about" },
+    { title: t("contactUs"), href: "/contact" },
+    { title: t("reviews"), href: "/reviews" },
+  ];
+};
 
 interface MobileMenuProps {
   agents?: SafeUser[] | null;
@@ -52,11 +60,12 @@ const MobileMenu = ({
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const { onOpen } = useModal();
-  const t = useTranslations("navbar");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const t = useTranslations("translate.navbarLinks");
+  const c = useTranslations("translate.common");
 
   return (
     <div className="relative md:hidden">
@@ -254,11 +263,11 @@ const MobileMenu = ({
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="item-1">
                     <AccordionTrigger className="font-semibold AccordionTrigger">
-                      About Us
+                      {t("aboutUs")}
                     </AccordionTrigger>
                     <Separator className="w-[250px]" />
                     <AccordionContent>
-                      {About.map((component) => (
+                      {About().map((component) => (
                         <Link
                           key={component.title}
                           href={component.href}
@@ -278,14 +287,14 @@ const MobileMenu = ({
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="item-1">
                     <AccordionTrigger className="font-semibold AccordionTrigger">
-                      Services
+                      {c("services")}
                     </AccordionTrigger>
                     <Separator className=" w-[250px]" />
                     <AccordionContent>
                       <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1-1">
                           <AccordionTrigger className="!text-sm pl-3 mt-2 AccordionTrigger font-semibold">
-                            Work Visa
+                            {t("workVisa")}
                           </AccordionTrigger>
                           <AccordionContent>
                             {SubWorkNav().map((component) => (
@@ -308,7 +317,7 @@ const MobileMenu = ({
 
                         <AccordionItem value="item-1-2">
                           <AccordionTrigger className="!text-sm pl-3 mt-2 AccordionTrigger font-semibold">
-                            Business Visa
+                            {c("Business Visa")}
                           </AccordionTrigger>
                           <AccordionContent>
                             {SubBusinessNav().map((component) => (
@@ -331,7 +340,7 @@ const MobileMenu = ({
 
                         <AccordionItem value="item-1-3">
                           <AccordionTrigger className="!text-sm pl-3 mt-2 AccordionTrigger font-semibold">
-                            Others Visa
+                            {c("othersVisa")}
                           </AccordionTrigger>
                           <AccordionContent>
                             {VisaType().map((component) => (
@@ -364,14 +373,14 @@ const MobileMenu = ({
                   toggleMenu();
                 }}
               >
-                Explore Jobs
+                {c("exploreJobs")}
               </div>
 
               <Separator className=" w-[250px] my-1 h-[2px]" />
 
               <li>
                 <Link href="/eb3-Jobs" onClick={toggleMenu}>
-                  Chat with an agent
+                  {c("chatOfficer")}
                 </Link>
               </li>
 
@@ -381,16 +390,16 @@ const MobileMenu = ({
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="item-1">
                     <AccordionTrigger className="font-semibold AccordionTrigger">
-                      Fees
+                      {c("fees")}
                     </AccordionTrigger>
                     <Separator className=" w-[250px]" />
                     <AccordionContent>
-                      {Feescomponents.map((component) => (
+                      {Fees().map((component) => (
                         <Link
                           key={component.title}
-                          href={component.href}
+                          href={component.link}
                           className={`block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground ${
-                            pathname === component.href
+                            pathname === component.link
                               ? "bg-[#0559a8] text-white"
                               : ""
                           }`}
@@ -409,16 +418,16 @@ const MobileMenu = ({
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="item-1">
                     <AccordionTrigger className="AccordionTrigger font-semibold outline-none border-none hover:outline-none">
-                      Faq
+                      {t("faq")}
                     </AccordionTrigger>
                     <Separator className=" w-[250px]" />
                     <AccordionContent>
-                      {Faqcomponents.map((component) => (
+                      {FaqNav().map((component) => (
                         <Link
                           key={component.title}
-                          href={component.href}
+                          href={component.link}
                           className={`block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground ${
-                            pathname === component.href
+                            pathname === component.link
                               ? "bg-[#0559a8] text-white"
                               : ""
                           }`}

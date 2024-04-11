@@ -52,7 +52,7 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
 
   const otherMember =
     memberOne.profileId === profile.id ? memberTwo : memberOne;
-
+  const apiUrl = `/api/direct-messages`;
   return (
     <div className="bg-white dark:bg-[#313338] flex flex-col h-full">
       <ChatHeader
@@ -76,7 +76,7 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
             name={otherMember?.profile?.firstName}
             chatId={conversation.id}
             type="conversation"
-            apiUrl="/api/direct-messages"
+            apiUrl={apiUrl}
             paramKey="conversationId"
             paramValue={conversation.id}
             socketUrl="/api/socket/direct-messages"

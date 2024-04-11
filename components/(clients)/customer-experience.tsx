@@ -85,8 +85,8 @@ const CustomerExperience = ({
     router.push(`/servers/${existingServer}/conversations/${supportId}`);
   };
 
-  const t = useTranslations("navbar.homeQuote");
-  const c = useTranslations("navbar.common");
+  const t = useTranslations("translate.homeQuote");
+  const c = useTranslations("translate.common");
 
   return (
     <div className="mt-10 shadow-sm py-10 bg-white">

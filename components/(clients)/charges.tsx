@@ -16,6 +16,8 @@ import Image from "next/image";
 import { SafeUser } from "@/types";
 import { useModal } from "@/hooks/use-modal-store";
 import { useRouter } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
 interface ChargesProps {
   currentUser?: SafeUser | null;
@@ -41,31 +43,23 @@ const Charges = ({ currentUser, serverId, supportId }: ChargesProps) => {
     router.push(`/servers/${serverId}/conversations/${supportId}`);
   };
 
+  const t = useTranslations("translate.usaServicePage");
+  const c = useTranslations("translate.common");
+
   return (
     <div className="w-full mt-28">
       <Container>
         <div className="p-4 bg-gray-200 border-y-2 border-gray-500 mb-4">
-          Migrate Compass Cost: Is it worth your money?
+          {t("header1")}
         </div>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 px-4">
           <div
             className="text-[#2C2C2C] text-base"
             style={{ lineHeight: "1.8" }}
           >
-            At Migrate Compass, we pride ourselves on our team of experienced
-            immigration professionals, including former consular officers, and
-            our strong ties with consular services. Our expertise lies in U.S.
-            immigration law. We offer a comprehensive service that starts with{" "}
-            <span className="font-bold">
-              connecting you to potential employers in the United States.
-            </span>{" "}
-            Once we secure you an employment offer, we then guide you through
-            the process of obtaining your U.S. work visa
-            <p className="pt-1">
-              <span className="font-bold">
-                Migrate Compass as a body specializes in immigration law.
-              </span>{" "}
-            </p>
+            {t("paragraph1")} <span className="font-bold">{t("span1")}</span>{" "}
+            {t("span2")}
+            <p className="pt-1 font-bold">{t("paragraph2")}</p>
           </div>
 
           <Image
@@ -76,51 +70,27 @@ const Charges = ({ currentUser, serverId, supportId }: ChargesProps) => {
         </div>
 
         <div className="text-[#2C2C2C] text-base mt-4">
-          <HeadingsText
-            heading="EB-3 Work Visa"
-            subHead="Assistance Payment Plan"
-            text="
-          Our EB-3 work visa assistance payment plan is designed to simplify the
-        process of obtaining your employment-based immigrant visa. Here&lsquo;s
-        what you can expect:"
-          />
-          <ul className="sm:!text-base text-sm list-disc flex flex-col gap-3 mb-2 ml-4 ul-list">
-            <li>
-              Assessing your qualifications for a job in the USA with our
-              extensive network of start-ups and smaller firms.
-            </li>
-            <li>
-              Assigning a dedicated officer to guide you from the first day of
-              the process until your arrival in the USA.
-            </li>
-            <li>
-              Thorough evaluation of your eligibility for the H-1B, Eb3 or L-1
-              visa categories.
-            </li>
-            <li>
-              Assistance with the preparation and submission of your visa
-              application.
-            </li>
-            <li>
-              Guidance on compiling the necessary documentation and evidence.
-            </li>
-            <li>
-              Regular updates on your application status and any developments.
-            </li>
-            <li>
-              Continuous support from our seasoned immigration team throughout
-              the process.
-            </li>
-          </ul>
-          <p className="mb-4">
-            With our transparent pricing and flexible payment options, you can
-            focus on your career opportunities in the United States while we
-            handle the complexities of your visa application.
-          </p>
+          <div className="md:w-[70%]">
+            <HeadingsText
+              heading={t("headingText1")}
+              subHead={t("subHeadingText1")}
+              text={t("subHeadingDetails1")}
+            />
+            <ul className="sm:!text-base text-sm list-disc flex flex-col gap-3 mb-2 ml-4 ul-list">
+              <li>{t("Benefits.list1")}</li>
+              <li>{t("Benefits.list2")}</li>
+              <li>{t("Benefits.list3")}</li>
+              <li>{t("Benefits.list4")}</li>
+              <li>{t("Benefits.list5")}</li>
+              <li>{t("Benefits.list6")}</li>
+              <li>{t("Benefits.list7")}</li>
+              <li>{t("Benefits.list8")}</li>
+              <li>{t("Benefits.list9")}</li>
+            </ul>
+            <p className="mb-4">{t("paragraph3")}</p>
+          </div>
           <div className="flex items-center p-4 mt-4 justify-center bg-[#DC531D] w-full">
-            <p className="font-bold text-white">
-              For more information Please chat with our
-            </p>
+            <p className="font-bold text-white">{t("paragraph4")}</p>
             <Button
               onClick={connectOfficer}
               className="ml-6 flex items-center "
@@ -133,97 +103,122 @@ const Charges = ({ currentUser, serverId, supportId }: ChargesProps) => {
                 autoplay
                 className="w-[50px] h-[50px]"
               />
-              Support Team
+              {c("supportTeam")}
             </Button>
           </div>
         </div>
 
         <h1 className="text-base mt-4 text-center sm:text-xl text-[#DC531D] font-extrabold">
-          Payment Plan{" "}
+          {t("header2")}
         </h1>
 
         <div className="flex sm:!flex-row flex-col-reverse items-start md:gap-5 gap-2 mt-6 sm:mt-10">
           {selectedType === "default" && (
             <div className="flex flex-col gap-3 p-5 rounded-md shadow-md bg-white">
               <PaymentHeading
-                heading="First Payment: Application Process"
-                price="$3,970"
-                text=" This payment is due onces you sign the agreement contract. This initiates the process where a dedicated officer begins working on securing you a job in the United States. This covers getting your own assigned officer and most importantly, connecting you with a trusted sponsor for employment opportunities."
+                heading={t("paymentTypeA.heading1")}
+                price={t("paymentTypeA.price1")}
+                text={t("paymentTypeA.text1")}
               />
 
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
               <PaymentHeading
-                heading="Second Payment"
-                price="8,930"
-                text="This payment is due after we secured you a job in the United States."
+                heading={t("paymentTypeA.heading2")}
+                price={t("paymentTypeA.price2")}
+                text={t("paymentTypeA.text2")}
               />
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
-              <UlList data={UsaFeeA} />
-
+              <div>
+                <ul
+                  style={{ lineHeight: 1.8 }}
+                  className="text-sm sm:text-base list-disc flex flex-col gap-3 ml-4 ul-list"
+                >
+                  {UsaFeeA().map((item, i) => (
+                    <li key={i}>{item.lists}</li>
+                  ))}
+                </ul>
+              </div>
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
               <PaymentHeading
-                heading="Third Payment: After Visa Approval"
-                price="$6,000"
-                text="This payment is due after your visa has been approved."
+                heading={t("paymentTypeA.heading3")}
+                price={t("paymentTypeA.price3")}
+                text={t("paymentTypeA.text3")}
               />
 
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
-              <UlList data={UsaFeeC} />
+              <div>
+                <ul
+                  style={{ lineHeight: 1.8 }}
+                  className="text-sm sm:text-base list-disc flex flex-col gap-3 ml-4 ul-list"
+                >
+                  {UsaFeeC().map((item, i) => (
+                    <li key={i}>{item.lists}</li>
+                  ))}
+                </ul>
+              </div>
 
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
-              <p className="text-sm">
-                If you have any questions or concerns about the payment process,
-                please don&apos;t hesitate to contact us at
-                support@migratecompass.com
-              </p>
+              <p className="text-sm">{t("paymentTypeA.paragraph")}</p>
             </div>
           )}
 
           {selectedType === "comfortable" && (
             <div className="flex flex-col gap-3 p-5 rounded-md shadow-md bg-white">
               <PaymentHeading
-                heading="First Payment: Application Process"
-                price="$3,970"
-                text=" This payment is due onces you sign the agreement contract. This initiates the process where a dedicated officer begins working on securing you a job in the United States. This covers getting your own assigned officer and most importantly, connecting you with a trusted sponsor for employment opportunities."
+                heading={t("paymentTypeB.heading1")}
+                price={t("paymentTypeB.price1")}
+                text={t("paymentTypeB.text1")}
               />
 
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
               <PaymentHeading
-                heading="Second Payment: Over a span of 12 Months"
-                price="$1,120"
+                heading={t("paymentTypeB.heading2")}
+                price={t("paymentTypeB.price2")}
                 // price="$14,440"
-                text="This is a monthly payment plan to be made monthly after we have secured you a job in the U.S.A."
+                text={t("paymentTypeB.text2")}
               />
 
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
-              <UlList data={UsaFeeA} />
-
+              <div>
+                <ul
+                  style={{ lineHeight: 1.8 }}
+                  className="text-sm sm:text-base list-disc flex flex-col gap-3 ml-4 ul-list"
+                >
+                  {UsaFeeA().map((item, i) => (
+                    <li key={i}>{item.lists}</li>
+                  ))}
+                </ul>
+              </div>
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
               <PaymentHeading
-                heading="Third Payment: After Visa Approval"
-                price="$6,000"
-                text="This payment is due after your visa has been approved."
+                heading={t("paymentTypeB.heading3")}
+                price={t("paymentTypeB.price3")}
+                text={t("paymentTypeB.text3")}
               />
 
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
-              <UlList data={UsaFeeC} />
-
+              <div>
+                <ul
+                  style={{ lineHeight: 1.8 }}
+                  className="text-sm sm:text-base list-disc flex flex-col gap-3 ml-4 ul-list"
+                >
+                  {UsaFeeC().map((item, i) => (
+                    <li key={i}>{item.lists}</li>
+                  ))}
+                </ul>
+              </div>
               <span className="my-2 w-full h-[2px] font-bold bg-indigo-500" />
 
-              <p className="text-sm">
-                If you have any questions or concerns about the payment process,
-                please don&apos;t hesitate to contact us at
-                support@migratecompass.com
-              </p>
+              <p className="text-sm">{t("paymentTypeB.paragraph")}</p>
             </div>
           )}
 
@@ -242,8 +237,10 @@ const Charges = ({ currentUser, serverId, supportId }: ChargesProps) => {
                   htmlFor="r1"
                   className="flex flex-col sm:gap-3 gap-1 w-full h-full cursor-pointer"
                 >
-                  <h1 className="font-bold sm:text-2xl text-lg">Plan A</h1>
-                  <p className="text-gray-100 !text-sm"> Total Cost: $18,900</p>
+                  <h1 className="font-bold sm:text-2xl text-lg">
+                    {t("Header4")}
+                  </h1>
+                  <p className="text-gray-100 !text-sm"> {t("paragraph")}</p>
                 </Label>
               </div>
               <div
@@ -260,62 +257,41 @@ const Charges = ({ currentUser, serverId, supportId }: ChargesProps) => {
                   htmlFor="r2"
                   className="flex flex-col sm:gap-3 gap-1 w-full h-full cursor-pointer"
                 >
-                  <h1 className="font-bold sm:text-2xl text-lg">Plan B</h1>
-                  <p className="text-gray-100"> Total Cost: $23,400</p>
+                  <h1 className="font-bold sm:text-2xl text-lg">
+                    {t("Header5")}
+                  </h1>
+                  <p className="text-gray-100"> {t("paragraph5")}</p>
                 </Label>
               </div>
             </RadioGroup>
           </div>
         </div>
-        <div className="text-[#2C2C2C] text-base mt-4">
+        <div className="text-[#2C2C2C] text-base mt-4 md:w-[70%]">
           <h2 className="font-bold sm:text-2xl text-lg mb-2">
-            When to hire{" "}
-            <span className="text-[#DC531D]"> Migrate Compass?</span>
+            {t("Header6")} <span className="text-[#DC531D]"> {t("span6")}</span>
           </h2>
-          <p className="mb-4">
-            Immigration law in the United States is complicated. It is generally
-            practical to hire immigration specialist like Migrate Compass to
-            save you time, money, and avoid confusion. The situations when you
-            need to hire a visa lawyer are listed below.
-          </p>
+          <p className="mb-4">{t("paragraph6")}</p>
           <ol className="list-decimal ml-6 mb-4 flex flex-col gap-2">
-            <li>
-              Accuse of a crime or committed a crime and seek re entry to the
-              United States or avoid expulsion from the country.
-            </li>
-            <li>
-              Seek assistance in the application process because there are
-              several forms and documentation that are either too complicated or
-              time-consuming
-            </li>
-            <li>
-              Unsure of your basic eligibility for a green card or other
-              immigration benefit.
-            </li>
-            <li>Have deportation or removal proceedings against you.</li>
-            <li>
-              Have trouble obtaining a USCIS green card, citizenship, or other
-              immigration benefit.
-            </li>
-            <li>Require urgent assistance with an immigration situation.</li>
-            <li>Need to provide extra documentation.</li>
-            <li>Seek to apply for readmission after deportation.</li>
-            <li>Seek an employment-based visa.</li>
-            <li>
-              Intend to move to the United States to work for a U.S. employer,
-              but the business has not supported you with the immigration
-              procedure.
-            </li>
+            <li>{t("reasonsToHireUs.list1")}</li>
+            <li>{t("reasonsToHireUs.list2")}</li>
+            <li>{t("reasonsToHireUs.list3")}</li>
+            <li>{t("reasonsToHireUs.list4")}</li>
+            <li>{t("reasonsToHireUs.list5")}</li>
+            <li>{t("reasonsToHireUs.list6")}</li>
+            <li>{t("reasonsToHireUs.list7")}</li>
+            <li>{t("reasonsToHireUs.list8")}</li>
+            <li>{t("reasonsToHireUs.list9")}</li>
+            <li>{t("reasonsToHireUs.list10")}</li>
           </ol>
         </div>
       </Container>
 
       <Review
         Animate={AnimateFaq}
-        title=" Check Out Our Frequently Asked Questions"
-        list1="What is your pricing? Do you have installmental plan?"
-        list2=" How long does it take to get a Job?"
-        list3=" Do you take cases outside the United States?"
+        title={t("faq.title")}
+        list1={t("faq.list1")}
+        list2={t("faq.list1")}
+        list3={t("faq.list1")}
         href="/usa-faq"
       />
     </div>

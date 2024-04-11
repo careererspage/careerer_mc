@@ -40,7 +40,8 @@ const HeroAbt = () => {
       setShowRightScroll1(!isAtEnd);
     }
   };
-  const t = useTranslations("navbar.aboutUsPage");
+  const t = useTranslations("translate.aboutUsPage");
+  const c = useTranslations("translate.common");
 
   return (
     <div className="w-full">
@@ -119,7 +120,7 @@ const HeroAbt = () => {
           >
             <div className="flex flex-nowrap w-[70%] sm:w-full sm:space-x-3 gap-4">
               {" "}
-              {VisaType.map((visa, index) => (
+              {VisaType().map((visa, index) => (
                 <div
                   key={index}
                   className="rounded-md bg-white flex-none w-full sm:w-1/2 md:w-1/2 lg:w-1/3 cursor-pointer shadow-md hover:shadow-sm p-4 transition flex flex-col gap-1 group"
@@ -146,7 +147,7 @@ const HeroAbt = () => {
                     size="icon"
                     className="w-full mt-auto sm:text-base text-sm"
                   >
-                    Chat with agent
+                    {c("chatOfficer")}{" "}
                   </Button>
                 </div>
               ))}
@@ -174,9 +175,7 @@ const HeroAbt = () => {
 
       <div className="p-8 mt-10 mb-10 flex flex-col sm:flex-row items-center justify-center gap-3 bg-white">
         <p className="sm:text-[17px] text-sm text-[#2C2C2c] md:w-[50%] w-full">
-          Not sure which visa type is for you? No worries. We&apos;re here to
-          discuss your visa case and give professional advice tailored to your
-          specific situation.
+          {c("supportDetails")}
         </p>
         <Button
           onClick={() =>
@@ -195,13 +194,13 @@ const HeroAbt = () => {
             className="object-contain"
             alt="Support"
           />
-          Support Line
+          {c("supportLine")}{" "}
         </Button>
       </div>
 
       <div className="mt-10 px-4 md:px-20">
         <h1 className="font-bold md:text-5xl sm:text-3xl text-xl text-center text-[#428BCa]">
-          Meet Our Team Lead
+          {t("TeamLead")}{" "}
         </h1>
 
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-3 gap-8">
@@ -232,7 +231,7 @@ const HeroAbt = () => {
               </div>
 
               <span className="font-semibold text-[#950b0bb3] sm:text-[17px] text-sm py-2">
-                Education and Membership
+                {t("MemberShip")}{" "}
               </span>
               <div className="w-full flex flex-col gap-3">
                 {team.education.map((cert, i) => (

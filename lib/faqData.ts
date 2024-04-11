@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 
 export const AboutNav = () => {
-  const t = useTranslations("navbar.navbarLinks");
+  const t = useTranslations("translate.navbarLinks");
 
   return [
     {
@@ -21,7 +21,7 @@ export const AboutNav = () => {
 };
 
 export const VisaType = () => {
-  const t = useTranslations("navbar.navbarLinks");
+  const t = useTranslations("translate.navbarLinks");
 
   return [
     {
@@ -36,7 +36,7 @@ export const VisaType = () => {
 };
 
 export const SubWorkNav = () => {
-  const t = useTranslations("navbar.navbarLinks");
+  const t = useTranslations("translate.navbarLinks");
 
   return [
     {
@@ -51,7 +51,7 @@ export const SubWorkNav = () => {
 };
 
 export const SubBusinessNav = () => {
-  const t = useTranslations("navbar.navbarLinks");
+  const t = useTranslations("translate.navbarLinks");
 
   return [
     {
@@ -66,7 +66,7 @@ export const SubBusinessNav = () => {
 };
 
 export const SubParentNav = () => {
-  const t = useTranslations("navbar.navbarLinks");
+  const t = useTranslations("translate.navbarLinks");
 
   return [
     {
@@ -81,7 +81,7 @@ export const SubParentNav = () => {
 };
 
 export const Jobs = () => {
-  const t = useTranslations("navbar.navbarLinks");
+  const t = useTranslations("translate.navbarLinks");
 
   return [
     {
@@ -100,7 +100,7 @@ export const Jobs = () => {
 };
 
 export const Fees = () => {
-  const t = useTranslations("navbar.navbarLinks");
+  const t = useTranslations("translate.navbarLinks");
 
   return [
     {
@@ -115,7 +115,7 @@ export const Fees = () => {
 };
 
 export const FaqNav = () => {
-  const t = useTranslations("navbar.navbarLinks");
+  const t = useTranslations("translate.navbarLinks");
 
   return [
     {

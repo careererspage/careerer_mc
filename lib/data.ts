@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 export const heroImages = [
   {
@@ -19,7 +20,7 @@ export const heroImages = [
 ];
 
 export const Reviews = () => {
-  const t = useTranslations("navbar.clientReviews");
+  const t = useTranslations("translate.clientReviews");
 
   return [
     {
@@ -263,7 +264,7 @@ export const DifficultCases = [
 ];
 
 export const Regions = () => {
-  const t = useTranslations("navbar.offices");
+  const t = useTranslations("translate.offices");
 
   return [
     {
@@ -289,7 +290,7 @@ export const Regions = () => {
   ];
 };
 export const Benefits = () => {
-  const t = useTranslations("navbar.benefits");
+  const t = useTranslations("translate.benefits");
 
   return [
     {
@@ -337,7 +338,7 @@ export const Benefits = () => {
 };
 
 export const Processes = () => {
-  const t = useTranslations("navbar.workProcess");
+  const t = useTranslations("translate.workProcess");
 
   return [
     {
@@ -384,34 +385,34 @@ export const Processes = () => {
   ];
 };
 
-export const VisaType = [
-  {
-    image: require("../public/images/agent.png"),
-    title: "Skilled & Unskilled",
-    details:
-      "For skilled and unskilled workers seeking employment opportunities in the U.S. & Europe After payment, a dedicated officer will manage your visa application for accuracy and completeness.",
-  },
-  {
-    image: require("../public/images/Denial.png"),
-    title: "Tourist, Visitor or Medical Treatment",
-    details:
-      "For individuals traveling to the for tourism, visiting, or seeking medical treatment. We welcome all visitors and our service covers every step of the way.",
-  },
+export const VisaType = () => {
+  const t = useTranslations("translate.visaTypeAboutPage");
 
-  {
-    image: require("../public/images/Cost.png"),
-    title: "Business or Employment",
-    details:
-      "For professionals attending business meetings, settling estates, making investments, or starting work in U.S. and Europe We help you get the right visa type for your needs.",
-  },
+  return [
+    {
+      image: require("../public/images/agent.png"),
+      title: t("title1"),
+      details: t("details1"),
+    },
+    {
+      image: require("../public/images/Denial.png"),
+      title: t("title2"),
+      details: t("details2"),
+    },
 
-  {
-    image: require("../public/images/peace-of-mind.png"),
-    title: "Study or Exchange",
-    details:
-      "For students and exchange visitors starting their academic journey in the U.S. We ensure your application is spotless and meets all requirements.",
-  },
-];
+    {
+      image: require("../public/images/Cost.png"),
+      title: t("title3"),
+      details: t("details3"),
+    },
+
+    {
+      image: require("../public/images/peace-of-mind.png"),
+      title: t("title4"),
+      details: t("details4"),
+    },
+  ];
+};
 
 export const Components = [
   { title: "Work Visa", href: "/work" },
@@ -607,61 +608,61 @@ export const WorkOverview = [
   },
 ];
 
-export const SwissWork = [
-  {
-    title: "Lower Tax Rates",
-    lists:
-      "Switzerland has lower tax rates compared to many other countries, allowing you to take home a larger portion of your salary.",
-  },
-  {
-    title: "Favorable Work Policies",
-    lists:
-      "Switzerland has eased policies for skilled workers, making it easier for them to secure work visas.",
-  },
-  {
-    title: "Skilled Professionals",
-    lists:
-      "Swiss companies are actively hiring skilled professionals across various sectors.",
-  },
-  {
-    title: "Job Opportunities",
-    lists:
-      "Switzerland offers plenty of job opportunities, especially for those with specialized skills.",
-  },
-  {
-    title: "High Salaries",
-    lists:
-      "Swiss salaries rank as the highest in the world, making it an attractive destination for professionals seeking well-paying jobs.",
-  },
-  {
-    title: "Work-Life Balance",
-    lists:
-      "The average work week in Switzerland is 35.2 hours, promoting a healthy work-life balance.",
-  },
-];
+export const SwissWork = async () => {
+  const t = await getTranslations("translate.swissWorkPage.swissWorkBenefits");
 
-export const SwissRequirement = [
-  {
-    title: "Job Offer",
-    lists:
-      "Migrate Compass assists in securing job offers from small firms in Switzerland for both skilled and unskilled roles.",
-  },
-  {
-    title: "Work Experience",
-    lists:
-      "For unskilled roles, practical experience can be advantageous. For skilled roles, several years of experience in your field is typically expected.",
-  },
-  {
-    title: "Qualifications",
-    lists:
-      "For skilled roles, you should possess a university degree or equivalent qualifications in your field of work. For unskilled labor roles in shortage occupations such as farming, plumbing, carpenter, and other unskilled jobs, specific qualifications may not be required.",
-  },
-  {
-    title: "Work Permit Application",
-    lists:
-      "Once a job offer is secured, Migrate Compass assists in the application process for your work permit, ensuring a streamlined immigration process to Switzerland.",
-  },
-];
+  return [
+    {
+      title: t("title1"),
+      lists: t("reason1"),
+    },
+    {
+      title: t("title2"),
+      lists: t("reason2"),
+    },
+    {
+      title: t("title3"),
+      lists: t("reason3"),
+    },
+    {
+      title: t("title4"),
+      lists: t("reason4"),
+    },
+    {
+      title: t("title5"),
+      lists: t("reason5"),
+    },
+    {
+      title: t("title6"),
+      lists: t("reason6"),
+    },
+  ];
+};
+
+export const SwissRequirement = async () => {
+  const t = await getTranslations(
+    "translate.swissWorkPage.swissWorkRequirement"
+  );
+
+  return [
+    {
+      title: t("title1"),
+      lists: t("lists1"),
+    },
+    {
+      title: t("title2"),
+      lists: t("lists2"),
+    },
+    {
+      title: t("title3"),
+      lists: t("lists3"),
+    },
+    {
+      title: t("title4"),
+      lists: t("lists4"),
+    },
+  ];
+};
 
 export const MigrateOverview = [
   {
@@ -744,107 +745,110 @@ export const BusinessOverview = [
   },
 ];
 
-export const UsaFeeA = [
-  {
-    lists: "Consular processing fees",
-  },
-  {
-    lists: "USCIS premium processing fees for expedited handling of your I-140",
-  },
-  {
-    lists:
-      "Preparation and filing of your I-485 (Application to Register Permanent Residence or Adjust Status), if you currently in the United States",
-  },
-  {
-    lists:
-      "Legal services for your case, including communication with USCIS and responding to any Requests for Evidence",
-  },
-  {
-    lists: "USCIS Legal Cost",
-  },
-  {
-    lists: "Application / Filing Fee",
-  },
-  {
-    lists: "Guidance on gathering the required documentation and evidence",
-  },
-  {
-    lists:
-      "Migrate Compass Services for ongoing support throughout the process",
-  },
-  {
-    lists: "Mailing fees for sending your documents to USCIS",
-  },
-  {
-    lists: "Premium Visa Interview preparation",
-  },
-];
+export const UsaFeeA = () => {
+  const t = useTranslations("translate.usaServicePage");
 
-export const UsaFeeC = [
-  {
-    lists: "Migrate Compass Total Service Fee",
-  },
-  {
-    lists:
-      "Assistance with the local registration process upon arrival in the United States",
-  },
-  {
-    lists: "Support in finding accommodation and settling in the United States",
-  },
-  {
-    lists:
-      "Guidance on the United State social security, tax system, and other local regulations",
-  },
-];
+  return [
+    {
+      lists: t("paymentTypeA.uLFeesA.list1"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list2"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list3"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list4"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list5"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list6"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list7"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list8"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list9"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list10"),
+    },
+  ];
+};
 
-export const SwissA = [
-  {
-    lists: "Preparation and submission of your Swiss work permit application",
-  },
-  {
-    lists: "Guidance on gathering the required documentation and evidence",
-  },
-  {
-    lists: "Consular processing fees",
-  },
-  {
-    lists:
-      "Legal services for your case, including communication with the Swiss immigration authorities and responding to any requests for additional information",
-  },
-  {
-    lists: "Legal costs associated with the Swiss work permit application",
-  },
-  {
-    lists: "Application / Filing Fee",
-  },
+export const UsaFeeC = () => {
+  const t = useTranslations("translate.usaServicePage");
 
-  {
-    lists:
-      "Migrate Compass Services for ongoing support throughout the process",
-  },
-  {
-    lists:
-      "Mailing fees for sending your documents to the Swiss immigration authorities",
-  },
-  {
-    lists:
-      "Preparation for any necessary interviews with the Swiss immigration authorities",
-  },
-];
+  return [
+    {
+      lists: t("paymentTypeA.uLFeesC.list1"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesC.list2"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesC.list3"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesC.list4"),
+    },
+  ];
+};
 
-export const SwissC = [
-  {
-    lists: "Migrate Compass Total Service Fee",
-  },
-  {
-    lists:
-      "Assistance with the local registration process upon arrival in Switzerland",
-  },
-  {
-    lists: "Support in finding accommodation and settling in Switzerland",
-  },
-  {
-    lists:
-      "Guidance on Swiss social security, tax system, and other local regulations",
-  },
-];
+export const SwissA = () => {
+  const t = useTranslations("translate.swissServicePage");
+
+  return [
+    {
+      lists: t("paymentTypeA.uLFeesA.list1"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list2"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list3"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list4"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list5"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list6"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list7"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list8"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesA.list9"),
+    },
+  ];
+};
+
+export const SwissC = () => {
+  const t = useTranslations("translate.swissServicePage");
+  return [
+    {
+      lists: t("paymentTypeA.uLFeesC.list1"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesC.list2"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesC.list3"),
+    },
+    {
+      lists: t("paymentTypeA.uLFeesC.list4"),
+    },
+  ];
+};

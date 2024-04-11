@@ -4,6 +4,8 @@ import Navbar from "@/components/(clients)/navbar";
 import Footer from "@/components/Footer";
 import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import React from "react";
 
 const Contact = async () => {
@@ -34,6 +36,8 @@ const Contact = async () => {
     (member) => member.profile?.firstName === "Support Line"
   );
 
+  const t = await getTranslations("translate.contactPage");
+
   return (
     <div className="w-full">
       <Navbar
@@ -45,9 +49,8 @@ const Contact = async () => {
         ImageUrl={require("@/public/images/hero/Call.jpg")}
         center
         chatAgent
-        title="Connect
-        with us directly through "
-        subTitle="the chat feature on your free account."
+        title={t("heroHeader")}
+        subTitle={t("heroSubHeader")}
       />
       <ContactPage
         currentUser={currentUser}

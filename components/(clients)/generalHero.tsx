@@ -5,6 +5,7 @@ import React from "react";
 import { Button } from "../ui/button";
 import AnimateChat from "@/public/images/lottie/chat.json";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface GeneralProps {
   title: string;
@@ -23,7 +24,9 @@ const GeneralHero = ({
   subTitle1,
   ImageUrl,
 }: GeneralProps) => {
-  const router=useRouter()
+  const router = useRouter();
+  const c = useTranslations("translate.common");
+
   return (
     <div>
       <div className="relative w-full h-[500px] overflow-hidden mt-14">
@@ -54,8 +57,14 @@ const GeneralHero = ({
             {subTitle1}
           </p>
           {chatAgent && (
-            <div className="w-full flex items-center justify-center"
-            onClick={()=>router.push("/servers/66edbb5c-de49-42d2-a842-4a77074f0f03/conversations/9fe2cb6c-7383-4a60-a7d2-39ec373f4734")}>
+            <div
+              className="w-full flex items-center justify-center"
+              onClick={() =>
+                router.push(
+                  "/servers/66edbb5c-de49-42d2-a842-4a77074f0f03/conversations/9fe2cb6c-7383-4a60-a7d2-39ec373f4734"
+                )
+              }
+            >
               <Button
                 className="ml-6 flex items-center"
                 variant="primary"
@@ -67,7 +76,7 @@ const GeneralHero = ({
                   autoplay
                   className="w-[50px] h-[50px]"
                 />
-                Support Team
+                {c("supportLine")}{" "}
               </Button>
             </div>
           )}

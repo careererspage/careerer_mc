@@ -24,7 +24,7 @@ const Cases = ({
 }: CasesProps) => {
   const { onOpen } = useModal();
   const router = useRouter();
-  const c = useTranslations("navbar.common");
+  const c = useTranslations("translate.common");
 
   const connectOfficer = () => {
     if (!currentUser) {

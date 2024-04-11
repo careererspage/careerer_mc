@@ -4,8 +4,10 @@ import { NextRequest, NextResponse } from "next/server";
 const nextIntlMiddleware = createMiddleware({
   // A list of all locales that are supported
   locales: ["en", "es"],
-
   // Used when no locale matches
+  localePrefix: "never",
+  // localePrefix: "as-needed",
+
   defaultLocale: "en",
 });
 
@@ -15,5 +17,5 @@ export default function (req: NextRequest): NextResponse {
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ["/", "/about", "/(es|en)/:path*"],
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)", "/([\\w-]+)?/servers/(.+)"],
 };

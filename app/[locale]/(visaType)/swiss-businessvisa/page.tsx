@@ -11,6 +11,7 @@ import Review from "@/components/(clients)/category/review";
 import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
 import ButtonChat from "@/components/(clients)/ButtonChat";
+import { getTranslations } from "next-intl/server";
 
 const page = async () => {
   const currentUser = await currentProfile();
@@ -40,6 +41,8 @@ const page = async () => {
     (member) => member.profile?.firstName === "Support Line"
   );
 
+  const t = await getTranslations("translate.swissBusinessPage");
+
   return (
     <div>
       <Navbar
@@ -49,8 +52,8 @@ const page = async () => {
       />
       <GeneralHero
         ImageUrl={require("@/public/images/hero/farm.jpg")}
-        title="Business / Investment Based Visa in Switzerland"
-        subTitle="Golden Swiss Visa."
+        title={t("heroHeader")}
+        subTitle={t("heroSubHeader")}
       />
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-[40%,60%] gap-4 mt-10 relative">
@@ -58,102 +61,70 @@ const page = async () => {
             currentUser={currentUser}
             existingServer={existingServer?.id}
             supportId={support?.id}
-            title="Business Visa"
+            title={t("serviceCard.header")}
             listItems={[
-              "We connect you with our established Business Partners",
-              "We assist in preparing all necessary documentation",
-              "Our support extends beyond visa approval, we accompany you throughout your journey",
+              t("serviceCard.headerDetails1"),
+              t("serviceCard.headerDetails2"),
+              t("serviceCard.headerDetails3"),
             ]}
           />
 
           <div>
             <h1 className="text-lg mt-4 text-[#055AAA] font-bold">
-              Swiss Investor Visa
+              {t("header1")}
             </h1>
             <p
               className="text-[#2C2C2C] text-sm mt-1 sm:!text-base"
               style={{ lineHeight: "1.8" }}
             >
-              The Swiss Investor Visa, also known as the Swiss Golden Visa
-              program or the Swiss Citizenship by Investment program, is
-              designed to attract high-net-worth individuals and foreign
-              investors from non-European Union (EU) countries.{" "}
+              {t("paragraph1")}
             </p>
             <p
               className="text-[#2C2C2C] text-sm mt-2 sm:!text-base"
               style={{ lineHeight: "1.8" }}
             >
-              Switzerland offers a special Residence by Investment program
-              designed for non-EU/EFTA citizens. This exciting opportunity lets
-              you and your family live in Switzerland by making an investment.
-              This payment gives you residency rights in Switzerland. The
-              Residence by Investment program stands out because it can lead to
-              getting a Swiss passport after some time. Living in Switzerland
-              with this kind of visa means enjoying the peace and beauty of the
-              country while building your business dreams. Plus, this route
-              eventually opens up the possibility of becoming a citizen,
-              granting freedom to work across Europe without needing separate
-              permissions or visas.
+              {t("paragraph2")}
             </p>
             <h1 className="text-lg mt-4 text-[#055AAA] font-bold">
-              Switzerland Golden Visa Residence Eligibility criteria:
+              {t("header2")}
             </h1>
             <ul
               style={{ lineHeight: 1.8 }}
-              className="text-sm mt-1 sm:!text-base list-disc ml-6 mb-4"
+              className="text-sm mt-1 sm:!text-base list-disc flex flex-col gap-3 ml-4 ul-list"
             >
-              <li>Be a non-EU citizen.</li>
-              <li>
-                Investing in a Swiss company or making a significant
-                contribution to an existing business.
-              </li>
-              <li>Be between the ages of 18 and 55. </li>
-              <li>
-                you need to demonstrate financial stability and provide proof of
-                your investment funds.
-              </li>
-              <li>Have a clean criminal record. </li>
-              <li>The source of your investment funds must be lawful.</li>
-              <li>Have an official source of income</li>
-              <li>Have owned or rented property in the country </li>
+              <li> {t("Eligibility.list1")}</li>
+              <li> {t("Eligibility.list2")}</li>
+              <li>{t("Eligibility.list3")}</li>
+              <li> {t("Eligibility.list4")}</li>
+              <li>{t("Eligibility.list5")}</li>
+              <li>{t("Eligibility.list6")}</li>
+              <li>{t("Eligibility.list7")}</li>
+              <li>{t("Eligibility.list8")}</li>
             </ul>
             <h1 className="text-lg mt-4 text-[#055AAA] font-bold">
               What are the Swiss Golden Visa Benefits?
             </h1>
             <ul
               style={{ lineHeight: 1.8 }}
-              className="text-sm mt-1 sm:!text-base list-disc ml-6 mb-4"
+              className="text-sm mt-1 sm:!text-base list-disc flex flex-col gap-3 ml-4 ul-list"
             >
               <li>
-                <span className="font-bold">
-                  Schengen visa-free travel to Schengen nations:
-                </span>{" "}
-                Switzerland is a member of the Schengen Zone. As a result, Swiss
-                residents can travel other Schengen countries and stay for up to
-                90 days out of 180 without a visa.
+                <h1 className="font-bold">
+                  <li>{t("Benefits.list1")}</li>
+                </h1>{" "}
+                {t("Benefits.details1")}
               </li>
               <li>
-                <span className="font-bold">Relocating to Switzerland:</span>{" "}
-                During the validity of the residence permit, the investor and
-                their family gain the right to reside in Switzerland. A
-                residence permission card is typically good for one year. It is
-                extendable if you live in the nation for 183 days out of the
-                year.
+                <h1 className="font-bold">{t("Benefits.list2")}</h1>{" "}
+                {t("Benefits.details2")}
               </li>
               <li>
-                <span className="font-bold">
-                  Access to high-quality education and healthcare:
-                </span>{" "}
-                Switzerland’s schools and universities are regarded as among the
-                best in the world. There, the investor’s children can receive a
-                good education.
+                <h1 className="font-bold">{t("Benefits.list3")}</h1>{" "}
+                {t("Benefits.details3")}
               </li>
               <li>
-                <span className="font-bold">Healthcare:</span> A Swiss resident
-                permit entitles the holder access medical treatment in local
-                clinics or institutions of other Schengen countries without the
-                need for a medical visa. Citizenship is granted after ten years
-                of residence in the country.
+                <h1 className="font-bold">{t("Benefits.list4")}</h1>{" "}
+                {t("Benefits.details4")}
               </li>
             </ul>
 
@@ -166,9 +137,7 @@ const page = async () => {
               className="text-[#2C2C2C] text-sm sm:!text-base mt-3"
               style={{ lineHeight: "1.8" }}
             >
-              Migrate Compass is here to offer you a hassle-free experience and
-              make sure you receive your Swiss Golden visa as quickly as
-              possible.
+              {t("Header6")}
             </p>
           </div>
         </div>
@@ -176,10 +145,10 @@ const page = async () => {
       <div className="mt-6">
         <Review
           Animate={AnimateFaq}
-          title="Check Out Our Reviews"
-          list1="Can I become a Swiss citizen if I marry someone from Switzerland?"
-          list2="What do I need to do to immigrate to Switzerland?"
-          list3="Can anyone apply for the Swiss golden visa program?"
+          title={t("faq.title")}
+          list1={t("faq.list1")}
+          list2={t("faq.list2")}
+          list3={t("faq.list3")}
           href="/reviews"
         />
       </div>

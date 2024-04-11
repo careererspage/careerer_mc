@@ -10,6 +10,7 @@ import Review from "@/components/(clients)/category/review";
 import ButtonChat from "@/components/(clients)/ButtonChat";
 import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
+import { getTranslations } from "next-intl/server";
 
 const page = async () => {
   const currentUser = await currentProfile();
@@ -39,6 +40,9 @@ const page = async () => {
     (member) => member.profile?.firstName === "Support Line"
   );
 
+  const t = await getTranslations("translate.usaWorkPage");
+  const c = await getTranslations("translate.common");
+
   return (
     <div>
       <Navbar
@@ -48,8 +52,8 @@ const page = async () => {
       />
       <GeneralHero
         ImageUrl={require("@/public/images/hero/work-visa.jpg")}
-        title="Work Visa made easy with Migrate Compass"
-        subTitle="Secure your United States work visa online."
+        title={t("heroHeader")}
+        subTitle={t("heroSubHeader")}
       />
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-[40%,60%] gap-4 mt-10 relative">
@@ -57,95 +61,76 @@ const page = async () => {
             currentUser={currentUser}
             existingServer={existingServer?.id}
             supportId={support?.id}
-            title="Work Visa Complete Service"
+            title={t("serviceCard.header")}
             listItems={[
-              "We connect you with patterned companies, firms, individuals, for potential job offers",
-              "We have a network of satisfied clients we pair you with on arrival",
-              "Don't have your papers? We would evaluate and connect you with an officer",
+              t("serviceCard.headerDetails1"),
+              t("serviceCard.headerDetails2"),
+              t("serviceCard.headerDetails3"),
             ]}
           />
 
           <div>
             <h1 className="text-lg mt-4 text-[#055AAA] font-bold">
-              What are the EB3 Visa Requirements?
+              {t("header1")}
             </h1>
             <p
               className="text-[#2C2C2C] text-sm mt-1 sm:!text-base"
               style={{ lineHeight: "1.8" }}
             >
-              There are several requirements for the EB3 visa. The following
-              conditions must be satisfied in order for you to be approved for
-              an EB3 visa. My team and I would be happy to help you determine if
-              you satisfy these requirements.
+              {t("paragraph1")}
             </p>
             <h1 className="text-lg mt-4 text-[#055AAA] font-bold">
-              Here&lsquo;s what you need to know
+              {t("header2")}
             </h1>
             <p
               className="text-[#2C2C2C] text-sm mt-1 sm:!text-base"
               style={{ lineHeight: "1.8" }}
             >
-              The EB3 visa allows someone to obtain a green card based on
-              getting sponsored by a U.S. company which we provide for you. To obtain a green card, your
-              company must go through the labor certificate PERM process. In
-              this guide, I will walk you through several important aspects of
-              the EB3 visa process. I will also show you how you can utilize
-              this visa to get a green card to live in the United States.
+              {t("headerDeatail2")}
             </p>
             <h1 className="text-lg mt-4 text-[#055AAA] font-bold">
-              Incomplete information,
+              {t("header3")}
             </h1>{" "}
             <p
               className="text-[#2C2C2C] text-sm mt-1 sm:!text-base"
               style={{ lineHeight: "1.8" }}
             >
-              insufficient evidence, and legal obstacles often lead to long
-              processing times, and even visa rejection. If any lack of document please let your assigned officer or SupportLine be aware.
+              {t("paragraph3")}
             </p>
             <h1 className="text-lg mt-4 text-[#055AAA] font-bold">
-              The requirements are less strict.
+              {t("header4")}
             </h1>
             <p
               className="text-[#2C2C2C] text-sm mt-1 sm:!text-base"
               style={{ lineHeight: "1.8" }}
             >
-              The EB3 visa has less strict requirements than either the EB1 or
-              the EB2 visas. This means that some people who may not qualify for
-              these other visas may be eligible for the EB3 visa.
+              {t("paragraph4")}
             </p>
             <h1 className="text-lg mt-4 text-[#055AAA] font-bold">
-              Your spouse and dependent children can come to the United States.
+              {t("header5")}
             </h1>
             <p
               className="text-[#2C2C2C] text-sm mt-1 sm:!text-base"
               style={{ lineHeight: "1.8" }}
             >
-              Guess what? With the EB3 visa, your family gets to join the
-              adventure too! If you have kids under 21 who aren&lsquo;t married,
-              they can hop on board. And the best part? They can go to school in
-              the U.S. Your spouse isn&lsquo;t left out either. Once
-              they&lsquo;ve sorted out their work documents or gotten their
-              green card, they&lsquo;re free to work.
+              {t("header5")}
             </p>
             <ButtonChat
               currentUser={currentUser}
               existingServer={existingServer?.id}
               supportId={support?.id}
             />
-            <p className="mt-3">
-              Migrate Compass is here to offer you a hassle-free experience and
-              make sure you receive your U.S Work visa as quickly as possible.
-            </p>
+            <p className="mt-3">{t("Header6")}</p>
           </div>
         </div>
       </Container>
       <div className="mt-6">
         <Review
           Animate={AnimateFaq}
-          title=" Check Out Our Reviews"
-          list1="Migrate Compass service was awesome althrough even though my case was compplicated"
-          list2="Never thought I could get a Job in the United States "
-          list3="Thanks Migrate Compass my family are now united with me in the United States"
+          title={c("reviews")}
+          list1={t("reviews.list1")}
+          list2={t("reviews.list2")}
+          list3={t("reviews.list3")}
           href="/reviews"
         />
       </div>

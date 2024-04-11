@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 const Quote = () => {
-  const t = useTranslations("navbar.homePage");
+  const t = useTranslations("translate.homePage");
 
   return (
     <div className="w-full">

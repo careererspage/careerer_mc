@@ -55,7 +55,7 @@ const Navbar = ({
   const pathname = usePathname();
   const { onOpen } = useModal();
   const router = useRouter();
-  const t = useTranslations("navbar");
+  const t = useTranslations("translate.navbar");
 
   const connectOfficer = () => {
     if (!currentUser) {

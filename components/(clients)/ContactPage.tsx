@@ -12,6 +12,7 @@ import { useToast } from "../ui/use-toast";
 import { sendEmail } from "@/actions/senderEmail";
 import { ToastAction } from "../ui/toast";
 import SubmitBtn from "./submit-btn";
+import { useTranslations } from "next-intl";
 
 interface ContactProps {
   currentUser?: SafeUser | null;
@@ -32,14 +33,16 @@ const ContactPage = ({ currentUser, serverId, supportId }: ContactProps) => {
     router.push(`/servers/${serverId}/conversations/${supportId}`);
   };
 
+  const t = useTranslations("translate.contactPage");
+  const c = useTranslations("translate.common");
+
   return (
     <div>
       <Container>
         <HeadingsText
-          heading="Schedule A "
-          subHead="Consultation"
-          text="
-          Please click the button below to schedule a consultation with one of our attorneys. In addition to phone consultations, we also offer live call consultations over on this platform. If you&lsquo;re local and would like to do an in-office consultations in our Fort Lauderdale office, we can accommodate that as well."
+          heading={t("scheduleAConsultationA")}
+          subHead={t("scheduleAConsultationB")}
+          text={t("consultationDetails")}
         />
         <Button
           onClick={supportLine}
@@ -47,7 +50,7 @@ const ContactPage = ({ currentUser, serverId, supportId }: ContactProps) => {
           variant="button"
           size="lg"
         >
-          Book Consultation
+          {c("bookSection")}{" "}
           <Lottie
             animationData={AnimateChat}
             loop
@@ -58,11 +61,8 @@ const ContactPage = ({ currentUser, serverId, supportId }: ContactProps) => {
 
         <div className="grid md:grid-cols-[55%,45%] grid-rows-1  gap-10 mt-10">
           <div className="w-full">
-            <h1 className="font-bold text-2xl">Send Us A Message</h1>
-            <p className="text-[#2C2C2C] mt-2">
-              We&apos;d love to help you with your immigration needs. Use the
-              form below to drop us an email.
-            </p>
+            <h1 className="font-bold text-2xl">{t("emailHeader")}</h1>
+            <p className="text-[#2C2C2C] mt-2">{t("emailMsg")}</p>
 
             <form
               className="mt-10 flex flex-col gap-3 text-black"
@@ -82,7 +82,6 @@ const ContactPage = ({ currentUser, serverId, supportId }: ContactProps) => {
                   return;
                 }
 
-                
                 toast({
                   style: {
                     background: "black",
@@ -121,25 +120,21 @@ const ContactPage = ({ currentUser, serverId, supportId }: ContactProps) => {
             </form>
           </div>
           <div className="text-[#2C2C2C] w-full">
-            <h1 className="font-bold text-2xl mb-2">
-              Immigration Process Simplified
-            </h1>
+            <h1 className="font-bold text-2xl mb-2">{t("emailHeader1")} </h1>
 
             <p
               className="mt-2 text-[#2c2c2c] text-base"
               style={{ lineHeight: "1.8" }}
             >
-              To see how we&apos;ve helped our clients overcome difficult
-              immigration challenges, visit our reviews page, and read what our
-              clients say about our services on our reviews page.
+              {t("emailMsg1")}
             </p>
             <div className="flex flex-col gap-2 mt-1">
               <div>
-                <h1 className="font-bold">Address / Offices</h1>
+                <h1 className="font-bold">{t("address")}</h1>
                 <div className="text-[#2c2c2c]">
-                  Swiss office: Stockerstrasse 38, CH-8002, Zürich, Switzerland
+                  {t("addressDetail1")}{" "}
                   <div className="text-[rgb(44,44,44)]">
-                    U.S office: USCIS headquarters.{" "}
+                    {t("addressDetail2")}{" "}
                   </div>
                 </div>
               </div>
