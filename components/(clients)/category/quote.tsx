@@ -8,11 +8,11 @@ const Quote = () => {
   return (
     <div className="w-full">
       <div
-        className="text-zinc-500 sm:text-2xl text-center md:text-3xl text-xl font-extrabold sm:leading-[60px] mb-2 mt-4 w-full"
+        className="text-zinc-500 text-[14px] sm:text-2xl text-center font-bold sm:font-extrabold sm:leading-[60px] mb-2 mt-8 w-full"
         style={{ lineHeight: 1.2 }}
       >
-        {t("title")} <span className="text-[#e67121]"> Expertise </span>
-        Delivered
+        {t("title")} <span className="text-[#e67121]"> {t("span1")} </span>
+        {t("span2")}
       </div>
       <div className="grid lg:!items-center lg:grid-cols-[35%,65%] grid-cols-1 gap-5 mt-10 mb-6 w-full px-5">
         <Image
@@ -21,9 +21,9 @@ const Quote = () => {
           alt="team"
         />
         <div>
-          <div className="text-zinc-500 sm:!text-base text-sm font-normal sm:!leading-8 !leading-8">
+          <div className="text-zinc-500 sm:!text-base text-sm font-normal sm:!leading-7 !leading-6">
             <div className="font-bold">{t("intoTitle")}</div>
-            {t("intro")} 😊
+            {t("intro")}
           </div>
         </div>
       </div>

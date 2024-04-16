@@ -5,12 +5,15 @@ import Container from "../container";
 import Lottie from "lottie-react";
 import { Button } from "../ui/button";
 import AnimateChat from "@/public/images/lottie/chat.json";
+import { useTranslations } from "next-intl";
 
 interface FaqPageProps {
   data: { question: string; answer: string }[];
 }
 
 const FaqPage = ({ data }: FaqPageProps) => {
+  const t = useTranslations("translate.swissFaqPage");
+
   return (
     <div>
       <Container>
@@ -20,9 +23,7 @@ const FaqPage = ({ data }: FaqPageProps) => {
           ))}
         </div>
         <div className="flex items-center p-4 mt-4 justify-center bg-[#DC531D] w-full">
-          <p className="font-bold text-white">
-            For more information Please chat with our{" "}
-          </p>
+          <p className="font-bold text-white">{t("paragraph")}</p>
           <Button
             className="ml-6 flex items-center "
             variant="primary"

@@ -36,10 +36,10 @@ const Region = ({
     <Container>
       <div className="">
         <h1 className="w-full leading-7 text-zinc-500 font-semibold sm:font-bold text-sm sm:!text-base">
-          {t("thisAre")}
-          <span className="text-blue-700">{t("coreRegions")}</span>{" "}
-          {t("specialPlace")}
-          <span className="text-blue-700">{t("teamMembers")}</span>{" "}
+          {t("thisAre")}{" "}
+          <span className="text-orange-500">{t("coreRegions")}</span>{" "}
+          {t("specialPlace")}{" "}
+          <span className="text-orange-500">{t("teamMembers")}</span>{" "}
           {t("inNations")}{" "}
         </h1>
         <div className="grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-4">

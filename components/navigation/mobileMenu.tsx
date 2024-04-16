@@ -68,7 +68,7 @@ const MobileMenu = ({
   const c = useTranslations("translate.common");
 
   return (
-    <div className="relative md:hidden">
+    <div className="relative z-50 lg:hidden">
       <button
         onClick={toggleMenu}
         className="text-slate-600 font-semibold text-base"
@@ -245,7 +245,7 @@ const MobileMenu = ({
                 <h1>Close</h1>
               </div>
 
-              {!currentUser && (
+              {currentUser && (
                 <>
                   <div
                     className="flex items-center gap-1 group cursor-pointer text-gray-600"
@@ -271,7 +271,11 @@ const MobileMenu = ({
                         <Link
                           key={component.title}
                           href={component.href}
-                          className="block select-none space-y-1 rounded-md p-3 leading-none outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className={`block select-none space-y-1 rounded-md p-3 leading-none outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground   ${
+                            pathname === component.href
+                              ? "bg-[#0559a8] text-white"
+                              : ""
+                          }`}
                         >
                           <div className="text-sm font-medium leading-none">
                             {component.title}
@@ -472,7 +476,7 @@ const MobileMenu = ({
                   >
                     <LiaSignOutAltSolid className="sm:h-7 sm:w-7 w-5 h-5 !text-red-500 group:hover:!text-red-400 transition-all" />
                     <span className=" text-gray-600 group-hover:opacity-80">
-                      Sign Up
+                      Create account
                     </span>
                   </div>
                 </>

@@ -45,8 +45,10 @@
 
     "homePage": {
       "title": "Immigration Law Expertise Delivered",
+      "span1": "Expertise",
+      "span2": "Delivered",
       "intoTitle": "Welcome to Migrate Compass!",
-      "intro": "We pride ourselves on our profound legal expertise, our commitment to a people-centric approach, and our adoption of technology-driven processes. In addition to our immigration services, Migrate Compass also operates as a recruitment agency. We have a vast network of startups and small firms that are constantly on the lookout for individuals. Our services provide an efficient pathway for businesses, employees, investors, students, and families seeking to apply for visas and green cards in Europe and the United States. We're here to guide you through every step of your immigration journey. Let's navigate the complexities of immigration together!",
+      "intro": "Our team of Immigration experts has strong relationships with embassies and consulates across this major countries we work, making it easy for our clients to apply for business visa, Employment visa and more to any number of countries like U.S.A., Switzerland, Austrailian, and Canada. Migrate Compass also operates as a recruitment agency as we have a vast network of companies, startups and small firms that are constantly in need of individuals and dedicated workers. Our services provide an efficient pathway for businesses, employees, investors, students, and families seeking to apply for visa and permanent residence in Europe and the United States. We're here to guide you through every step of your immigration journey. Let's navigate the complexities of immigration together!",
 
       "introBeneath": "This are  we work with. These countries hold a special place in  in some of these nations.",
       "introSpan": "core regions.",
@@ -63,13 +65,13 @@
 
     "offices": {
       "usaOffice": "U.S.A Office",
-      "usaComment": "Embark on your American dream with ease. Let Global expedite your U.S. visa process.",
+      "usaComment": "Embark on your American dream with ease. Let Migrate Compass expedite your U.S. visa process.",
       "canadaOffice": "Canada Office",
-      "canadaComment": "From the Nomads visa to the unskilled visa, let Global pave the way for your Canadian adventure.",
+      "canadaComment": "From the Nomads visa to the unskilled visa, let Migrate Compass pave the way for your Canadian adventure.",
       "australiaOffice": "Austrailian Office",
-      "australiaComment": "Let Global be your gateway to the land down under. Explore Austrailian's vibrant cities with ease.",
+      "australiaComment": "Let Migrate Compass be your gateway to the land down under. Explore Austrailian's vibrant cities with ease.",
       "switzerlandOffice": "Switzerland Office",
-      "switzerlandComment": "Indulge in the picturesque beauty and tranquility of Switzerland. Trust Global for your Swiss visa process."
+      "switzerlandComment": "Indulge in the picturesque beauty and tranquility of Switzerland. Trust Migrate Compass for your Swiss visa process."
     },
 
     "common": {
@@ -86,6 +88,7 @@
       "exploreJobs": "Explore Jobs",
       "fees": "Fees",
       "faq": "Faq",
+      "migrateDetails": "Migrate Compass, a registered service with the U.S. Dept of State, offers job opporturnities, visa processing, expired visa, completion and courier services for visa applications and much more. We officially follow all instructions protocol based on your input, Dept of State and foreign consulates/embassies.",
 
       "reviews": "Testimonials & Reviews",
       "clientsExperience": "Clients",
@@ -567,7 +570,7 @@
       "heroSubHeader": "Reunite with your family in the U.S. fast and hassel-free",
       "header1": "Family Based Green Card",
       "paragraph1": "The family-based immigrant visa is one of the most common ways people acquire green cards and become permanent residents in the United States. Citizens and permanent residents may petition the USCIS to bring their family members into the country on an immigrant visa.",
-      "paragraph2": "Currently, this particular visa program accounts for about two-thirds of the more than 1 million green cards issued annually. Just like every other immigrant visa, the family-based green card has several subcategories, each determined by the family relationship that exists between the sponsor and the beneficiary of the visa. Family immigration is one of our key services at VisaNation. Over the past decade, we helped thousands of families reunite in the U.S.",
+      "paragraph2": "Currently, this particular visa program accounts for about two-thirds of the more than 1 million green cards issued annually. Just like every other immigrant visa, the family-based green card has several subcategories, each determined by the family relationship that exists between the sponsor and the beneficiary of the visa. Family immigration is one of our key services at Migrate Compass. Over the past decade, we helped thousands of families reunite in the U.S.",
 
       "span1": "Start your immigration journey today!",
 
@@ -805,7 +808,7 @@
 
     "swissServicePage": {
       "header1": "Migrate Compass Cost: Is it worth your money?",
-      "paragraph1": "At Migrate Compass, we pride ourselves on our team of experienced immigration professionals, including former consular officers, and our strong ties with consular services. Our expertise lies in U.S. immigration law. We offer a comprehensive service that starts with",
+      "paragraph1": "At Migrate Compass, we pride ourselves on our team of experienced immigration professionals, including former consular officers, and our strong ties with consular services. Our expertise lies not just in the U.S. but also with most European immigration law. We offer a comprehensive service that starts with",
 
       "span1": "connecting you to potential employers in Switzerland",
 
@@ -888,6 +891,142 @@
         "list1": "Is there a money refund if visa not successful",
         "list2": "How long does it take to get a Job?",
         "list3": "What is your pricing? Do you have installmental plan"
+      }
+    },
+
+    "swissFaqPage": {
+      "headingText1": "Switzerland",
+      "subHeadingText1": "Frequently Asked Question",
+      "subHeadingDetails1": "If not satisfied chat with our Support team",
+      "paragraph": "For more information Please chat with our",
+
+      "swissFaqs": {
+        "list1": "What is the role of the dedicated officer assigned to me?",
+        "details1": "The dedicated officer guides you from the first day of the process until your arrival in Switzerland. They are your main point of contact and provide continuous support throughout the process.",
+
+        "list2": "How do you help immigrants secure jobs in Switzerland?",
+        "details2": "We have an extensive network of startups, agencies, small firms, and individuals across Switzerland who are in need of foreign workers. We leverage this network to help you secure a job that matches your skills and preferences.",
+
+        "list3": "Can you help with finding accommodation in Switzerland?",
+        "details3": "Yes, we can pair you with other immigrants for accommodation, where you both would share the expenses. This is an optional arrangement.",
+
+        "list4": "Do you offer an installment payment plan?",
+        "details4": "Yes, we offer a flexible installment payment plan to make the process more affordable for our clients, speak to the Support Line for more info.",
+        "list5": "What types of Swiss work visas do you specialize in?",
+        "details5": "We specialize in the Permit B and Permit L work visas for Switzerland.",
+
+        "list6": "What is the process of obtaining a Swiss work visa?",
+        "details6": "The process involves securing a job offer, preparing and submitting the visa application, and going through the visa approval process.",
+
+        "list7": "How long does it take to secure a job in Switzerland?",
+        "details7": "The timeline can vary depending on the job market and the specific skills and qualifications of the immigrant, please chat with us for more info.",
+
+        "list8": "What kind of support do you provide during the visa application process?",
+        "details8": "Our strong ties with the Swiss consulates enable us to provide this premium level of support. We provide premium support including assistance with preparing and submitting the visa application, guidance on gathering the required documentation and evidence, and regular updates on your application status.",
+
+        "list9": "What happens if my visa application is not successful?",
+        "details9": "If your visa application is not successful, We will provide guidance on the appropriate next steps to take in response to the rejection. If it is determined that a refund is necessary, we will issue a partial refund from the service fee that you initially paid. The exact amount of the refund will depend on the specific circumstances and will be discussed with you at that time.",
+
+        "list10": "What is your connection with investor patterns?",
+        "details10": "We connect immigrants with potential investors to explore business and investment opportunities in Switzerland.",
+
+        "list11": "What is the cost of your services?",
+        "details11": "Our fees are transparent and we offer flexible payment options. The total cost will depend on the specific services you require.",
+
+        "list12": "What if I have an expired visa?",
+        "details12": "Please would recommend you to chat with Us or the support Line for support, so we provide you with the best solution and support",
+
+        "list13": "What is the eligibility criteria for the Permit B or Permit L visa categories?",
+        "details13": "The eligibility criteria for these visa categories can vary. We conduct a thorough evaluation of your eligibility as part of our services.",
+
+        "list14": "What is the process after my Swiss work visa has been approved?",
+        "details14": "After your visa has been approved, we assist with the local registration process upon arrival in Switzerland and provide support in finding accommodation and settling in.",
+
+        "list15": "What kind of legal services do you provide?",
+        "details15": "Our legal services include communication with the Swiss immigration authorities and responding to any requests for additional information.",
+
+        "list16": "What is the Swiss social security and tax system like?",
+        "details16": "Switzerland has a comprehensive social security system and a progressive tax system. We provide guidance on these and other local regulations.",
+
+        "list17": "What kind of jobs do you help secure for immigrants?",
+        "details17": "We help secure jobs across a wide range of sectors, depending on the skills and preferences of the immigrant.",
+
+        "list18": "What is the success rate of the visa applications you handle?",
+        "details18": "we have a high success rate due to our expertise and thorough approach, along with our strong ties with the swiss consulate.",
+
+        "list19": "What kind of businesses can I invest in Switzerland?",
+        "details19": "Switzerland offers a wide range of investment opportunities, including real estate, farming, and more. We can connect you with potential investment opportunities based on your interests.",
+
+        "list20": "What happens if I commit a crime in Switzerland?",
+        "details20": "Committing a crime can have serious consequences but we advice you to speak with our Support Line"
+      }
+    },
+
+    "usaFaqPage": {
+      "headingText1": "United States",
+      "subHeadingText1": "Frequently Asked Question",
+      "subHeadingDetails1": "If not satisfied chat with our Support team",
+      "paragraph": "For more information Please chat with our",
+
+      "usaFaqs": {
+        "list1": "What is the role of the dedicated officer assigned to me?",
+        "details1": "The dedicated officer guides you from the first day of the process until your arrival in the United States. They are your main point of contact and provide continuous support throughout the process.",
+
+        "list2": "I wish to work in the United States. Can you help me get a work visa?",
+        "details2": "We have an extensive network with startups, large corperations, agencies, small firms, and individuals across the country who are in need of foreign workers. We leverage this network to help you secure a job that matches your skills and preferences. Please chat with us for more info.",
+
+        "list3": "Can you help with finding accommodation in the United State?",
+        "details3": "Yes, we can pair you with other immigrants for accommodation, where you both would share the expenses. This is an optional arrangement.",
+
+        "list4": "Do you offer an installment payment plan?",
+        "details4": "Yes, we offer a flexible installment payment plan to make the process more affordable for our clients, speak to the Support Line for more info.",
+        "list5": "What types of U.S. work visas do you specialize in?",
+        "details5": "We specialize in the Eb-3, Eb-2, H1-B work visas for the United States.",
+
+        "list6": "What is the process of obtaining a U.S. Work Visa?",
+        "details6": "Our strong ties with the USCIS consulates make process faster as we expedite all processes for our clients. The process involves securing a job offer, preparing and submitting the visa application, and going through the visa approval process. Please for more info chat with us.",
+
+        "list7": "How long does it take to secure a job in the United States?",
+        "details7": "The timeline can vary depending on the job market and the specific skills and qualifications of the immigrant. Typically, this process can take anywhere from 1 to 2 months. Please chat with our Team for more info.",
+
+        "list8": "What kind of support do you provide during the visa application process?",
+        "details8": "Our strong ties with the USCIS consulates enables us to provide this premium level of support. We provide premium support including assistance with preparing and submitting the visa application, expedited process, guidance on gathering the required documentation and evidence, and regular updates on your application status.",
+
+        "list9": "What happens if my visa application is not successful?",
+        "details9": "If your visa application is not successful, We will provide guidance on the appropriate next steps to take in response to the rejection. If it is determined that a refund is necessary, we will issue a partial refund from the service fee that you initially paid. The exact amount of the refund will depend on the specific circumstances and will be discussed with you at that time.",
+
+        "list10": "What is your connection with investor patterns?",
+        "details10": "We connect immigrants with potential investors to explore business and investment opportunities in the United States.",
+
+        "list11": "What is the cost of your services?",
+        "details11": "Our fees are transparent and we offer flexible payment options. The total cost will depend on the specific services you require.",
+
+        "list12": "What if I have an expired visa?",
+        "details12": "Please would recommend you to chat with Us or the support Line for support, so we provide you with the best solution and support",
+
+        "list13": "What is the eligibility criteria for the work visa categories?",
+        "details13": "The eligibility criteria for these visa categories can vary. We conduct a thorough evaluation of your eligibility as part of our services.",
+
+        "list14": "What is the process after my work permit has been approved?",
+        "details14": "After your visa has been approved, we assist with the local registration process upon arrival in United States and provide support in finding accommodation and settling in.",
+
+        "list15": "What kind of legal services do you provide?",
+        "details15": "Our legal services include communication with the USCIS and responding to any requests for additional information.",
+
+        "list16": "How is the United States social security and tax system like?",
+        "details16": "The United States has a vast social security system and a progressive tax system. We provide guidance on these and other local regulations.",
+
+        "list17": "What kind of jobs do you help secure for immigrants?",
+        "details17": "We help secure jobs across a wide range of sectors, depending on the skills and preferences of the immigrant.",
+
+        "list18": "What is the success rate of the visa applications you handle?",
+        "details18": "we have a high success rate due to our expertise and thorough approach, along with our strong ties with the USCIS consulate.",
+
+        "list19": "What kind of businesses can I invest in Switzerland?",
+        "details19": "We offers a wide range of investment opportunities, including real estate, farming, workshop and more. We can connect you with potential investment opportunities based on your interests.",
+
+        "list20": "What happens if I commit a crime in the United States?",
+        "details20": "Committing a crime can have serious consequences but we advice you to speak with our Support Line"
       }
     }
   }

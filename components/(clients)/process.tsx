@@ -38,8 +38,8 @@ const Process = ({
     router.push(`/servers/${existingServer}/conversations/${supportId}`);
   };
 
-  const c = useTranslations("navbar.common");
-  const t = useTranslations("navbar.workProcess");
+  const c = useTranslations("translate.common");
+  const t = useTranslations("translate.workProcess");
 
   return (
     <div className="relative">

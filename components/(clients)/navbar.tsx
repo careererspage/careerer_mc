@@ -27,11 +27,11 @@ import { usePathname } from "next/navigation";
 import { useModal } from "@/hooks/use-modal-store";
 import { SafeMember, SafeUser } from "@/types";
 import { signOut } from "next-auth/react";
-import { CgProfile } from "react-icons/cg";
 import { UserAvatar } from "../user-avatar";
 import { LiaSignOutAltSolid } from "react-icons/lia";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { LanguagePicker } from "./language-picker";
 
 interface NavbarProps {
   currentUser?: SafeUser | null;
@@ -75,7 +75,7 @@ const Navbar = ({
 
   return (
     <div className="mb-4 h-[60px] w-full bg-[#0559a8] sticky top-0 z-50">
-      <Container>
+      <Container navbar>
         <div className="py-2 flex items-center justify-between">
           <div className="sm:flex hidden items-center gap-1">
             <span className="text-gray-200 text-xs font-semibold">call us</span>
@@ -85,14 +85,14 @@ const Navbar = ({
           </div>
           <div
             onClick={connectOfficer}
-            className="text-white cursor-pointer text-sm hover:opacity-75 transition border p-1 rounded-md"
+            className="text-white cursor-pointer text-[12px] sm:text-sm hover:opacity-75 transition border p-1 rounded-md"
           >
             {t("liveChat")}
           </div>
 
           <div
             onClick={connectOfficer}
-            className="bg-[#003266] !text-sm shadow-md py-1 px-1 rounded-lg text-white font-semibold flex items-center gap-2 hover:bg-white hover:text-gray-600 transition ease-in duration-200 cursor-pointer"
+            className="bg-[#003266] !text-[12px] sm:text-sm shadow-md py-1 px-1 rounded-lg text-white font-semibold flex items-center gap-2 hover:bg-white hover:text-gray-600 transition ease-in duration-200 cursor-pointer"
           >
             <Image
               width={50}
@@ -161,12 +161,26 @@ const Navbar = ({
       </Container>
 
       <div className="bg-slate-50 shadow-md">
-        <Container>
+        <Container navbar>
           <div className="flex items-center justify-between py-1">
-            <div className="text-slate-600 font-bold">LOGO</div>
+            <Link href="/" className="flex items-center justify-center">
+              <Image
+                width={50}
+                height={50}
+                src={require("@/public/images/migrateCompassLogo.png")}
+                alt="care line"
+                className="sm:w-[30px] sm:h-[30px] w-[20px] h-[20px] last:object-contain rounded-full an"
+              />
+              <div className="text-slate-600 text-[11px]  font-extrabold flex items-center">
+                Migrate{" "}
+                <span className="text-orange-500 text-[13px]">Compass</span>{" "}
+              </div>
+            </Link>
+
+            <LanguagePicker />
 
             <div>
-              <div className="hidden md:flex items-center text-slate-600 text-base">
+              <div className="hidden lg:flex items-center text-slate-600 text-base">
                 <NavigationMenu className="w-full bg-white py-2 rounded-md">
                   <NavigationMenuList>
                     <NavigationMenuItem>
@@ -352,7 +366,7 @@ const Navbar = ({
                 </NavigationMenu>
               </div>
 
-              <div className="block sm:hidden">
+              <div className="block lg:hidden">
                 <MobileMenu
                   serverId={serverId}
                   agents={agents}

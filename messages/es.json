@@ -45,8 +45,10 @@
     },
     "homePage": {
       "title": "Experiencia en Ley de Inmigración Entregada",
+      "span1": "Expertise",
+      "span2": "Delivered",
       "intoTitle": "¡Bienvenido a Migrate Compass!",
-      "intro": "Nos enorgullece nuestra profunda experiencia legal, nuestro compromiso con un enfoque centrado en las personas y nuestra adopción de procesos impulsados por la tecnología. Además de nuestros servicios de inmigración, Migrate Compass también opera como una agencia de reclutamiento. Tenemos una vasta red de startups y pequeñas empresas que están constantemente en busca de individuos. Nuestros servicios proporcionan un camino eficiente para empresas, empleados, inversores, estudiantes y familias que buscan solicitar visas y tarjetas verdes en Europa y Estados Unidos. Estamos aquí para guiarlo en cada paso de su viaje de inmigración. ¡Naveguemos juntos las complejidades de la inmigración!",
+      "intro": "Nuestro equipo de expertos en inmigración tiene fuertes relaciones con embajadas y consulados en los principales países con los que trabajamos, lo que facilita a nuestros clientes la solicitud de visa de negocios, visa de empleo y más a cualquier número de países como EE. UU., Suiza, Australia y Canadá. Migrate Compass también opera como una agencia de reclutamiento ya que tenemos una vasta red de empresas, startups y pequeñas firmas que están constantemente en necesidad de individuos y trabajadores dedicados. Nuestros servicios proporcionan un camino eficiente para empresas, empleados, inversores, estudiantes y familias que buscan solicitar una visa y residencia permanente en Europa y los Estados Unidos. Estamos aquí para guiarlo en cada paso de su viaje de inmigración. ¡Naveguemos juntos las complejidades de la inmigración!",
 
       "introBeneath": "Estos son los países con los que trabajamos. Estos países ocupan un lugar especial en nuestros corazones, ya que muchos de nuestros miembros del equipo han servido como oficiales de inmigración en algunas de estas naciones.",
       "introSpan": "regiones principales.",
@@ -61,16 +63,16 @@
     },
 
     "offices": {
-      "usaOffice": "Oficina de EE. UU.",
-      "usaComment": "Embarque en su sueño americano con facilidad. Deje que Global acelere su proceso de visa de EE. UU.",
-      "canadaOffice": "Oficina de Canadá",
-      "canadaComment": "Desde la visa de nómadas hasta la visa de no calificados, deje que Global allane el camino para su aventura canadiense.",
-      "australiaOffice": "Oficina de Australia",
-      "australiaComment": "Deje que Global sea su puerta de entrada a la tierra de abajo. Explore las vibrantes ciudades de Australia con facilidad.",
-      "switzerlandOffice": "Oficina de Suiza",
-      "switzerlandComment": "Disfrute de la belleza pintoresca y la tranquilidad de Suiza. Confíe en Global para su proceso de visa suiza."
+      "usaOffice": "Oficina en EE. UU.",
+      "usaComment": "Emprende tu sueño americano con facilidad. Deja que Migrate Compass acelere tu proceso de visa para EE. UU.",
+      "canadaOffice": "Oficina en Canadá",
+      "canadaComment": "Desde la visa de nómadas hasta la visa no calificada, deja que Migrate Compass allane el camino para tu aventura canadiense.",
+      "australiaOffice": "Oficina en Australia",
+      "australiaComment": "Deja que Migrate Compass sea tu puerta de entrada a la tierra de los canguros. Explora las vibrantes ciudades australianas con facilidad.",
+      "switzerlandOffice": "Oficina en Suiza",
+      "switzerlandComment": "Déjate llevar por la belleza pintoresca y la tranquilidad de Suiza. Confía en Migrate Compass para tu proceso de visa suiza."
     },
-
+    
     "common": {
       "bookSection": "Reservar una sección",
       "chatOfficer": "Chatea con un oficial",
@@ -84,6 +86,7 @@
       "exploreJobs": "Explorar Trabajos",
       "fees": "Tarifas",
       "faq": "Preguntas Frecuentes",
+      "migrateDetails": "Migrate Compass, un servicio registrado con el Departamento de Estado de EE. UU., ofrece oportunidades de trabajo, procesamiento de visas, visas vencidas, servicios de finalización y mensajería para solicitudes de visa y mucho más. Seguimos oficialmente todos los protocolos de instrucciones basados en su aporte, el Departamento de Estado y los consulados/embajadas extranjeros.",
 
       "reviews": "Testimonios y reseñas",
       "clientsExperience": "Clientes",
@@ -555,7 +558,7 @@
       "heroSubHeader": "Reúnete con tu familia en los EE.UU. de manera rápida y sin complicaciones",
       "header1": "Tarjeta Verde Basada en la Familia",
       "paragraph1": "La visa de inmigrante basada en la familia es una de las formas más comunes en que las personas adquieren tarjetas verdes y se convierten en residentes permanentes en los Estados Unidos. Los ciudadanos y residentes permanentes pueden solicitar al USCIS que traigan a sus familiares al país con una visa de inmigrante.",
-      "paragraph2": "Actualmente, este programa de visa en particular representa alrededor de dos tercios de las más de 1 millón de tarjetas verdes emitidas anualmente. Al igual que todas las demás visas de inmigrante, la tarjeta verde basada en la familia tiene varias subcategorías, cada una determinada por la relación familiar que existe entre el patrocinador y el beneficiario de la visa. La inmigración familiar es uno de nuestros servicios clave en VisaNation. Durante la última década, ayudamos a miles de familias a reunirse en los EE.UU.",
+      "paragraph2": "Actualmente, este programa de visa en particular representa aproximadamente dos tercios de las más de 1 millón de tarjetas de residencia emitidas anualmente. Al igual que cualquier otra visa de inmigrante, la tarjeta de residencia basada en la familia tiene varias subcategorías, cada una determinada por la relación familiar que existe entre el patrocinador y el beneficiario de la visa. La inmigración familiar es uno de nuestros servicios clave en Migrate Compass. Durante la última década, hemos ayudado a miles de familias a reunirse en los EE. UU.",
 
       "span1": "¡Comienza tu viaje de inmigración hoy!",
 
@@ -791,7 +794,7 @@
 
     "swissServicePage": {
       "header1": "Costo de Migrate Compass: ¿Vale la pena tu dinero?",
-      "paragraph1": "En Migrate Compass, nos enorgullece nuestro equipo de profesionales de inmigración con experiencia, incluyendo ex oficiales consulares, y nuestros fuertes lazos con los servicios consulares. Nuestra experiencia radica en la ley de inmigración de EE.UU. Ofrecemos un servicio integral que comienza con",
+      "paragraph1": "En Migrate Compass, nos enorgullece nuestro equipo de profesionales de inmigración con experiencia, incluidos ex oficiales consulares, y nuestros fuertes lazos con los servicios consulares. Nuestra experiencia no solo se encuentra en los EE. UU., sino también en la mayoría de las leyes de inmigración europeas. Ofrecemos un servicio integral que comienza con",
 
       "span1": "conectándote con posibles empleadores en Suiza",
 
@@ -873,6 +876,129 @@
         "list1": "¿Hay un reembolso de dinero si la visa no es exitosa?",
         "list2": "¿Cuánto tiempo se tarda en conseguir un trabajo?",
         "list3": "¿Cuál es tu precio? ¿Tienes plan de pagos a plazos?"
+      }
+    },
+
+    "swissFaqPage": {
+      "headingText1": "Suiza",
+      "subHeadingText1": "Preguntas frecuentes",
+      "subHeadingDetails1": "Si no está satisfecho, chatee con nuestro equipo de soporte",
+      "paragraph": "Para más información, por favor chatee con nosotros",
+      "swissFaqs": {
+        "list1": "¿Cuál es el papel del oficial dedicado asignado a mí?",
+        "details1": "El oficial dedicado te guía desde el primer día del proceso hasta tu llegada a Suiza. Son tu principal punto de contacto y brindan apoyo continuo durante todo el proceso.",
+        "list2": "¿Cómo ayudan a los inmigrantes a conseguir trabajos en Suiza?",
+        "details2": "Tenemos una extensa red de startups, agencias, pequeñas empresas e individuos en toda Suiza que necesitan trabajadores extranjeros. Aprovechamos esta red para ayudarte a conseguir un trabajo que se ajuste a tus habilidades y preferencias.",
+        "list3": "¿Pueden ayudar a encontrar alojamiento en Suiza?",
+        "details3": "Sí, podemos emparejarte con otros inmigrantes para el alojamiento, donde ambos compartirían los gastos. Este es un arreglo opcional.",
+        "list4": "¿Ofrecen un plan de pago a plazos?",
+        "details4": "Sí, ofrecemos un plan de pago a plazos flexible para hacer el proceso más asequible para nuestros clientes, hable con la Línea de Soporte para obtener más información.",
+        "list5": "¿En qué tipos de visas de trabajo suizas se especializan?",
+        "details5": "Nos especializamos en las visas de trabajo Permit B y Permit L para Suiza.",
+        "list6": "¿Cuál es el proceso para obtener una visa de trabajo suiza?",
+        "details6": "El proceso implica asegurar una oferta de trabajo, preparar y presentar la solicitud de visa, y pasar por el proceso de aprobación de la visa.",
+        "list7": "¿Cuánto tiempo se tarda en conseguir un trabajo en Suiza?",
+        "details7": "El tiempo puede variar dependiendo del mercado laboral y las habilidades y calificaciones específicas del inmigrante, por favor chatee con nosotros para obtener más información.",
+        "list8": "¿Qué tipo de apoyo proporcionan durante el proceso de solicitud de visa?",
+        "details8": "Nuestros fuertes lazos con los consulados suizos nos permiten proporcionar este nivel premium de apoyo. Proporcionamos apoyo premium que incluye asistencia para preparar y presentar la solicitud de visa, orientación sobre la recopilación de la documentación y evidencia requeridas, y actualizaciones regulares sobre el estado de su solicitud.",
+        "list9": "¿Qué sucede si mi solicitud de visa no es exitosa?",
+        "details9": "Si su solicitud de visa no es exitosa, proporcionaremos orientación sobre los próximos pasos apropiados a tomar en respuesta al rechazo. Si se determina que es necesario un reembolso, emitiremos un reembolso parcial de la tarifa de servicio que inicialmente pagó. La cantidad exacta del reembolso dependerá de las circunstancias específicas y se discutirá con usted en ese momento.",
+        "list10": "¿Cuál es su conexión con los patrones de inversión?",
+        "details10": "Conectamos a los inmigrantes con posibles inversores para explorar oportunidades de negocio e inversión en Suiza.",
+        "list11": "¿Cuál es el costo de sus servicios?",
+        "details11": "Nuestras tarifas son transparentes y ofrecemos opciones de pago flexibles. El costo total dependerá de los servicios específicos que requiera.",
+        "list12": "¿Qué pasa si tengo una visa vencida?",
+        "details12": "Por favor, le recomendamos que chatee con nosotros o con la Línea de Soporte para obtener apoyo, para que podamos proporcionarle la mejor solución y apoyo",
+        "list13": "¿Cuáles son los criterios de elegibilidad para las categorías de visa Permit B o Permit L?",
+        "details13": "Los criterios de elegibilidad para estas categorías de visa pueden variar. Realizamos una evaluación exhaustiva de su elegibilidad como parte de nuestros servicios.",
+        "list14": "¿Cuál es el proceso después de que mi visa de trabajo suiza ha sido aprobada?",
+        "details14": "Después de que su visa ha sido aprobada, asistimos con el proceso de registro local a su llegada a Suiza y brindamos apoyo para encontrar alojamiento y establecerse.",
+
+        "list15": "¿Qué tipo de servicios legales proporcionan?",
+        "details15": "Nuestros servicios legales incluyen la comunicación con las autoridades de inmigración suizas y la respuesta a cualquier solicitud de información adicional.",
+
+        "list16": "¿Cómo es el sistema de seguridad social e impuestos en Suiza?",
+        "details16": "Suiza tiene un sistema de seguridad social integral y un sistema de impuestos progresivo. Proporcionamos orientación sobre estas y otras regulaciones locales.",
+
+        "list17": "¿Qué tipo de trabajos ayudan a asegurar para los inmigrantes?",
+        "details17": "Ayudamos a asegurar trabajos en una amplia gama de sectores, dependiendo de las habilidades y preferencias del inmigrante.",
+
+        "list18": "¿Cuál es la tasa de éxito de las solicitudes de visa que manejan?",
+        "details18": "tenemos una alta tasa de éxito debido a nuestra experiencia y enfoque minucioso, junto con nuestros fuertes lazos con el consulado suizo.",
+
+        "list19": "¿En qué tipo de negocios puedo invertir en Suiza?",
+        "details19": "Suiza ofrece una amplia gama de oportunidades de inversión, incluyendo bienes raíces, agricultura y más. Podemos conectarlo con posibles oportunidades de inversión basadas en sus intereses.",
+
+        "list20": "¿Qué sucede si cometo un delito en Suiza?",
+        "details20": "Cometer un delito puede tener graves consecuencias, pero le aconsejamos que hable con nuestra Línea de Apoyo"
+      }
+    },
+
+    "usaFaqPage": {
+      "headingText1": "Estados Unidos",
+      "subHeadingText1": "Preguntas frecuentes",
+      "subHeadingDetails1": "Si no está satisfecho, chatee con nuestro equipo de soporte",
+      "paragraph": "Para obtener más información, por favor chatee con nosotros",
+
+      "usaFaqs": {
+        "list1": "¿Cuál es el papel del oficial dedicado asignado a mí?",
+        "details1": "El oficial dedicado te guía desde el primer día del proceso hasta tu llegada a los Estados Unidos. Son tu principal punto de contacto y brindan apoyo continuo durante todo el proceso.",
+
+        "list2": "Deseo trabajar en los Estados Unidos. ¿Pueden ayudarme a obtener una visa de trabajo?",
+        "details2": "Tenemos una extensa red con startups, grandes corporaciones, agencias, pequeñas empresas e individuos en todo el país que necesitan trabajadores extranjeros. Aprovechamos esta red para ayudarte a conseguir un trabajo que se ajuste a tus habilidades y preferencias. Por favor, chatea con nosotros para obtener más información.",
+
+        "list3": "¿Pueden ayudar a encontrar alojamiento en los Estados Unidos?",
+        "details3": "Sí, podemos emparejarte con otros inmigrantes para el alojamiento, donde ambos compartirían los gastos. Este es un arreglo opcional.",
+
+        "list4": "¿Ofrecen un plan de pago a plazos?",
+        "details4": "Sí, ofrecemos un plan de pago a plazos flexible para hacer el proceso más asequible para nuestros clientes, habla con la Línea de Soporte para obtener más información.",
+
+        "list5": "¿En qué tipos de visas de trabajo de EE. UU. se especializan?",
+        "details5": "Nos especializamos en las visas de trabajo Eb-3, Eb-2, H1-B para los Estados Unidos.",
+
+        "list6": "¿Cuál es el proceso para obtener una visa de trabajo de EE. UU.?",
+        "details6": "Nuestros fuertes lazos con los consulados de USCIS hacen que el proceso sea más rápido ya que aceleramos todos los procesos para nuestros clientes. El proceso implica asegurar una oferta de trabajo, preparar y presentar la solicitud de visa, y pasar por el proceso de aprobación de la visa. Por favor, para obtener más información chatea con nosotros.",
+
+        "list7": "¿Cuánto tiempo se tarda en conseguir un trabajo en los Estados Unidos?",
+        "details7": "El tiempo puede variar dependiendo del mercado laboral y las habilidades y calificaciones específicas del inmigrante. Típicamente, este proceso puede tomar entre 1 a 2 meses. Por favor, chatea con nuestro equipo para obtener más información.",
+
+        "list8": "¿Qué tipo de apoyo proporcionan durante el proceso de solicitud de visa?",
+        "details8": "Nuestros fuertes lazos con los consulados de USCIS nos permiten proporcionar este nivel premium de apoyo. Proporcionamos apoyo premium que incluye asistencia para preparar y presentar la solicitud de visa, proceso acelerado, orientación sobre la recopilación de la documentación y evidencia requeridas, y actualizaciones regulares sobre el estado de tu solicitud.",
+
+        "list9": "¿Qué sucede si mi solicitud de visa no es exitosa?",
+        "details9": "Si tu solicitud de visa no es exitosa, proporcionaremos orientación sobre los próximos pasos apropiados a tomar en respuesta al rechazo. Si se determina que es necesario un reembolso, emitiremos un reembolso parcial de la tarifa de servicio que inicialmente pagaste. La cantidad exacta del reembolso dependerá de las circunstancias específicas y se discutirá contigo en ese momento.",
+
+        "list10": "¿Cuál es su conexión con los patrones de inversión?",
+        "details10": "Conectamos a los inmigrantes con posibles inversores para explorar oportunidades de negocio e inversión en los Estados Unidos.",
+
+        "list11": "¿Cuál es el costo de sus servicios?",
+        "details11": "Nuestras tarifas son transparentes y ofrecemos opciones de pago flexibles. El costo total dependerá de los servicios específicos que requieras.",
+
+        "list12": "¿Qué pasa si tengo una visa vencida?",
+        "details12": "Te recomendamos que chatees con nosotros o con la Línea de Soporte para obtener apoyo, para que podamos proporcionarte la mejor solución y apoyo",
+
+        "list13": "¿Cuáles son los criterios de elegibilidad para las categorías de visa de trabajo?",
+        "details13": "Los criterios de elegibilidad para estas categorías de visa pueden variar. Realizamos una evaluación exhaustiva de tu elegibilidad como parte de nuestros servicios.",
+        "list14": "¿Cuál es el proceso después de que mi permiso de trabajo ha sido aprobado?",
+        "details14": "Después de que su visa ha sido aprobada, asistimos con el proceso de registro local a su llegada a los Estados Unidos y brindamos apoyo para encontrar alojamiento y establecerse.",
+
+        "list15": "¿Qué tipo de servicios legales proporcionan?",
+        "details15": "Nuestros servicios legales incluyen la comunicación con USCIS y la respuesta a cualquier solicitud de información adicional.",
+
+        "list16": "¿Cómo es el sistema de seguridad social e impuestos en los Estados Unidos?",
+        "details16": "Los Estados Unidos tienen un vasto sistema de seguridad social y un sistema de impuestos progresivo. Proporcionamos orientación sobre estas y otras regulaciones locales.",
+
+        "list17": "¿Qué tipo de trabajos ayudan a asegurar para los inmigrantes?",
+        "details17": "Ayudamos a asegurar trabajos en una amplia gama de sectores, dependiendo de las habilidades y preferencias del inmigrante.",
+
+        "list18": "¿Cuál es la tasa de éxito de las solicitudes de visa que manejan?",
+        "details18": "tenemos una alta tasa de éxito debido a nuestra experiencia y enfoque minucioso, junto con nuestros fuertes lazos con el consulado de USCIS.",
+
+        "list19": "¿En qué tipo de negocios puedo invertir en Suiza?",
+        "details19": "Ofrecemos una amplia gama de oportunidades de inversión, incluyendo bienes raíces, agricultura, talleres y más. Podemos conectarlo con posibles oportunidades de inversión basadas en sus intereses.",
+
+        "list20": "¿Qué sucede si cometo un delito en los Estados Unidos?",
+        "details20": "Cometer un delito puede tener graves consecuencias, pero le aconsejamos que hable con nuestra Línea de Apoyo"
       }
     }
   }

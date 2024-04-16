@@ -123,7 +123,7 @@ const CustomerExperience = ({
         <div
           className={cn(
             reviewPage
-              ? "overflow-y-scroll overflow-x-hidden bg-slate-50 shadow-md md:-mx-10 h-[500px]"
+              ? "overflow-y-scroll overflow-x-hidden bg-slate-50 shadow-md md:-mx-10"
               : "md:mx-20",
             "relative group mt-24"
           )}
@@ -139,7 +139,7 @@ const CustomerExperience = ({
               className={cn(
                 "w-full sm:space-x-3 gap-1",
                 reviewPage
-                  ? "grid justify-center grid-cols-2"
+                  ? "grid justify-center grid-cols-1"
                   : "flex flex-nowrap"
               )}
             >
@@ -152,7 +152,7 @@ const CustomerExperience = ({
                       "rounded-md flex-none cursor-pointer shadow-md hover:shadow-sm p-4 m-2 transition flex flex-col gap-1 group",
                       reviewPage
                         ? "w-full bg-white"
-                        : "w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/3"
+                        : "w-[80%] sm:w-1/2 md:w-1/2 lg:w-1/3"
                     )}
                   >
                     <div className="flex items-center gap-4">
@@ -170,7 +170,7 @@ const CustomerExperience = ({
                     <div className="flex">
                       <Ratings rating={review?.rating ?? 0} />
                     </div>
-                    <div className="text-[#000000B3] pr-0.5 text-[16px] group-hover:overflow-y-scroll h-[100px] w-full overflow-hidden">
+                    <div className="text-[#000000B3] pr-0.5 text-[16px] group-hover:overflow-y-scroll h-[130px] w-full overflow-hidden">
                       {review.comment}
                     </div>
                   </div>
@@ -218,7 +218,7 @@ const CustomerExperience = ({
                 onClick={loadMoreReviews}
                 disabled={isFetching}
               >
-                {reviews >= Reviews.length
+                {reviews >= Reviews().length
                   ? "End of Reviews"
                   : "Load More Reviews"}
               </Button>

@@ -19,7 +19,7 @@ const PaymentHeading = ({ heading, price, text, subText }: PaymentProps) => {
           {price}
         </span>
       </div>
-      <p className="text-sm">
+      <p className="text-sm sm:!text-[15px]">
         {text}
 
         {subText && (

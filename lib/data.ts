@@ -437,9 +437,9 @@ export const Teams = [
   {
     image: require("../public/images/team/member-4.jpeg"),
     name: "Andrew Ryan",
-    title: "CEO, Retired USCIS officer",
+    title: "CEO of Migrate Compass, Retired USCIS officer",
     details:
-      "Managed visa applications for skilled and unskilled workers in the U.S.",
+      "Fosters strong relationships with immigration consulates, enhancing the company’s reputation and facilitating smoother visa application processes for clients. As CEO, Andrew leads the team at Migrate Compass, inspiring them to deliver exceptional service and meet the company’s strategic goals",
 
     education: [
       {
@@ -453,9 +453,9 @@ export const Teams = [
   {
     image: require("../public/images/team/director.jpg"),
     name: "Ethan Matthew",
-    title: "Ex-Canada Immigration Officer",
+    title: "Retired Canadian Immigration Services Officer",
     details:
-      "My role involved processing immigration applications, ensuring compliance with immigration laws and regulations, and offering guidance to those seeking to navigate the complexities of business and work immigration. My expertise and experience have been instrumental in helping many individuals and businesses successfully immigrate to Canada.",
+      "Leverages his expertise at Migrate Compass to streamline immigration processes. His in-depth knowledge of Canadian immigration norms and hands-on experience significantly enhance our service quality, making the immigration journey smoother for our clients.",
     education: [
       {
         school: "University of Toronto (B.A. in Sociology)",
@@ -470,7 +470,7 @@ export const Teams = [
     name: "Attorney Alan Brad",
     title: "Senior Attorney",
     details:
-      "Specializes in case management at Cohen Immigration Law. Holds an MBA and a law degree from McGill University.",
+      "Specializes in case management at Migrate Compass. Holds an MBA and a law degree from McGill University.",
     education: [
       {
         school: "McGill University Faculty of Law (BCL/LLB/LLM)",
@@ -492,7 +492,7 @@ export const Teams = [
     name: "Sheila Ian",
     title: "Senior Business Immigration Specialist",
     details:
-      "As a Senior U.S. Immigration Specialist with VisaNation, Sheila focuses on PERM Labor Certification and EB-2 & EB-3 immigrant visa petitions. She has over 16 years of experience in the field of immigration law. She assumes responsibility for the management of cases, leverages her extensive experience to draft essential forms, monitors critical deadlines, and prepares immigration packets.",
+      "Sheila’s role is far from ordinary, she is the bridge that connects ambitious professionals to their dreams. Her proficiency in navigating complex immigration laws greatly simplifies the process for those seeking business visas and beyond. Sheila’s expertise is a valuable asset to Migrate Compass, enhancing our ability to provide top-notch immigration services",
     education: [
       {
         school:
@@ -512,7 +512,7 @@ export const Teams = [
     name: "Ann Souza",
     title: "Chief of Staff",
     details:
-      "For professionals attending business meetings, settling estates, making investments, or starting work in the U.S. We help you get the right visa type for your needs.",
+      "Ann plays a crucial role in managing the staff. She ensures smooth communication between departments, resolves issues, and fosters a positive work environment. Her leadership helps in enhancing productivity and maintaining high morale among the team members.",
     education: [
       {
         school:
@@ -533,7 +533,7 @@ export const Teams = [
     name: "Nicole Joseph",
     title: "Director of Client Services",
     details:
-      "Ensuring top-notch client services for all visa-related needs, From attending business meetings to making investments in the U.S., we're here to guide you every step of the way.",
+      "Nicole ensures strong relationships with clients, understanding their needs and ensuring their satisfaction, leads the client services team, addresses any issues or concerns raised by clients, providing effective solutions and high performance.",
     education: [
       {
         school:
@@ -569,7 +569,8 @@ export const Teams = [
     image: require("../public/images/team/member-1.jpeg"),
     name: "Ardian  Snow",
     title: "Vice President, Finance",
-    details: "Assists professionals with business and work travels to the U.S.",
+    details:
+      "Entrusted with the responsibility of providing expert advice and guiding clients towards the most beneficial and secure path tailored to their specific needs. ",
     education: [
       {
         school: "University of Pennsylvania (B.S. in Economics)",

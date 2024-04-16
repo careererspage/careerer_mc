@@ -53,7 +53,9 @@ const ReviewsClient = ({
                 <h1 className="font-bold">Excellent</h1>
                 <Ratings rating={4.8 ?? 0} />
                 <Separator className="h-10 w-1" />
-                <h1 className="font-bold">986 Reviews</h1>
+                <h1 className="font-bold text-sm sm:text-[16px]">
+                  986 Reviews
+                </h1>
               </div>
               <Button
                 variant="primary"
@@ -113,7 +115,7 @@ const ReviewsClient = ({
                   type="text"
                   required
                   maxLength={500}
-                  placeholder="Last name"
+                  placeholder="Name"
                 />
               </div>
 

@@ -14,7 +14,8 @@ interface BenefitProps {
 }
 
 const Benefit = ({ connectOfficer }: BenefitProps) => {
-  const c = useTranslations("navbar.common");
+  const c = useTranslations("translate.common");
+  const t = useTranslations("translate.benefits");
   return (
     <div className="mt-10 rounded-xl p-5">
       <div className="flex items-center gap-4">
@@ -25,7 +26,7 @@ const Benefit = ({ connectOfficer }: BenefitProps) => {
           className="w-[100px] h-[100px]"
         />
         <h1 className="sm:text-2xl text-lg font-bold sm:text-center text-gray-600">
-          Benefit of working with us
+          {t("Title")}
         </h1>
       </div>
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-3">

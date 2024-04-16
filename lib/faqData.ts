@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 export const AboutNav = () => {
   const t = useTranslations("translate.navbarLinks");
@@ -129,136 +130,178 @@ export const FaqNav = () => {
   ];
 };
 
-export const SwissFaq = [
-  {
-    question: "What is a Swiss work visa?",
-    answer:
-      "A Swiss work visa is a permit that allows foreign nationals to live and work in Switzerland.",
-  },
-  {
-    question:
-      "I wish to work in the United States. Can you help me get a work visa?",
-    answer:
-      "We provide consulting and assistance for the B1 Business visa that is used for attending conferences, settling estates, and negotiating contracts. If you want to accept employment or work in the United States, our experts are here to offer all the info you need and get you started on the immigration process. Please chat with any of our support agent.",
-  },
-  {
-    question: "Who needs a Swiss work visa?",
-    answer:
-      "Non-EU/EFTA nationals who plan to work in Switzerland for longer than three months need a Swiss work visa.",
-  },
-  {
-    question:
-      "What services does Migrate Compass offer for the Swiss work visa process?",
-    answer:
-      "Migrate Compass offers comprehensive services including job matching, application preparation, legal services, post-arrival support, and more.",
-  },
-  {
-    question: "How long does the Swiss work visa process take?",
-    answer:
-      "The process can take several months, depending on the specifics of your case and the current processing times of the Swiss immigration authorities.",
-  },
-  {
-    question: "What documents do I need for a Swiss work visa application?",
-    answer:
-      "You typically need a valid passport, job offer or contract, qualification documents, and other supporting documents.",
-  },
-  {
-    question:
-      "What happens after Migrate Compass secures a job for me in Switzerland?",
-    answer:
-      "After securing a job, Migrate Compass will assist you in applying for a residence permit and work visa. Once these are approved, you can move to Switzerland.",
-  },
-  {
-    question: "What if I have a criminal record?",
-    answer:
-      "Having a criminal record can complicate the visa process, but it doesn’t necessarily disqualify you. Migrate Compass can provide guidance based on the specifics of your case.",
-  },
-  {
-    question: "Can Migrate Compass help me find accommodation in Switzerland?",
-    answer:
-      "Yes, Migrate Compass offers support in finding accommodation and settling in Switzerland.",
-  },
-  {
-    question: "What if my work visa application is rejected?",
-    answer:
-      "If your application is rejected, Migrate Compass can help you understand the reasons for the rejection and guide you on the next steps.",
-  },
-  {
-    question:
-      "Can Migrate Compass help me understand Swiss social security and tax system?",
-    answer:
-      "Yes, Migrate Compass provides guidance on Swiss social security, tax system, and other local regulations.",
-  },
-  {
-    question: "What is the cost of Migrate Compass’s services?",
-    answer:
-      "The cost varies depending on the complexity of your case and the services provided. Please contact Migrate Compass for a detailed quote",
-  },
-  {
-    question:
-      "Can Migrate Compass help me if I have deportation or removal proceedings against me?",
-    answer:
-      "Migrate Compass can provide legal services and guidance if you have deportation or removal proceedings against you.",
-  },
-  {
-    question:
-      "What if I need to provide extra documentation for my application?",
-    answer:
-      "Migrate Compass can guide you on what additional documentation you may need and how to obtain it.",
-  },
-];
+export const SwissFaq = async () => {
+  const t = await getTranslations("translate.swissFaqPage");
 
-export const USAFaqData = [
-  {
-    question: "What are the service charges? Is there a payment plan?",
-    answer:
-      "Details about our service charges and payment plans can be found on the pricing section of our website.",
-  },
-  {
-    question:
-      "I wish to work in the United States. Can you help me get a work visa?",
-    answer:
-      "We provide consulting and assistance for the B1 Business visa that is used for attending conferences, settling estates, and negotiating contracts. If you want to accept employment or work in the United States, our experts are here to offer all the info you need and get you started on the immigration process. Please chat with any of our support agent",
-  },
-  {
-    question: "Is there a refund policy?",
-    answer:
-      "Migrate Compass operates on a strict no-refund policy. However, if your case is denied due to reasons beyond your control, we will refile your case at no additional cost. Full terms and conditions can be reviewed in your Migrate Compass account before making your first payment.",
-  },
-  {
-    question: "Do you guarantee Visa approval?",
-    answer:
-      "While we cannot guarantee Visa approval, our team of experienced immigration officers strive to ensure the best possible outcome. We are proud to have a 90% Visa approval rate.",
-  },
-  {
-    question: "How do I communicate with Migrate Compass?",
-    answer:
-      "You can communicate with us by creating a free account on our website and sending us a direct message. You can also schedule a call through the chat feature in your account.",
-  },
-  {
-    question: "Do you offer job listings?",
-    answer:
-      "Yes, we offer a wide variety of jobs and update our listings every few weeks. Our job offerings span across various sectors and are located all around the country. You can view all current job offerings on our website.",
-  },
-  {
-    question: "Why should I choose Migrate Compass?",
-    answer:
-      "Choosing Migrate Compass means you're opting for expert advice, thorough case assessment, and a smooth visa process. Our team of experienced immigration lawyers with live work experiences in the Immgration services and law firms can provide legal counsel and defend your case, increasing the chances of a successful application.",
-  },
-  {
-    question: "How effective is an Immigration Lawyer?",
-    answer:
-      "Immigration lawyers play a crucial role in navigating the complexities of immigration law. They can defend a client's case to prevent deportation and provide legal counsel on work visa eligibility. Their expertise ensures a thorough case assessment and a smooth EB-5 process, contributing to a successful application.",
-  },
-  {
-    question: "Can you help me schedule the interview?",
-    answer:
-      "We directly look for interview spots for you. We align with the Embassy and Consulate’s schedules and we help you book the next available interview date. In special circumstances, you may qualify for an expedited appointment and we help you arrange that as well. After we review and submit the application, the MRV fee needs to be paid in order to schedule the interview.",
-  },
-  {
-    question:
-      "I don't have anyone in the United States / no specific place that I'm planning to stay at yet, how can I apply?",
-    answer:
-      "In case you don’t have a point of contact or you’re unsure where you are going to stay, you can provide information regarding the locations you plan to visit while in the United States. If you’re applying for a tourist visa and you’ve decided at which hotel you’re going to stay but you haven’t booked it yet, you can still use the location of that hotel on your application. For a student visa, use the address of the educational institution where you got accepted to study. If you are applying for a crewmember visa, you can input the information of the airport or port where you will make your transit.",
-  },
-];
+  return [
+    {
+      question: t("swissFaqs.list1"),
+      answer: t("swissFaqs.details1"),
+    },
+
+    {
+      question: t("swissFaqs.list2"),
+      answer: t("swissFaqs.details2"),
+    },
+    {
+      question: t("swissFaqs.list3"),
+      answer: t("swissFaqs.details3"),
+    },
+    {
+      question: t("swissFaqs.list4"),
+      answer: t("swissFaqs.details4"),
+    },
+    {
+      question: t("swissFaqs.list5"),
+      answer: t("swissFaqs.details5"),
+    },
+    {
+      question: t("swissFaqs.list6"),
+      answer: t("swissFaqs.details6"),
+    },
+    {
+      question: t("swissFaqs.list7"),
+      answer: t("swissFaqs.details7"),
+    },
+    {
+      question: t("swissFaqs.list8"),
+      answer: t("swissFaqs.details8"),
+    },
+    {
+      question: t("swissFaqs.list9"),
+      answer: t("swissFaqs.details9"),
+    },
+    {
+      question: t("swissFaqs.list10"),
+      answer: t("swissFaqs.details10"),
+    },
+    {
+      question: t("swissFaqs.list11"),
+      answer: t("swissFaqs.details11"),
+    },
+    {
+      question: t("swissFaqs.list12"),
+      answer: t("swissFaqs.details12"),
+    },
+    {
+      question: t("swissFaqs.list13"),
+      answer: t("swissFaqs.details13"),
+    },
+    {
+      question: t("swissFaqs.list14"),
+      answer: t("swissFaqs.details14"),
+    },
+    {
+      question: t("swissFaqs.list15"),
+      answer: t("swissFaqs.details15"),
+    },
+    {
+      question: t("swissFaqs.list16"),
+      answer: t("swissFaqs.details16"),
+    },
+    {
+      question: t("swissFaqs.list17"),
+      answer: t("swissFaqs.details17"),
+    },
+    {
+      question: t("swissFaqs.list18"),
+      answer: t("swissFaqs.details18"),
+    },
+    {
+      question: t("swissFaqs.list19"),
+      answer: t("swissFaqs.details19"),
+    },
+    {
+      question: t("swissFaqs.list20"),
+      answer: t("swissFaqs.details20"),
+    },
+  ];
+};
+
+export const USAFaqData = async () => {
+  const t = await getTranslations("translate.usaFaqPage");
+
+  return [
+    {
+      question: t("usaFaqs.list1"),
+      answer: t("usaFaqs.details1"),
+    },
+
+    {
+      question: t("usaFaqs.list2"),
+      answer: t("usaFaqs.details2"),
+    },
+    {
+      question: t("usaFaqs.list3"),
+      answer: t("usaFaqs.details3"),
+    },
+    {
+      question: t("usaFaqs.list4"),
+      answer: t("usaFaqs.details4"),
+    },
+    {
+      question: t("usaFaqs.list5"),
+      answer: t("usaFaqs.details5"),
+    },
+    {
+      question: t("usaFaqs.list6"),
+      answer: t("usaFaqs.details6"),
+    },
+    {
+      question: t("usaFaqs.list7"),
+      answer: t("usaFaqs.details7"),
+    },
+    {
+      question: t("usaFaqs.list8"),
+      answer: t("usaFaqs.details8"),
+    },
+    {
+      question: t("usaFaqs.list9"),
+      answer: t("usaFaqs.details9"),
+    },
+    {
+      question: t("usaFaqs.list10"),
+      answer: t("usaFaqs.details10"),
+    },
+    {
+      question: t("usaFaqs.list11"),
+      answer: t("usaFaqs.details11"),
+    },
+    {
+      question: t("usaFaqs.list12"),
+      answer: t("usaFaqs.details12"),
+    },
+    {
+      question: t("usaFaqs.list13"),
+      answer: t("usaFaqs.details13"),
+    },
+    {
+      question: t("usaFaqs.list14"),
+      answer: t("usaFaqs.details14"),
+    },
+    {
+      question: t("usaFaqs.list15"),
+      answer: t("usaFaqs.details15"),
+    },
+    {
+      question: t("usaFaqs.list16"),
+      answer: t("usaFaqs.details16"),
+    },
+    {
+      question: t("usaFaqs.list17"),
+      answer: t("usaFaqs.details17"),
+    },
+    {
+      question: t("usaFaqs.list18"),
+      answer: t("usaFaqs.details18"),
+    },
+    {
+      question: t("usaFaqs.list19"),
+      answer: t("usaFaqs.details19"),
+    },
+    {
+      question: t("usaFaqs.list20"),
+      answer: t("usaFaqs.details20"),
+    },
+  ];
+};

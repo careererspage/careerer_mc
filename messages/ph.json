@@ -1,0 +1,532 @@
+{
+  "translate": {
+    "navbar": {
+      "liveChat": "Live Chat",
+      "bookSection": "Mag-book ng Seksyon",
+      "profile": "Profile",
+      "signOut": "Mag-sign out",
+      "login": "Mag-login",
+      "signUp": "Mag-sign up",
+      "aboutUs": "Tungkol sa Amin",
+      "visaType": "Uri ng Visa",
+      "fees": "Bayad",
+      "exploreJobs": "Tuklasin ang Mga Trabaho",
+      "faq": "Madalas Itanong",
+      "businessVisa": "Negosyo Visa",
+      "workVisa": "Trabaho Visa",
+      "expiredVisaComplicated": "Naluma na Visa / Komplikado"
+    },
+    "navbarLinks": {
+      "aboutUs": "Tungkol sa Amin",
+      "contactUs": "Makipag-ugnayan sa Amin",
+      "reviews": "Mga Puna",
+      "visaType": "Uri ng Visa",
+      "fees": "Bayad",
+      "exploreJobs": "Tuklasin ang Mga Trabaho",
+      "faq": "Madalas Itanong",
+      "businessVisa": "Negosyo Visa",
+      "workVisa": "Trabaho Visa",
+      "expiredVisaComplicated": "Naluma na Visa / Komplikado",
+      "Family Visa": "Pamilihang Visa",
+      "Religious Visa": "Relihiyosong Visa",
+      "Switzerland Work Visa": "Switzerland Trabaho Visa",
+      "USA Work Visa": "U.S.A Trabaho Visa",
+      "Switzerland Business Visa": "Switzerland Negosyo Visa",
+      "USA Business Visa": "U.S.A Negosyo Visa",
+      "Switzerland": "Switzerland",
+      "USA": "U.S.A",
+      "Jobs in USA": "Mga Trabaho sa U.S.A",
+      "Jobs in Switzerland": "Mga Trabaho sa Switzerland",
+      "Jobs in Canada": "Mga Trabaho sa Canada",
+      "Jobs in Australia": "Mga Trabaho sa Australia",
+      "USA Fee": "Bayad sa U.S.A",
+      "Switzerland Fee": "Bayad sa Switzerland"
+    },
+
+    "homePage": {
+      "title": "Ang Kaalaman sa Batas sa Immigrasyon Ipinadala",
+      "span1": "Kaalaman",
+      "span2": "Ipinadala",
+      "intoTitle": "Maligayang Pagdating sa Migrate Compass!",
+      "intro": "Ang aming koponan ng mga eksperto sa Immigrasyon ay may matatag na ugnayan sa mga embahada at konsulado sa mga pangunahing bansa na aming pinagsisilbihan, na ginagawang madali para sa aming mga kliyente na mag-apply para sa negosyo visa, Employment visa at higit pa sa anumang bilang ng mga bansa tulad ng U.S.A., Switzerland, Australia, at Canada. Ang Migrate Compass din ay nag-ooperate bilang isang ahensya sa pagrekrut sapagkat mayroon kaming malawak na network ng mga kumpanya, startups, at maliit na mga kumpanya na palaging nangangailangan ng mga indibidwal at dedicadong manggagawa. Ang aming mga serbisyo ay nagbibigay ng mabilis na paraan para sa mga negosyo, mga empleyado, mga mamumuhunan, mga mag-aaral, at mga pamilya na naghahanap na mag-apply para sa visa at permanenteng tirahan sa Europa at sa Estados Unidos. Narito kami upang gabayan ka sa bawat hakbang ng iyong paglalakbay sa immigrasyon. Halina't tuklasin natin ang mga kumplikasyon ng immigrasyon kasama-sama!",
+      "introBeneath": "Ito ang mga bansa na aming pinagsisilbihan. Ang mga bansang ito ay may espesyal na lugar sa aming mga puso, sapagkat marami sa aming mga kasapi ng koponan ang naglingkod bilang mga opisyal sa immigrasyon sa ilan sa mga bansang ito.",
+      "introSpan": "mga pangunahing rehiyon.",
+      "introSpan1": "aming mga puso, sapagkat marami sa aming mga kasapi ng koponan ang naglingkod bilang mga opisyal sa immigrasyon sa ilan sa mga bansang ito."
+    },
+
+    "homeQuote": {
+      "thisAre": "Ito ay",
+      "coreRegions": "mga pangunahing rehiyon na aming pinagsisilbihan.",
+      "specialPlace": "Ang mga bansang ito ay may espesyal na lugar sa aming mga puso, sapagkat marami sa",
+      "teamMembers": "aming mga kasapi ng koponan ang naglingkod bilang mga opisyal sa immigrasyon",
+      "inNations": "sa ilan sa mga bansang ito."
+    },
+
+    "offices": {
+      "usaOffice": "Opisina sa U.S.A",
+      "usaComment": "Simulan ang iyong American dream nang madali. Pabibilisin ng Migrate Compass ang iyong proseso sa U.S. visa.",
+      "canadaOffice": "Opisina sa Canada",
+      "canadaComment": "Mula sa Nomads visa hanggang sa unskilled visa, hayaan ang Migrate Compass na magtuktok ng daan para sa iyong Canadian adventure.",
+      "australiaOffice": "Opisina sa Australia",
+      "australiaComment": "Hayaan ang Migrate Compass na maging iyong daan papuntang down under. Tuklasin ang mga bihirang lungsod ng Australya nang madali.",
+      "switzerlandOffice": "Opisina sa Switzerland",
+      "switzerlandComment": "Tamisin ang pintoreskong kagandahan at katahimikan ng Switzerland. Tiwala sa Migrate Compass para sa iyong proseso sa Swiss visa."
+    },
+
+    "common": {
+      "bookSection": "Mag-book ng Seksyon",
+      "chatOfficer": "Makipag-usap sa isang opisyal",
+      "chatWithUs": "Makipag-usap sa Amin",
+      "supportLine": "Linya ng Suporta",
+      "supportTeam": "Tulong sa Paghahanap",
+      "needHelp": "Kailangan mo ba ng tulong ng isang Eksperto?",
+      "supportDetails": "Hindi sigurado kung aling uri ng visa ang para sa iyo? Walang problema. Narito kami upang talakayin ang iyong kaso sa visa at magbigay ng propesyonal na payo na naaayon sa iyong partikular na sitwasyon.",
+      "submit": "Ipasa",
+      "Business Visa": "Negosyo Visa",
+      "othersVisa": "Iba pang Visa",
+      "exploreJobs": "Tuklasin ang Mga Trabaho",
+      "fees": "Bayad",
+      "faq": "Madalas Itanong",
+      "migrateDetails": "Ang Migrate Compass, isang rehistradong serbisyo sa U.S. Dept of State, ay nag-aalok ng mga oportunidad sa trabaho, pagproseso ng visa, nalumang visa, pagtatapos at serbisyo sa courier para sa mga aplikasyon sa visa at marami pang iba. Opisyal na sinusunod namin ang lahat ng tagubilin batay sa iyong input, Dept of State at mga dayuhang konsulado/embahada.",
+
+      "reviews": "Testimonials & Reviews",
+      "clientsExperience": "Mga Kliyente",
+      "clientsExperienceSpan": "Karanasan",
+      "googleReview": "500+ Google Reviews",
+      "readMoreStories": "Magbasa ng iba pang kwento",
+      "letClientsTalk": "Hayaan ang aming mga kliyente ang magsalita",
+      "dontTakeFromUs": "Huwag lang kumuha sa amin",
+      "premium": "Premium",
+      "services": "Serbisyo",
+      "visaPremium": "Visa Premium",
+      "regularCases": "Regular na mga Kaso",
+      "visaTopPremium": "Visa Top-Premium",
+      "problematicCases": "Mga Kaso ng Problema",
+      "reviewHeader": "Online",
+      "reviewSpan": "Serbisyo sa Visa",
+      "reviewParagraph": "Ang pag-aaplay para sa visa online ay hindi kailanman naging mas madali kaysa sa Migrate Compass. Ang aming koponan ng mga eksperto sa Immigrasyon ay may matatag na ugnayan sa mga embahada at konsulado sa buong mundo, na ginagawang madali para sa aming mga kliyente na mag-apply para sa negosyo visa, Employment visa at higit pa sa anumang bilang ng mga bansa tulad ng U.S.A., Switzerland, Australia, at Canada. Kahit na kailangan mo ng serbisyo sa visa sa loob ng linggong ikaw ay naglalakbay, gagabayan ka namin mula sa simula hanggang sa wakas, na tiyaking ang iyong mga dokumento ay magtatugma sa mga kinakailangan ng mga dayuhang embahada."
+    },
+
+    "benefits": {
+      "Title": "Benepisyo ng pakikipagtrabaho sa amin",
+      "title1": "Iwasan ang Panganib ng Pagsasara ng Visa",
+      "details1": "Ang mga pagsasara ng visa madalas ay nagmumula sa mga kamalian o hindi sapat na ebidensya. Tinutulungan ka ng aming koponan na maiwasan ang mga isyu na ito, suriin ang iyong aplikasyon, at ihanda ka para sa panayam, na nagpapataas sa iyong mga pagkakataon ng tagumpay.",
+      "title2": "Mga Tagasponsor ng Trabaho",
+      "details2": "Nag-uugnay kami sa iyo sa mga pinagkakatiwalaang kumpanya na handang magbigay ng mga oportunidad sa trabaho at sponsorship.",
+
+      "title3": "Bawasan ang Iyong Gastos",
+      "details3": "Ang pagharap sa pagsasara ng visa ay maaaring magastos. Ang aming ekspertong gabay ay nagpapadali ng proseso, nagtitipid sa iyo ng oras, pera, at stress.",
+      "title4": "Mga Kaso ng Komplikado",
+      "details4": "Kahit na ang iyong visa ay nag-expire o ikaw ay nakaranas ng deportasyon, tinitingnan at sinusugpo namin ang isyu nang epektibo.",
+      "title5": "Personal na Gabay",
+      "details5": "Isang nakatalaga at senior na opisyal ang ibibigay sa iyo kapag nagsimula ka na sa iyong aplikasyon.",
+      "title6": "Tamang Pananaw",
+      "details6": "Iwan ang mga kumplikasyon ng mga kinakailangang visa, mga porma, gastos, at panayam sa aming mga eksperto. Pangangasiwaan namin ang iyong kaso para sa isang matagumpay na resulta.",
+      "title7": "Pagpapahalaga sa Iyong Oras",
+      "details7": "Pinapadali namin ang iyong proseso sa visa. Mula sa pagsusuri ng mga opsyon hanggang sa paghahawak ng mga papeles, pinamamahalaan namin ang iyong kaso mula simula hanggang wakas. Ang aming mga magaan gamiting tool ay tumutulong sa iyo na mag-focus sa mga mahalaga.",
+      "title8": "24/7 Suporta",
+      "details8": "Ang aming koponan ay magagamit 24/7/365 upang agad na sagutin ang iyong mga katanungan at alalahanin, na nagtitiyak ng mabilis na serbisyo sa lahat ng oras."
+    },
+
+    "workProcess": {
+      "Title": "Proseso ng Trabaho at Solusyon",
+      "title1": "Simulan ang Aplikasyon",
+      "details1": "Kumpletuhin ang form ng aplikasyon sa pamamagitan ng pagtugon sa simpleng serye ng mga tanong tungkol sa iyong sarili.",
+      "title2": "Amin kayo nang trabaho",
+      "details2": "Kumonekta kami sa inyo sa mga pinagkakatiwalaang kumpanya na mayroon kaming pakikipag-ugnay para sa mga oportunidad sa trabaho.",
+      "title3": "Bayad sa Serbisyo",
+      "details3": "Pagkatapos ng bayad, isang nakatalaga na opisyal ang ibibigay sa iyo. Ang opisyal na ito ang magtuturo sa iyo mula sa pag-secure ng trabaho hanggang sa pagproseso ng iyong aplikasyon sa visa, at kahit na tumutulong sa iyo sa pag-aasikaso sa iyong bagong bansa.",
+      "title4": "Pagpapatunay ng Dokumento",
+      "details4": "Binubusisi namin ang pagiging totoo ng iyong mga detalye sa aplikasyon at nagbibigay ng tulong sa pagkuha ng anumang kinakailangang dokumento na maaaring kulangin mo.",
+      "title5": "Tulong sa Panayam",
+      "details5": "Pinamamahalaan ng aming espesyalistang visa ang iyong panayam sa embahada at pinapahanda ang mga dokumento.",
+      "title6": "Pagkuha ng Visa",
+      "details6": "Sinusuportahan ka namin sa buong proseso, pinalalakas ang proseso at pinapalakas ang iyong mga pagkakataon ng pag-apruba sa visa",
+      "title7": "Suporta",
+      "details7": "Pagkatapos, tinutulungan ka namin sa paghahanap ng tirahan at pag-aayos sa piling lugar ng iyong paninirahan.",
+      "title8": "Gabay",
+      "details8": "Gabay at orientasyon sa sistema ng seguridad sa bansa, sistema ng buwis, at iba pang lokal na regulasyon ng bansa"
+    },
+
+    "clientReviews": {
+      "name1": "Ava G.",
+      "comment1": "Nakakuha ako ng sponsor mula sa Switzerland sa pamamagitan ng Migrate Compass at salamat sa aking nakatalagang opisyal ngayon ay nagtatrabaho ako bilang Electrician sa isang maliit na Mechanical agency sa Basel.",
+      "rating1": 4,
+      "name2": "Mia H.",
+      "comment2": "Inilipat ako mula sa China patungo sa Switzerland sa isang work visa bilang isang Teacher. Nakuha nila ako ng sponsor at tinulungan ako sa proseso ng paglipat.",
+      "rating2": 5,
+
+      "name3": "Noah E.",
+      "comment3": "Ang aking nakatalagang opisyal ay nagbigay ng mahusay na suporta sa pagkuha ng isang business visa para sa USA. Sinunod ko ang ruta ng E-2 visa, ang aking pamilya ay nakatira rin sa akin.",
+      "rating3": 4.5,
+
+      "name4": "Markuss T.",
+      "comment4": "Nakakuha ako ng trabaho bilang truck driver sa Australia. Salamat sa Migrate Compass at sa aking nakatalagang opisyal na gumawa ng mahusay na trabaho sa pagtulong sa akin na mag-settle sa bansa.",
+      "rating4": 5,
+
+      "name5": "Olivia S.",
+      "comment5": "Nakakuha ako ng posisyon bilang electrician sa USA. Tinulungan ako ng aking opisyal na makipag-usap sa mas magandang alok para sa akin.",
+      "rating5": 4.5,
+
+      "name6": "Ruth L.",
+      "comment6": "Ako ay nakabase sa Mexico bilang isang estudyante ngunit ngayon ay nagtatrabaho bilang nurse sa Australia. Ang kanilang kasanayan ay napakagaling.",
+      "rating6": 5,
+
+      "name7": "Jack R.",
+      "comment7": "Nagpapasalamat ako sa Migrate Compass sa pagtulong sa akin sa pagkuha ng work visa para sa USA bilang truck driver. Ang suporta ng aking nakatalagang opisyal ay nagpahusay sa proseso ng imigrasyon.",
+      "rating7": 5,
+
+      "name8": "Olivia H.",
+      "comment8": "Tinulungan ako ng Migrate Compass na makakuha ng trabaho bilang farm worker sa Australia. Tumulong din sila sa pagpili ng pinakamahusay na trabaho base sa kanilang lugar at presyo.",
+      "rating8": 5,
+
+      "name9": "Paul S.",
+      "comment9": "Salamat sa Migrate Compass, nakakuha ako ng trabaho bilang plumber sa Switzerland. Ngayon ay nakatira ako sa Bern at maganda ang sahod.",
+      "rating9": 5,
+
+      "name10": "Liam S.",
+      "comment10": "Salamat sa Migrate Compass, nakakuha ako ng posisyon bilang electrician sa Switzerland. Buhay sa Argentina ang aking buong buhay, ngayon ay masaya akong maranasan ang buhay sa Basel Switzerland.",
+      "rating10": 5,
+
+      "name11": "Emily C.",
+      "comment11": "Nagpapasalamat ako sa Migrate Compass sa paggabay sa akin sa proseso ng pagkuha ng work visa para sa Canada bilang machine Engineer. Ang aking Opisyal ay napaka bait.",
+      "rating11": 4.5,
+
+      "name12": "Emma D.",
+      "comment12": "Pinadali ng Migrate Compass ang aking paglipat sa Canada sa pamamagitan ng pagtulong sa isang family-based visa. Ang kanilang suporta ay nagpagaan sa pag-transition.",
+      "rating12": 4.5,
+
+      "name13": "Chloe B.",
+      "comment13": "Nagpapasalamat ako sa Migrate Compass sa paggabay sa akin sa proseso ng pagkuha ng work visa para sa Canada bilang Nurse. Ang aking nakatalagang opisyal ay talagang mabait.",
+      "rating13": 5,
+
+      "name14": "Noah L.",
+      "comment14": "Tinulungan ako ng Migrate Compass sa pagkuha ng work visa para sa Switzerland bilang bartender. Ngayon ay nagtatrabaho ako bilang waitress sa Zurich.",
+      "rating14": 5,
+
+      "name15": "Ava T.",
+      "comment15": "Nagpapasalamat ako sa Migrate Compass sa pagtulong sa akin na makakuha ng business visa para sa Switzerland. Ang kanilang kasanayan ang nagpasimula sa aking negosyanteng paglalakbay.",
+      "rating15": 5,
+
+      "name16": "James C.",
+      "comment16": "Tinulungan ako ng Migrate Compass sa pagkuha ng R1 visa at pinaalam sa akin ang mga dapat at hindi dapat.",
+      "rating16": 5,
+
+      "name17": "Isabella G.",
+      "comment17": "Nagpapasalamat ako sa Migrate Compass, nakakuha ako ng trabaho bilang plumber sa Australia. Ang kanilang tulong sa work visa ay napakahalaga.",
+      "rating17": 5,
+
+      "name18": "Ethan M.",
+      "comment18": "Tinulungan ako ng Migrate Compass na makakuha ng work visa para sa Switzerland bilang machine/staff coordinator para sa isang production unit, bagaman pagkatapos ng isang taon ay malaya na akong magtrabaho para sa sinuman.",
+      "rating18": 5,
+
+      "name19": "Sophie K.",
+      "comment19": "Nagpapasalamat ako sa Migrate Compass sa pagtulong sa akin na makakuha ng family visa para sa Canada. Ang kanilang personal na pamamaraan ang nagpadali sa proseso.",
+      "rating19": 5,
+
+      "name20": "William F.",
+      "comment20": "Mahalaga ang papel na ginampanan ng Migrate Compass sa pagkuha ng trabaho ko bilang hotel hostess sa USA. Ang kanilang gabay sa buong proseso ng visa ay napakahalaga.",
+      "rating20": 5,
+
+      "name21": "Charlotte B.",
+      "comment21": "Dahil sa Migrate Compass, nakakuha ako ng posisyon bilang Nurse sa Australia. Ang kanilang kasanayan sa pagproseso ng visa ang nagpasimple sa pag-transition.",
+      "rating21": 5,
+
+      "name22": "Oliver W.",
+      "comment22": "Tinulungan ako ng Migrate Compass sa pagkuha ng relihiyosong visa para sa USA. Hindi ko alam na posible pala ito.",
+      "rating22": 5,
+
+      "name23": "Amelia P.",
+      "comment23": "Nagpapasalamat ako sa Migrate Compass sa pagtulong sa akin na makakuha ng work visa para sa Canada bilang farm worker. Ang gabay ng aking nakatalagang opisyal ay ang pinakamahusay.",
+      "rating23": 5,
+
+      "name24": "Muray D.",
+      "comment24": "Nagbigay ng mahusay na suporta ang Migrate Compass sa pagkuha ng business visa para sa Switzerland. Ngayon ay may-ari na ako ng maliit na estate at tindahan dito sa Bern.",
+      "rating24": 5,
+
+      "name25": "Benjamin H.",
+      "comment25": "Naglaro ng mahalagang papel ang Migrate Compass sa pagkuha ng aking relihiyosong visa para sa USA. Ako ay isang senior pastor sa Nairobi.",
+      "rating25": 5,
+
+      "name26": "Henry C.",
+      "comment26": "Tinulungan ako ng Migrate Compass sa pagkuha ng family visa para sa Australia. Ang aking asawa at mga anak ay kasama ko na ngayon.",
+      "rating26": 5,
+
+      "name27": "Joshua D.",
+      "comment27": "Nakakuha ako ng trabaho bilang truck driver sa Canada. Salamat sa Migrate Compass at sa aking nakatalagang opisyal na gumawa ng mahusay na trabaho sa pagtulong sa akin na mag-settle sa bansa.",
+      "rating27": 5,
+
+      "name28": "Daniel M.",
+      "comment28": "Nagbigay ng mahusay na suporta ang Migrate Compass sa pagkuha ng business visa para sa USA. Nagbigay sila ng tapat na payo at gabay.",
+      "rating28": 5,
+
+      "name29": "Daniel M.",
+      "comment29": "Ang aking nakatalagang opisyal ay naglaro ng mahalagang papel sa pagkuha ng aking relihiyosong visa para sa USA. Ang kanilang propesyonalismo at dedikasyon ay lubos na napatunayan sa buong proseso.",
+      "rating29": 5,
+
+      "name30": "Avery L.",
+      "comment30": "Ang aking nakatalagang opisyal ay kaibigan at salamat sa Migrate Compass sa pagtulong sa akin na makakuha ng trabaho bilang Cruise hostess sa Australia. Ang kanilang gabay sa buong proseso ng visa ay hindi gaanong mahirap",
+      "rating30": 4.5,
+
+      "name31": "Sophia M.",
+      "comment31": "Mahalagang papel ang ginampanan ng Migrate Compass sa pagkuha ng trabaho ko bilang bartender sa Canada. Ang kanilang kasanayan sa pag-navigate sa proseso ng work visa ay natatangi.",
+      "rating31": 5,
+
+      "name32": "Ethan B.",
+      "comment32": "Ako ay isang senior pastor mula sa France ngunit ngayon ay nakabase sa USA salamat sa Migrate Compass na naglaro ng mahalagang papel sa pagkuha ng aking relihiyosong visa para sa USA.",
+      "rating32": 4,
+
+      "name33": "Lucas P.",
+      "comment33": "Nagpapasalamat ako kay James, ang Officer na nasa pangangalaga ng aking kaso, sa paggabay sa akin sa proseso ng pagkuha ng work visa para sa Canada bilang plumber. Ang kanilang propesyonalismo ay maliwanag.",
+      "rating33": 5,
+
+      "name34": "Randy M.",
+      "comment34": "Ako ay isang mekaniko mula sa Italy, ngayon ay nagtatrabaho sa Australia salamat sa Migrate Compass. Tinulungan nila akong makakuha ng work visa at kahit na konektado nila ako sa aking kasalukuyang employer.",
+      "rating34": 5,
+
+      "name35": "Ahaan K.",
+      "comment35": "Naglaro ng mahalagang papel ang Migrate Compass sa pagtulong sa akin na mag-migrate mula sa India patungo sa U.S.A sa isang family visa. Ngayon ay masaya na akong nakatira kasama ang aking pamilya sa California.",
+      "rating35": 4,
+
+      "name36": "Isabella R.",
+      "comment36": "Ako ay isang magsasaka mula sa Brazil, at nais kong tuklasin ang mga oportunidad sa Canada. Ginawa ito posible ng Migrate Compass sa pamamagitan ng pagtulong sa akin na makakuha ng work visa.",
+      "rating36": 5,
+
+      "name37": "Liam S.",
+      "comment37": "Inilipat ako mula sa South Africa patungo sa Switzerland sa isang business visa sa tulong ng Migrate Compass. Ang kanilang team at ang aking opisyal ay lubos na sumuporta sa buong proseso.",
+      "rating37": 4,
+
+      "name38": "Sophia T.",
+      "comment38": "Ako ay isang electrician mula sa Pilipinas. Tinulungan ako ng Migrate Compass na makakuha ng trabaho sa Australia at tinulungan ako sa proseso ng work visa.",
+      "rating38": 5,
+
+      "name39": "Mason G.",
+      "comment39": "Ako ay mula sa Mexico, ngayon ay nagtatrabaho sa U.S.A bilang isang automobile-engineer salamat sa Migrate Compass. Kinonekta nila ako sa employer na kasalukuyan kong pinagtatrabahuhan.",
+      "rating39": 4,
+
+      "name40": "Ava L.",
+      "comment40": "Inilipat ako mula sa Japan patungo sa Canada sa isang work visa. Ngayon ay nagtatrabaho ako bilang chef sa isang kilalang restawran sa Toronto.",
+      "rating40": 5,
+
+      "name41": "Logan P.",
+      "comment41": "Ako ay isang karpintero mula sa Poland, ngayon ay nagtatrabaho sa Switzerland. Ang aking nakatalagang opisyal ay nag-advise sa akin at kinonekta ako sa agency na kasalukuyan kong pinagtatrabahuhan.",
+      "rating41": 4,
+
+      "name42": "Jacob B.",
+      "comment42": "Ako ay isang pintor mula sa Spain, ngayon ay nagtatrabaho sa Australia. Tinulungan ako ng Migrate Compass na makakuha ng work visa at kahit na kinonekta ako sa aking kasalukuyang employer.",
+      "rating42": 4,
+
+      "name43": "Emma W.",
+      "comment43": "Inilipat ako mula sa Russia patungo sa Canada sa isang family visa sa tulong ng Migrate Compass. Ngayon ay masaya na akong nakatira kasama ang aking pamilya sa Vancouver.",
+      "rating43": 5,
+
+      "name44": "Ethan Z.",
+      "comment44": "Ako ay isang mekaniko mula sa Germany, ngayon ay nagtatrabaho sa U.S.A. Pinadali ng Migrate Compass ang proseso ng work visa.",
+      "rating44": 4,
+
+      "name45": "Avery T.",
+      "comment45": "Inilipat ako mula sa India patungo sa Switzerland sa isang business visa sa tulong ng Migrate Compass. Ang kanilang team ay lubos na sumuporta sa buong proseso.",
+      "rating45": 5,
+
+      "comment46": "Nakakuha ako ng trabaho bilang nurse sa California, USA at ang Migrate Compass ang ginamit ng aking ahensya upang maproseso ang aking aplikasyon. Ang kanilang serbisyo ay napaka gaan at kaibigan.",
+      "rating46": 5
+    },
+
+    "aboutUsPage": {
+      "title": "Maligayang pagdating sa Migrate Compass",
+      "subTitle": "Tayo ay Tumutulong sa Imigrasyon at mga Pagkakataon sa Trabaho",
+      "subTitle1": "Sa Estados Unidos at Europa",
+      "header": "Sino Kami",
+      "subHeader": "Pangunahing Pinuno sa Buong Mundo",
+      "speech": "Nagmula sa mahigit sa mga taon ng karanasan at mahigit sa 2,000 mga eksperto sa imigrasyon, visa at passport, mga abogado at mga kwalipikadong opisyal sa imigrasyon sa 5 o higit pang mga bansa. Nag-aalok ang Migrate Compass ng kumpletong hanay ng mga serbisyo sa ilalim ng dalawang pangunahing tatak: imigrasyon at pag-sponsor sa trabaho. Ang aming unang layunin, ang imigrasyon, ay nakakasama sa pagbibigay ng estratehikong payo at solusyon para sa mga korporasyon sa buong mundo. Ang pangalawang layunin naman, ang pag-sponsor sa trabaho, ay naglalaman ng pag-aalok ng pangunahing mga serbisyo para sa parehong mga korporasyon at indibidwal na naghahanap ng visa sa trabaho at mga serbisyo sa passport. Ang Migrate Compass ay isang pribadong kumpanya na awtorisado na magproseso ng mga aplikasyon para sa visa at mapabilis ang mga passport sa konsulado at mga ahensya ng passport sa bayad.",
+
+      "OurVision": "Aming Pangitain",
+      "visionDetail": "Pahintulutan ang paglalakbay, upang isambang ang mga tao, kultura, at negosyo at buksan ang mundo.",
+
+      "OurMission": "Aming Misyon",
+      "missionDetails": "Pinapayagan namin ang global na paggalaw sa pamamahala sa mga kumplikasyon ng isang nagbabagong mundo. Pinapalakas namin ang mga tao at organisasyon na nang walang kahirap-hirap na mabuhay, magtrabaho, maglakbay, at magkalakal sa pamamagitan ng aming pandaigdigang saklaw, lokal na kaalaman, at solusyon na nakatuon sa customer.",
+
+      "operateWithCare": "KUMIKILOS NG MAINGAT",
+      "operateDetails": "Malalim kaming nag-aalala sa ginagawa namin at ang pagkakaiba na ginagawa namin. Nangangahulugan kami ng pananagutan, nagpapakita ng integridad, at gumagawa ng mga mapanagot na pagpipilian upang gawin ang tamang bagay. Nais naming iwan ang mga bagay na mas mabuti kaysa sa aming natagpuan.",
+
+      "effectiveAndEfficient": "MABISA AT MAAASAHAN",
+      "effectiveDetails": "Naghahanap kami ng maingat na balanse ng bilis, kalidad, at kahusayan. Ginagamit namin ang mga global na proseso upang makamit ang consistente, naaayon sa batas na mga resulta. Pinapayagan namin ang mga koponan na mag-ayos upang matugunan ang mga nagbabagong pangangailangan ng aming mga customer at ang mga ahensya ng gobyerno na aming kausap.",
+
+      "purpose": "Nararapat ba ang layunin ng iyong pagbisita sa isa sa mga kategoryang ito?",
+      "TeamLead": "Pakilala sa Aming Pangunahing Lider ng Pangkat",
+      "MemberShip": "Edukasyon at Kasapihan"
+    },
+
+    "visaTypeAboutPage": {
+      "title1": "May Kasanayan at Walang Kasanayan na Manggagawa",
+      "details1": "Para sa mga indibidwal na nangangailangan ng Isponsor sa Trabaho, na naghahanap ng mga pagkakataon sa trabaho sa U.S. & Europa pagkatapos ng pagsusuri, isang espesyal na opisyal ay itatalaga sa iyo.",
+      "title2": "Turista, Bisita o Pang-medikal na Paggamot",
+      "details2": "Para sa mga indibidwal na naglalakbay sa para sa turismo, pagbisita, o naghahanap ng pang-medikal na paggamot. Malugod naming tinatanggap ang lahat ng mga bisita at ang aming serbisyo ay sumasaklaw sa bawat hakbang ng daan.",
+      "title3": "Negosyo o Trabaho",
+      "details3": "Para sa mga propesyonal na dumadalo sa mga pulong pang-negosyo, mga indibidwal na nangangailangan ng Isponsor sa Trabaho, nagsasagawa ng mga pamumuhunan, o nagsisimula ng trabaho sa U.S. at Europa. Tinutulungan ka namin na makakuha ng tamang uri ng visa para sa iyong mga pangangailangan.",
+      "title4": "Pag-aaral o Palitan",
+      "details4": "Para sa mga mag-aaral at mga bisita sa palitan na nagsisimula sa kanilang akademikong paglalakbay sa U.S. Sinisiguro namin na ang iyong aplikasyon ay malinis at sumusunod sa lahat ng mga kinakailangan."
+    },
+
+    "contactPage": {
+      "heroHeader": "Kumonekta sa amin nang direkta sa pamamagitan ng",
+      "heroSubHeader": "ang feature ng chat sa iyong libreng account.",
+      "scheduleAConsultationA": "Mag-schedule ng",
+      "scheduleAConsultationB": "Konsultasyon",
+      "consultationDetails": "Mangyaring mag-click sa button sa ibaba upang mag-schedule ng konsultasyon sa isa sa aming mga abogado. Bukod pa sa mga konsultasyon sa telepono, nag-aalok din kami ng mga konsultasyon sa buhay sa platapormang ito. Kung ikaw ay lokal at nais na magkaroon ng isang konsultasyon sa opisina sa aming opisina sa Fort Lauderdale, maaari naming maisakatuparan din iyon.",
+
+      "emailHeader": "Magpadala ng Mensahe sa Amin",
+      "emailMsg": "Gusto naming tulungan ka sa iyong mga pangangailangan sa imigrasyon. Gamitin ang form sa ibaba upang magpadala sa amin ng email.",
+
+      "emailHeader1": "Pinadaling Proseso ng Imigrasyon",
+      "emailMsg1": "Upang makita kung paano namin natugunan ang mga hamon sa imigrasyon ng aming mga kliyente, bisitahin ang aming pahina ng mga review, at basahin kung ano ang sinasabi ng aming mga kliyente tungkol sa aming mga serbisyo sa aming mga review page.",
+
+      "address": "Address / Mga Tanggapan",
+      "addressDetail1": "Swiss office: Stockerstrasse 38, CH-8002, Zürich, Switzerland",
+      "addressDetail2": "U.S office: USCIS headquarters."
+    },
+
+    "reviewPage": {
+      "heroHeader": "Mga Testimonials at Review",
+      "heroSubHeader": "Pinagmamalaki naming maglingkod sa mga nakakatugon na mga kliyente sa buong mundo. Tingnan ang kanilang mga totoong oras na mga review sa Google sa ibaba.",
+      "writeReview": "Magsulat ng review",
+      "formHeader": "Simulan ang Iyong Paglalakbay"
+    },
+
+    "swissWorkPage": {
+      "heroHeader": "Ginawang Madali ng Migrate Compass ang Work Visa",
+      "heroSubHeader": "Siguraduhing may Switzerland work visa.",
+      "formHeader": "Simulan ang Iyong Paglalakbay",
+      "header1": "Bakit Piliin ang Work Visa para sa Switzerland?",
+      "header2": "Switzerland Work Visa",
+      "headerDeatail2": "Kung nais mong magtrabaho sa Switzerland, kakailanganin mo ng Switzerland work visa. Sa Migrate Compass, garantisado ang tulong sa paglalagay sa trabaho. Isa sa mga anyo ng mga long-stay visa sa Switzerland ay ang Swiss work visa (B / L permit). Ipinagkakaloob ng visa na ito ang pahintulot sa may hawak na magtrabaho sa Switzerland sa habang ng visa.",
+
+      "header3": "Oras ng Pagproseso ng Switzerland work visa",
+      "paragraph": "Ang oras ng pagproseso para sa isang permit sa trabaho sa Switzerland ay 6 – 12 na linggo.",
+      "header4": "Mga Kinakailangang Pamantayan para sa Switzerland Work Visa",
+      "header5": "Mga Kinakailangang Dokumento",
+      "listItem1": "Kailangan mo ng isang wastong pasaporte na may hindi bababa sa dalawang blangkong pahina.",
+      "listItem2": "Tatlong kopya ng mga naaangkop na pahina ng iyong pasaporte.",
+      "listItem3": "Kopya ng iyong kontrata sa trabaho na kasama ang 2 mga larawan ng passport.",
+      "listItem4": "Patunay ng iyong propesyonal na karanasan",
+      "listItem5": "Patunay ng iyong mga pang-edukasyon o pagsasanay, tulad ng mga diploma at sertipiko",
+      "Header6": "Nandito ang Migrate Compass upang mag-alok sa iyo ng isang walang-kahirap-hirap na karanasan at siguraduhing matanggap mo ang iyong Swiss Work visa sa pinakamaagang panahon.",
+
+      "serviceCard": {
+        "header": "Kumpletong Serbisyo sa Work Visa",
+        "headerDetails1": "Kami ay nag-uugnay sa iyo sa mga kumpanya, indibidwal para sa posibleng mga alok sa trabaho",
+        "headerDetails2": "Mayroon kaming isang network ng mga masayang kliyente na pinagsasamantalahan ka kapag dumating ka",
+        "headerDetails3": "Wala ka bang mga papeles? Susuriin namin at ikokonekta ka sa isang opisyal"
+      },
+
+      "swissWorkBenefits": {
+        "title1": "Mas Mababang mga Buwis na Rate",
+        "reason1": "Ang Switzerland ay may mas mababang mga rate ng buwis kumpara sa maraming ibang mga bansa, nagpapahintulot sa iyo na dalhin ang mas malaking bahagi ng iyong sahod sa bahay.",
+        "title2": "Paborable na mga Patakaran sa Trabaho",
+        "reason2": "Ang Switzerland ay may mga pinadaling patakaran para sa mga mahusay na manggagawa, na ginagawang mas madali para sa kanila na makakuha ng mga work visa.",
+        "title3": "Mga Propesyonal na May Kasanayan",
+        "reason3": "Ang mga kumpanya sa Switzerland ay aktibong nag-aalok ng mga propesyonal na may kasanayan sa iba't ibang sektor.",
+        "title4": "Mga Pagkakataon sa Trabaho",
+        "reason4": "Ang Switzerland ay nag-aalok ng maraming mga pagkakataon sa trabaho, lalo na para sa mga may espesyalisadong kasanayan.",
+        "title5": "Mataas na Mga Sahod",
+        "reason5": "Ang mga sahod sa Switzerland ay itinuturing bilang pinakamataas sa buong mundo, ginagawang isang atraktibong destinasyon para sa mga propesyonal na naghahanap ng mga mataas na sahod na trabaho.",
+        "title6": "Balanseng Trabaho at Buhay",
+        "reason6": "Ang average na oras ng trabaho sa isang linggo sa Switzerland ay 35.2 na oras, na nagpo-promote ng isang malusog na balanseng pagitan ng trabaho at buhay."
+      },
+
+      "swissWorkRequirement": {
+        "title1": "Alok sa Trabaho",
+        "lists1": "Tumutulong ang Migrate Compass sa pagkakakuha ng mga alok sa trabaho mula sa mga maliit na kumpanya sa Switzerland para sa parehong mga papel na may kasanayan at walang kasanayan.",
+
+        "title2": "Karanasan sa Trabaho",
+        "lists2": "Para sa mga papel na walang kasanayan, ang praktikal na karanasan ay maaaring makabuti. Para sa mga papel na may kasanayan, karaniwan nang inaasahan ang ilang taon ng karanasan sa iyong larangan.",
+
+        "title3": "Mga Kwalipikasyon",
+        "lists3": "Para sa mga papel na may kasanayan, dapat kang magkaroon ng isang digri sa unibersidad o katumbas na mga kwalipikasyon sa iyong larangan ng trabaho. Para sa mga papel na may walang kasanayan sa trabaho sa mga pagpapaunlad tulad ng pagsasaka, pagpipintura, paggawa ng karpintero, at iba pang mga trabahong walang kasanayan, maaaring hindi kinakailangan ang partikular na kwalipikasyon.",
+
+        "title4": "Aplikasyon sa Permit sa Trabaho",
+        "lists4": "Kapag nakuha ang alok sa trabaho, tinutulungan ka ng Migrate Compass sa proseso ng aplikasyon para sa iyong permit sa trabaho, na nagpapasa ng isang pinahusay na proseso ng imigrasyon patungo sa Switzerland."
+      },
+      "reviews": {
+        "list1": "Dahil sa Migrate Compass, ngayon ay nagtatrabaho ako bilang Project Manager sa isang start-up.",
+        "list2": "Tinulungan ako ng Migrate Compass at ang aking kapatid na magkaroon ng trabaho bilang mga nars, at ang kultura ng trabaho dito ay ang pinakamaganda.",
+        "list3": "Ako ay mula sa Pakistan, ngunit dahil sa Migrate Compass, kasalukuyan akong nasa Switzerland na nagtatrabaho bilang isang Plumber at ang sahod ay kamangha-mangha."
+      }
+    },
+
+    "usaWorkPage": {
+      "heroHeader": "Gawing madali ang Work Visa sa tulong ng Migrate Compass",
+      "heroSubHeader": "Tiyakin ang iyong United States work visa online.",
+      "header1": "Ano ang mga Kinakailangang EB3 Visa?",
+      "paragraph1": "May ilang mga kinakailangan para sa EB3 visa. Ang mga sumusunod na kundisyon ay dapat matugunan upang maaprubahan ka para sa isang EB3 visa. Masaya kaming tulungan ka upang malaman kung ikaw ay pumapasa sa mga kinakailangang ito.",
+      "header2": "Narito ang mga bagay na kailangan mong malaman",
+      "headerDeatail2": "Pinapayagan ng EB3 visa ang isang tao na makakuha ng isang green card batay sa pagkakaroon ng sponsor mula sa isang U.S. na kumpanya na ibinibigay namin para sa iyo. Upang makakuha ng isang green card, kailangang dumaan ang iyong kumpanya sa proseso ng labor certificate PERM. Sa gabay na ito, aalamin ko ang ilang mahahalagang aspeto ng proseso ng EB3 visa. Ipapakita rin kita kung paano mo magagamit ang visa na ito upang makakuha ng isang green card para mamalagi sa Estados Unidos.",
+      "header3": "Di-kumpletong impormasyon,",
+      "paragraph3": "Ang hindi sapat na ebidensya, at mga legal na hadlang madalas na humahantong sa mahabang panahon ng pagproseso, at kahit na pagtanggi sa visa. Kung may kakulangan sa dokumento, mangyaring ipaalam sa iyong itinalagang opisyal o SupportLine.",
+      "header4": "Ang mga kinakailangan ay hindi gaanong mahigpit.",
+      "paragraph4": "Ang EB3 visa ay may mga kinakailangan na hindi gaanong mahigpit kumpara sa EB1 o EB2 visas. Ito ay nangangahulugan na ang ilang mga tao na maaaring hindi mag-qualify para sa iba pang mga visa ay maaaring maging eligible para sa EB3 visa.",
+      "header5": "Puwede ring pumunta sa Estados Unidos ang iyong asawa at mga anak na dependente.",
+      "paragraph5": "Alam mo ba? Sa EB3 visa, puwede ring sumama ang iyong pamilya sa paglalakbay! Kung mayroon kang mga anak na hindi pa 21 taong gulang at hindi pa kasal, maaari silang sumama. At ang pinakamahusay? Pwede rin silang mag-aral sa U.S. Hindi rin naiiwan ang iyong asawa. Kapag naayos na nila ang kanilang mga dokumento sa trabaho o nakakuha na ng kanilang green card, sila ay malaya nang magtrabaho.",
+      "Header6": "Narito ang Migrate Compass upang mag-alok sa iyo ng isang walang-abalang karanasan at tiyakin na matatanggap mo ang iyong U.S Work visa sa pinakamabilis na paraan.",
+      "serviceCard": {
+        "header": "Kumpletong Serbisyo ng Work Visa",
+        "headerDetails1": "Kami ay mag-uugnay sa iyo sa mga kumpanya, firm, indibidwal, para sa mga potensyal na alok sa trabaho",
+        "headerDetails2": "Mayroon kaming isang network ng mga masayang kliyente na ikaw ay pag-iisahin sa iyong pagdating",
+        "headerDetails3": "Wala kang mga dokumento? Kukilatisin at mag-uugnay kami sa iyo sa isang opisyal"
+      },
+      "reviews": {
+        "list1": "Nagpapasalamat ako sa Migrate Compass sa pagtulong sa akin sa pagkuha ng work visa para sa USA bilang isang truck driver. Ang suporta ng aking itinalagang opisyal ay nagpadali sa proseso ng imigrasyon.",
+        "list2": "Nakaseguro ako ng posisyon bilang electrician sa USA. Tinulungan din ako ng aking opisyal na makipag-ayos ng mas magandang alok para sa akin.",
+        "list3": "Nakakuha ako ng trabaho bilang nurse sa California USA at ang Migrate Compass ang ginamit ng aking ahensya para sa pagproseso ng aking aplikasyon. Ang kanilang mga serbisyo ay napakaluwag at magiliw."
+      }
+    },
+    "swissBusinessPage": {
+      "heroHeader": "Negosyo / Investasyon Batay sa Visa sa Switzerland",
+      "heroSubHeader": "Ginto Swiss Visa.",
+      "header1": "Swiss Investor Visa",
+      "paragraph1": "Ang Swiss Investor Visa, na kilala rin bilang Swiss Golden Visa program o Swiss Citizenship by Investment program, ay idinisenyo upang mahikayat ang mga indibidwal na may mataas na net-worth at mga dayuhan na mamumuhunan mula sa mga bansa sa labas ng European Union (EU).",
+      "paragraph2": "Nag-aalok ang Switzerland ng espesyal na Residence by Investment program na idinisenyo para sa mga mamamayan na hindi taga-EU/EFTA. Ang kapana-panabik na oportunidad na ito ay nagpapahintulot sa iyo at sa iyong pamilya na mamuhay sa Switzerland sa pamamagitan ng pag-iinvest. Ang pagbabayad na ito ay nagbibigay sa iyo ng mga karapatan sa paninirahan sa Switzerland. Ang Residence by Investment program ay kakaiba dahil maaari itong magdulot ng pagkakaroon ng Swiss passport pagkatapos ng ilang panahon. Ang pagbuhay sa Switzerland na may ganitong uri ng visa ay nangangahulugan ng pagtangkilik sa kapayapaan at kagandahan ng bansa habang itinatayo ang iyong mga pangarap sa negosyo. Bukod pa, ang ruta na ito sa huli ay nagbubukas ng posibilidad ng pagiging mamamayan, na nagbibigay ng kalayaan na magtrabaho sa buong Europa nang hindi kinakailangan ang hiwalay na pahintulot o visa.",
+      "header2": "Mga Kwalipikasyon sa Residence ng Switzerland Golden Visa:",
+
+      "Eligibility": {
+        "list1": "Maging hindi EU mamamayan",
+        "list2": "Mag-invest sa isang kumpanya sa Switzerland o magbigay ng malaking kontribusyon sa isang umiiral na negosyo.",
+        "list3": "Maging nasa pagitan ng 18 at 55 taong gulang.",
+        "list4": "Kailangan mong patunayan ang iyong financial stability at magbigay ng patunay ng iyong pondo sa investment.",
+        "list5": "Magkaroon ng malinis na rekord sa krimen.",
+        "list6": "Ang pinagmulan ng iyong pondo sa investment ay dapat na legal.",
+        "list7": "Magkaroon ng opisyal na pinagkukunan ng kita.",
+        "list8": "Magkaroon ng sariling ari-arian o inupahan na property sa bansa."
+      },
+
+      "header3": "Ano ang mga benepisyo ng Swiss Golden Visa?",
+
+      "Benefits": {
+        "list1": "Libreng paglalakbay sa Schengen nations:",
+        "details1": "Ang Switzerland ay kasapi ng Schengen Zone. Bilang resulta, ang mga residente ng Switzerland ay maaaring maglakbay sa iba pang mga bansang Schengen at manatili ng hanggang 90 araw sa loob ng 180 na hindi kailangan ng visa.",
+        "list2": "Paglipat sa Switzerland:",
+        "details2": "Sa panahon ng bisa ng permit ng paninirahan, ang mamumuhunan at ang kanilang pamilya ay nagkakaroon ng karapatan na manirahan sa Switzerland. Ang isang residence permission card ay karaniwang maganda sa loob ng isang taon. Ito ay mapapalawig kung ikaw ay naninirahan sa bansa para sa 183 araw sa loob ng isang taon.",
+        "list3": "Access sa mataas na kalidad ng edukasyon at healthcare:",
+        "details3": "Ang mga paaralan at unibersidad sa Switzerland ay itinuturing na isa sa pinakamahusay sa buong mundo. Dito, maaaring makatanggap ng magandang edukasyon ang mga anak ng mamumuhunan.",
+        "list4": "Healthcare:",
+        "details4": "Ang isang permit sa paninirahan ng isang Swiss ay nagbibigay-daan sa may hawak na magkaroon ng access sa medikal na paggamot sa lokal na klinik o institusyon ng iba pang mga bansang Schengen nang hindi kailangan ng medikal na visa. Ang pagkamamamayan ay ibinibigay pagkatapos ng sampung taon ng paninirahan sa bansa."
+      },
+
+      "Header6": "Narito ang Migrate Compass upang mag-alok sa iyo ng isang walang-abalang karanasan at tiyakin na matatanggap mo ang iyong Swiss Golden Visa sa pinakamabilis na paraan.",
+
+      "serviceCard": {
+        "header": "Negosyo Visa sa Switzerland",
+        "headerDetails1": "Kami ay mag-uugnay sa iyo sa aming mga nakatagong kasosyo sa negosyo",
+        "headerDetails2": "Tayo ay tutulong sa paghahanda ng lahat ng kinakailangang dokumentasyon at gastos",
+        "headerDetails3": "Ang aming suporta ay umiiral pahilom, kami ay mag-aakompaña sa iyo sa buong iyong paglalakbay"
+      },
+
+      "faq": {
+        "title": "Tingnan ang Aming Mga Madalas Itanong",
+        "list1": "Maaari bang mag-apply ang sinuman para sa Swiss golden visa program?",
+        "list2": "Pwede ba akong maging mamamayan ng Switzerland kung ikakasal ako sa isang Swiss?",
+        "list3": "Pwede bang sumama ang aking pamilya sa akin gamit ang aking Swiss Golden Visa?"
+      }
+    }
+  }
+}

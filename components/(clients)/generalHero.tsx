@@ -49,11 +49,11 @@ const GeneralHero = ({
           <p
             className={` ${
               center ? "text-center" : ""
-            } md:text-2xl text-center w-full font-extrabold text-[#6bb7fe] mb-2 sm:text-2xl text-xl `}
+            }  text-center w-full font-extrabold text-[#6bb7fe] mb-2 sm:text-2xl text-lg `}
           >
             {subTitle}
           </p>
-          <p className="sm:text-xl text-lg font-bold w-full text-center text-red-400">
+          <p className="sm:text-xl text-lg sm:font-bold font-semibold w-full text-center text-orange-400">
             {subTitle1}
           </p>
           {chatAgent && (

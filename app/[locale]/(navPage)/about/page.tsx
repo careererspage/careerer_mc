@@ -42,7 +42,7 @@ const About = async () => {
         serverId={existingServer?.id}
       />
       <HeroAbt />
-      <div className="bg-[#055AAA] w-full">
+      <div className="bg-[#055AAA] mt-5 w-full">
         <Cases
           currentUser={currentUser}
           expiredVisa={expiredVisa?.id}

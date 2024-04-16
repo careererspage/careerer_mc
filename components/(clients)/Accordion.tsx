@@ -16,7 +16,7 @@ export const Accordion = ({ faq }: AccordionProps) => {
         isOpen={isOpen}
         toggle={toggle}
       />
-      {isOpen && <TextSection answer={faq.answer} />}
+      {isOpen && <TextSection answer={faq.answer} isOpen />}
     </div>
   );
 };
@@ -53,9 +53,15 @@ export const ExpendableColumn = ({
   );
 };
 
-export const TextSection = ({ answer }: { answer: string }) => {
+export const TextSection = ({
+  answer,
+  isOpen,
+}: {
+  answer: string;
+  isOpen: boolean;
+}) => {
   return (
-    <div className="text-container px-5 p-10" style={{ lineHeight: 1.8 }}>
+    <div className={` text-container px-5 p-10 ${isOpen ? "open" : ""}`}>
       {answer}
     </div>
   );

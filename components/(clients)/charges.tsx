@@ -133,7 +133,7 @@ const Charges = ({ currentUser, serverId, supportId }: ChargesProps) => {
               <div>
                 <ul
                   style={{ lineHeight: 1.8 }}
-                  className="text-sm sm:text-base list-disc flex flex-col gap-3 ml-4 ul-list"
+                  className="sm:!text-base text-sm list-disc flex flex-col gap-3 ml-4 ul-list"
                 >
                   {UsaFeeA().map((item, i) => (
                     <li key={i}>{item.lists}</li>
@@ -153,7 +153,7 @@ const Charges = ({ currentUser, serverId, supportId }: ChargesProps) => {
               <div>
                 <ul
                   style={{ lineHeight: 1.8 }}
-                  className="text-sm sm:text-base list-disc flex flex-col gap-3 ml-4 ul-list"
+                  className="sm:!text-base text-sm list-disc flex flex-col gap-3 ml-4 ul-list"
                 >
                   {UsaFeeC().map((item, i) => (
                     <li key={i}>{item.lists}</li>
@@ -189,7 +189,7 @@ const Charges = ({ currentUser, serverId, supportId }: ChargesProps) => {
               <div>
                 <ul
                   style={{ lineHeight: 1.8 }}
-                  className="text-sm sm:text-base list-disc flex flex-col gap-3 ml-4 ul-list"
+                  className="sm:!text-base text-sm list-disc flex flex-col gap-3 ml-4 ul-list"
                 >
                   {UsaFeeA().map((item, i) => (
                     <li key={i}>{item.lists}</li>
@@ -209,7 +209,7 @@ const Charges = ({ currentUser, serverId, supportId }: ChargesProps) => {
               <div>
                 <ul
                   style={{ lineHeight: 1.8 }}
-                  className="text-sm sm:text-base list-disc flex flex-col gap-3 ml-4 ul-list"
+                  className="sm:!text-base text-sm list-disc flex flex-col gap-3 ml-4 ul-list"
                 >
                   {UsaFeeC().map((item, i) => (
                     <li key={i}>{item.lists}</li>
@@ -290,8 +290,8 @@ const Charges = ({ currentUser, serverId, supportId }: ChargesProps) => {
         Animate={AnimateFaq}
         title={t("faq.title")}
         list1={t("faq.list1")}
-        list2={t("faq.list1")}
-        list3={t("faq.list1")}
+        list2={t("faq.list2")}
+        list3={t("faq.list3")}
         href="/usa-faq"
       />
     </div>

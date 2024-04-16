@@ -5,6 +5,7 @@ import Link from "next/link";
 import { SafeUser } from "@/types";
 import { useModal } from "@/hooks/use-modal-store";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface FooterProps {
   currentUser?: SafeUser | null;
@@ -38,6 +39,8 @@ const Footer = ({
     router.push(`/servers/${existingServer}/conversations/${expiredVisa}`);
   };
 
+  const c = useTranslations("translate.common");
+
   return (
     <div className="py-10 mt-10 bg-[#112e5f]">
       <Container>
@@ -54,11 +57,7 @@ const Footer = ({
               className="text-sm text-gray-300 leading-10"
               style={{ lineHeight: 1.8 }}
             >
-              Migrate Compass, a registered service with the U.S. Dept of State,
-              offers job opporturnities, visa processing, expired visa,
-              completion and courier services for visa applications and much
-              more. We officially follow all instructions protocol based on your
-              input, Dept of State and foreign consulates/embassies.
+              {c("migrateDetails")}
             </p>
           </div>
 

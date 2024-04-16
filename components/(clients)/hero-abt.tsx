@@ -56,52 +56,59 @@ const HeroAbt = () => {
         <div className="grid sm:grid-cols-[40%,60%] grid-cols-1 gap-4">
           <div className="flex sm:!flex-row flex-col items-center">
             <div className="flex flex-col gap-1 mt-4">
-              <h1 className="md:text-6xl sm:text-4xl text-3xl font-bold">
+              <h1 className="md:text-6xl sm:text-4xl text-xl font-bold">
                 {t("header")}
               </h1>
-              <h2 className="sm:text-[22px] text-xl text-zinc-500 font-bold">
+              <h2 className="sm:text-[22px] text-lg text-[#055AAA] mt-2 font-bold">
                 {t("subHeader")}{" "}
               </h2>
 
-              <p className="text-[15px] text-[#333333]">{t("speech")}</p>
+              <p className="sm:text-[15px] text-[14px] text-[#333333]">
+                {t("speech")}
+              </p>
             </div>
 
-            <div className="sm:w-[50px] sm:h-[80px] w-full h-[20px] bg-yellow-400 sm:mx-6 my-6" />
+            <div className="sm:w-[50px] sm:h-[80px] w-full h-[8px] bg-yellow-400 sm:mx-6 my-6" />
           </div>
 
           <div className="flex flex-col gap-4">
             <div>
-              <h2 className="sm:text-[22px] text-lg text-zinc-500 font-bold">
+              <h2 className="sm:text-[22px] text-lg text-[#055AAA] font-bold">
                 {" "}
                 {t("OurVision")}
               </h2>
-              <p className="text-[15px] text-[#333333]">{t("OurVision")}</p>
+              <p className="text-[14px] mt-1 text-[#333333]">
+                {t("visionDetail")}
+              </p>
             </div>
 
             <div>
-              <h2 className="sm:text-[22px] text-lg text-zinc-500 font-bold">
+              <h2 className="sm:text-[22px] text-lg text-[#055AAA] font-bold">
                 {" "}
                 {t("OurMission")}
               </h2>
-              <p className="text-[15px] text-[#333333]">
+              <p className="text-[14px] mt-1 text-[#333333]">
                 {t("missionDetails")}
               </p>
             </div>
 
             <div>
-              <h2 className="sm:text-[22px] text-lg text-zinc-500 font-bold">
+              <h2 className="sm:text-[22px] text-lg text-[#055AAA] font-bold">
                 {" "}
                 {t("operateWithCare")}
               </h2>
-              <p className="text-[15px] text-[#333333]">
+              <p className="text-[14px] mt-1 text-[#333333]">
                 {t("operateDetails")}
               </p>
             </div>
             <div>
-              <h2 className="sm:text-[22px] text-lg text-zinc-500 font-bold">
+              <h2 className="sm:text-[22px] text-lg text-[#055AAA] font-bold">
                 {t("effectiveAndEfficient")}{" "}
               </h2>
-              <p className="text-[15px] text-[#333333]">
+              <p
+                className="text-[14px] mt-1
+               text-[#333333]"
+              >
                 {t("effectiveDetails")}
               </p>
             </div>
@@ -109,7 +116,7 @@ const HeroAbt = () => {
         </div>
       </div>
       <div className="bg-[#055AAA] w-full sm:px-10 h-auto mt-4 flex flex-col items-center py-4">
-        <h2 className="text-white md:text-xl text-lg font-bold text-center p-4">
+        <h2 className="text-white md:text-xl text-[15px] font-bold text-center p-4">
           {t("purpose")}{" "}
         </h2>
 
@@ -156,7 +163,7 @@ const HeroAbt = () => {
 
           {showLeftScroll1 && (
             <button
-              className="absolute group-hover:sm:block sm:hidden block z-50 sm:-left-10 left-0 top-1/2 hover:opacity-80 transition bg-white/95 border border-[#003b95] rounded-full p-2"
+              className="absolute group-hover:sm:block sm:hidden block z-30 sm:-left-10 left-0 top-1/2 hover:opacity-80 transition bg-white/95 border border-[#003b95] rounded-full p-2"
               onClick={() => scrollAction(-350)}
             >
               <BsChevronLeft size={25} className="text-blue-400" />
@@ -164,7 +171,7 @@ const HeroAbt = () => {
           )}
           {showRightScroll1 && (
             <button
-              className="absolute group-hover:sm:block sm:hidden block z-50 sm:-right-10 right-0 top-1/2 hover:opacity-80 transition bg-white/95 border border-[#003b95] rounded-full p-2"
+              className="absolute group-hover:sm:block sm:hidden block z-30 sm:-right-10 right-0 top-1/2 hover:opacity-80 transition bg-white/95 border border-[#003b95] rounded-full p-2"
               onClick={() => scrollAction(350)}
             >
               <BsChevronRight size={25} className="text-blue-400" />
@@ -221,7 +228,7 @@ const HeroAbt = () => {
                 <h2 className="text-[#555555] font-semibold sm:text-lg text-base">
                   {team.name}
                 </h2>
-                <h2 className="text-[#306eb9] font-semibold sm:text-xl text-lg">
+                <h2 className="text-[#306eb9] font-semibold sm:text-xl text-[15px]">
                   {team.title}
                 </h2>
               </div>
