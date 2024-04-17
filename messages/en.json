@@ -43,6 +43,33 @@
       "Switzerland Fee": "Switzerland Fee"
     },
 
+    "profileMGCPage": {
+      "header": "Migrate Compass",
+      "header1": "Welcome To Migrate Compass",
+      "paragraph1": "We pride ourselves on our profound legal expertise, our commitment to a people-centric approach, and our adoption of technology-driven processes. In addition to our immigration services, Migrate Compass also operates as a recruitment agency. We have a vast network of startups, agencies and farm lands that are constantly on the lookout for foreign immigrants. Our services provide an efficient pathway for businesses, employees, investors, students, and families seeking to apply for visas and green cards in Europe and the United States. We're here to guide you through every step of your immigration journey. Let's navigate the complexities of immigration together!",
+      "header2": "Services we provide",
+
+      "services": {
+        "listHeader1": "Evaluation:",
+        "list1": "Evaluation of your case, visa type, skillset, and providing honest opinions.",
+        "listHeader2": "Recruitment Services:",
+        "list2": "Our recruiters connect you with agencies, small firms/start-ups and organisations in need of labor, services, skill, or care.",
+        "listHeader3": "Legal Assistance:",
+        "list3": "Assistance with hearings, visa applications, and problematic visa cases.",
+        "listHeader4": "Cultural Integration:",
+        "list4": "Providing support and resources to help immigrants integrate into their new communities, including language classes, cultural orientation programs, and networking events.",
+        "listHeader5": "Networking Opportunities:",
+        "list5": "We connect you with our communities of foreign immigrants based on the Cantons or country you are heading to.",
+        "listHeader6": "Continuous Support:",
+        "list6": "Offering ongoing support and assistance throughout the immigration and employment process, including follow-up consultations and assistance with any issues or concerns that may arise.",
+        "listHeader7": "Orientation:",
+        "list7": "Guidance on the country social security, tax system, and other local regulations."
+      },
+
+      "header3": "It seems you haven't started your process with us yet. Would you like to get a free evaluation with one of our agents?",
+      "evaluation": "Start Free Evaluation"
+    },
+
     "homePage": {
       "title": "Immigration Law Expertise Delivered",
       "span1": "Expertise",
@@ -427,13 +454,17 @@
       "header2": "Here's what you need to know",
       "headerDeatail2": "The EB3 visa allows someone to obtain a green card based on getting sponsored by a U.S. company which we provide for you. To obtain a green card, your company must go through the labor certificate PERM process. In this guide, I will walk you through several important aspects of the EB3 visa process. I will also show you how you can utilize this visa to get a green card to live in the United States.",
 
-      "header3": "Incomplete information,",
-      "paragraph3": "Insufficient evidence, and legal obstacles often lead to long processing times, and even visa rejection. If any lack of document please let your assigned officer or SupportLine be aware.",
-      "header4": "The requirements are less strict.",
-      "paragraph4": "The EB3 visa has less strict requirements than either the EB1 or the EB2 visas. This means that some people who may not qualify for these other visas may be eligible for the EB3 visa.",
+      "header3": "Here's what you need to know",
+      "headerDeatail3": "Annually, the U.S. government sets aside nothing less than 12,000 visas specifically for non-specialized roles. One of the biggest challenges for many is securing an employer who is both capable and willing to sponsor them. Migrate Compass partners with qualified employers who are prepared to sponsor foreign nationals, either fully or partially, for work permits.",
+      "span3": "The EB-3 ‘Other Workers’ Visa presents a valuable opportunity for you to secure permanent residency in the United States. This can be achieved either by adjusting your current status or through consular processing in your home country. If applicable, your spouse and unmarried children under the age of 21 may also be eligible for this benefits.",
 
-      "header5": "Your spouse and dependent children can come to the United States.",
-      "paragraph5": "Guess what? With the EB3 visa, your family gets to join the adventure too! If you have kids under 21 who aren't married, they can hop on board. And the best part? They can go to school in the U.S. Your spouse isn't left out either. Once they've sorted out their work documents or gotten their green card, they're free to work.",
+      "header4": "Incomplete information,",
+      "paragraph4": "Insufficient evidence, and legal obstacles often lead to long processing times, and even visa rejection. If any lack of document please let your assigned officer or SupportLine be aware.",
+      "header5": "The requirements are less strict.",
+      "paragraph5": "The EB3 visa has less strict requirements than either the EB1 or the EB2 visas. This means that some people who may not qualify for these other visas may be eligible for the EB3 visa.",
+
+      "header6": "Your spouse and dependent children can come to the United States.",
+      "paragraph6": "Guess what? With the EB3 visa, your family gets to join the adventure too! If you have kids under 21 who aren't married, they can hop on board. And the best part? They can go to school in the U.S. Your spouse isn't left out either. Once they've sorted out their work documents or gotten their green card, they're free to work.",
 
       "Header6": "Migrate Compass is here to offer you a hassle-free experience and make sure you receive your U.S Work visa as quickly as possible.",
 

@@ -17,7 +17,7 @@ const InviteCodePage = async ({ params }: InviteCodePageProps) => {
   }
 
   if (!params.inviteCode) {
-    return redirect("/about");
+    return redirect("/");
   }
 
   const existingServer = await db.server.findFirst({

@@ -65,7 +65,7 @@ const ProfileSidebar = ({
       <Separator className=" w-[250px] my-2 h-[1px]" />
 
       <div className="text-xs my-1 uppercase font-bold text-zinc-500">
-        Country Agents
+        Country Office
       </div>
 
       {agents &&

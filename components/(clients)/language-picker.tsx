@@ -14,11 +14,19 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 import { FaChevronDown } from "react-icons/fa";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "../ui/navigation-menu";
+import { CheckIcon } from "lucide-react";
 
 export const LanguagePicker: React.FC = () => {
   const locale = useLocale() as Locale;
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
 
   const flags = {
     en: require("@/public/images/usa-translate-flag.png"),
@@ -42,55 +50,54 @@ export const LanguagePicker: React.FC = () => {
   }
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <div
-          className="border-none flex items-center gap-1 hover:bg-gray-200 cursor-pointer p-1 rounded-md"
-          onClick={() => setIsOpen(true)}
-        >
-          <Image
-            width={50}
-            height={50}
-            src={flags[locale]}
-            alt={languages[locale]}
-            className="w-[17px] h-[17px] object-contain"
-          />
-          <h1 className="text-[15px]">{languages[locale]}</h1>
-          <FaChevronDown
-            className="text-[#57a1e6]"
-            style={{
-              transform: `rotate(${isOpen ? 180 : 0}deg)`,
-              transition: "all 0.25s ",
-            }}
-          />
-        </div>
-      </DropdownMenuTrigger>
-
-      <DropdownMenuContent align="end">
-        <DropdownMenuLabel>Language</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-
-        {Object.keys(languages).map((lang) => (
-          <DropdownMenuCheckboxItem
-            key={lang}
-            checked={locale === lang}
-            onClick={() => {
-              handleLocaleChange(lang as Locale);
-            }}
-          >
-            <Image
-              width={50}
-              height={50}
-              src={flags[lang as keyof typeof flags]}
-              alt={languages[lang as keyof typeof languages]}
-              className="w-[17px] h-[17px] mr-3 object-contain"
-            />
-            <h1 className="text-[15px]">
-              {languages[lang as keyof typeof languages]}
-            </h1>
-          </DropdownMenuCheckboxItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div>
+      <NavigationMenu className="w-full bg-white py-2 rounded-md">
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>
+              <div className="transition border-none flex items-center gap-1 hover:bg-gray-200 cursor-pointer p-1 rounded-md w-full">
+                <Image
+                  width={50}
+                  height={50}
+                  src={flags[locale]}
+                  alt={languages[locale]}
+                  className="w-[17px] h-[17px] object-contain"
+                />
+                <h1 className="text-[15px]">{languages[locale]}</h1>
+              </div>
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid gap-2 pl-4 py-2 w-[170px] sm:w-[300px] md:grid-cols-1 lg:w-[300px] text-sm">
+                {Object.keys(languages).map((lang) => (
+                  <div
+                    key={lang}
+                    onClick={() => {
+                      handleLocaleChange(lang as Locale);
+                    }}
+                    className={`transition border-none flex items-center gap-1 hover:bg-gray-200 cursor-pointer p-1 rounded-md ${
+                      locale === lang ? "bg-gray-200" : ""
+                    }`}
+                  >
+                    <Image
+                      width={50}
+                      height={50}
+                      src={flags[lang as keyof typeof flags]}
+                      alt={languages[lang as keyof typeof languages]}
+                      className="w-[17px] h-[17px] mr-3 object-contain"
+                    />
+                    <h1 className="text-[15px]">
+                      {languages[lang as keyof typeof languages]}
+                    </h1>
+                    {locale === lang && (
+                      <CheckIcon className="w-5 h-5 text-green-500" />
+                    )}
+                  </div>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
   );
 };

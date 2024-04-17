@@ -43,6 +43,33 @@
       "Switzerland Fee": "Bayad sa Switzerland"
     },
 
+    "profileMGCPage": {
+      "header": "Migrate Compass",
+      "header1": "Maligayang Pagdating sa Migrate Compass",
+      "paragraph1": "Ipinagmamalaki namin ang aming malalim na kasanayan sa batas, ang aming dedikasyon sa isang pag-approach na nakatuon sa mga tao, at ang aming pagsasagawa ng mga proseso na pinapatakbo ng teknolohiya. Bukod sa aming mga serbisyo sa imigrasyon, gumagana rin ang Migrate Compass bilang isang ahensya ng recruitment. Mayroon kaming malawak na network ng mga startups, ahensya, at mga taniman na patuloy na naghahanap ng dayuhang imigrante. Nagbibigay ang aming mga serbisyo ng isang mabisang daan para sa mga negosyo, empleyado, mamumuhunan, mag-aaral, at pamilyang nagnanais na mag-aplay para sa mga visa at green card sa Europa at Estados Unidos. Narito kami upang gabayan ka sa bawat hakbang ng iyong paglalakbay sa imigrasyon. Tara na't samahan natin ang paglilibot sa mga kumplikasyon ng imigrasyon!",
+      "header2": "Mga Serbisyo na Aming Binibigay",
+
+      "services": {
+        "listHeader1": "Ebalwasyon:",
+        "list1": "Ebalwasyon ng iyong kaso, uri ng visa, hanay ng kasanayan, at pagbibigay ng tapat na mga opinyon.",
+        "listHeader2": "Mga Serbisyo sa Pagre-recruit:",
+        "list2": "Ang aming mga recruiter ay nag-uugnay sa iyo sa mga ahensya, maliit na mga kumpanya/start-ups, at mga organisasyon na nangangailangan ng trabahador, serbisyo, kasanayan, o pangangalaga.",
+        "listHeader3": "Tulong Legal:",
+        "list3": "Tulong sa mga pagdinig, aplikasyon ng visa, at mga problemadong kaso ng visa.",
+        "listHeader4": "Pagpapalawak sa Kultura:",
+        "list4": "Pagbibigay ng suporta at mga mapagkukunan upang matulungan ang mga imigrante na maging bahagi ng kanilang bagong mga komunidad, kasama ang mga klase sa wika, mga programa ng orientasyon sa kultura, at mga kaganapan sa networking.",
+        "listHeader5": "Mga Pagkakataon sa Networking:",
+        "list5": "Binubuo ka namin sa aming mga komunidad ng mga dayuhang imigrante batay sa mga Cantons o bansa na patutunguhan mo.",
+        "listHeader6": "Patuloy na Suporta:",
+        "list6": "Nag-aalok ng patuloy na suporta at tulong sa buong proseso ng imigrasyon at empleyo, kasama ang mga konsultasyon na sumusunod at tulong sa anumang mga isyu o alalahanin na maaaring lumitaw.",
+        "listHeader7": "Orientasyon:",
+        "list7": "Gabay sa sistema ng seguridad social ng bansa, sistema ng buwis, at iba pang lokal na regulasyon."
+      },
+
+      "header3": "Parang hindi mo pa sinimulan ang iyong proseso sa amin. Gusto mo bang magkaroon ng libreng ebalwasyon sa isa sa aming mga ahente?",
+      "evaluation": "Magsimula ng Libreng Ebalwasyon"
+    },
+
     "homePage": {
       "title": "Ang Kaalaman sa Batas sa Immigrasyon Ipinadala",
       "span1": "Kaalaman",
@@ -461,12 +488,17 @@
       "paragraph1": "May ilang mga kinakailangan para sa EB3 visa. Ang mga sumusunod na kundisyon ay dapat matugunan upang maaprubahan ka para sa isang EB3 visa. Masaya kaming tulungan ka upang malaman kung ikaw ay pumapasa sa mga kinakailangang ito.",
       "header2": "Narito ang mga bagay na kailangan mong malaman",
       "headerDeatail2": "Pinapayagan ng EB3 visa ang isang tao na makakuha ng isang green card batay sa pagkakaroon ng sponsor mula sa isang U.S. na kumpanya na ibinibigay namin para sa iyo. Upang makakuha ng isang green card, kailangang dumaan ang iyong kumpanya sa proseso ng labor certificate PERM. Sa gabay na ito, aalamin ko ang ilang mahahalagang aspeto ng proseso ng EB3 visa. Ipapakita rin kita kung paano mo magagamit ang visa na ito upang makakuha ng isang green card para mamalagi sa Estados Unidos.",
-      "header3": "Di-kumpletong impormasyon,",
-      "paragraph3": "Ang hindi sapat na ebidensya, at mga legal na hadlang madalas na humahantong sa mahabang panahon ng pagproseso, at kahit na pagtanggi sa visa. Kung may kakulangan sa dokumento, mangyaring ipaalam sa iyong itinalagang opisyal o SupportLine.",
-      "header4": "Ang mga kinakailangan ay hindi gaanong mahigpit.",
-      "paragraph4": "Ang EB3 visa ay may mga kinakailangan na hindi gaanong mahigpit kumpara sa EB1 o EB2 visas. Ito ay nangangahulugan na ang ilang mga tao na maaaring hindi mag-qualify para sa iba pang mga visa ay maaaring maging eligible para sa EB3 visa.",
-      "header5": "Puwede ring pumunta sa Estados Unidos ang iyong asawa at mga anak na dependente.",
-      "paragraph5": "Alam mo ba? Sa EB3 visa, puwede ring sumama ang iyong pamilya sa paglalakbay! Kung mayroon kang mga anak na hindi pa 21 taong gulang at hindi pa kasal, maaari silang sumama. At ang pinakamahusay? Pwede rin silang mag-aral sa U.S. Hindi rin naiiwan ang iyong asawa. Kapag naayos na nila ang kanilang mga dokumento sa trabaho o nakakuha na ng kanilang green card, sila ay malaya nang magtrabaho.",
+
+      "header3": "Kahalagahan ng Migrate Compass",
+      "headerDeatail3": "Anualmente, el gobierno de los EE. UU. reserva nada menos que 12,000 visas específicamente para roles no especializados. Uno de los mayores desafíos para muchos es asegurar un empleador que sea capaz y esté dispuesto a patrocinarlos. Migrate Compass se asocia con empleadores calificados que están preparados para patrocinar a extranjeros, ya sea total o parcialmente, para permisos de trabajo.",
+      "span3": "La Visa EB-3 'Otros Trabajadores' presenta una valiosa oportunidad para que usted obtenga la residencia permanente en los Estados Unidos. Esto se puede lograr ajustando su estado actual o mediante el procesamiento consular en su país de origen. Si corresponde, su cónyuge e hijos solteros menores de 21 años también pueden ser elegibles para estos beneficios.",
+
+      "header4": "Di-kumpletong impormasyon,",
+      "paragraph4": "Ang hindi sapat na ebidensya, at mga legal na hadlang madalas na humahantong sa mahabang panahon ng pagproseso, at kahit na pagtanggi sa visa. Kung may kakulangan sa dokumento, mangyaring ipaalam sa iyong itinalagang opisyal o SupportLine.",
+      "header5": "Ang mga kinakailangan ay hindi gaanong mahigpit.",
+      "paragraph5": "Ang EB3 visa ay may mga kinakailangan na hindi gaanong mahigpit kumpara sa EB1 o EB2 visas. Ito ay nangangahulugan na ang ilang mga tao na maaaring hindi mag-qualify para sa iba pang mga visa ay maaaring maging eligible para sa EB3 visa.",
+      "header6": "Puwede ring pumunta sa Estados Unidos ang iyong asawa at mga anak na dependente.",
+      "paragraph6": "Alam mo ba? Sa EB3 visa, puwede ring sumama ang iyong pamilya sa paglalakbay! Kung mayroon kang mga anak na hindi pa 21 taong gulang at hindi pa kasal, maaari silang sumama. At ang pinakamahusay? Pwede rin silang mag-aral sa U.S. Hindi rin naiiwan ang iyong asawa. Kapag naayos na nila ang kanilang mga dokumento sa trabaho o nakakuha na ng kanilang green card, sila ay malaya nang magtrabaho.",
       "Header6": "Narito ang Migrate Compass upang mag-alok sa iyo ng isang walang-abalang karanasan at tiyakin na matatanggap mo ang iyong U.S Work visa sa pinakamabilis na paraan.",
       "serviceCard": {
         "header": "Kumpletong Serbisyo ng Work Visa",
@@ -526,6 +558,527 @@
         "list1": "Maaari bang mag-apply ang sinuman para sa Swiss golden visa program?",
         "list2": "Pwede ba akong maging mamamayan ng Switzerland kung ikakasal ako sa isang Swiss?",
         "list3": "Pwede bang sumama ang aking pamilya sa akin gamit ang aking Swiss Golden Visa?"
+      }
+    },
+
+    "usaBusinessPage": {
+      "heroHeader": "Negosyo / Investasyon Batay sa Estados Unidos",
+      "heroSubHeader": "Mga Investasyon mula sa $50,000 o mas mababa ay kwalipikado para sa E2!.",
+      "header1": "Ano ang E2 Visa?",
+      "paragraph1": "Ang E2 visa ay isang non-immigrant visa para sa mga mamumuhunan, mga negosyante, at mga taong naghahanap na magpatakbo ng isang negosyo sa Estados Unidos. Sa isang E2 visa, maaari kang magtayo ng isang negosyo sa US o mamuhunan sa isang negosyo sa US at magtrabaho para sa nasabing negosyo.",
+      "paragraph2": "Mayroong dalawang uri ng investor visas kaya bago tingnan ang mga kinakailangan ng E-2 visa para sa mga mamumuhunan, siguraduhing ang E-2 visa ay ang tamang bagay para sa iyo bilang isang dayuhang mamumuhunan. Kung hindi angkop sa iyo ang E-2 visa, mayroon ding opsiyon na EB-5 investor green card.",
+
+      "paragraph3": "Walang limitasyon sa bilang ng mga pagkakataon na maaaring muling i-renew ang E2 visa. Kaya habang patuloy na nagpapatakbo ang negosyo ng E2 at nakakatugon sa mga kinakailangang ng E2 visa, maaaring magpatuloy ang may-ari ng E2 visa sa pagre-renew ng kanilang visa at manirahan at magtrabaho sa Estados Unidos.",
+
+      "header2": "Ang Investment Dapat ay Isang Tunay na Operasyon na Enterprise",
+
+      "headerDetail2": "Ang tunay na operasyon na enterprise ay nangangahulugang ang negosyo ay nag-aalok ng isang tangible na produkto o serbisyo. Mga halimbawa ng mga negosyong ito ay mga restawran, tindahan ng retail, opisina ng medikal, atbp. Ang speculative o idle investment tulad ng mga investment sa real estate, undeveloped land, o mga stock na hawak ng isang mamumuhunan na walang layuning pamahalaan ang negosyo ay hindi kwalipikado. Gayundin, ang mga hindi pinanatiliang pondo sa bangko o katulad na seguridad ay hindi itinuturing na isang investment.",
+
+      "header3": "Ano ang mga Kinakailangan para sa Halaga ng E-2 Investment?",
+      "headerDetail3": "Iba sa EB-5 visa na may itinakdang minimum na halaga ng investment para sa dalawang kategorya nito, ang E-2 visa ay wala naman minimum para sa kapital ng negosyo at sa halip ay naghahanap para sa “substantial capital”. Ang anong angkop na halaga ng investment ay nag-iiba nang malaki depende sa sukat at uri ng bawat negosyo.",
+      "headerDetail4": "Ginagamit ng mga opisyal sa embahada o USCIS ang kanilang pagkukusa upang isaalang-alang kung ang halaga ng kapital ng investment ay angkop o hindi. Bagaman paniniwalaang ang pagkakaroon ng hindi bababa sa $50,000 na kapital ay isang magandang patnubay, sa ilang mga kaso, maaaring kailanganin mo ng mas marami o mas kaunti. Halimbawa, maaaring aprubahan ang isang maliit na tindahan o kumpanya sa isang halagang investment na nasa mga pulutong ng libong dolyar. Sa pangkalahatan, gayunpaman, ang pagkakaroon ng malaking halaga ng investment ay makakatulong at gagawin ang iyong kaso na mas matatag. Ito ay isa pang mahalagang lugar na nangangailangan ng pakikipagtulungan sa isang may karanasan na abogado sa imigrasyon ng E-2 visa kung saan pumapasok ang Migrate Compass.",
+
+      "header4": "Panahon ng Paghahanda para sa E-2 Visa",
+      "paragraph4": "Ang panahon ng pagproseso para sa isang E-2 visa ay nag-iiba nang malaki depende sa embahada kung saan ka nag-aapply. Sa ilang mga embahada, maaaring tumagal lamang ng ilang linggo ang proseso, habang sa iba maaaring kailanganin mong maghintay ng ilang buwan. Kung ikaw ay nagaaplay mula sa loob ng Estados Unidos, maaari mong gamitin ang premium processing service upang magkaroon ng iyong aplikasyon ng visa na maiproseso sa loob ng 15 araw na kalendaryo. Isa pang bagay na maaaring makatulong na mapabilis ang proseso ay kung ikaw ay bibili ng isang umiiral nang negosyo na nakarehistro na bilang isang E-2 treaty enterprise.",
+
+      "header5": "Ano ang mga Kinakailangan para sa E2 Visa?",
+      "Eligibility": {
+        "list1": "Dapat kang maging mamamayan ng isang bansa na may E2 treaty sa Estados Unidos.",
+        "list2": "Dapat kang maglagak ng malaking investment sa isang kumpanya sa US o Sa iyong sariling kumpanya.",
+        "list3": "Dapat kang papasok sa Estados Unidos upang pamahalaan at paunlarin ang iyong negosyo sa E2.",
+        "list4": "Lisensya ng negosyo.",
+        "list5": "Ang pinagmulan ng iyong pondo sa investment ay dapat na legal.",
+        "list6": "Dapat kang maging mamamayan ng isang bansa na may E2 treaty sa Estados Unidos."
+      },
+
+      "header6": "Ano ang mga Benepisyo ng E2 Visa?",
+
+      "Benefits": {
+        "list1": "Hindi tulad ng iba pang non-immigrant visas, hindi mo kailangang panatilihin ang isang dayuhang tirahan upang makakuha ng isang E2 visa.",
+        "list2": "Walang itinakdang minimum na halaga ng investment para kwalipikado sa isang E2 visa. Mga investasyon mula sa $50,000 o mas mababa ay kwalipikado para sa E2.",
+        "list3": "Sa pamamagitan ng isang E2 visa, maaari kang magtayo ng isang negosyo sa Estados Unidos at magtrabaho para sa nasabing negosyo.",
+        "list4": "Maaaring mag-aplay ang iyong asawa para sa awtorisasyon ng trabaho, upang magtrabaho sa Estados Unidos.",
+        "list5": "May access ang iyong mga anak sa mga paaralan sa Estados Unidos.",
+        "list6": "Sa pamamagitan ng pagkakuha ng E2 visa, ang iyong asawa at mga hindi pa kasal na anak na wala pang 21 taong gulang ay maaari ring kwalipikado para sa E2 visas."
+      },
+
+      "header7": "Incomplete information.",
+      "paragraph7": "Insufficient evidence, Incomplete documentation and legal obstacles often lead to long processing times, please let your assigned officer or SupportLine be aware...",
+
+      "header8": "Ang iyong asawa at mga dependente na mga anak ay maaaring pumunta sa Estados Unidos.",
+      "paragraph8": "Alam mo ba? Sa pamamagitan ng E2 visa, maaari ring sumali sa adventure ang iyong pamilya! Kung mayroon kang mga anak na wala pang 21 na taong gulang at hindi pa kasal, maaari silang sumama. At ang pinakamahusay na bahagi? Maaari silang mag-aral sa U.S. Hindi rin naiiwan ang iyong asawa. Kapag naayos na nila ang kanilang mga dokumento sa trabaho o nakakuha na ng kanilang green card, sila ay malaya nang magtrabaho.",
+
+      "Header8": "Narito ang Migrate Compass upang mag-alok sa iyo ng isang walang-abalang karanasan at tiyakin na matatanggap mo ang iyong U.S. Business visa sa pinakamabilis na paraan.",
+
+      "serviceCard": {
+        "header": "U.S.A. Business Visa",
+        "headerDetails1": "Kami ay mag-uugnay sa iyo sa aming mga Nakakatagong Kasosyo sa Negosyo",
+        "headerDetails2": "Tayo ay tutulong sa paghahanda ng lahat ng kinakailangang dokumentasyon",
+        "headerDetails3": "Ang aming suporta ay umaabot sa labas ng pag-apruba ng visa, kami ay makakasama mo sa iyong buong paglalakbay"
+      },
+
+      "reviews": {
+        "title": "Tingnan ang Aming Mga Review",
+        "list1": "Ang proseso ay walang kapintasan. Ang Migrate Compass ay labis na kahanga-hanga, tinulungan nila ako sa lahat, bagaman kami ay dumaan sa proseso sa panahon ng covid, walang huminto sa pagtugon sa anumang mga tanong ko at hindi nagpabagal ang covid sa kanilang proseso na makipag-ugnay sa amin sa mga negosyo na nakabase sa U.S. Hindi ako makapagmasid na lubos sa kanila at inirerekomenda ko sila ng mataas! Maraming salamat ulit sa pagpapagana nito.",
+        "list2": "Salamat sa aking asignadong opisyal na nagpaliwanag sa Akin at sa aking Asawa kung paano kami maaaring magkaroon ng isang restawran dahil kaming dalawa ay propesyonal na chef. Sa ngayon mayroon na kaming sarili naming Restawran dito sa U.S.",
+        "list3": "Salamat sa Migrate Compass na nagpatugma sa akin sa isang U.S. base na national na may-ari ng Mechanics Workshop."
+      }
+    },
+
+    "familyBasedVisaPage": {
+      "heroHeader": "Pamilya-Based Green Card",
+      "heroSubHeader": "Magkakasama muli sa iyong pamilya sa U.S. nang mabilis at walang abala",
+      "header1": "Pamilya-Based Green Card",
+      "paragraph1": "Ang pamilya-based immigrant visa ay isa sa mga pinakakaraniwang paraan kung paano nakakakuha ng green card at naging permanenteng residente sa Estados Unidos. Ang mga mamamayan at permanenteng residente ay maaaring magpetisyon sa USCIS upang dalhin ang kanilang mga miyembro ng pamilya sa bansa sa pamamagitan ng isang immigrant visa.",
+      "paragraph2": "Sa kasalukuyan, ang partikular na programa ng visa na ito ay nagpapakita ng halos dalawang-ikalawang bahagi ng higit sa 1 milyong mga green card na inilabas taun-taon. Tulad ng bawat iba pang immigrant visa, ang pamilya-based green card ay may ilang mga subkategorya, bawat isa ay natukoy ng relasyong pamilya na umiiral sa pagitan ng nagsponsor at ng benepisyaryo ng visa. Ang immigrasyon ng pamilya ay isa sa mga pangunahing serbisyo namin sa Migrate Compass. Sa nakaraang dekada, tinulungan namin ang libu-libong mga pamilya na magkasama muli sa U.S.",
+
+      "span1": "Simulan ang iyong paglalakbay sa immigrasyon ngayon!",
+
+      "header2": "Panahon ng Paghahanda para sa Mga Agad na Kamag-anak",
+
+      "headerDetail2": "Dahil walang numerical limitation para sa kategoryang ito, ang mga visa ay laging magagamit para sa mga aplikante, na nangangahulugang maiksi lamang ang panahon ng pagproseso ng 9 hanggang 13 buwan. Kapag ang petisyon na I-130 na isinumite ng petitioner (mamamayan ng U.S.) ay inaprubahan ng USCIS, ang immediate relative (IR) beneficiary ay hindi na kailangang maghintay ng visa number.",
+      "headerDetail3": "Tulad ng nabanggit sa itaas, ang kategoryang ito ay para lamang sa mga asawa, mga hindi kasal na anak (sa ilalim ng 21 taong gulang), at mga magulang ng mga mamamayan ng U.S. Kung ang isang anak ng mamamayan ng U.S. ay kasal, hindi na siya kwalipikado para sa kategoryang ito kahit na siya ay sa ilalim ng 21 taong gulang.",
+
+      "header3": "Kwalipikasyon para sa Pamilya-Based Green Card",
+
+      "Eligibility": {
+        "list1": "Dapat mong ipakita ang isang malapit na relasyong pamilya sa benepisyaryo ng visa. Ang relasyong ito ay dapat na mapasama sa isa sa mga kategorya na natukoy bilang mga agad na kamag-anak o mga karapatan sa pamilya.",
+        "list2": "Kinakailangan mong panatilihin ang iyong pangunahing tirahan sa Estados Unidos.",
+        "list3": "Ang mga anak ay dapat na wala pang 21 taong gulang at hindi kasal ",
+        "list4": "Bilang isang sponsor ng green card, dapat kang magbigay ng ebidensya ng iyong kakayahang pinansyal na suportahan ang iyong inisponsor na miyembro ng pamilya sa kanilang pagdating sa Estados Unidos. Ito ay kinabibilangan ng pagpirma sa isang affidavit of support, na kailangang magpahiwatig na ang iyong taunang kita ay sapat upang suportahan ang iyong sarili, ang inisponsor na benepisyaryo, at lahat ng iba pang mga miyembro ng iyong sambahayan.",
+        "list5": "Ang benepisyaryo ng visa ay dapat na kwalipikado na pumasok sa Estados Unidos. Ito ay nangangahulugang hindi sila dapat magkaroon ng tiyak na mga kaso ng krimen, mga problema sa kalusugan, o mga nakaraang paglabag sa immigrasyon na maaaring gawin silang hindi kwalipikado para sa visa."
+      },
+
+      "header4": "Ano ang mga Kinakailangan ng Form I-130?",
+
+      "Requirements": {
+        "list1": "Patunay na ang nagsponsor ay mamamayan ng U.S. o may green card",
+        "list2": "Pasaporte na may bisa sa hindi bababa sa anim na buwan mula sa layuning petsa ng pagpasok sa U.S.",
+        "list3": "Patunay na mayroong legal na wastong relasyon",
+        "list4": "Affidavit of support",
+        "list5": "Birth certificate",
+        "list6": "Marriage certificate, kung kailangan",
+        "list7": "Dokumentasyon ng pagtatapos ng kasal, kung kailangan",
+        "list8": " Porma ng pagsusuri sa medikal na immigrasyon",
+        "list9": " Dalawang litrato sa pasaporte. Dapat ay tumugma sa mga kinakailangan ng litrato ng DOS"
+      },
+
+      "Header5": "Magsalita sa aming mga Abogado sa Immigrasyon.",
+
+      "paragraph5": "Ang pagtatrabaho kasama ang isang may karanasan na abogado mula sa Migrate Compass ay nagsisiguro na ang iyong petisyon para sa immigrasyon na batay sa pamilya ay ng pinakamataas na kalidad, na pinapabawas ang mga di-kinakailangang gastos at pagkaantala ng oras. Hinaharap ng aming kilalang mga abogado sa immigrasyon ang lahat ng mahahalagang yugto at papel, na nagtitipid sa iyo ng oras at pera.",
+      "paragraph6": "Ang Migrate Compass ay gagabay sa iyo sa masalimuot na proseso ng paghahain ng petisyon para sa status ng immigrasyon na batay sa pamilya. Dahil sa kumplikasyon ng proseso ng immigrasyon sa Estados Unidos, ang pagtatangkang mag-navigate dito nang walang propesyonal na tulong ay maaaring maging hamon.",
+
+      "paragraph7": "Sa Migrate Compass, naniniwala kami nang matibay sa kahalagahan ng pag-iingat at pagpapalakas sa pagkakaisa ng pamilya. Magsimula sa pamamagitan ng pagkontak sa isa sa aming mga abogado sa immigrasyon na batay sa pamilya upang simulan ang iyong kaso. Ang aming koponan sa Migrate Compass ay magpapatuloy sa iyo sa buong proseso.",
+
+      "serviceCard": {
+        "header": "Serbisyong Family Green Card",
+        "headerDetails1": "Itinuturo ka namin sa masalimuot na proseso ng pag-aaplay para sa isang Family-Based Green Card.",
+        "headerDetails2": "Tayo ay tutulong sa paghahanda ng lahat ng kinakailangang dokumentasyon para sa iyong aplikasyon ng Family-Based Green Card.",
+        "headerDetails3": "Ang aming suporta ay umaabot sa labas ng pag-apruba ng visa, kami ay makakasama mo sa iyong buong proseso ng immigrasyon."
+      },
+
+      "reviews": {
+        "title": "Tingnan ang Aming Mga Review",
+        "list1": "Ang pag-navigate sa proseso ng Family-Based Green Card ay nakakatakot, ngunit ginawang madali ng Migrate Compass. Ang kanilang koponan ay nandito sa bawat hakbang ng daan, nagbibigay ng malinaw na gabay at agaran na mga sagot. Lubos akong nagpapasalamat sa kanilang suporta.",
+        "list2": "Ang pagkakamit ng isang Family-Based Green Card ay pakiramdam na parang isang pangarap na naging totoo, at hindi ito magiging posible nang hindi dahil sa Migrate Compass. Ang kanilang kaalaman at dedikasyon ay nagdulot ng malaking pagkakaiba sa aking proseso ng aplikasyon.",
+        "list3": "Ang paglalakbay patungo sa pagkuha ng aking Family-Based Green Card ay mas madali kaysa sa inaasahan ko, salamat sa Migrate Compass. Ang kanilang propesyonalismo at mabuting pag-unawa sa proseso ay nagpagaan sa aking mga pag-aalala at ginawa ang karanasan na mas kaaya-aya."
+      }
+    },
+
+    "r1-BasedVisaPage": {
+      "heroHeader": "Simplihin ang Iyong R1 Religious Visa",
+      "heroSubHeader": "Kumuha ng iyong R1 U.S Visa.",
+      "header1": "R1 Visa",
+      "paragraph1": "Ang R1 visa ay isang kategoryang visa na espesyal na idinisenyo para sa mga indibidwal na nais pumunta sa U.S. upang magsagawa ng relihiyosong trabaho. Kasama dito ang pagpapaunlad ng kanilang relihiyosong bokasyon, propesyon, o ministeryo. Ang bawat isa sa mga kategoryang ito ay may mga partikular na kriteryo na dapat matugunan. Ang mga indibidwal na nagsusumikap sa isang relihiyosong bokasyon, tulad ng mga madre o monghe, karaniwang yaong nagsumpaan sa isang buhay na pangako. Karaniwan ito sa isang relihiyosong order o komunidad. Sa kabilang dako, yaong mga nagsusumikap sa relihiyosong propesyon ay mga indibidwal na nagsasagawa ng mga relihiyosong gawain na tradisyonal na kaugnay sa kanilang pananampalataya. Ang mga gawain na ito ay dapat na pangunahing may kaugnayan sa sistemang paniniwala at praktis ng pananampalataya. Sa huli, yaong mga pumapasok bilang isang ministro ay dapat na isang napag-aral na miyembro ng klero.",
+      "header2": "Mga Benepisyo ng R1 Visa.",
+      "Benefits": {
+        "list1": "Pinapayagan ka ng R1 visa na dalhin ang iyong mga immediate family member sa Estados Unidos.",
+        "list2": "Maaari kang manirahan sa Estados Unidos nang hanggang sa 5 taon sa ilalim ng R1 visa",
+        "list3": "Pinapayagan ka ng R1 visa na magtrabaho sa nagtataguyod na relihiyosong organisasyon sa isang hindi propesyonal na kapasidad.",
+        "list4": "Ang R1 visa ay isang visa ng dalawang layunin, kung kaya't pinapayagan nito ang mga aplikante na magpursige ng katayuang green card kung nais nilang gawin ito"
+      },
+      "header3": "Mga Kinakailangan ng R1 Visa.",
+      "Requirements": {
+        "list1": "Maging isang relihiyosong manggagawa na pumupunta upang magtrabaho.",
+        "list2": "Dapat kang maging miyembro ng isang relihiyosong denominasyon sa loob ng hindi bababa sa dalawang taon bago isumite ang aplikasyon.",
+        "list3": "Dapat kang maging isang ministro na pumupunta upang magtrabaho.",
+        "list4": "Ang R1 ay hindi isang self-petitioning visa. Sa halip, kailangan mo ng isang tao na humiling na ikaw ay pumunta sa Estados Unidos upang magtrabaho."
+      },
+      "Header4": "Proseso ng R1 Visa",
+      "paragraph": "Ang Migrate Compass ay nandito upang mag-alok sa iyo ng isang walang-abalang karanasan at tiyakin na matanggap mo ang iyong R1 Visa sa pinakamabilis na paraan.",
+      "Process": {
+        "list1": "Suportadong sulat mula sa relihiyosong organisasyon.",
+        "list2": "Detalyadong paglalarawan ng trabaho kasama ang isang pagbaba ng oras na alokado para sa bawat tungkulin.",
+        "list3": "Isang bisa na liham mula sa IRS na kumpirmahin ang tax-exempt status ng organisasyon.",
+        "list4": "Patunay ng pagsasahod.",
+        "list5": "Ang self-support ay naaangkop lamang sa ilang hindi imigrante na misyonero..",
+        "list6": "Patunay ng pinansyal na mapagkukunan para sa pagsasahod. Dapat ipakita ng organisasyon kung paano mapopondohan ang posisyon, gamit ang mga nakaraang rekord ng pinansyal, badyet, at iba pa.",
+        "list7": "Mga dokumento na nagpapatunay sa relihiyosong kalikasan at layunin ng organisasyon. Kasama dito ang mga relihiyosong teksto, pamphlet, flyers, at iba pang kaugnay na literatura."
+      },
+      "serviceCard": {
+        "header": "Religious Visa ng R1",
+        "headerDetails1": "Tinutulungan ka namin na magtayo ng mga koneksyon sa relihiyosong organisasyon para sa potensyal na alok ng trabaho.",
+        "headerDetails2": "Mayroon kaming mga network ng mga kasiyahan na kliyente na may R1 visa, at maaari naming ikonekta ka sa kanila para sa suporta at gabay.",
+        "headerDetails3": "Tayo ay tutulong sa paghahanda ng kumprehensibong dokumentasyon na kinakailangan para sa R1 visa."
+      },
+      "reviews": {
+        "title": "Tingnan ang Aming Mga Review",
+        "list1": "Ang serbisyo ng Migrate Compass ay kamangha-mangha kahit na ang aking kaso ay kumplikado",
+        "list2": "Ang gabay at suporta na aking natanggap sa buong proseso ng aking R1 Visa ay mahalaga. Highly recommended para sa sinuman dahil ito ay isang landas na bihirang alam ng mga tao",
+        "list3": "Hindi ko inakalang maaari akong mag-migrate sa Estados Unidos sa pamamagitan ng ruta ng R1 Visa, Salamat sa asignadong opisyal para sa pag-handle ng aking aplikasyon"
+      }
+    },
+
+    "usaServicePage": {
+      "header1": "Migrate Compass Cost: Sulit ba ang iyong pera?",
+      "paragraph1": "Sa Migrate Compass, ipinagmamalaki namin ang aming koponan ng mga karanasang propesyonal sa immigrasyon, kasama na ang mga dating opisyal ng konsulado, at ang aming matibay na ugnayan sa mga serbisyo ng konsulado. Ang aming kaalaman ay nasa U.S. immigration law. Nag-aalok kami ng isang komprehensibong serbisyo na nagsisimula sa",
+
+      "span1": "pagkakonekta sa iyo sa potensyal na mga employer sa Estados Unidos",
+
+      "span2": "Kapag nakuha na namin sa iyo ang isang alok sa trabaho, kami naman ay magbibigay sa iyo ng gabay sa proseso ng pagkuha ng iyong U.S. work visa",
+      "paragraph2": "Ang Migrate Compass bilang isang institusyon ay nagpapokus sa batas ng immigrasyon.",
+      "headingText1": "EB-3 Work Visa",
+      "subHeadingText1": "Assistance Payment Plan",
+      "subHeadingDetails1": "Ang aming EB-3 work visa assistance payment plan ay idinisenyo upang mapadali ang proseso ng pagkuha ng iyong employment-based immigrant visa. Narito ang mga inaasahan mo:",
+
+      "Benefits": {
+        "list1": "Pagkuha sa iyo ng Trabaho sa pamamagitan ng aming malawak na mga network ng mga startups, ahensya, maliit na kumpanya, at indibidwal sa buong Estados Unidos.",
+        "list2": "Ikaw ay ipa-pair sa iba pang mga imigrante para sa tuluyan, kung saan pareho kayong magbabahagi ng mga gastusin. Ito ay isang opsyonal na arrangement.",
+        "list3": "Tatanggap ka ng premium na serbisyo dahil pinapanatili namin ang matatag na mga ugnayan sa mga konsulado ng immigrasyon.",
+        "list4": "Pagtatalaga ng isang dedikadong opisyal upang gabayan ka mula sa unang araw ng proseso hanggang sa iyong pagdating sa USA.",
+        "list5": "Buong pagsusuri sa iyong kwalipikasyon para sa mga kategorya ng visa ng H-1B, Eb3 o L-1.",
+        "list6": "Tulong sa paghahanda at pagsusumite ng iyong aplikasyon sa visa.",
+        "list7": "Gabay sa pagtitipon ng kinakailangang dokumentasyon at ebidensya.",
+        "list8": "Patuloy na suporta mula sa aming karanasan na koponan sa immigrasyon sa buong proseso.",
+        "list9": "Regular na mga update sa status ng iyong aplikasyon at anumang mga pagbabago."
+      },
+
+      "paragraph3": "Sa aming transparent pricing at flexible payment options, maaari mong pagtuunan ng pansin ang iyong mga oportunidad sa karera sa Estados Unidos habang hinihikayat namin ang mga kumplikasyon ng iyong aplikasyon sa visa.",
+
+      "paragraph4": "Para sa karagdagang impormasyon, mangyaring makipag-chat sa aming",
+
+      "header2": "Payment Plan.",
+      "paymentTypeA": {
+        "heading1": "Unang Bayad: Proseso ng Aplikasyon",
+        "price1": "$3,970",
+        "text1": "Ang bayad na ito ay dapat bayaran kapag pumirma ka sa kasunduang kontrata. Ito ay nagsisimula ng proseso kung saan ang isang dedikadong opisyal ay nagsisimula sa paghahanap sa iyo ng trabaho sa Estados Unidos. Kasama dito ang pagkuha ng iyong sariling assigned officer at pinaka-importante, pagkakonekta sa iyo sa isang mapagkakatiwalaang sponsor para sa mga oportunidad sa trabaho.",
+
+        "heading2": "Ikalawang Bayad.",
+        "price2": "$8,930",
+        "text2": "Ang bayad na ito ay dapat bayaran pagkatapos nating makuha sa iyo ang isang trabaho sa Estados Unidos.",
+
+        "uLFeesA": {
+          "list1": "Mga bayad sa konsular na proseso",
+          "list2": "USCIS premium processing fees para sa mabilisang pagproseso ng iyong I-140",
+          "list3": "Paghahanda at pagsusumite ng iyong I-485 (Application to Register Permanent Residence o Adjust Status), kung ikaw ay kasalukuyang nasa Estados Unidos",
+          "list4": "Legal na mga serbisyo para sa iyong kaso, kabilang ang pakikipag-ugnayan sa USCIS at pagsagot sa anumang mga Requests for Evidence",
+          "list5": "USCIS Legal Cost",
+          "list6": "Application / Filing Fee",
+          "list7": "Gabay sa pagtitipon ng kinakailangang dokumentasyon at ebidensya",
+          "list8": "Migrate Compass Services para sa patuloy na suporta sa buong proseso",
+          "list9": "Mga bayad sa pagpapadala ng iyong mga dokumento sa USCIS",
+          "list10": "Premium Visa Interview preparation"
+        },
+
+        "uLFeesC": {
+          "list1": "Kabuuang Serbisyong Bayad ng Migrate Compass",
+          "list2": "Tulong sa lokal na proseso ng rehistrasyon pagdating sa Estados Unidos",
+          "list3": "Suporta sa paghahanap ng tuluyan at pag-aayos sa Estados Unidos",
+          "list4": "Gabay sa sistema ng United States social security, sistema ng buwis, at iba pang mga lokal na regulasyon"
+        },
+
+        "heading3": "Ikatlong Bayad: Pagkatapos ng Pag-apruba ng Visa.",
+        "price3": "$6,000",
+        "text3": "Ang bayad na ito ay dapat bayaran pagkatapos aprubahan ang iyong visa.",
+        "paragraph": "Kung mayroon ka mang anumang mga katanungan o alalahanin tungkol sa proseso ng pagbabayad, huwag mag-atubiling makipag-ugnay sa amin sa support@migratecompass.com."
+      },
+
+      "paymentTypeB": {
+        "heading1": "Unang Bayad: Proseso ng Aplikasyon",
+        "price1": "$3,970",
+        "text1": "Ang bayad na ito ay dapat bayaran kapag pumirma ka sa kasunduang kontrata. Ito ay nagsisimula ng proseso kung saan ang isang dedikadong opisyal ay nagsisimula sa paghahanap sa iyo ng trabaho sa Estados Unidos. Kasama dito ang pagkuha ng iyong sariling assigned officer at pinaka-importante, pagkakonekta sa iyo sa isang mapagkakatiwalaang sponsor para sa mga oportunidad sa trabaho.",
+
+        "heading2": "Ikalawang Bayad: Sa loob ng 12 Buwan.",
+        "price2": "$1,120",
+        "text2": "Ito ay isang monthly payment plan na dapat bayaran buwan-buwan pagkatapos nating makuha sa iyo ang isang trabaho sa U.S.A.",
+
+        "uLFeesA": {
+          "list1": "Mga bayad sa konsular na proseso",
+          "list2": "USCIS premium processing fees para sa mabilisang pagproseso ng iyong I-140",
+          "list3": "Paghahanda at pagsusumite ng iyong I-485 (Application to Register Permanent Residence o Adjust Status), kung ikaw ay kasalukuyang nasa Estados Unidos",
+          "list4": "Legal na mga serbisyo para sa iyong kaso, kabilang ang pakikipag-ugnayan sa USCIS at pagsagot sa anumang mga Requests for Evidence",
+          "list5": "USCIS Legal Cost",
+          "list6": "Application / Filing Fee",
+          "list7": "Gabay sa pagtitipon ng kinakailangang dokumentasyon at ebidensya",
+          "list8": "Migrate Compass Services para sa patuloy na suporta sa buong proseso",
+          "list9": "Mga bayad sa pagpapadala ng iyong mga dokumento sa USCIS",
+          "list10": "Premium Visa Interview preparation"
+        },
+
+        "uLFeesC": {
+          "list1": "Kabuuang Serbisyong Bayad ng Migrate Compass",
+          "list2": "Tulong sa lokal na proseso ng rehistrasyon pagdating sa Estados Unidos",
+          "list3": "Suporta sa paghahanap ng tuluyan at pag-aayos sa Estados Unidos",
+          "list4": "Gabay sa sistema ng United States social security, sistema ng buwis, at iba pang mga lokal na regulasyon"
+        },
+
+        "heading3": "Ikatlong Bayad: Pagkatapos ng Pag-apruba ng Visa.",
+        "price3": "$6,000",
+        "text3": "Ang bayad na ito ay dapat bayaran pagkatapos aprubahan ang iyong visa.",
+        "paragraph": "Kung mayroon ka mang anumang mga katanungan o alalahanin tungkol sa proseso ng pagbabayad, huwag mag-atubiling makipag-ugnay sa amin sa support@migratecompass.com."
+      },
+
+      "Header4": "Plan A",
+      "paragraph": "Kabuuang Gastos: $18,900",
+      "Header5": "Plan B",
+      "paragraph5": "Kabuuang Gastos: $23,400",
+
+      "Header6": "Kailan kailangan na",
+      "span6": "hirin ang Migrate Compass?",
+      "paragraph6": "Ang batas sa immigrasyon sa Estados Unidos ay komplikado. Karaniwan itong praktikal na mag-employ ng mga specialist sa immigrasyon tulad ng Migrate Compass upang makatipid ka ng oras, pera, at maiwasan ang kalituhan. Ang mga sitwasyon kung kailan mo kailangang kumuha ng isang abogado sa visa ay nakalista sa ibaba.",
+
+      "reasonsToHireUs": {
+        "list1": "Maghanap ng isang employment-based visa.",
+        "list2": "Maaakusahan ng isang krimen o gumawa ng isang krimen at naghahanap ng re-entry sa Estados Unidos o iwasan ang pagpapalayas mula sa bansa.",
+        "list3": "Humiling ng tulong sa proseso ng aplikasyon dahil may ilang mga form at dokumentasyon na masyadong kumplikado o kailangang gugulin ng maraming oras.",
+        "list4": "Mayroong deportation o removal proceedings laban sa iyo.",
+        "list5": "Hindi sigurado sa iyong pangunahing kwalipikasyon para sa isang green card o iba pang benepisyo sa immigrasyon.",
+        "list6": "Balak mag-invest sa U.S. sa pamamagitan ng real estate, pagsasaka, at iba pa.",
+        "list7": "Nagkaroon ng problema sa pagkuha ng isang green card ng USCIS, pagiging mamamayan, o iba pang benepisyo sa immigrasyon.",
+        "list8": "Nangangailangan ng agarang tulong sa isang sitwasyon sa immigrasyon.",
+        "list9": "Kailangan magbigay ng karagdagang dokumentasyon.",
+        "list10": "Nais mag-apply para sa readmission matapos ang deportation."
+      },
+
+      "faq": {
+        "title": "Tingnan ang Aming Mga Madalas Itanong",
+        "list1": "Ano ang iyong presyo? Mayroon ka bang installmental plan?",
+        "list2": "Gaano katagal bago makakuha ng Trabaho?",
+        "list3": "Kuha ba kayo ng mga kaso sa labas ng Estados Unidos?"
+      }
+    },
+
+    "swissServicePage": {
+      "header1": "Migrate Compass Cost: Sulit ba ang iyong pera?",
+      "paragraph1": "Sa Migrate Compass, ipinagmamalaki namin ang aming koponan ng mga karanasang propesyonal sa immigrasyon, kasama na ang mga dating opisyal ng konsulado, at ang aming matibay na ugnayan sa mga serbisyo ng konsulado. Ang aming kaalaman ay hindi lamang sa U.S. kundi pati na rin sa karamihan ng batas sa immigrasyon sa Europa. Nag-aalok kami ng isang komprehensibong serbisyo na nagsisimula sa",
+
+      "span1": "pagkakonekta sa iyo sa potensyal na mga employer sa Switzerland",
+
+      "span2": "Kapag nakuha na namin sa iyo ang isang alok sa trabaho, kami naman ay magbibigay sa iyo ng gabay sa proseso ng pagkuha ng iyong Swiss work visa.",
+
+      "headingText1": "Swiss Work Visa Assistance",
+      "subHeadingText1": "Permit B / Permit L Payment Plan",
+      "subHeadingDetails1": "Ang aming Swiss work visa assistance payment plan ay idinisenyo upang mapadali ang proseso ng pagkuha ng iyong Permit B o Permit L work visa. Narito ang mga inaasahan mo:",
+
+      "Benefits": {
+        "list1": "Pagkuha sa iyo ng Trabaho sa pamamagitan ng aming malawak na mga network ng mga startups, ahensya, maliit na kumpanya, at indibidwal sa buong Switzerland o Luxembourg.",
+        "list2": "Ikaw ay ipa-pair sa iba pang mga imigrante para sa tuluyan, kung saan pareho kayong magbabahagi ng mga gastusin. Ito ay isang opsyonal na arrangement.",
+        "list3": "Tatanggap ka ng premium na serbisyo dahil pinapanatili namin ang matatag na mga ugnayan sa mga konsulado ng immigrasyon.",
+        "list4": "Pagtatalaga ng isang dedikadong opisyal upang gabayan ka mula sa unang araw ng proseso hanggang sa iyong pagdating sa Switzerland.",
+        "list5": "Buong pagsusuri sa iyong kwalipikasyon para sa Permit B o Permit L kategorya.",
+        "list6": "Tulong sa paghahanda at pagsusumite ng iyong aplikasyon sa visa.",
+        "list7": "Gabay sa pagtitipon ng kinakailangang dokumentasyon at ebidensya.",
+        "list8": "Patuloy na suporta mula sa aming karanasan na koponan sa immigrasyon sa buong proseso.",
+        "list9": "Regular na mga update sa status ng iyong aplikasyon at anumang mga pagbabago."
+      },
+
+      "paragraph3": "Sa aming transparent pricing at flexible payment options, maaari mong pagtuunan ng pansin ang iyong mga oportunidad sa karera sa Switzerland habang hinihikayat namin ang mga kumplikasyon ng iyong aplikasyon sa visa.",
+
+      "paragraph4": "Para sa karagdagang impormasyon, mangyaring makipag-chat sa aming",
+
+      "header2": "Payment Plan.",
+      "paymentTypeA": {
+        "heading1": "Unang Bayad: Proseso ng Aplikasyon",
+        "price1": "$3,830",
+        "text1": "Ang bayad na ito ay dapat bayaran kapag pumirma ka sa kasunduang kontrata. Ito ay nagsisimula ng proseso kung saan ang isang dedikadong opisyal ay nagsisimula sa paghahanap sa iyo ng trabaho sa Switzerland. Kasama dito ang pagkuha ng iyong sariling assigned officer at pinaka-importante, pagkakonekta sa iyo sa isang mapagkakatiwalaang sponsor para sa mga oportunidad sa trabaho.",
+
+        "heading2": "Ikalawang Bayad: Pagkatapos ng Aprobal ng Trabaho.",
+        "price2": "$2,980",
+        "text2": "Ang bayad na ito ay dapat bayaran pagkatapos nating makuha ang isang trabaho para sa iyo sa Switzerland.",
+
+        "uLFeesA": {
+          "list1": "Paghahanda at pagsusumite ng iyong aplikasyon sa Swiss work permit",
+          "list2": "Gabay sa pagtitipon ng kinakailangang dokumentasyon at ebidensya",
+          "list3": "Mga bayad sa konsular na proseso",
+          "list4": "Legal na mga serbisyo para sa iyong kaso, kabilang ang pakikipag-ugnayan sa mga awtoridad sa immigrasyon sa Switzerland at pagsagot sa anumang mga hiling para sa karagdagang impormasyon",
+          "list5": "Mga legal na gastos na kaugnay ng aplikasyon sa Swiss work permit",
+          "list6": "Application / Filing Fee",
+          "list7": "Migrate Compass Services para sa patuloy na suporta sa buong proseso",
+          "list8": "Mga bayad sa pagpapadala ng iyong mga dokumento sa mga awtoridad sa immigrasyon sa Switzerland",
+          "list9": "Paghahanda para sa anumang kinakailangang interbyu sa mga awtoridad sa immigrasyon sa Switzerland"
+        },
+
+        "uLFeesC": {
+          "list1": "Kabuuang Serbisyong Bayad ng Migrate Compass",
+          "list2": "Tulong sa lokal na proseso ng rehistrasyon pagdating sa Switzerland",
+          "list3": "Suporta sa paghahanap ng tuluyan at pag-aayos sa Switzerland",
+          "list4": "Gabay sa Swiss social security, sistema ng buwis, at iba pang mga lokal na regulasyon"
+        },
+
+        "heading3": "Ikatlong Bayad: Pagkatapos ng Aprobal ng Visa.",
+        "price3": "$3,800",
+        "text3": "Ang bayad na ito ay dapat bayaran pagkatapos aprubahan ang iyong Swiss work visa.",
+        "paragraph": "Kung mayroon kang anumang mga katanungan o alalahanin tungkol sa proseso ng pagbabayad, huwag mag-atubiling makipag-ugnay sa amin sa support@migratecompass.com."
+      },
+
+      "Header6": "Kailan kailangan na",
+      "span6": "hirin ang Migrate Compass?",
+      "paragraph6": "Ang batas sa immigrasyon sa Switzerland ay komplikado. Karaniwan itong praktikal na mag-employ ng mga specialist sa immigrasyon tulad ng Migrate Compass upang makatipid ka ng oras, pera, at maiwasan ang kalituhan. Ang mga sitwasyon kung kailan mo kailangang kumuha ng isang abogado sa visa ay nakalista sa ibaba.",
+
+      "reasonsToHireUs": {
+        "list1": "Kung kailangan mo ng tulong sa pagkuha ng trabaho sa Switzerland.",
+        "list2": "Maaakusahan ng isang krimen o gumawa ng isang krimen at naghahanap ng re-entry sa Switzerland o kahit sa anong bahagi ng Europa o iwasan ang pagpapalayas mula sa bansa.",
+        "list3": "Humiling ng tulong sa proseso ng aplikasyon dahil may ilang mga form at dokumentasyon na masyadong kumplikado o kailangang gugulin ng maraming oras.",
+        "list4": "Mayroong deportation o removal proceedings laban sa iyo.",
+        "list5": "Hindi sigurado sa iyong pangunahing kwalipikasyon para sa isang Swiss work permit o iba pang benepisyo sa immigrasyon.",
+        "list6": "Balak mag-invest sa Switzerland sa pamamagitan ng real estate, pagsasaka, at iba pa.",
+        "list7": "Kung mayroon kang problema sa pagkuha ng isang Swiss work permit, hindi kumpletong mga papeles o iba pang benepisyo sa Swiss",
+        "list8": "Nangangailangan ng agarang tulong sa isang sitwasyon sa immigrasyon.",
+        "list9": "Kailangan magbigay ng karagdagang dokumentasyon.",
+        "list10": "Nais mag-apply para sa readmission matapos ang deportation."
+      },
+
+      "faq": {
+        "title": "Tingnan ang Aming Mga Madalas Itanong",
+        "list1": "Mayroon bang refund sa pera kung hindi matagumpay ang visa",
+        "list2": "Gaano katagal bago makakuha ng Trabaho?",
+        "list3": "Ano ang iyong presyo? Mayroon ka bang installmental plan"
+      }
+    },
+
+    "swissFaqPage": {
+      "headingText1": "Switzerland",
+      "subHeadingText1": "Madalas Itanong",
+      "subHeadingDetails1": "Kung hindi kayo nasisiyahan, makipag-chat sa aming Support team",
+      "paragraph": "Para sa karagdagang impormasyon, mangyaring makipag-chat sa aming",
+
+      "swissFaqs": {
+        "list1": "Ano ang papel ng dedikadong opisyal na itinalaga sa akin?",
+        "details1": "Ang dedikadong opisyal ay gagabay sa iyo mula sa unang araw ng proseso hanggang sa iyong pagdating sa Switzerland. Sila ang iyong pangunahing point of contact at nagbibigay ng patuloy na suporta sa buong proseso.",
+
+        "list2": "Paano ninyo natutulungan ang mga imigrante na makakuha ng trabaho sa Switzerland?",
+        "details2": "Mayroon kaming malawak na network ng mga startups, ahensya, maliit na kumpanya, at indibidwal sa buong Switzerland na nangangailangan ng mga dayuhang manggagawa. Ginagamit namin ang network na ito upang matulungan kang makakuha ng trabaho na tugma sa iyong mga kasanayan at kagustuhan.",
+
+        "list3": "Maaari ba kayong tumulong sa paghahanap ng tuluyan sa Switzerland?",
+        "details3": "Oo, maaari naming ipa-pair ka sa iba pang mga imigrante para sa tuluyan, kung saan pareho kayong magbabahagi ng mga gastusin. Ito ay isang opsyonal na kasunduan.",
+
+        "list4": "Nag-aalok ba kayo ng installment payment plan?",
+        "details4": "Oo, nag-aalok kami ng isang flexible installment payment plan upang gawing abot-kaya ang proseso para sa aming mga kliyente, makipag-usap sa Support Line para sa karagdagang impormasyon.",
+        "list5": "Ano-anong uri ng Swiss work visas ang inyong espesyalidad?",
+        "details5": "Espesyal kami sa mga Permit B at Permit L work visas para sa Switzerland.",
+
+        "list6": "Ano ang proseso ng pagkuha ng isang Swiss work visa?",
+        "details6": "Ang proseso ay kinabibilangan ng pagkuha ng alok sa trabaho, paghahanda at pagsusumite ng aplikasyon sa visa, at pagsasagawa ng proseso ng aprobasyon ng visa.",
+
+        "list7": "Gaano katagal bago makakuha ng trabaho sa Switzerland?",
+        "details7": "Maaaring mag-iba ang timeline depende sa merkado ng trabaho at sa mga espesipikong kasanayan at kwalipikasyon ng imigrante, mangyaring makipag-chat sa amin para sa karagdagang impormasyon.",
+
+        "list8": "Anong uri ng suporta ang inyong ibinibigay sa panahon ng proseso ng aplikasyon sa visa?",
+        "details8": "Ang aming matibay na mga ugnayan sa mga konsulado ng Switzerland ay nagpapahintulot sa amin na magbigay ng premium na antas ng suporta. Kami ay nagbibigay ng premium na suporta na kasama ang tulong sa paghahanda at pagsusumite ng aplikasyon sa visa, gabay sa pagtitipon ng kinakailangang dokumentasyon at ebidensya, at regular na mga update sa status ng iyong aplikasyon.",
+
+        "list9": "Ano ang mangyayari kung hindi matagumpay ang aplikasyon ng aking visa?",
+        "details9": "Kung hindi matagumpay ang iyong aplikasyon sa visa, magbibigay kami ng gabay sa tamang mga hakbang na dapat gawin bilang tugon sa pagtanggi. Kung napagpasyahan na kinakailangan ang refund, magbibigay kami ng parsyal na refund mula sa service fee na iyong unang binayad. Ang eksaktong halaga ng refund ay depende sa mga partikular na kalagayan at pag-uusapan namin ito sa iyong panahon.",
+
+        "list10": "Ano ang inyong koneksyon sa mga pattern ng mga investor?",
+        "details10": "Kami ay nagko-konekta ng mga imigrante sa potensyal na mga investor upang suriin ang mga oportunidad sa negosyo at investment sa Switzerland.",
+
+        "list11": "Magkano ang bayad sa inyong mga serbisyo?",
+        "details11": "Ang aming mga bayad ay transparent at nag-aalok kami ng mga flexible na pagpipilian sa pagbabayad. Ang kabuuang halaga ay depende sa mga partikular na serbisyo na kailangan mo.",
+
+        "list12": "Ano ang mangyayari kung ang aking visa ay expired na?",
+        "details12": "Maari naming irekomenda na makipag-chat sa Amin o sa Support Line para sa suporta, upang makapagbigay kami sa iyo ng pinakamahusay na solusyon at suporta",
+
+        "list13": "Ano ang mga kwalipikasyon para sa Permit B o Permit L visa categories?",
+        "details13": "Ang mga kwalipikasyon para sa mga kategoryang visa na ito ay maaaring mag-iba. Ginagawa namin ang isang malawakang pagsusuri sa iyong kwalipikasyon bilang bahagi ng aming mga serbisyo.",
+
+        "list14": "Ano ang proseso pagkatapos na ma-aprubahan ang aking Swiss work visa?",
+        "details14": "Pagkatapos ma-aprubahan ang iyong visa, tumutulong kami sa lokal na proseso ng rehistrasyon pagdating sa Switzerland at nagbibigay ng suporta sa paghahanap ng tuluyan at pag-aayos.",
+
+        "list15": "Anong uri ng mga legal na serbisyo ang inyong ibinibigay?",
+        "details15": "Kasama sa aming mga legal na serbisyo ang pakikipag-ugnayan sa mga awtoridad sa immigrasyon ng Switzerland at pagsasagot sa anumang mga hiling para sa karagdagang impormasyon.",
+
+        "list16": "Ano ang sistema ng social security at buwis sa Switzerland?",
+        "details16": "Mayroon ang Switzerland ng isang kumprehensibong sistema ng social security at isang progresibong sistema ng buwis. Kami ay nagbibigay ng gabay sa mga ito at iba pang lokal na regulasyon.",
+
+        "list17": "Anong uri ng mga trabaho ang tinutulungan ninyo sa mga imigrante na makakuha?",
+        "details17": "Tinutulungan namin ang pagkuha ng mga trabaho sa iba't ibang sektor, depende sa kasanayan at kagustuhan ng imigrante.",
+
+        "list18": "Ano ang rate ng tagumpay ng mga aplikasyon ng visa na inyong hina-handle?",
+        "details18": "may mataas na rate ng tagumpay dahil sa aming kasanayan at komprehensibong pamamaraan, kasama ang aming matibay na ugnayan sa konsulado ng swiss.",
+
+        "list19": "Anong uri ng mga negosyo ang maaari kong pasukin sa Switzerland?",
+        "details19": "Nag-aalok ang Switzerland ng maraming oportunidad sa investment, kasama ang real estate, pagsasaka, at iba pa. Maari naming ikonekta ka sa potensyal na mga oportunidad sa investment base sa iyong interes.",
+
+        "list20": "Ano ang mangyayari kung gumawa ako ng isang krimen sa Switzerland?",
+        "details20": "Ang pagsasagawa ng krimen ay maaaring magdulot ng seryosong mga kahihinatnan ngunit inirerekomenda namin na makipag-usap sa aming Support Line"
+      }
+    },
+
+    "usaFaqPage": {
+      "headingText1": "Estados Unidos",
+      "subHeadingText1": "Madalas Itanong",
+      "subHeadingDetails1": "Kung hindi kayo nasisiyahan, makipag-chat sa aming Support team",
+      "paragraph": "Para sa karagdagang impormasyon, mangyaring makipag-chat sa aming",
+
+      "usaFaqs": {
+        "list1": "Ano ang papel ng dedikadong opisyal na itinalaga sa akin?",
+        "details1": "Ang dedikadong opisyal ay gagabay sa iyo mula sa unang araw ng proseso hanggang sa iyong pagdating sa Estados Unidos. Sila ang iyong pangunahing point of contact at nagbibigay ng patuloy na suporta sa buong proseso.",
+
+        "list2": "Nais kong magtrabaho sa Estados Unidos. Makakatulong ba kayo sa akin na makakuha ng work visa?",
+        "details2": "Mayroon kaming malawak na network sa mga startups, malalaking korporasyon, mga ahensya, maliit na kumpanya, at mga indibidwal sa buong bansa na nangangailangan ng mga dayuhang manggagawa. Ginagamit namin ang network na ito upang matulungan kang makakuha ng trabaho na tugma sa iyong mga kasanayan at kagustuhan. Mangyaring makipag-chat sa amin para sa karagdagang impormasyon.",
+
+        "list3": "Maaari ba kayong tumulong sa paghahanap ng tuluyan sa Estados Unidos?",
+        "details3": "Oo, maaari naming ipa-pair ka sa iba pang mga imigrante para sa tuluyan, kung saan pareho kayong magbabahagi ng mga gastusin. Ito ay isang opsyonal na kasunduan.",
+
+        "list4": "Nag-aalok ba kayo ng installment payment plan?",
+        "details4": "Oo, nag-aalok kami ng isang flexible installment payment plan upang gawing abot-kaya ang proseso para sa aming mga kliyente, makipag-usap sa Support Line para sa karagdagang impormasyon.",
+        "list5": "Ano-anong uri ng mga U.S. work visas ang inyong espesyalidad?",
+        "details5": "Espesyal kami sa Eb-3, Eb-2, H1-B work visas para sa Estados Unidos.",
+
+        "list6": "Ano ang proseso ng pagkuha ng isang U.S. Work Visa?",
+        "details6": "Ang aming matibay na mga ugnayan sa mga konsulado ng USCIS ay gumagawa ng proseso na mas mabilis habang pinapabilis namin ang lahat ng mga proseso para sa aming mga kliyente. Ang proseso ay kinabibilangan ng pagkuha ng alok sa trabaho, paghahanda at pagsusumite ng aplikasyon sa visa, at pagsasagawa ng proseso ng aprobasyon ng visa. Mangyaring makipag-chat sa amin para sa karagdagang impormasyon.",
+
+        "list7": "Gaano katagal bago makakuha ng trabaho sa Estados Unidos?",
+        "details7": "Maaaring mag-iba ang timeline depende sa merkado ng trabaho at sa mga espesipikong kasanayan at kwalipikasyon ng imigrante. Karaniwang, ang prosesong ito ay maaaring tumagal mula 1 hanggang 2 buwan. Mangyaring makipag-chat sa aming Team para sa karagdagang impormasyon.",
+
+        "list8": "Anong uri ng suporta ang inyong ibinibigay sa panahon ng proseso ng aplikasyon sa visa?",
+        "details8": "Ang aming matibay na mga ugnayan sa mga konsulado ng USCIS ay nagbibigay-daan sa amin na magbigay ng premium na antas ng suporta. Kami ay nagbibigay ng premium na suporta na kasama ang tulong sa paghahanda at pagsusumite ng aplikasyon sa visa, pabilis na proseso, gabay sa pagtitipon ng kinakailangang dokumentasyon at ebidensya, at regular na mga update sa status ng iyong aplikasyon.",
+
+        "list9": "Ano ang mangyayari kung hindi matagumpay ang aplikasyon ng aking visa?",
+        "details9": "Kung hindi matagumpay ang iyong aplikasyon sa visa, magbibigay kami ng gabay sa tamang mga hakbang na dapat gawin bilang tugon sa pagtanggi. Kung napagpasyahan na kinakailangan ang refund, magbibigay kami ng parsyal na refund mula sa service fee na iyong unang binayad. Ang eksaktong halaga ng refund ay depende sa mga partikular na kalagayan at pag-uusapan namin ito sa iyong panahon.",
+
+        "list10": "Ano ang inyong koneksyon sa mga pattern ng mga investor?",
+        "details10": "Kami ay nagko-konekta ng mga imigrante sa potensyal na mga investor upang suriin ang mga oportunidad sa negosyo at investment sa Estados Unidos.",
+
+        "list11": "Magkano ang bayad sa inyong mga serbisyo?",
+        "details11": "Ang aming mga bayad ay transparent at nag-aalok kami ng mga flexible na pagpipilian sa pagbabayad. Ang kabuuang halaga ay depende sa mga partikular na serbisyo na kailangan mo.",
+
+        "list12": "Ano ang mangyayari kung ang aking visa ay expired na?",
+        "details12": "Maari naming irekomenda na makipag-chat sa Amin o sa Support Line para sa suporta, upang makapagbigay kami sa iyo ng pinakamahusay na solusyon at suporta",
+
+        "list13": "Ano ang mga kwalipikasyon para sa mga kategorya ng work visa?",
+        "details13": "Ang mga kwalipikasyon para sa mga kategoryang visa na ito ay maaaring mag-iba. Ginagawa namin ang isang malawakang pagsusuri sa iyong kwalipikasyon bilang bahagi ng aming mga serbisyo.",
+
+        "list14": "Ano ang proseso pagkatapos na ma-aprubahan ang aking work permit?",
+        "details14": "Pagkatapos na ma-aprubahan ang iyong visa, tinutulungan ka naming sa proseso ng lokal na rehistrasyon pagdating sa Estados Unidos at nagbibigay ng suporta sa paghahanap ng tuluyan at paglalagay sa sarili.",
+
+        "list15": "Anong uri ng mga legal na serbisyo ang inyong ibinibigay?",
+        "details15": "Kasama sa aming mga legal na serbisyo ang pakikipag-ugnayan sa USCIS at pagtugon sa anumang hiling para sa karagdagang impormasyon.",
+
+        "list16": "Paano ang social security at buwis sa Estados Unidos?",
+        "details16": "Ang Estados Unidos ay may malawak na sistema ng social security at isang progresibong sistema ng buwis. Kami ay nagbibigay ng gabay sa mga ito at iba pang lokal na regulasyon.",
+
+        "list17": "Anong uri ng mga trabaho ang tinutulungan ninyo sa mga imigrante na makakuha?",
+        "details17": "Tinutulungan namin sa pagkuha ng mga trabaho sa iba't ibang sektor, depende sa kasanayan at kagustuhan ng imigrante.",
+
+        "list18": "Ano ang rate ng tagumpay ng mga aplikasyon ng visa na hina-handle ninyo?",
+        "details18": "may mataas na rate ng tagumpay dahil sa aming kasanayan at komprehensibong pamamaraan, kasama ang aming matibay na ugnayan sa konsulado ng USCIS.",
+
+        "list19": "Anong uri ng mga negosyo ang maaari kong pasukin sa Estados Unidos?",
+        "details19": "Nag-aalok kami ng maraming oportunidad sa investment, kasama ang real estate, pagsasaka, at iba pa. Maari naming ikonekta ka sa potensyal na mga oportunidad sa investment batay sa iyong interes.",
+
+        "list20": "Ano ang mangyayari kung gumawa ako ng isang krimen sa Estados Unidos?",
+        "details20": "Ang pagsasagawa ng krimen ay maaaring magdulot ng seryosong mga kahihinatnan ngunit inirerekomenda namin na makipag-usap sa aming Support Line"
       }
     }
   }

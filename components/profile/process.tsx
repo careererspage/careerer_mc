@@ -4,8 +4,28 @@ import { Button } from "../ui/button";
 import Container from "../container";
 import Lottie from "lottie-react";
 import AnimateChat from "@/public/images/lottie/chat.json";
+import { SafeUser } from "@/types";
+import { useModal } from "@/hooks/use-modal-store";
+import { useRouter } from "next/navigation";
 
-const Process = () => {
+interface ProcessProps {
+  currentUser?: SafeUser | null;
+  serverId?: string;
+  supportId?: string | undefined;
+}
+
+const Process = ({ serverId, currentUser, supportId }: ProcessProps) => {
+  const { onOpen } = useModal();
+  const router = useRouter();
+
+  const connectOfficer = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${serverId}/conversations/${supportId}`);
+  };
+
   return (
     <div className="w-full p-4 bg-white shadow-md">
       <Container>
@@ -19,6 +39,7 @@ const Process = () => {
           </div>
 
           <Button
+            onClick={connectOfficer}
             className="ml-6 text-base flex items-center "
             variant="primary"
             size="lg"

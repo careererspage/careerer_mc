@@ -109,7 +109,7 @@ const Navbar = ({
               {currentUser ? (
                 <div className="flex items-center gap-5">
                   <Link
-                    href="/settings"
+                    href="/migrate-compass"
                     className="flex items-center gap-1 group"
                   >
                     <UserAvatar

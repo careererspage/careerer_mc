@@ -42,6 +42,34 @@
       "USA Fee": "Taxa dos EUA",
       "Switzerland Fee": "Taxa da Suíça"
     },
+
+    "profileMGCPage": {
+      "header": "Migrar com Compasso",
+      "header1": "Bem-vindo ao Migrar com Compasso",
+      "paragraph1": "Orgulhamo-nos de nossa profunda expertise legal, nosso compromisso com uma abordagem centrada nas pessoas e nossa adoção de processos impulsionados pela tecnologia. Além de nossos serviços de imigração, Migrar com Compasso também opera como uma agência de recrutamento. Temos uma vasta rede de startups, agências e fazendas que estão constantemente em busca de imigrantes estrangeiros. Nossos serviços fornecem um caminho eficiente para empresas, funcionários, investidores, estudantes e famílias que desejam solicitar vistos e green cards na Europa e nos Estados Unidos. Estamos aqui para orientá-lo em cada etapa de sua jornada de imigração. Vamos navegar juntos pelas complexidades da imigração!",
+      "header2": "Serviços que fornecemos",
+
+      "services": {
+        "listHeader1": "Avaliação:",
+        "list1": "Avaliação do seu caso, tipo de visto, conjunto de habilidades e fornecimento de opiniões honestas.",
+        "listHeader2": "Serviços de Recrutamento:",
+        "list2": "Nossos recrutadores o conectam com agências, pequenas empresas/start-ups e organizações que precisam de mão de obra, serviços, habilidades ou cuidados.",
+        "listHeader3": "Assistência Legal:",
+        "list3": "Assistência com audiências, solicitações de visto e casos de visto problemáticos.",
+        "listHeader4": "Integração Cultural:",
+        "list4": "Fornecimento de suporte e recursos para ajudar os imigrantes a se integrarem em suas novas comunidades, incluindo aulas de idiomas, programas de orientação cultural e eventos de networking.",
+        "listHeader5": "Oportunidades de Networking:",
+        "list5": "Conectamos você com nossas comunidades de imigrantes estrangeiros com base nos Cantões ou países para os quais você está indo.",
+        "listHeader6": "Suporte Contínuo:",
+        "list6": "Oferecendo suporte contínuo e assistência ao longo do processo de imigração e emprego, incluindo consultas de acompanhamento e assistência com quaisquer problemas ou preocupações que possam surgir.",
+        "listHeader7": "Orientação:",
+        "list7": "Orientação sobre o sistema de segurança social do país, sistema tributário e outras regulamentações locais."
+      },
+
+      "header3": "Parece que você ainda não começou seu processo conosco. Gostaria de obter uma avaliação gratuita com um de nossos agentes?",
+      "evaluation": "Iniciar Avaliação Gratuita"
+    },
+    
     "homePage": {
       "title": "Especialização em Direito de Imigração Entregue",
       "span1": "Especialização",
@@ -392,12 +420,17 @@
       "paragraph1": "Existem vários requisitos para o visto EB3. As seguintes condições devem ser cumpridas para que você seja aprovado para um visto EB3. Minha equipe e eu ficaríamos felizes em ajudá-lo a determinar se você atende a esses requisitos.",
       "header2": "Aqui está o que você precisa saber",
       "headerDeatail2": "O visto EB3 permite que alguém obtenha um green card com base no patrocínio de uma empresa dos EUA, o que fornecemos para você. Para obter um green card, sua empresa deve passar pelo processo de certificado de trabalho PERM. Neste guia, vou orientá-lo sobre vários aspectos importantes do processo de visto EB3. Também mostrarei como você pode utilizar este visto para obter um green card e viver nos Estados Unidos.",
-      "header3": "Informações incompletas,",
-      "paragraph3": "Evidências insuficientes e obstáculos legais frequentemente levam a longos tempos de processamento e até rejeição de visto. Se houver falta de documento, avise seu oficial designado ou a Linha de Suporte.",
-      "header4": "Os requisitos são menos rigorosos.",
-      "paragraph4": "O visto EB3 tem requisitos menos rigorosos do que os vistos EB1 ou EB2. Isso significa que algumas pessoas que não se qualificam para esses outros vistos podem ser elegíveis para o visto EB3.",
-      "header5": "Seu cônjuge e filhos dependentes podem vir para os Estados Unidos.",
-      "paragraph5": "Adivinha só? Com o visto EB3, sua família pode participar da aventura também! Se você tem filhos menores de 21 anos que não são casados, eles podem embarcar. E a melhor parte? Eles podem estudar nos EUA. Seu cônjuge também não fica de fora. Assim que resolverem seus documentos de trabalho ou obtiverem seu green card, eles estão livres para trabalhar.",
+
+      "header3": "Importância do Migrate Compass",
+      "headerDeatail3": "Anualmente, o governo dos EUA reserva nada menos que 12.000 vistos especificamente para funções não especializadas. Um dos maiores desafios para muitos é garantir um empregador que seja capaz e disposto a patrociná-los. A Migrate Compass faz parceria com empregadores qualificados que estão preparados para patrocinar estrangeiros, total ou parcialmente, para permissões de trabalho.",
+      "span3": "O visto EB-3 'Outros Trabalhadores' apresenta uma valiosa oportunidade para você obter residência permanente nos Estados Unidos. Isso pode ser alcançado ajustando seu status atual ou através do processamento consular em seu país de origem. Se aplicável, seu cônjuge e filhos solteiros menores de 21 anos também podem ser elegíveis para esses benefícios.",
+
+      "header4": "Informações incompletas,",
+      "paragraph4": "Evidências insuficientes e obstáculos legais frequentemente levam a longos tempos de processamento e até rejeição de visto. Se houver falta de documento, avise seu oficial designado ou a Linha de Suporte.",
+      "header5": "Os requisitos são menos rigorosos.",
+      "paragraph5": "O visto EB3 tem requisitos menos rigorosos do que os vistos EB1 ou EB2. Isso significa que algumas pessoas que não se qualificam para esses outros vistos podem ser elegíveis para o visto EB3.",
+      "header6": "Seu cônjuge e filhos dependentes podem vir para os Estados Unidos.",
+      "paragraph6": "Adivinha só? Com o visto EB3, sua família pode participar da aventura também! Se você tem filhos menores de 21 anos que não são casados, eles podem embarcar. E a melhor parte? Eles podem estudar nos EUA. Seu cônjuge também não fica de fora. Assim que resolverem seus documentos de trabalho ou obtiverem seu green card, eles estão livres para trabalhar.",
       "Header6": "A Migrate Compass está aqui para oferecer uma experiência sem complicações e garantir que você receba seu visto de trabalho nos Estados Unidos o mais rápido possível.",
       "serviceCard": {
         "header": "Serviço Completo de Visto de Trabalho",

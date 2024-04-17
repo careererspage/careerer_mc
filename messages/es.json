@@ -43,6 +43,34 @@
       "USA Fee": "Tarifa de EE. UU.",
       "Switzerland Fee": "Tarifa de Suiza"
     },
+
+    "profileMGCPage": {
+      "header": "Migrar con Brújula",
+      "header1": "Bienvenido a Migrar con Brújula",
+      "paragraph1": "Nos enorgullecemos de nuestra profunda experiencia legal, nuestro compromiso con un enfoque centrado en las personas y nuestra adopción de procesos impulsados por la tecnología. Además de nuestros servicios de inmigración, Migrar con Brújula también funciona como una agencia de reclutamiento. Tenemos una amplia red de startups, agencias y fincas que están constantemente en busca de inmigrantes extranjeros. Nuestros servicios proporcionan un camino eficiente para empresas, empleados, inversores, estudiantes y familias que buscan solicitar visas y tarjetas verdes en Europa y los Estados Unidos. Estamos aquí para guiarlo en cada paso de su viaje de inmigración. ¡Vamos a navegar juntos por las complejidades de la inmigración!",
+      "header2": "Servicios que proporcionamos",
+
+      "services": {
+        "listHeader1": "Evaluación:",
+        "list1": "Evaluación de su caso, tipo de visa, conjunto de habilidades y proporcionar opiniones honestas.",
+        "listHeader2": "Servicios de reclutamiento:",
+        "list2": "Nuestros reclutadores lo conectan con agencias, pequeñas empresas/start-ups y organizaciones que necesitan mano de obra, servicios, habilidades o cuidados.",
+        "listHeader3": "Asistencia legal:",
+        "list3": "Asistencia con audiencias, solicitudes de visa y casos de visa problemáticos.",
+        "listHeader4": "Integración cultural:",
+        "list4": "Proporcionar apoyo y recursos para ayudar a los inmigrantes a integrarse en sus nuevas comunidades, incluyendo clases de idiomas, programas de orientación cultural y eventos de networking.",
+        "listHeader5": "Oportunidades de networking:",
+        "list5": "Lo conectamos con nuestras comunidades de inmigrantes extranjeros basadas en los Cantones o países a los que se dirige.",
+        "listHeader6": "Soporte continuo:",
+        "list6": "Ofreciendo apoyo continuo y asistencia durante todo el proceso de inmigración y empleo, incluyendo consultas de seguimiento y asistencia con cualquier problema o preocupación que pueda surgir.",
+        "listHeader7": "Orientación:",
+        "list7": "Orientación sobre el sistema de seguridad social del país, sistema de impuestos y otras regulaciones locales."
+      },
+
+      "header3": "Parece que aún no has comenzado tu proceso con nosotros. ¿Te gustaría obtener una evaluación gratuita con uno de nuestros agentes?",
+      "evaluation": "Comenzar la evaluación gratuita"
+    },
+
     "homePage": {
       "title": "Experiencia en Ley de Inmigración Entregada",
       "span1": "Expertise",
@@ -72,7 +100,7 @@
       "switzerlandOffice": "Oficina en Suiza",
       "switzerlandComment": "Déjate llevar por la belleza pintoresca y la tranquilidad de Suiza. Confía en Migrate Compass para tu proceso de visa suiza."
     },
-    
+
     "common": {
       "bookSection": "Reservar una sección",
       "chatOfficer": "Chatea con un oficial",
@@ -416,13 +444,17 @@
       "header2": "Esto es lo que necesitas saber",
       "headerDeatail2": "La visa EB3 permite a alguien obtener una tarjeta verde basada en conseguir el patrocinio de una empresa de EE. UU. que nosotros proporcionamos para ti. Para obtener una tarjeta verde, tu empresa debe pasar por el proceso de certificado laboral PERM. En esta guía, te guiaré a través de varios aspectos importantes del proceso de la visa EB3. También te mostraré cómo puedes utilizar esta visa para obtener una tarjeta verde para vivir en Estados Unidos.",
 
-      "header3": "Información incompleta,",
-      "paragraph3": "La evidencia insuficiente y los obstáculos legales a menudo conducen a largos tiempos de procesamiento e incluso al rechazo de la visa. Si falta algún documento, por favor haz que tu oficial asignado o SupportLine estén al tanto.",
-      "header4": "Los requisitos son menos estrictos.",
-      "paragraph4": "La visa EB3 tiene requisitos menos estrictos que las visas EB1 o EB2. Esto significa que algunas personas que pueden no calificar para estas otras visas pueden ser elegibles para la visa EB3.",
+      "header3": "Importancia de Migrate Compass",
+      "headerDeatail3": "Anualmente, el gobierno de los EE. UU. reserva nada menos que 12,000 visas específicamente para roles no especializados. Uno de los mayores desafíos para muchos es asegurar un empleador que sea capaz y esté dispuesto a patrocinarlos. Migrate Compass se asocia con empleadores calificados que están preparados para patrocinar a extranjeros, ya sea total o parcialmente, para permisos de trabajo.",
+      "span3": "La Visa EB-3 'Otros Trabajadores' presenta una valiosa oportunidad para que usted obtenga la residencia permanente en los Estados Unidos. Esto se puede lograr ajustando su estado actual o mediante el procesamiento consular en su país de origen. Si corresponde, su cónyuge e hijos solteros menores de 21 años también pueden ser elegibles para estos beneficios.",
 
-      "header5": "Tu cónyuge e hijos dependientes pueden venir a Estados Unidos.",
-      "paragraph5": "¿Adivina qué? ¡Con la visa EB3, tu familia también puede unirse a la aventura! Si tienes hijos menores de 21 años que no están casados, pueden subirse a bordo. ¿Y la mejor parte? Pueden ir a la escuela en los EE. UU. Tu cónyuge tampoco se queda fuera. Una vez que hayan ordenado sus documentos de trabajo o hayan obtenido su tarjeta verde, son libres para trabajar.",
+      "header4": "Información incompleta,",
+      "paragraph4": "La evidencia insuficiente y los obstáculos legales a menudo conducen a largos tiempos de procesamiento e incluso al rechazo de la visa. Si falta algún documento, por favor haz que tu oficial asignado o SupportLine estén al tanto.",
+      "header5": "Los requisitos son menos estrictos.",
+      "paragraph5": "La visa EB3 tiene requisitos menos estrictos que las visas EB1 o EB2. Esto significa que algunas personas que pueden no calificar para estas otras visas pueden ser elegibles para la visa EB3.",
+
+      "header6": "Tu cónyuge e hijos dependientes pueden venir a Estados Unidos.",
+      "paragraph6": "¿Adivina qué? ¡Con la visa EB3, tu familia también puede unirse a la aventura! Si tienes hijos menores de 21 años que no están casados, pueden subirse a bordo. ¿Y la mejor parte? Pueden ir a la escuela en los EE. UU. Tu cónyuge tampoco se queda fuera. Una vez que hayan ordenado sus documentos de trabajo o hayan obtenido su tarjeta verde, son libres para trabajar.",
 
       "Header6": "Migrate Compass está aquí para ofrecerte una experiencia sin complicaciones y asegurarse de que recibas tu visa de trabajo de EE. UU. lo más rápido posible.",
 

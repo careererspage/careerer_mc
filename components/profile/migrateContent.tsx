@@ -6,83 +6,88 @@ import Lottie from "lottie-react";
 import AnimateChat from "@/public/images/lottie/chat.json";
 import { SafeUser } from "@/types";
 import { FaRegUserCircle } from "react-icons/fa";
+import { useModal } from "@/hooks/use-modal-store";
+import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface MigrateProps {
   currentUser?: SafeUser | null;
+  serverId?: string;
+  supportId?: string | undefined;
 }
 
-const MigrateContent = ({ currentUser }: MigrateProps) => {
+const MigrateContent = ({ currentUser, serverId, supportId }: MigrateProps) => {
+  const { onOpen } = useModal();
+  const router = useRouter();
+
+  const connectOfficer = () => {
+    if (!currentUser) {
+      onOpen("loginModal");
+      return;
+    }
+    router.push(`/servers/${serverId}/conversations/${supportId}`);
+  };
+
+  const t = useTranslations("translate.profileMGCPage");
+
   return (
-    <div className="w-full mx-auto md:ml-6 sm:px-4 sm:py-4 py-2 px-1 bg-white shadow-md">
+    <div className="w-full md:ml-6 sm:px-4 sm:py-4 py-2 px-1 bg-white shadow-md">
       <Container>
         <div className="flex flex-col items-center gap-6">
           <div className="font-bold text-center md:text-3xl text-gray-500">
-            Welcome To Migrate Compass
+            {t("header")}
           </div>
 
           <div className="sm:!text-base text-sm font-normal sm:!leading-8 !leading-8">
-            <div className="font-bold text-[#055AAA]">
-              Welcome to Migrate Compass!
-            </div>
+            <div className="font-bold text-[#055AAA]">{t("header1")}</div>
 
-            <p>
-              We pride ourselves on our profound legal expertise, our commitment
-              to a people-centric approach, and our adoption of
-              technology-driven processes. In addition to our immigration
-              services, Migrate Compass also operates as a recruitment agency.
-              We have a vast network of startups and small firms that are
-              constantly on the lookout for individuals. Our services provide an
-              efficient pathway for businesses, employees, investors, students,
-              and families seeking to apply for visas and green cards in Europe
-              and the United States. We&apos;re here to guide you through every
-              step of your immigration journey. Let&apos;s navigate the
-              complexities of immigration together! 😊
-            </p>
+            <p>{t("paragraph1")}</p>
           </div>
 
           <div className="">
-            <h1 className="mt-6 text-[#055AAA] font-bold">
-              Services we provide
-            </h1>
+            <h1 className="mt-6 text-[#055AAA] font-bold">{t("header2")}</h1>
             <ul className="list-disc sm:text-base text-sm ml-4 mt-3">
               <li className="mb-2">
-                <span className="font-semibold">Case Evaluation:</span>{" "}
-                Evaluation of your case, visa type, skillset, and providing
-                honest opinions.
+                <span className="font-semibold">
+                  {t("services.listHeader1")}
+                </span>{" "}
+                {t("services.list1")}
               </li>
               <li className="mb-2">
-                <span className="font-semibold">Recruitment Services:</span> Our
-                recruiters connect you with individuals, small firms/start-ups
-                in need of labor, services, skill, or care.
+                <span className="font-semibold">
+                  {t("services.listHeader2")}
+                </span>{" "}
+                {t("services.list2")}
               </li>
               <li className="mb-2">
-                <span className="font-semibold">Legal Assistance:</span>{" "}
-                Assistance with hearings, visa applications, and problematic
-                visa cases.
+                <span className="font-semibold">
+                  {t("services.listHeader3")}
+                </span>{" "}
+                {t("services.list3")}
               </li>
               <li className="mb-2">
-                <span className="font-semibold">Cultural Integration:</span>{" "}
-                Providing support and resources to help immigrants integrate
-                into their new communities, including language classes, cultural
-                orientation programs, and networking events.
+                <span className="font-semibold">
+                  {t("services.listHeader4")}
+                </span>{" "}
+                {t("services.list4")}
               </li>
               <li className="mb-2">
-                <span className="font-semibold">Networking Opportunities:</span>{" "}
-                We connect you with our communities of immigrants based in
-                Canton or the destination country.
+                <span className="font-semibold">
+                  {t("services.listHeader5")}
+                </span>{" "}
+                {t("services.list5")}
               </li>
               <li className="mb-2">
-                <span className="font-semibold">Continuous Support:</span>{" "}
-                Offering ongoing support and assistance throughout the
-                immigration and employment process, including follow-up
-                consultations and assistance with any issues or concerns that
-                may arise.
+                <span className="font-semibold">
+                  {t("services.listHeader6")}
+                </span>{" "}
+                {t("services.list6")}
               </li>
               <li>
-                <span className="font-semibold">Orientation:</span> Guidance
-                with finding accommodation and settling within the
-                country&apos;s social security, tax system, and other local
-                regulations.
+                <span className="font-semibold">
+                  {t("services.listHeader7")}
+                </span>{" "}
+                {t("services.list7")}
               </li>
             </ul>
           </div>
@@ -91,14 +96,14 @@ const MigrateContent = ({ currentUser }: MigrateProps) => {
           {!currentUser?.process && (
             <div className="flex flex-col justify-center">
               <div className="flex md:!text-lg text-sm items-center justify-center">
-                It seems you haven&apos;t started your process with us yet.
-                Would you like to get a free evaluation with one of our agents?
+                {t("header3")}
               </div>
 
               <Button
-                className="ml-6 mt-4 text-base flex items-center justify-center w-[200px]"
+                className="sm:ml-6 mt-4 flex gap-4 sm:gap-10 items-center justify-center w-[330px]"
                 variant="primary"
                 size="lg"
+                onClick={connectOfficer}
               >
                 <Lottie
                   animationData={AnimateChat}
@@ -106,7 +111,7 @@ const MigrateContent = ({ currentUser }: MigrateProps) => {
                   autoplay
                   className="w-[50px] h-[50px]"
                 />
-                Start Free Evaluation
+                <h1 className="text-sm sm:text-base">{t("evaluation")}</h1>
               </Button>
             </div>
           )}

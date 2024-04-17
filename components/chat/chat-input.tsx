@@ -12,6 +12,8 @@ import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useModal } from "@/hooks/use-modal-store";
 import { EmojiPicker } from "@/components/emoji-picker";
+import { AiOutlineSend } from "react-icons/ai";
+import { Button } from "../ui/button";
 
 interface ChatInputProps {
   apiUrl: string;
@@ -45,6 +47,11 @@ export const ChatInput = ({
   const isLoading = form.formState.isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    // Check if the message is not empty
+    if (!values.content.trim()) {
+      return;
+    }
+
     try {
       const url = qs.stringifyUrl({
         url: apiUrl,
@@ -90,12 +97,21 @@ export const ChatInput = ({
                     }`}
                     {...field}
                   />
-                  <div className="absolute top-7 right-8">
+                  <div className="absolute flex items-center gap-2 top-5 right-8">
                     <EmojiPicker
                       onChange={(emoji: string) =>
                         field.onChange(`${field.value} ${emoji}`)
                       }
                     />
+
+                    <Button
+                      variant="primary"
+                      size="icon"
+                      className="flex items-center justify-center p-1 rounded-full"
+                      type="submit"
+                    >
+                      <AiOutlineSend color="white" />
+                    </Button>
                   </div>
                 </div>
               </FormControl>

@@ -1,17 +1,16 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoClose, IoMenuOutline, IoSettingsOutline } from "react-icons/io5";
 
-import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Separator } from "../ui/separator";
-import { Faqcomponents, Feescomponents } from "@/lib/data";
+import { useModal } from "@/hooks/use-modal-store";
+import { Faqcomponents } from "@/lib/data";
 import {
   FaqNav,
   Fees,
@@ -19,17 +18,18 @@ import {
   SubWorkNav,
   VisaType,
 } from "@/lib/faqData";
-import { usePathname } from "next/navigation";
-import { MdOutlineTrackChanges } from "react-icons/md";
-import { RxPerson } from "react-icons/rx";
-import { RiTeamLine } from "react-icons/ri";
-import Image from "next/image";
-import { useModal } from "@/hooks/use-modal-store";
-import { signOut } from "next-auth/react";
+import { cn } from "@/lib/utils";
 import { SafeMember, SafeUser } from "@/types";
-import { LiaSignOutAltSolid } from "react-icons/lia";
-import ServerTool from "../server/server-tool";
+import { signOut } from "next-auth/react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { LiaSignOutAltSolid } from "react-icons/lia";
+import { MdOutlineTrackChanges } from "react-icons/md";
+import { RiTeamLine } from "react-icons/ri";
+import { RxPerson } from "react-icons/rx";
+import ServerTool from "../server/server-tool";
+import { Separator } from "../ui/separator";
 
 const About = () => {
   const t = useTranslations("translate.navbarLinks");
@@ -106,7 +106,22 @@ const MobileMenu = ({
               )}
             >
               <Link
+                href="/"
+                onClick={toggleMenu}
+                className={cn(
+                  "flex items-center hover:opacity-60 transition duration-200 cursor-pointer w-full py-1",
+                  pathname === "/"
+                    ? "bg-[#0559a8] !text-white pl-2"
+                    : "text-gray-600"
+                )}
+              >
+                <MdOutlineTrackChanges size={20} className="" />
+                <span className="pl-3">Home page</span>
+              </Link>
+
+              <Link
                 href="/migrate-compass"
+                onClick={toggleMenu}
                 className={cn(
                   "flex items-center hover:opacity-60 transition duration-200 cursor-pointer w-full py-1",
                   pathname === "/migrate-compass"
@@ -122,6 +137,7 @@ const MobileMenu = ({
 
               <Link
                 href="/settings"
+                onClick={toggleMenu}
                 className={cn(
                   "flex items-center hover:opacity-60 transition duration-200 cursor-pointer w-full py-1",
                   pathname === "/settings" ? "bg-[#0559a8] text-white pl-2" : ""
@@ -134,6 +150,7 @@ const MobileMenu = ({
               <Separator className=" w-[250px] my-2 h-[1px]" />
 
               <ServerTool
+                profilePage
                 serverId={serverId}
                 supportLine={supportLine}
                 expiredVisa={expiredVisa}
@@ -141,7 +158,7 @@ const MobileMenu = ({
 
               <Separator className=" w-[250px] my-2 h-[1px]" />
               <div className="text-xs my-1 uppercase font-bold text-zinc-500">
-                Country Agents
+                Country Office
               </div>
               {agents &&
                 agents.map((agent) => (
@@ -159,11 +176,14 @@ const MobileMenu = ({
                     <Image
                       width={50}
                       height={50}
-                      src={require("@/public/images/care-line.png")}
+                      src={
+                        agent.imageUrl ||
+                        require("@/public/images/care-line.png")
+                      }
                       alt="care line"
-                      className="w-[30px] h-[30px] object-contain rounded-full"
+                      className="w-[20px] h-[20px] object-cover"
                     />
-                    <span className="pl-3 sm:text-sm text-[11px]">
+                    <span className="pl-3 sm:text-sm text-[12px]">
                       {agent.firstName}
                     </span>
                   </Link>
@@ -173,6 +193,7 @@ const MobileMenu = ({
 
               <Link
                 href="/track-process"
+                onClick={toggleMenu}
                 className={cn(
                   "flex items-center hover:opacity-60 transition duration-200 cursor-pointer w-full py-1",
                   pathname === "/track-process"
@@ -247,15 +268,15 @@ const MobileMenu = ({
 
               {currentUser && (
                 <>
-                  <div
+                  <Link
+                    href="/migrate-compass"
                     className="flex items-center gap-1 group cursor-pointer text-gray-600"
-                    onClick={() => signOut()}
                   >
                     <RxPerson className="sm:h-7 sm:w-7 w-5 h-5 !text-gray-500 group:hover:!text-red-400 transition-all" />
                     <span className=" text-gray-600 group-hover:opacity-80">
                       Profile
                     </span>
-                  </div>
+                  </Link>
                   <Separator className=" w-[250px] my-1 h-[2px]" />
                 </>
               )}

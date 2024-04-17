@@ -85,7 +85,7 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
             }}
           />
           <ChatInput
-            name={otherMember?.profile.firstName ?? "John"}
+            name={otherMember?.profile.firstName ?? "User"}
             type="conversation"
             apiUrl="/api/socket/direct-messages"
             query={{

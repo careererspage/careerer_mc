@@ -76,7 +76,7 @@ export const LoginModal = () => {
         const firstError = Object.values(result.error.errors)[0];
         toast({
           style: {
-            background: "black",
+            background: "red",
             color: "#fff",
           },
           variant: "destructive",
@@ -103,7 +103,7 @@ export const LoginModal = () => {
           onClose();
           toast({
             style: {
-              background: "black",
+              background: "red",
               color: "#fff",
             },
             variant: "destructive",
@@ -116,7 +116,7 @@ export const LoginModal = () => {
       setIsloading(false);
       toast({
         style: {
-          background: "black",
+          background: "red",
           color: "#fff",
         },
         variant: "destructive",

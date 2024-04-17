@@ -27,9 +27,9 @@ export const ConsultationFeeModal = () => {
           </DialogTitle>
         </DialogHeader>
         <div className="p-6">
-          <Label className="text-xs font-bold text-zinc-500 dark:text-secondary/70">
-            Oh no! You are yet to make a consultation fee payment. Kindly
-            contact the support line for assistance.
+          <Label className="md:!text-base text-xs font-bold text-zinc-500 dark:text-secondary/70">
+            sorry! You are yet to make a consultation fee payment to acces this
+            call service. Kindly contact the support line for assistance.
           </Label>
           <div className="flex items-center mt-2 gap-x-2">
             <Button
